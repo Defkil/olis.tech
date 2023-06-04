@@ -1,6 +1,12 @@
 lockfileVersion: '6.0'
 
 dependencies:
+  '@fontsource-variable/outfit':
+    specifier: ^5.0.2
+    version: 5.0.2
+  '@fontsource/righteous':
+    specifier: ^5.0.2
+    version: 5.0.2
   astro:
     specifier: ^2.5.6
     version: 2.5.6
@@ -534,6 +540,14 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@fontsource-variable/outfit@5.0.2:
+    resolution: {integrity: sha512-r/vx4NoNV3nxUxQ1PIDJux6ZK8tZB0F09N8DM3xHjI9TP8DrIMPa4VZBUStD2gNZjlcJOqhzuMWZA8regx/hsw==}
+    dev: false
+
+  /@fontsource/righteous@5.0.2:
+    resolution: {integrity: sha512-J0/Ct4T+ar/Q8YYbzbru2iDuRvwbYUjs3KHWA8a8vidHg+hjNF356z6nMS/3Z2hEga0iE5LitfglFRL7kLj7ng==}
+    dev: false
 
   /@jridgewell/gen-mapping@0.3.3:
     resolution: {integrity: sha512-HLhSWOLRi875zjjMG/r+Nv0oCW8umGb0BgEhyX3dDX3egwZtB8PqLnjz3yedt8R5StBrzcg4aBpnh8UA9D1BoQ==}
