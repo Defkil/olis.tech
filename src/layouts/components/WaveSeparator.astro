@@ -14,12 +14,12 @@ const { color } = Astro.props
     width: 100vw;
   }
   .separator::before {
-    mask: url('./images/layout/wave.svg');
-    -webkit-mask: url('./images/layout/wave.svg');
+    mask: url('/images/layout/wave.svg');
+    -webkit-mask: url('/images/layout/wave.svg');
     background-color: var(--color);
   }
   .separator::after {
-    background: transparent url('./images/layout/wave-border.svg') 0 repeat-x;
+    background: transparent url('/images/layout/wave-border.svg') 0 repeat-x;
   }
 </style>
 <div class="separator">
