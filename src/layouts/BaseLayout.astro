@@ -1,0 +1,19 @@
+---
+import Header from "./components/Header.astro";
+import '@fontsource/righteous'
+import '@fontsource-variable/outfit';
+import Head from "./components/Head.astro";
+const { title } = Astro.props
+---
+
+<html lang="de">
+<head>
+  <Head title={title} />
+</head>
+<body>
+<Header/>
+<main>
+  <slot />
+</main>
+</body>
+</html>
