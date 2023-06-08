@@ -6,10 +6,12 @@ import {styles} from "../../const/styles";
   <header-element>
     <header class='header__container container'>
       <h1 class='header__title righteous'>
-        <a class="header__title__link" href="/public">Olis.tech</a>
+        <a class="header__title__link" href="/">Olis.tech</a>
       </h1>
       <div class='header__search'>
-        <input type="text" placeholder="Wie zentriere ich eine div?" class="header__search__input br-border br-shadow" />
+        <label class="header__search__label">
+          <input type="text" placeholder="Wie zentriere ich eine div?" class="header__search__input br-border br-shadow" />
+        </label>
         <button class="header__search__button br-border br-shadow">Suchen</button>
       </div>
     </header>
@@ -53,6 +55,10 @@ import {styles} from "../../const/styles";
     display: flex;
     gap: 18px;
     align-items: center;
+    height: 100%;
+  }
+
+  .header__search__label {
     height: 100%;
   }
 
