@@ -1,0 +1,29 @@
+---
+import { collections } from "../../content/config";
+import { getCollection } from 'astro:content';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+export async function getStaticPaths() {
+  const routes: {
+    params: {
+      slug: string,
+      category: string
+    },
+    props: any
+  }[] = []
+  for (const collection of Object.keys(collections)) {
+    const entries = await getCollection(collection as any)
+    entries.forEach(entry => {
+      routes.push({
+        params: { slug: entry.slug, category: collection }, props: { entry },
+      })
+    })
+  }
+  return routes
+}
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+<BaseLayout title={'Olis.tech - ' + entry.data.title}>
+  <h1>{entry.data.title}</h1>
+  <Content />
+</BaseLayout>
