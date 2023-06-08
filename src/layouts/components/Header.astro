@@ -1,0 +1,79 @@
+---
+import WaveSeparator from "./WaveSeparator.astro";
+import {styles} from "../../const/styles";
+---
+<div class="header">
+  <header-element>
+    <header class='header__container container'>
+      <h1 class='header__title righteous'>
+        <a class="header__title__link" href="/public">Olis.tech</a>
+      </h1>
+      <div class='header__search'>
+        <input type="text" placeholder="Wie zentriere ich eine div?" class="header__search__input br-border br-shadow" />
+        <button class="header__search__button br-border br-shadow">Suchen</button>
+      </div>
+    </header>
+  </header-element>
+</div>
+<WaveSeparator color={styles["color-secondary"]} />
+<script>
+  class HeaderElement extends HTMLElement {
+    constructor() {
+      super();
+    }
+  }
+
+  customElements.define('header-element', HeaderElement);
+</script>
+<style>
+  .header {
+    background: var(--color-secondary);
+    position: relative;
+    padding: 40px 0 20px 0;
+  }
+
+  .header__container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 18px;
+    padding: 0 6px;
+  }
+
+  .header__title {
+    margin-right: auto;
+    font-size: 3rem;
+    line-height: 0;
+  }
+
+  .header__title__link {
+    color: var(--color-quaternary);
+  }
+
+  .header__search {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    height: 100%;
+  }
+
+  .header__search__input, .header__search__button {
+    height: 100%;
+    font-size: 30px;
+    background: var(--color-white);
+    color: var(--color-black);
+    padding: 0 16px;
+  }
+
+  .header__search__input {
+    box-sizing: border-box;
+    flex: 1;
+  }
+
+  .header__search__input:focus {
+    outline: none;
+  }
+
+  .header__search__button {
+    cursor: pointer;
+  }
+</style>
