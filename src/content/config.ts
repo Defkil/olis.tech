@@ -1,4 +1,5 @@
-import { z, defineCollection } from 'astro:content';
+import {z, defineCollection} from 'astro:content';
+import {categories} from "./_categories";
 
 const collectionSchemaDefault = z.object({
   title: z.string(),
@@ -8,17 +9,12 @@ const collectionSchemaDefault = z.object({
   updateDate: z.date().optional(),
 })
 
-const allgemein = defineCollection({
-  type: 'content',
-  schema: collectionSchemaDefault
-})
+export const collections: {
+  [key: string]: any
+} = {}
 
-const server = defineCollection({
-  type: 'content',
-  schema: collectionSchemaDefault
-})
-
-export const collections = {
-  allgemein,
-  server
+for (const category of categories) {
+  collections[category.collection] = defineCollection({
+    type: 'content', schema: collectionSchemaDefault
+  })
 }
