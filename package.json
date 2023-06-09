@@ -15,6 +15,10 @@
     "@fontsource-variable/outfit": "^5.0.2",
     "@fontsource/righteous": "^5.0.2",
     "astro": "^2.6.1",
-    "astro-compress": "^1.1.47"
+    "astro-compress": "^1.1.47",
+    "astro-rome": "^0.1.17"
+  },
+  "devDependencies": {
+    "rome": "12.1.3"
   }
 }
