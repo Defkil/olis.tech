@@ -4,14 +4,14 @@ const { color } = Astro.props
 <style define:vars={{color}}>
   .separator {
     position: relative;
-    width: 100vw;
+    width: 100%;
   }
   .separator::before, .separator::after {
     bottom: -16px;
     content: "";
     height: 16px;
     position: absolute;
-    width: 100vw;
+    width: 100%;
   }
   .separator::before {
     mask: url('/images/layout/wave.svg');
