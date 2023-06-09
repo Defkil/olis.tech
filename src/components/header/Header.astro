@@ -1,12 +1,13 @@
 ---
-import WaveSeparator from "./WaveSeparator.astro";
+import WaveSeparator from "../WaveSeparator.astro";
 import {styles} from "../../const/styles";
+import HeaderCategories from "./HeaderCategories.astro";
 ---
 <div class="header">
   <header-element>
     <header class='header__container container'>
       <h1 class='header__title righteous'>
-        <a class="header__title__link" href="/">Olis.tech</a>
+        <a class="header__title__link" href="/public">Olis.tech</a>
       </h1>
       <div class='header__search'>
         <label class="header__search__label">
@@ -18,6 +19,8 @@ import {styles} from "../../const/styles";
   </header-element>
 </div>
 <WaveSeparator color={styles["color-secondary"]} />
+<HeaderCategories />
+<WaveSeparator color={styles["color-senary"]} />
 <script>
   class HeaderElement extends HTMLElement {
     constructor() {
@@ -31,7 +34,7 @@ import {styles} from "../../const/styles";
   .header {
     background: var(--color-secondary);
     position: relative;
-    padding: 40px 0 20px 0;
+    padding: 60px 0 40px 0;
   }
 
   .header__container {
