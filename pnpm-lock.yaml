@@ -1,6 +1,9 @@
 lockfileVersion: '6.0'
 
 dependencies:
+  '@astrojs/prefetch':
+    specifier: ^0.2.3
+    version: 0.2.3
   '@fontsource-variable/outfit':
     specifier: ^5.0.2
     version: 5.0.2
@@ -72,6 +75,12 @@ packages:
       vfile: 5.3.7
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /@astrojs/prefetch@0.2.3:
+    resolution: {integrity: sha512-r51t4fkGcePA6FHFVDD5vC/whhoKWFSaKNug/4Z2FSKZZga9yjb2qDcrul7u32nVDN+30ywZ/RQAmBMrHOmLiw==}
+    dependencies:
+      throttles: 1.0.1
     dev: false
 
   /@astrojs/prism@2.1.2:
@@ -3244,6 +3253,11 @@ packages:
       acorn: 8.8.2
       commander: 2.20.3
       source-map-support: 0.5.21
+    dev: false
+
+  /throttles@1.0.1:
+    resolution: {integrity: sha512-fab7Xg+zELr9KOv4fkaBoe/b3L0GMGLd0IBSCn16GoE/Qx6/OfCr1eGNyEcDU2pUA79qQfZ8kPQWlRuok4YwTw==}
+    engines: {node: '>=6'}
     dev: false
 
   /titleize@3.0.0:
