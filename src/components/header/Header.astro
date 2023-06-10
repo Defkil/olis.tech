@@ -4,7 +4,7 @@ import {styles} from "../../const/styles";
 import HeaderCategories from "./HeaderCategories.astro";
 ---
 <div class="header">
-  <header-element>
+  <header-search>
     <header class='header__container container'>
       <h1 class='header__title righteous'>
         <a class="header__title__link" href="/public">Olis.tech</a>
@@ -16,19 +16,19 @@ import HeaderCategories from "./HeaderCategories.astro";
         <button class="header__search__button br-border br-shadow">Suchen</button>
       </div>
     </header>
-  </header-element>
+  </header-search>
 </div>
 <WaveSeparator color={styles["color-secondary"]} />
 <HeaderCategories />
 <WaveSeparator color={styles["color-senary"]} />
 <script>
-  class HeaderElement extends HTMLElement {
+  class HeaderSearch extends HTMLElement {
     constructor() {
       super();
     }
   }
 
-  customElements.define('header-element', HeaderElement);
+  customElements.define('header-search', HeaderSearch);
 </script>
 <style>
   .header {
