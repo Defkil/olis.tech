@@ -6,8 +6,8 @@ import HeaderCategories from "./HeaderCategories.astro";
 <div class="header">
   <header-search>
     <header class='header__container container'>
-      <h1 class='header__title righteous'>
-        <a class="header__title__link" href="/public">Olis.tech</a>
+      <h1 class='header__title '>
+        <a href="/"><button class="header__title__button righteous">Olis.tech</button></a>
       </h1>
       <div class='header__search'>
         <label class="header__search__label">
@@ -46,19 +46,31 @@ import HeaderCategories from "./HeaderCategories.astro";
 
   .header__title {
     margin-right: auto;
-    font-size: 3rem;
-    line-height: 0;
   }
 
-  .header__title__link {
+  .header__title__button {
+    font-size: 6rem;
+    background: none;
+    border: none;
+    cursor: pointer;
     color: var(--color-quaternary);
+    text-shadow: var(--br-shadow-size) var(--br-shadow-size) #000;
+
+    transition: transform var(--br-animation-duration) var(--br-animation-easing),
+    text-shadow var(--br-animation-duration) var(--br-animation-easing);
+  }
+
+  .header__title__button:hover {
+    text-shadow: 0 1px #000, 1px 0 #000, -1px 0 #000, 0 -1px #000;
+    transform: translate(var(--br-shadow-size), var(--br-shadow-size));
   }
 
   .header__search {
     display: flex;
     gap: 18px;
     align-items: center;
-    height: 100%;
+    height: 60%;
+    padding-top: 5%;
   }
 
   .header__search__label {
