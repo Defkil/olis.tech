@@ -5,15 +5,15 @@ import HeaderCategories from "./HeaderCategories.astro";
 ---
 <div class="header">
   <header-search>
-    <header class='header__container container'>
+    <header class='header__container'>
       <h1 class='header__title '>
-        <a href="/"><button class="header__title__button righteous">Olis.tech</button></a>
+        <a href="/"><button class="header__title__button">Olis.tech</button></a>
       </h1>
       <div class='header__search'>
         <label class="header__search__label">
-          <input type="text" placeholder="Wie zentriere ich eine div?" class="header__search__input br-border br-shadow" />
+          <input type="text" placeholder="Wie zentriere ich eine div?" class="header__search__input border shadow shadow--hover" />
         </label>
-        <button class="header__search__button br-border br-shadow">Suchen</button>
+        <button class="header__search__button border shadow shadow--hover">Suchen</button>
       </div>
     </header>
   </header-search>
@@ -40,6 +40,8 @@ import HeaderCategories from "./HeaderCategories.astro";
   .header__container {
     display: grid;
     grid-template-columns: 1fr auto;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
     gap: 18px;
     padding: 0 6px;
   }
@@ -54,15 +56,16 @@ import HeaderCategories from "./HeaderCategories.astro";
     border: none;
     cursor: pointer;
     color: var(--color-quaternary);
-    text-shadow: var(--br-shadow-size) var(--br-shadow-size) #000;
+    text-shadow: var(--shadow-size) var(--shadow-size) var(--color-black);
+    font-family: var(--font-family-hightlight);
 
-    transition: transform var(--br-animation-duration) var(--br-animation-easing),
-    text-shadow var(--br-animation-duration) var(--br-animation-easing);
+    transition: transform var(--animation-duration) var(--animation-easing),
+    text-shadow var(--animation-duration) var(--animation-easing);
   }
 
   .header__title__button:hover {
-    text-shadow: 0 1px #000, 1px 0 #000, -1px 0 #000, 0 -1px #000;
-    transform: translate(var(--br-shadow-size), var(--br-shadow-size));
+    text-shadow: 0 1px var(--color-black), 1px 0 var(--color-black), -1px 0 var(--color-black), 0 -1px var(--color-black);
+    transform: translate(var(--shadow-size), var(--shadow-size));
   }
 
   .header__search {
@@ -83,6 +86,7 @@ import HeaderCategories from "./HeaderCategories.astro";
     background: var(--color-white);
     color: var(--color-black);
     padding: 0 24px 0 28px;
+    border-radius: var(--border-radius);
   }
 
   .header__search__input {

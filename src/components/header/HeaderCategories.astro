@@ -1,11 +1,72 @@
 ---
+import {categories} from "../../content/_categories";
 ---
-<div class="categories">
-
+<div class="background">
+  <header-categories>
+    <div class="container">
+      <div class="sidebar">
+        <h2 class="sidebar__title">Kategorien</h2>
+        {categories.map((category) => (
+            <button class="sidebar_button border shadow shadow--hover">
+              {category.title}
+            </button>))}
+      </div>
+      <div class="info border shadow">
+        <h2 class="info__title">{categories[0].title}</h2>
+        <h2 class="info__description">{categories[0].description}</h2>
+      </div>
+      <div class="latest">
+      </div>
+    </div>
+  </header-categories>
 </div>
+<script>
+  class HeaderCategories extends HTMLElement {
+    constructor() {
+      super();
+    }
+  }
+
+  customElements.define('header-categories', HeaderCategories);
+</script>
 <style>
-  .categories {
-    padding: 28px 0;
+  .background {
+    padding: 48px 0 40px 0;
     background-color: var(--color-senary);
+  }
+
+  .container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .sidebar {
+    padding: 26px 0;
+    max-width: 400px;
+  }
+
+  .sidebar__title {
+    margin: 0 0 50px 0;
+    line-height: 0;
+    font-size: 3rem;
+    font-weight: 500;
+    color: var(--color-white);
+  }
+
+  .sidebar_button {
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 6px 24px 6px 0;
+    border-radius: var(--border-radius);
+  }
+
+  /* todo active button with a star */
+
+  .info {
+    width: 100%;
+    height: 100%;
+    background: blue;
   }
 </style>
