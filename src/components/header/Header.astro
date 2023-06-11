@@ -18,9 +18,11 @@ import HeaderCategories from "./HeaderCategories.astro";
     </header>
   </header-search>
 </div>
-<WaveSeparator color={styles["color-secondary"]} />
-<HeaderCategories />
-<WaveSeparator color={styles["color-senary"]} />
+<div class="header__categories">
+  <WaveSeparator color={styles["color-secondary"]} />
+  <HeaderCategories />
+  <WaveSeparator color={styles["color-senary"]} />
+</div>
 <script>
   class HeaderSearch extends HTMLElement {
     constructor() {
@@ -46,6 +48,11 @@ import HeaderCategories from "./HeaderCategories.astro";
     max-width: var(--container-max-width);
     margin: 0 auto;
     padding: 0 6px;
+  }
+
+  .header__categories {
+    position: relative;
+    z-index: 1;
   }
 
   .title {
