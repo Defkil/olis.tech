@@ -17,11 +17,14 @@ const { title, description } = Astro.props
   import Swup from 'swup'
   import SwupHeadPlugin from '@swup/head-plugin'
   import SwupSlideTheme from '@swup/slide-theme'
+  import SwupPreloadPlugin from '@swup/preload-plugin';
 
-  const swup = new Swup({
-    plugins: [new SwupHeadPlugin(), new SwupSlideTheme({
-      reversed: false,
-    })],
+  window['swup'] = new Swup({
+    plugins: [
+      new SwupHeadPlugin(),
+      new SwupPreloadPlugin(),
+      new SwupSlideTheme({ reversed: false })
+    ],
   })
 </script>
 </body>
