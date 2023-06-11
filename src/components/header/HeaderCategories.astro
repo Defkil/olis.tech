@@ -1,7 +1,6 @@
 ---
 import {getCollection} from "astro:content";
 import {categories} from "../../content/_categories";
-import {getCollection} from "astro:content";
 
 const categoriesData: {
   title: string, description: string, count: number, lastPublishOrUpdate: string, link: string, lastPosts: {
@@ -45,6 +44,8 @@ for (const category of categories) {
     link: '/' + category.collection
   })
 }
+
+const initialCategory = categoriesData[0]!;
 ---
 <div class="background">
   <header-categories>
@@ -52,36 +53,36 @@ for (const category of categories) {
       <div class="sidebar">
         <h2 class="sidebar__title">Kategorien</h2>
         {categoriesData.map((category) => (
-            <button
-                class="sidebar__button border shadow shadow--hover js--category-button"
-                data-link={category.link}
-                data-description={category.description}
-                data-count={category.count}
-                data-last-publish-or-update={category.lastPublishOrUpdate}
-                data-last-posts={category.lastPosts}>
-              {category.title}
-            </button>))}
+          <button
+            class="sidebar__button border shadow shadow--hover js--category-button"
+            data-link={category.link}
+            data-description={category.description}
+            data-count={category.count}
+            data-last-publish-or-update={category.lastPublishOrUpdate}
+            data-last-posts={category.lastPosts}>
+            {category.title}
+          </button>))}
       </div>
       <div class="info border shadow">
-        <h2 class="info__title js--title">{categoriesData[0].title}</h2>
-        <p class="info__description js--description">{categoriesData[0].description}</p>
+        <h2 class="info__title js--title">{initialCategory.title}</h2>
+        <p class="info__description js--description">{initialCategory.description}</p>
         <div class="info__details">
-          <span>Anzahl Artikel: <span class="js--details__count">{categoriesData[0].count}</span></span>
-          <span>Letzte Änderung: <span class="js--details__last">{categoriesData[0].lastPublishOrUpdate}</span></span>
+          <span>Anzahl Artikel: <span class="js--details__count">{initialCategory.count}</span></span>
+          <span>Letzte Änderung: <span class="js--details__last">{initialCategory.lastPublishOrUpdate}</span></span>
         </div>
       </div>
       <div class="posts">
-        {categoriesData[0].lastPosts.map((post) => (
-            <a href={post.link} data-swup-preload>
-              <div class="post border shadow shadow--hover">
-                <img class="post__image" src={post.img} alt={post.title}/>
-                <div class="post__title">{post.title}</div>
-              </div>
-            </a>))}
-        <a class="js--link" href={categoriesData[0].link} data-swup-preload>
+        {initialCategory.lastPosts.map((post) => (
+          <a href={post.link} data-swup-preload>
+            <div class="post border shadow shadow--hover">
+              <img class="post__image" src={post.img} alt={post.title}/>
+              <div class="post__title">{post.title}</div>
+            </div>
+          </a>))}
+        <a class="js--link" href={initialCategory.link} data-swup-preload>
           <div class="post post--small border shadow shadow--hover">
             <div class="post__title post__title--small-centered-text">
-              Alle Artikel aus <span class="js--title">{categoriesData[0].title}</span> anzeigen
+              Alle Artikel aus <span class="js--title">{initialCategory.title}</span> anzeigen
             </div>
           </div>
         </a>
@@ -92,11 +93,11 @@ for (const category of categories) {
 <script>
   class HeaderCategories extends HTMLElement {
     dom = {
-      title: this.querySelectorAll('.js--title'),
-      link: this.querySelectorAll('.js--link'),
-      description: this.querySelector('.js--description'),
-      count: this.querySelector('.js--details__count'),
-      last: this.querySelector('.js--details__last')
+      title: this.querySelectorAll('.js--title')!,
+      link: this.querySelectorAll('.js--link')!,
+      description: this.querySelector('.js--description')!,
+      count: this.querySelector('.js--details__count')!,
+      last: this.querySelector('.js--details__last')!
     }
 
     connectedCallback() {
@@ -104,15 +105,19 @@ for (const category of categories) {
     }
 
     registerButtons() {
-      const buttons = this.querySelectorAll('.js--category-button');
+      const buttons: NodeListOf<HTMLElement> = this.querySelectorAll('.js--category-button');
       buttons.forEach((button) => {
         button.addEventListener('click', () => {
           this.dom.title.forEach((title) => title.textContent = button.textContent);
-          this.dom.link.forEach((link) => link['href'] = button['dataset'].link);
-          this.dom.description.textContent = button['dataset'].description;
-          this.dom.count.textContent = button['dataset'].count;
-          this.dom.last.textContent = button['dataset'].lastPublishOrUpdate;
-          const swup = window['swup']
+          this.dom.link.forEach((link) => {
+            if (link instanceof HTMLAnchorElement) {
+              link.href = button.dataset.link!;
+            }
+          });
+          this.dom.description.textContent = button.dataset.description!;
+          this.dom.count.textContent = button.dataset.count!;
+          this.dom.last.textContent = button.dataset.lastPublishOrUpdate!;
+          const swup: any = (window as any).swup;
           if (swup) {
             swup.preloadPages()
           }
