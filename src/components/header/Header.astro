@@ -6,14 +6,14 @@ import HeaderCategories from "./HeaderCategories.astro";
 <div class="header">
   <header-search>
     <header class='header__container'>
-      <h1 class='header__title '>
-        <a href="/"><button class="header__title__button">Olis.tech</button></a>
+      <h1 class='title'>
+        <a href="/"><button class="title__button">Olis.tech</button></a>
       </h1>
-      <div class='header__search'>
-        <label class="header__search__label">
-          <input type="text" placeholder="Wie zentriere ich eine div?" class="header__search__input border shadow shadow--hover" />
+      <div class='search'>
+        <label class="search__label">
+          <input type="text" placeholder="Wie zentriere ich eine div?" class="search__input border shadow shadow--hover" />
         </label>
-        <button class="header__search__button border shadow shadow--hover">Suchen</button>
+        <button class="search__button border shadow shadow--hover">Suchen</button>
       </div>
     </header>
   </header-search>
@@ -32,74 +32,80 @@ import HeaderCategories from "./HeaderCategories.astro";
 </script>
 <style>
   .header {
-    background: var(--color-secondary);
     position: relative;
-    padding: 60px 0 40px 0;
+    padding: 60px 0 40px;
+    background: var(--color-secondary);
   }
 
   .header__container {
     display: grid;
     grid-template-columns: 1fr auto;
+    gap: 18px;
+
     max-width: var(--container-max-width);
     margin: 0 auto;
-    gap: 18px;
     padding: 0 6px;
   }
 
-  .header__title {
+  .title {
     margin-right: auto;
   }
 
-  .header__title__button {
-    font-size: 6rem;
-    background: none;
-    border: none;
+  .title__button {
     cursor: pointer;
+
+    font-family: var(--font-family-hightlight);
+    font-size: 6rem;
     color: var(--color-quaternary);
     text-shadow: var(--shadow-size) var(--shadow-size) var(--color-black);
-    font-family: var(--font-family-hightlight);
+
+    background: none;
+    border: none;
 
     transition: transform var(--animation-duration) var(--animation-easing),
     text-shadow var(--animation-duration) var(--animation-easing);
   }
 
-  .header__title__button:hover {
-    text-shadow: 0 1px var(--color-black), 1px 0 var(--color-black), -1px 0 var(--color-black), 0 -1px var(--color-black);
+  .title__button:hover {
     transform: translate(var(--shadow-size), var(--shadow-size));
+    text-shadow: 0 1px var(--color-black), 1px 0 var(--color-black), -1px 0 var(--color-black), 0 -1px var(--color-black);
   }
 
-  .header__search {
+  .search {
     display: flex;
     gap: 18px;
     align-items: center;
+
     height: 60%;
     padding-top: 5%;
   }
 
-  .header__search__label {
+  .search__label {
     height: 100%;
   }
 
-  .header__search__input, .header__search__button {
+  .search__input, .search__button {
     height: 100%;
-    font-size: 30px;
-    background: var(--color-white);
-    color: var(--color-black);
     padding: 0 24px 0 28px;
+
+    font-size: 30px;
+    color: var(--color-black);
+
+    background: var(--color-white);
     border-radius: var(--border-radius);
   }
 
-  .header__search__input {
-    box-sizing: border-box;
+  .search__input {
     flex: 1;
+    box-sizing: border-box;
     padding-right: 18px;
   }
 
-  .header__search__input:focus {
+  .search__input:focus {
     outline: none;
   }
 
-  .header__search__button {
+  .search__button {
     cursor: pointer;
   }
 </style>

@@ -42,7 +42,7 @@ export const categories: CategoryData[] = [
 		collection: "sonstiges",
 		description: "Sonstiges",
 		image: "https://via.placeholder.com/150",
-	}
+	},
 ];
 
 export const categorySchema = z.object({

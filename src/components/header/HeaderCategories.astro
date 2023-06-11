@@ -7,7 +7,7 @@ import {categories} from "../../content/_categories";
       <div class="sidebar">
         <h2 class="sidebar__title">Kategorien</h2>
         {categories.map((category) => (
-            <button class="sidebar_button border shadow shadow--hover">
+            <button class="sidebar__button border shadow shadow--hover">
               {category.title}
             </button>))}
       </div>
@@ -31,34 +31,35 @@ import {categories} from "../../content/_categories";
 </script>
 <style>
   .background {
-    padding: 48px 0 40px 0;
+    padding: 48px 0 40px;
     background-color: var(--color-senary);
   }
 
   .container {
-    max-width: var(--container-max-width);
-    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
   }
 
   .sidebar {
-    padding: 26px 0;
     max-width: 400px;
+    padding: 26px 0;
   }
 
   .sidebar__title {
-    margin: 0 0 50px 0;
-    line-height: 0;
+    margin: 0 0 50px;
+
     font-size: 3rem;
     font-weight: 500;
+    line-height: 0;
     color: var(--color-white);
   }
 
-  .sidebar_button {
+  .sidebar__button {
     cursor: pointer;
-    padding: 10px 20px;
     margin: 6px 24px 6px 0;
+    padding: 10px 20px;
     border-radius: var(--border-radius);
   }
 

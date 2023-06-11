@@ -6,18 +6,24 @@ const { color } = Astro.props
     position: relative;
     width: 100%;
   }
+
   .separator::before, .separator::after {
-    bottom: -16px;
     content: "";
-    height: 16px;
+
     position: absolute;
+    bottom: -16px;
+
     width: 100%;
+    height: 16px;
   }
+
   .separator::before {
-    mask: url('/images/layout/wave.svg');
-    -webkit-mask: url('/images/layout/wave.svg');
     background-color: var(--color);
+    /* stylelint-disable-next-line property-no-vendor-prefix */
+    -webkit-mask: url('/images/layout/wave.svg');
+    mask: url('/images/layout/wave.svg');
   }
+
   .separator::after {
     background: transparent url('/images/layout/wave-border.svg') 0 repeat-x;
   }

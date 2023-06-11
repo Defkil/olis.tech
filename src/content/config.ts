@@ -1,5 +1,6 @@
 import { z, defineCollection } from "astro:content";
 import { categories } from "./_categories";
+import type { CollectionConfig } from "astro/dist/content/utils";
 
 const collectionSchemaDefault = z.object({
 	title: z.string(),
@@ -10,7 +11,7 @@ const collectionSchemaDefault = z.object({
 });
 
 export const collections: {
-	[key: string]: any;
+	[key: string]: CollectionConfig;
 } = {};
 
 for (const category of categories) {
