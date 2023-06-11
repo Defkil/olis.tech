@@ -11,5 +11,5 @@ import solidJs from "@astrojs/solid-js";
 export default defineConfig({
   site: 'https://olis.tech',
   output: 'static',
-  integrations: [compress(), prefetch(), sitemap(), rome(), critters(), compressor(), solidJs()]
+  integrations: [compress(), prefetch(), sitemap(), rome(), critters(), solidJs(), compressor()]
 });
