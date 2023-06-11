@@ -1,29 +1,119 @@
 ---
+import {getCollection} from "astro:content";
 import {categories} from "../../content/_categories";
+import {getCollection} from "astro:content";
+
+const categoriesData: {
+  title: string, description: string, count: number, lastPublishOrUpdate: string, link: string, lastPosts: {
+    title: string, link: string, img?: string
+  }[]
+}[] = []
+for (const category of categories) {
+  const unsortedCategoryEntries = await getCollection(category.collection as any);
+  const categoryEntries = unsortedCategoryEntries.sort((a, b) => {
+    if (a.data.publishDate > b.data.publishDate) {
+      return -1;
+    }
+    if (a.data.publishDate < b.data.publishDate) {
+      return 1;
+    }
+    return 0;
+  });
+
+  let lastPublishOrUpdate = categoryEntries[0].data.publishDate;
+  for (const article of categoryEntries) {
+    if (article.data.publishDate > lastPublishOrUpdate) {
+      lastPublishOrUpdate = article.data.publishDate;
+    }
+    if (article.data.updateDate > lastPublishOrUpdate) {
+      lastPublishOrUpdate = article.data.updateDate;
+    }
+  }
+
+  categoriesData.push({
+    title: category.title,
+    description: category.description,
+    count: categoryEntries.length,
+    lastPublishOrUpdate: lastPublishOrUpdate.toLocaleString('de-DE', {
+      year: 'numeric', month: 'numeric', day: 'numeric'
+    }),
+    lastPosts: categoryEntries.slice(0, 3).map((article) => ({
+      title: article.data.title,
+      link: '/' + category.collection + '/' + article['slug'],
+      img: article.data.image,
+    })),
+    link: '/' + category.collection
+  })
+}
 ---
 <div class="background">
   <header-categories>
     <div class="container">
       <div class="sidebar">
         <h2 class="sidebar__title">Kategorien</h2>
-        {categories.map((category) => (
-            <button class="sidebar__button border shadow shadow--hover">
+        {categoriesData.map((category) => (
+            <button
+                class="sidebar__button border shadow shadow--hover js--category-button"
+                data-link={category.link}
+                data-description={category.description}
+                data-count={category.count}
+                data-last-publish-or-update={category.lastPublishOrUpdate}
+                data-last-posts={category.lastPosts}>
               {category.title}
             </button>))}
       </div>
       <div class="info border shadow">
-        <h2 class="info__title">{categories[0].title}</h2>
-        <h2 class="info__description">{categories[0].description}</h2>
+        <h2 class="info__title js--title">{categoriesData[0].title}</h2>
+        <p class="info__description js--description">{categoriesData[0].description}</p>
+        <div class="info__details">
+          <span>Anzahl Artikel: <span class="js--details__count">{categoriesData[0].count}</span></span>
+          <span>Letzte Änderung: <span class="js--details__last">{categoriesData[0].lastPublishOrUpdate}</span></span>
+        </div>
       </div>
-      <div class="latest">
+      <div class="posts">
+        {categoriesData[0].lastPosts.map((post) => (
+            <a href={post.link} rel="prefetch">
+              <div class="post border shadow shadow--hover">
+                <img class="post__image" src={post.img} alt={post.title}/>
+                <div class="post__title">{post.title}</div>
+              </div>
+            </a>))}
+        <a class="js--link" href={categoriesData[0].link} rel="prefetch">
+          <div class="post post--small border shadow shadow--hover">
+            <div class="post__title post__title--small-centered-text">
+              Alle Artikel aus <span class="js--title">{categoriesData[0].title}</span> anzeigen
+            </div>
+          </div>
+        </a>
       </div>
     </div>
   </header-categories>
 </div>
 <script>
   class HeaderCategories extends HTMLElement {
-    constructor() {
-      super();
+    dom = {
+      title: this.querySelectorAll('.js--title'),
+      link: this.querySelectorAll('.js--link'),
+      description: this.querySelector('.js--description'),
+      count: this.querySelector('.js--details__count'),
+      last: this.querySelector('.js--details__last')
+    }
+
+    connectedCallback() {
+      this.registerButtons();
+    }
+
+    registerButtons() {
+      const buttons = this.querySelectorAll('.js--category-button');
+      buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+          this.dom.title.forEach((title) => title.textContent = button.textContent);
+          this.dom.link.forEach((link) => link['href'] = button['dataset'].link);
+          this.dom.description.textContent = button['dataset'].description;
+          this.dom.count.textContent = button['dataset'].count;
+          this.dom.last.textContent = button['dataset'].lastPublishOrUpdate;
+        })
+      })
     }
   }
 
@@ -31,30 +121,35 @@ import {categories} from "../../content/_categories";
 </script>
 <style>
   .background {
+    min-height: 280px;
     padding: 48px 0 40px;
     background-color: var(--color-senary);
   }
 
   .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    gap: 24px;
     max-width: var(--container-max-width);
     margin: 0 auto;
   }
 
   .sidebar {
-    max-width: 400px;
+    width: 100%;
+    max-width: 340px;
     padding: 26px 0;
   }
 
   .sidebar__title {
-    margin: 0 0 50px;
+    margin: 16px 0 42px;
 
+    font-family: var(--font-family-hightlight);
     font-size: 3rem;
     font-weight: 500;
     line-height: 0;
     color: var(--color-white);
   }
+
+  /* todo active button with a star */
 
   .sidebar__button {
     cursor: pointer;
@@ -63,11 +158,83 @@ import {categories} from "../../content/_categories";
     border-radius: var(--border-radius);
   }
 
-  /* todo active button with a star */
-
   .info {
+    display: flex;
+    flex-direction: column;
+
     width: 100%;
     height: 100%;
+
     background: blue;
+  }
+
+  .info__title, .info__description, .info__details {
+    padding: 0 26px;
+    color: var(--color-white);
+  }
+
+  .info__title {
+    font-family: var(--font-family-hightlight);
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 0;
+  }
+
+  .info__description {
+    font-weight: 300;
+  }
+
+  .info__details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: auto;
+    padding-bottom: 24px;
+  }
+
+  .posts {
+    flex-grow: 1;
+    width: 100%;
+  }
+
+  .posts a {
+    text-decoration: none;
+  }
+
+  .post {
+    display: flex;
+
+    width: 100%;
+    height: 80px;
+    margin-bottom: 16px;
+
+    background: var(--color-tertiary);
+    border-radius: var(--border-radius);
+  }
+
+  .post--small {
+    display: grid;
+  }
+
+  .post__image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+  }
+
+  .post__title {
+    margin: auto 0;
+    padding: 0 26px;
+
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--color-white);
+  }
+
+  .post__title--small-centered-text {
+    font-size: 1.25rem;
+    text-align: center;
   }
 </style>
