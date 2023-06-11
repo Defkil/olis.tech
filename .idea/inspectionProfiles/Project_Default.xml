@@ -12,7 +12,8 @@
             <item index="4" class="java.lang.String" itemvalue="embed" />
             <item index="5" class="java.lang.String" itemvalue="script" />
             <item index="6" class="java.lang.String" itemvalue="categories-tab" />
-            <item index="8" class="java.lang.String" itemvalue="header-search" />
+            <item index="7" class="java.lang.String" itemvalue="header-search" />
+            <item index="8" class="java.lang.String" itemvalue="header-categories" />
           </list>
         </value>
       </option>
