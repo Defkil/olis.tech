@@ -39,6 +39,12 @@ devDependencies:
   '@namics/stylelint-bem':
     specifier: ^8.1.0
     version: 8.1.0(stylelint@15.7.0)
+  '@swup/head-plugin':
+    specifier: ^1.3.0
+    version: 1.3.0
+  '@swup/slide-theme':
+    specifier: ^1.0.5
+    version: 1.0.5
   postcss-html:
     specifier: ^1.5.0
     version: 1.5.0
@@ -57,6 +63,9 @@ devDependencies:
   stylelint-config-standard:
     specifier: ^33.0.0
     version: 33.0.0(stylelint@15.7.0)
+  swup:
+    specifier: ^3.0.8
+    version: 3.0.8
 
 packages:
 
@@ -825,6 +834,26 @@ packages:
   /@rometools/wasm-nodejs@12.1.3:
     resolution: {integrity: sha512-qdrqjBxJcOMmkGq7mSdGYjxqEJ2TNbITIRl4gCGm1K2zv1qzEu57QjfHOL6NyRMlfhA1yxbda/NY48WsBxr6ZQ==}
     dev: false
+
+  /@swup/head-plugin@1.3.0:
+    resolution: {integrity: sha512-vKx+Bz9aDWu6ionZ3xvUoaKFJJyn4pJziw1EEXmfagBqWH+b/GN/es7LzKuLOLq8XTsgdmDaRjr0KCTy3mVuyg==}
+    dependencies:
+      '@swup/plugin': 1.0.1
+    dev: true
+
+  /@swup/plugin@1.0.1:
+    resolution: {integrity: sha512-QrTGn1DLx+50CNsk6oGzUFnyNyLkDK6iLb032qKImmAXS+0Dd1cwa8cSGvJ+I27J4qR8y6oJNurgHIEc6ZCTrg==}
+    dev: true
+
+  /@swup/slide-theme@1.0.5:
+    resolution: {integrity: sha512-0xxqtURSMDScjLMRdNjtxzo8NGCPcmp6VXrQcxIQzQDSAvwNnP8Zw871C+FSL1EMe8OhAzWAP3E3x9vzH+iLHg==}
+    dependencies:
+      '@swup/theme': 1.0.7
+    dev: true
+
+  /@swup/theme@1.0.7:
+    resolution: {integrity: sha512-OINEaf34fYs90l7/YUUKfOf+paY7/FDhOBLwYxrD0w1OjBiItZpw3N+ATA/QklJwmoUu3KkDFOaQG0zT4KxmmA==}
+    dev: true
 
   /@trysound/sax@0.2.0:
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}
@@ -1682,6 +1711,12 @@ packages:
     resolution: {integrity: sha512-N+MeXYoqr3pOgn8xfyRPREN7gHakLYjhsHhWGT3fWAiL4IkAt0iDw14QiiEm2bE30c5XX5q0FtAA3CK5f9/BUg==}
     engines: {node: '>=12'}
     dev: false
+
+  /delegate-it@6.0.1:
+    resolution: {integrity: sha512-ZS2hRm/SaoPzaeWcWyYjzVVF4/PgALZqma9FXsunFt4XQGVAtQ79Vx7v57vNQNaI75Rl12C+x6TkLqHS5PNKLg==}
+    dependencies:
+      typed-query-selector: 2.10.1
+    dev: true
 
   /dequal@2.0.3:
     resolution: {integrity: sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA==}
@@ -3161,6 +3196,11 @@ packages:
       is-wsl: 2.2.0
     dev: false
 
+  /opencollective-postinstall@2.0.3:
+    resolution: {integrity: sha512-8AV/sCtuzUeTo8gQK5qDZzARrulB3egtLzFgteqB2tcT4Mw7B8Kt7JcDHmltjz6FOAHsvTevk70gZEbhM4ZS9Q==}
+    hasBin: true
+    dev: true
+
   /ora@6.3.1:
     resolution: {integrity: sha512-ERAyNnZOfqM+Ao3RAvIXkYh5joP220yf59gVe2X/cI6SiCxIdi4c9HZKZD8R6q/RDXEje1THBju6iExiSsgJaQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
@@ -4145,6 +4185,14 @@ packages:
       picocolors: 1.0.0
     dev: false
 
+  /swup@3.0.8:
+    resolution: {integrity: sha512-9ryeG1j+9iEFzvWp0MIBYNB+At6rOwVJrkBMJuzpaepqkblt6B/HEBZAYe3gXq9rFMzIEkGO9cCI8ygvaqNJiw==}
+    requiresBuild: true
+    dependencies:
+      delegate-it: 6.0.1
+      opencollective-postinstall: 2.0.3
+    dev: true
+
   /synckit@0.8.5:
     resolution: {integrity: sha512-L1dapNV6vu2s/4Sputv8xGsCdAVlb5nRDMFU/E27D44l5U6cw1g0dGd45uLc+OXjNMmF4ntiMdCimzcjFKQI8Q==}
     engines: {node: ^14.18.0 || >=16.0.0}
@@ -4274,6 +4322,10 @@ packages:
     resolution: {integrity: sha512-RAH822pAdBgcNMAfWnCBU3CFZcfZ/i1eZjwFU/dsLKumyuuP3niueg2UAukXYF0E2AAoc82ZSSf9J0WQBinzHA==}
     engines: {node: '>=12.20'}
     dev: false
+
+  /typed-query-selector@2.10.1:
+    resolution: {integrity: sha512-VyNeetDghQngbLWOVyxUFB95nZF3z3QIrvdsWmuDwwYbePEup9hjZbNT1IK5YP3t8LqicnYNnDpQPW3vq7iCTQ==}
+    dev: true
 
   /typescript@5.1.3:
     resolution: {integrity: sha512-XH627E9vkeqhlZFQuL+UsyAXEnibT0kWR2FWONlr4sTjvxyJYnyefgrkyECLzM5NenmKzRAy2rR/OlYLA1HkZw==}

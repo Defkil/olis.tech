@@ -26,11 +26,14 @@
   },
   "devDependencies": {
     "@namics/stylelint-bem": "^8.1.0",
+    "@swup/head-plugin": "^1.3.0",
+    "@swup/slide-theme": "^1.0.5",
     "postcss-html": "^1.5.0",
     "rome": "12.1.3",
     "stylelint": "^15.7.0",
     "stylelint-config-clean-order": "^5.0.1",
     "stylelint-config-html": "^1.1.0",
-    "stylelint-config-standard": "^33.0.0"
+    "stylelint-config-standard": "^33.0.0",
+    "swup": "^3.0.8"
   }
 }

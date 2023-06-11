@@ -10,8 +10,19 @@ const { title, description } = Astro.props
 </head>
 <body>
 <Header/>
-<main>
+<main id="swup">
   <slot />
 </main>
+<script>
+  import Swup from 'swup'
+  import SwupHeadPlugin from '@swup/head-plugin'
+  import SwupSlideTheme from '@swup/slide-theme'
+
+  const swup = new Swup({
+    plugins: [new SwupHeadPlugin(), new SwupSlideTheme({
+      reversed: false,
+    })],
+  })
+</script>
 </body>
 </html>
