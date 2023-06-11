@@ -72,13 +72,13 @@ for (const category of categories) {
       </div>
       <div class="posts">
         {categoriesData[0].lastPosts.map((post) => (
-            <a href={post.link} rel="prefetch">
+            <a href={post.link} data-swup-preload>
               <div class="post border shadow shadow--hover">
                 <img class="post__image" src={post.img} alt={post.title}/>
                 <div class="post__title">{post.title}</div>
               </div>
             </a>))}
-        <a class="js--link" href={categoriesData[0].link} rel="prefetch">
+        <a class="js--link" href={categoriesData[0].link} data-swup-preload>
           <div class="post post--small border shadow shadow--hover">
             <div class="post__title post__title--small-centered-text">
               Alle Artikel aus <span class="js--title">{categoriesData[0].title}</span> anzeigen
@@ -112,6 +112,10 @@ for (const category of categories) {
           this.dom.description.textContent = button['dataset'].description;
           this.dom.count.textContent = button['dataset'].count;
           this.dom.last.textContent = button['dataset'].lastPublishOrUpdate;
+          const swup = window['swup']
+          if (swup) {
+            swup.preloadPages()
+          }
         })
       })
     }
