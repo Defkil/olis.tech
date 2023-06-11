@@ -1,6 +1,7 @@
 ---
 import Header from "../components/header/Header.astro";
 import Head from "./components/Head.astro";
+
 const { title, description } = Astro.props
 ---
 
@@ -15,14 +16,17 @@ const { title, description } = Astro.props
 </main>
 <script>
   import Swup from 'swup'
+  // @ts-expect-error
   import SwupHeadPlugin from '@swup/head-plugin'
+  // @ts-expect-error
   import SwupSlideTheme from '@swup/slide-theme'
+  // @ts-expect-error
   import SwupPreloadPlugin from '@swup/preload-plugin';
 
-  window['swup'] = new Swup({
+  (window as any)['swup'] = new Swup({
     plugins: [
-      new SwupHeadPlugin(),
       new SwupPreloadPlugin(),
+      new SwupHeadPlugin(),
       new SwupSlideTheme({ reversed: false })
     ],
   })
