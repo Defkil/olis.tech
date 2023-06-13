@@ -2,6 +2,8 @@
 import WaveSeparator from "../WaveSeparator.astro";
 import {styles} from "../../const/styles";
 import HeaderCategories from "./HeaderCategories.astro";
+
+const { category } = Astro.props
 ---
 <div class="header">
   <header-search>
@@ -20,7 +22,7 @@ import HeaderCategories from "./HeaderCategories.astro";
 </div>
 <div class="header__categories">
   <WaveSeparator color={styles["color-secondary"]} />
-  <HeaderCategories />
+  <HeaderCategories selectedCategory={category} />
   <WaveSeparator color={styles["color-senary"]} />
 </div>
 <script>

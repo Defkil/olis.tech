@@ -25,7 +25,7 @@ const {category} = Astro.props;
 const {title, description} = getCategoryData(category)
 ---
 
-<BaseLayout title={'Olis.tech - Kategorie ' + title} description={description}>
+<BaseLayout title={'Olis.tech - Kategorie ' + title} description={description} category={category}>
   <h1>{title}</h1>
   <!-- todo show description and posts -->
 </BaseLayout>
