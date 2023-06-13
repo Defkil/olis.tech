@@ -8,3 +8,5 @@ export const styles = {
   "color-quinary": "#FFFF00",
   "color-senary": "#FF4911",
 };
+
+export const WaveSeparatorColors = [styles["color-secondary"], styles["color-senary"]];

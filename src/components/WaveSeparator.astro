@@ -1,32 +1,27 @@
 ---
+import {WaveSeparatorColors} from "../const/styles";
 const { color } = Astro.props
+
+if (!WaveSeparatorColors.includes(color)) {
+  throw new Error(`Invalid color prop: ${color}`)
+}
+
+const colorName = color.replace('#', '')
 ---
-<style define:vars={{color}}>
+<style>
   .separator {
     position: relative;
     width: 100%;
-  }
-
-  .separator::before, .separator::after {
-    content: "";
-
-    position: absolute;
-    bottom: -16px;
-
-    width: 100%;
     height: 16px;
+    margin-bottom: -16px;
   }
 
-  .separator::before {
-    background-color: var(--color);
-    /* stylelint-disable-next-line property-no-vendor-prefix */
-    -webkit-mask: url('/images/layout/wave.svg');
-    mask: url('/images/layout/wave.svg');
-  }
-
-  .separator::after {
-    background: transparent url('/images/layout/wave-border.svg') 0 repeat-x;
+  .hidden-pattern {
+    display: none;
   }
 </style>
 <div class="separator">
+  <svg width="100%" height="16px">
+    <use href={'#separator-' + colorName} />
+  </svg>
 </div>

@@ -1,8 +1,9 @@
 ---
 import Header from "../components/header/Header.astro";
 import Head from "./components/Head.astro";
+import PreloadSvg from "./components/PreloadSvg.astro";
 
-const { title, description } = Astro.props
+const { title, description, category } = Astro.props
 ---
 
 <html lang="de">
@@ -10,7 +11,8 @@ const { title, description } = Astro.props
   <Head title={title} description={description} />
 </head>
 <body>
-<Header/>
+<PreloadSvg />
+<Header category={category} />
 <main id="swup">
   <slot />
 </main>
