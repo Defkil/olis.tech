@@ -10,7 +10,7 @@ const categoriesData: {
   lastPublishOrUpdate: string,
   link: string,
   lastPosts: {
-    title: string, link: string, image?: string
+    title: string, link: string
   }[]
 }[] = []
 
@@ -45,7 +45,7 @@ for (const category of categories) {
       year: 'numeric', month: 'numeric', day: 'numeric'
     }),
     lastPosts: categoryEntries.slice(0, 3).map((article) => ({
-      title: article.data.title, link: '/' + category.collection + '/' + article['slug'], image: article.data.image,
+      title: article.data.title, link: '/' + category.collection + '/' + article['slug'],
     })),
     link: '/' + category.collection,
   })
@@ -86,14 +86,13 @@ if (selectedCategory) {
       <div class="posts">
         {initialCategory.lastPosts.map((post) => (<a href={post.link} data-swup-preload>
           <div class="post border shadow shadow--hover">
-            {post.image && <img class="post__image" src={post.image} alt={post.title}/>}
             <div class="post__title">{post.title}</div>
           </div>
         </a>))}
         <a class="js--link" href={initialCategory.link} data-swup-preload>
           <div class="post post--small border shadow shadow--hover">
             <div class="post__title post__title--small-centered-text">
-              Alle Artikel aus <span class="js--title">{initialCategory.title}</span> anzeigen
+              Alles aus <span class="js--title">{initialCategory.title}</span> anzeigen
             </div>
           </div>
         </a>
@@ -122,7 +121,7 @@ if (selectedCategory) {
           this.dom.title.forEach((title) => {
             title.textContent = button.textContent
             if (title.classList.contains('info__title')){
-              if (title.textContent.trim().length > 12) {
+              if (title.textContent!.trim().length > 12) {
                 title.classList.add('info__title--small')
               } else {
                 title.classList.remove('info__title--small')
