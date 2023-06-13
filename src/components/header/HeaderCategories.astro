@@ -74,8 +74,9 @@ if (selectedCategory) {
             {category.title}
           </button>))}
       </div>
-      <div class="info border shadow">
-        <h2 class="info__title js--title">{initialCategory.title}</h2>
+      <div class="info">
+        <h2 class="info__title js--title" class:list={[{'info__title--small': initialCategory.title.length > 12}]}>
+          {initialCategory.title}</h2>
         <p class="info__description js--description">{initialCategory.description}</p>
         <div class="info__details">
           <span><span class="js--details__count">{initialCategory.count}</span> Artikel</span>
@@ -118,7 +119,16 @@ if (selectedCategory) {
       const buttons: NodeListOf<HTMLElement> = this.querySelectorAll('.js--category-button');
       buttons.forEach((button) => {
         button.addEventListener('click', () => {
-          this.dom.title.forEach((title) => title.textContent = button.textContent);
+          this.dom.title.forEach((title) => {
+            title.textContent = button.textContent
+            if (title.classList.contains('info__title')){
+              if (title.textContent.trim().length > 12) {
+                title.classList.add('info__title--small')
+              } else {
+                title.classList.remove('info__title--small')
+              }
+            }
+          });
           this.dom.link.forEach((link) => {
             if (link instanceof HTMLAnchorElement) {
               link.href = button.dataset.link!;
