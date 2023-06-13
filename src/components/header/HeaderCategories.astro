@@ -3,10 +3,17 @@ import {getCollection} from "astro:content";
 import {categories} from "../../content/_categories";
 
 const categoriesData: {
-  title: string, description: string, count: number, lastPublishOrUpdate: string, link: string, lastPosts: {
-    title: string, link: string, img?: string
+  title: string,
+  collection: string,
+  description: string,
+  count: number,
+  lastPublishOrUpdate: string,
+  link: string,
+  lastPosts: {
+    title: string, link: string, image?: string
   }[]
 }[] = []
+
 for (const category of categories) {
   const unsortedCategoryEntries = await getCollection(category.collection as any);
   const categoryEntries = unsortedCategoryEntries.sort((a, b) => {
@@ -31,21 +38,25 @@ for (const category of categories) {
 
   categoriesData.push({
     title: category.title,
+    collection: category.collection,
     description: category.description,
     count: categoryEntries.length,
     lastPublishOrUpdate: lastPublishOrUpdate.toLocaleString('de-DE', {
       year: 'numeric', month: 'numeric', day: 'numeric'
     }),
     lastPosts: categoryEntries.slice(0, 3).map((article) => ({
-      title: article.data.title,
-      link: '/' + category.collection + '/' + article['slug'],
-      img: article.data.image,
+      title: article.data.title, link: '/' + category.collection + '/' + article['slug'], image: article.data.image,
     })),
-    link: '/' + category.collection
+    link: '/' + category.collection,
   })
 }
 
-const initialCategory = categoriesData[0]!;
+const {selectedCategory} = Astro.props
+
+let initialCategory = categoriesData[0]!;
+if (selectedCategory) {
+  initialCategory = categoriesData.find((category) => category.collection === selectedCategory)!;
+}
 ---
 <div class="background">
   <header-categories>
@@ -67,18 +78,17 @@ const initialCategory = categoriesData[0]!;
         <h2 class="info__title js--title">{initialCategory.title}</h2>
         <p class="info__description js--description">{initialCategory.description}</p>
         <div class="info__details">
-          <span>Anzahl Artikel: <span class="js--details__count">{initialCategory.count}</span></span>
-          <span>Letzte Änderung: <span class="js--details__last">{initialCategory.lastPublishOrUpdate}</span></span>
+          <span><span class="js--details__count">{initialCategory.count}</span> Artikel</span>
+          <span>Letzte Änderung am <span class="js--details__last">{initialCategory.lastPublishOrUpdate}</span></span>
         </div>
       </div>
       <div class="posts">
-        {initialCategory.lastPosts.map((post) => (
-          <a href={post.link} data-swup-preload>
-            <div class="post border shadow shadow--hover">
-              <img class="post__image" src={post.img} alt={post.title}/>
-              <div class="post__title">{post.title}</div>
-            </div>
-          </a>))}
+        {initialCategory.lastPosts.map((post) => (<a href={post.link} data-swup-preload>
+          <div class="post border shadow shadow--hover">
+            {post.image && <img class="post__image" src={post.image} alt={post.title}/>}
+            <div class="post__title">{post.title}</div>
+          </div>
+        </a>))}
         <a class="js--link" href={initialCategory.link} data-swup-preload>
           <div class="post post--small border shadow shadow--hover">
             <div class="post__title post__title--small-centered-text">
@@ -118,6 +128,7 @@ const initialCategory = categoriesData[0]!;
           this.dom.count.textContent = button.dataset.count!;
           this.dom.last.textContent = button.dataset.lastPublishOrUpdate!;
           const swup: any = (window as any).swup;
+          //todo update last posts
           if (swup) {
             swup.preloadPages()
           }
