@@ -9,5 +9,5 @@ import compressor from 'astro-compressor';
 export default defineConfig({
   site: 'https://olis.tech',
   output: 'static',
-  integrations: [compress(), sitemap(), rome(), critters(), compressor()]
+  integrations: [sitemap(), rome(), critters(), compressor(), compress()]
 });
