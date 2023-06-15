@@ -2,7 +2,7 @@
 import WaveSeparator from "../WaveSeparator.astro";
 import {styles} from "../../const/styles";
 import HeaderCategories from "./HeaderCategories.astro";
-import './Header.css'
+import './Header.scss'
 const {category} = Astro.props
 ---
 <div class="header">
@@ -15,7 +15,7 @@ const {category} = Astro.props
     <div class='search'>
       <header-search>
         <label class="search__label">
-          <input type="text" placeholder="Wie zentriere ich eine div?" class="search__input border shadow shadow--hover js--search-input"/>
+          <input type="text" placeholder="Seite durchsuchen" class="search__input border shadow shadow--hover js--search-input"/>
         </label>
       </header-search>
     </div>
@@ -42,6 +42,5 @@ const {category} = Astro.props
     }
   }
 
-  // window.dispatchEvent(new KeyboardEvent('keydown', { 'key': 'k', ctrlKey: true, }));
   customElements.define('header-search', HeaderSearch);
 </script>
