@@ -1,0 +1,29 @@
+<algolia-search>
+  <div id="docsearch" class="docsearch"></div>
+</algolia-search>
+<script>
+  import docsearch from '@docsearch/js';
+
+  class AlgoliaSearch extends HTMLElement {
+    connectedCallback() {
+      docsearch({
+        container: '#docsearch', appId: 'YOUR_APP_ID', indexName: 'YOUR_INDEX_NAME', apiKey: 'YOUR_SEARCH_API_KEY',
+      });
+    }
+  }
+
+  customElements.define('algolia-search', AlgoliaSearch);
+</script>
+<style is:global>
+  @import url('/node_modules/@docsearch/css');
+
+  /* stylelint-disable selector-class-pattern */
+  body .DocSearch-Help {
+    color: red;
+  }
+</style>
+<style>
+  .docsearch {
+    display: none;
+  }
+</style>

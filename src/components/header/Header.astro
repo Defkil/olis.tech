@@ -3,35 +3,45 @@ import WaveSeparator from "../WaveSeparator.astro";
 import {styles} from "../../const/styles";
 import HeaderCategories from "./HeaderCategories.astro";
 import './Header.css'
-
-const { category } = Astro.props
+const {category} = Astro.props
 ---
 <div class="header">
-  <header-search>
-    <header class='header__container'>
-      <h1 class='title'>
-        <a href="/" data-swup-preload><button class="title__button">Olis.tech</button></a>
-      </h1>
-      <div class='search'>
+  <header class='header__container'>
+    <h1 class='title'>
+      <a href="/" data-swup-preload>
+        <button class="title__button">Olis.tech</button>
+      </a>
+    </h1>
+    <div class='search'>
+      <header-search>
         <label class="search__label">
-          <input type="text" placeholder="Wie zentriere ich eine div?" class="search__input border shadow shadow--hover" />
+          <input type="text" placeholder="Wie zentriere ich eine div?" class="search__input border shadow shadow--hover js--search-input"/>
         </label>
-        <button class="search__button border shadow shadow--hover">Suchen</button>
-      </div>
-    </header>
-  </header-search>
+      </header-search>
+    </div>
+  </header>
 </div>
 <div class="header__categories">
-  <WaveSeparator color={styles["color-secondary"]} />
-  <HeaderCategories selectedCategory={category} />
-  <WaveSeparator color={styles["color-senary"]} />
+  <WaveSeparator color={styles["color-secondary"]}/>
+  <HeaderCategories selectedCategory={category}/>
+  <WaveSeparator color={styles["color-senary"]}/>
 </div>
 <script>
   class HeaderSearch extends HTMLElement {
-    constructor() {
-      super();
+    dom = {
+      input: this.querySelector('.js--search-input') as HTMLInputElement
+    }
+    connectedCallback() {
+      this.dom.input.addEventListener('click', this.openSearch.bind(this))
+      this.dom.input.addEventListener('input', this.openSearch.bind(this))
+    }
+
+    openSearch() {
+      this.dom.input.value = ''
+      window.dispatchEvent(new KeyboardEvent('keydown', { 'key': 'k', ctrlKey: true, }));
     }
   }
 
+  // window.dispatchEvent(new KeyboardEvent('keydown', { 'key': 'k', ctrlKey: true, }));
   customElements.define('header-search', HeaderSearch);
 </script>
