@@ -32,7 +32,7 @@
         navigateDownKeyAriaLabel: 'Pfeil nach unten',
         closeText: 'Schließen',
         closeKeyAriaLabel: 'Escape-Taste',
-        searchByText: 'Suchen nach',
+        searchByText: 'Suche durch',
       },
       noResultsScreen: {
         noResultsText: 'Keine Ergebnisse für',
@@ -46,7 +46,7 @@
   class AlgoliaSearch extends HTMLElement {
     connectedCallback() {
       docsearch({
-        container: '#docsearch', appId: 'YOUR_APP_ID', indexName: 'YOUR_INDEX_NAME', apiKey: 'YOUR_SEARCH_API_KEY', translations
+        container: '#docsearch', appId: 'YOUR_APP_ID', indexName: 'YOUR_INDEX_NAME', apiKey: 'YOUR_SEARCH_API_KEY', translations, placeholder: 'Olis.tech durchsuchen'
       });
     }
   }
@@ -57,19 +57,13 @@
   @import url('/node_modules/@docsearch/css');
 
   /* stylelint-disable selector-class-pattern */
-  body .DocSearch-Help {
-    color: red;
-  }
-
   body .DocSearch-Modal {
     max-width: 600px;
-
     background: var(--color-quinary);
-    border: var(--border-size) solid #000;
-    box-shadow: var(--shadow-size) var(--shadow-size) 0 0 #000;
+  }
 
-    transition: transform var(--animation-duration) var(--animation-easing),
-    box-shadow var(--animation-duration) var(--animation-easing);
+  body .DocSearch-Logo {
+    margin-top: -2px;
   }
 
   body .DocSearch-Footer {
@@ -79,24 +73,53 @@
 
   body .DocSearch-Commands li, body .DocSearch-Logo {
     padding: 6px 12px;
+    font-weight: bold;
     border: var(--border-size) solid #000;
     border-radius: var(--border-radius);
   }
 
-  body .DocSearch-Logo {
-    margin-top: -2px;
+  body .DocSearch-Form {
+    background: var(--color-quaternary);
+  }
+
+  body .DocSearch-Help {
+    font-size: 18px;
+    font-family: var(--font-family-hightlight);
+  }
+
+  body .DocSearch-Modal,
+  body .DocSearch-Form,
+  body .DocSearch-Logo,
+  body .DocSearch-Hit a {
+    border: var(--border-size) solid #000;
     box-shadow: var(--shadow-size) var(--shadow-size) 0 0 #000;
     transition: transform var(--animation-duration) var(--animation-easing),
     box-shadow var(--animation-duration) var(--animation-easing);
   }
 
-  body .DocSearch-Logo:hover {
+  body .DocSearch-Logo:hover,
+  body .DocSearch-Form:hover,
+  body .DocSearch-Hit a:hover {
     transform: translate(var(--shadow-size), var(--shadow-size));
     box-shadow: 0 0 0 0 #000;
   }
 
-  body .DocSearch-Label {
+
+  body .DocSearch-Label,
+  body .DocSearch-Screen-Icon,
+  body .DocSearch-Help {
     color: var(--color-black);
+  }
+
+  body .DocSearch-MagnifierLabel,
+  body .DocSearch-Input,
+  body .DocSearch-Reset {
+    color: var(--color-white);
+    transition: color var(--animation-duration) var(--animation-easing);
+  }
+
+  body .DocSearch-Reset:hover {
+    color: rgba(255, 255, 255, 0.5);
   }
 </style>
 <style>
