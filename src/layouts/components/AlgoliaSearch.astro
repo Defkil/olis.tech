@@ -4,10 +4,49 @@
 <script>
   import docsearch from '@docsearch/js';
 
+  const translations = {
+    modal: {
+      searchBox: {
+        resetButtonTitle: 'Anfrage löschen',
+        resetButtonAriaLabel: 'Anfrage löschen',
+        cancelButtonText: 'Abbrechen',
+        cancelButtonAriaLabel: 'Abbrechen',
+      },
+      startScreen: {
+        recentSearchesTitle: 'Neueste',
+        noRecentSearchesText: 'Keine aktuellen Suchanfragen',
+        saveRecentSearchButtonTitle: 'Diese Suche speichern',
+        removeRecentSearchButtonTitle: 'Diese Suche aus dem Verlauf entfernen',
+        favoriteSearchesTitle: 'Favorit',
+        removeFavoriteSearchButtonTitle: 'Diese Suche aus den Favoriten entfernen',
+      },
+      errorScreen: {
+        titleText: 'Ergebnisse können nicht abgerufen werden',
+        helpText: 'Überprüfen Sie bitte Ihre Netzwerkverbindung.',
+      },
+      footer: {
+        selectText: 'Auswählen',
+        selectKeyAriaLabel: 'Eingabetaste',
+        navigateText: 'Navigieren',
+        navigateUpKeyAriaLabel: 'Pfeil nach oben',
+        navigateDownKeyAriaLabel: 'Pfeil nach unten',
+        closeText: 'Schließen',
+        closeKeyAriaLabel: 'Escape-Taste',
+        searchByText: 'Suchen nach',
+      },
+      noResultsScreen: {
+        noResultsText: 'Keine Ergebnisse für',
+        suggestedQueryText: 'Versuche zu suchen nach',
+        reportMissingResultsText: 'Glaubst du, dass die Ergebnisse fehlen?',
+        reportMissingResultsLinkText: 'Lasst es uns wissen',
+      },
+    },
+  };
+
   class AlgoliaSearch extends HTMLElement {
     connectedCallback() {
       docsearch({
-        container: '#docsearch', appId: 'YOUR_APP_ID', indexName: 'YOUR_INDEX_NAME', apiKey: 'YOUR_SEARCH_API_KEY'
+        container: '#docsearch', appId: 'YOUR_APP_ID', indexName: 'YOUR_INDEX_NAME', apiKey: 'YOUR_SEARCH_API_KEY', translations
       });
     }
   }
@@ -23,15 +62,19 @@
   }
 
   body .DocSearch-Modal {
+    max-width: 600px;
+
     background: var(--color-quinary);
     border: var(--border-size) solid #000;
     box-shadow: var(--shadow-size) var(--shadow-size) 0 0 #000;
+
     transition: transform var(--animation-duration) var(--animation-easing),
     box-shadow var(--animation-duration) var(--animation-easing);
   }
 
   body .DocSearch-Footer {
     background: var(--color-quinary);
+    box-shadow: none;
   }
 
   body .DocSearch-Commands li, body .DocSearch-Logo {
@@ -54,10 +97,6 @@
 
   body .DocSearch-Label {
     color: var(--color-black);
-  }
-
-  body .DocSearch-Footer {
-    box-shadow: none;
   }
 </style>
 <style>
