@@ -44,7 +44,7 @@
   cursor: pointer;
 
   font-family: var(--font-family-hightlight);
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 800;
   color: var(--color-quaternary);
   text-shadow: var(--shadow-size) var(--shadow-size) var(--color-black);
@@ -54,6 +54,14 @@
 
   transition: transform var(--animation-duration) var(--animation-easing),
   text-shadow var(--animation-duration) var(--animation-easing);
+
+  @media screen and (width >= 330px) {
+    font-size: 4.5rem;
+  }
+
+  @media screen and (width >= 400px) {
+    font-size: 5rem;
+  }
 
   @media screen and (width >= 450px) {
     font-size: 6rem;
