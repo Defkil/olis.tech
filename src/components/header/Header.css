@@ -29,6 +29,7 @@
 
   font-family: var(--font-family-hightlight);
   font-size: 6rem;
+  font-weight: 800;
   color: var(--color-quaternary);
   text-shadow: var(--shadow-size) var(--shadow-size) var(--color-black);
 
