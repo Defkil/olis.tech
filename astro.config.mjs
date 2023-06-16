@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import {defineConfig} from 'astro/config';
 import compress from 'astro-compress';
 import sitemap from '@astrojs/sitemap';
 import rome from 'astro-rome';
@@ -9,5 +9,5 @@ import compressor from 'astro-compressor';
 export default defineConfig({
   site: 'https://olis.tech',
   output: 'static',
-  integrations: [sitemap(), rome(), critters(), compressor(), compress()]
+  integrations: [sitemap(), rome(), critters(), compressor(), compress({css: false})]
 });
