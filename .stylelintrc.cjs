@@ -1,6 +1,7 @@
 module.exports = {
   extends: [
     "stylelint-config-standard",
+    "stylelint-config-standard-scss",
     "stylelint-config-html/astro",
     "@namics/stylelint-bem",
     "stylelint-config-clean-order"
