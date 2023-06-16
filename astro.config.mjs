@@ -12,6 +12,21 @@ export default defineConfig({
   output: 'static',
   integrations: [sitemap(), rome(), critters(), compressor(), compress({css: false})],
   vite: {
-    plugins: [visualizer({filename: './dist/_astro/stats.html', gzipSize: true, brotliSize: true})]
+    plugins: [visualizer({filename: './dist/_astro/stats.html', gzipSize: true, brotliSize: true})],
+    build: {
+      rollupOptions: {
+        treeshake: true,
+        output: {
+          manualChunks: (id) => {
+            if (id.includes('algolia')) {
+              return 'algolia';
+            }
+            if (id.includes('swup')) {
+              return 'swup';
+            }
+          }
+        }
+      }
+    }
   }
 });
