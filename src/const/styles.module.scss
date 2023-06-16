@@ -1,0 +1,19 @@
+$color-black: #000;
+$color-white: #fff;
+$color-primary: #7Df9FF;
+$color-secondary: #2FFF2F;
+$color-tertiary: #FF00F5;
+$color-quaternary: #30F;
+$color-quinary: #FF0;
+$color-senary: #FF4911;
+
+:export {
+  color-black: $color-black;
+  color-white: $color-white;
+  color-primary: $color-primary;
+  color-secondary: $color-secondary;
+  color-tertiary: $color-tertiary;
+  color-quaternary: $color-quaternary;
+  color-quinary: $color-quinary;
+  color-senary: $color-senary;
+}

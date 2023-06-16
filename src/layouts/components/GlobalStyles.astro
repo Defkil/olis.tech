@@ -2,16 +2,18 @@
 import '@fontsource-variable/space-grotesk';
 import '@fontsource-variable/outfit';
 ---
-<style is:global>
+<style is:global lang="scss">
+  @import "../../const/styles.module.scss";
+
   :root {
-    --color-black: #000;
-    --color-white: #fff;
-    --color-primary: #7Df9FF;
-    --color-secondary: #2FFF2F;
-    --color-tertiary: #b000ac;
-    --color-quaternary: #30F;
-    --color-quinary: #FF0;
-    --color-senary: #FF4911;
+    --color-black: #{$color-black};
+    --color-white: #{$color-white};
+    --color-primary: #{$color-primary};
+    --color-secondary: #{$color-secondary};
+    --color-tertiary: #{$color-tertiary};
+    --color-quaternary: #{$color-quaternary};
+    --color-quinary: #{$color-quinary};
+    --color-senary: #{$color-senary};
     --border-size: 2px;
     --border-radius: 0.5rem;
     --shadow-size: 4px;
