@@ -1,17 +1,26 @@
 .background {
   min-height: 280px;
-  padding: 48px 0 40px;
+  padding: 24px 0;
   background-color: var(--color-senary);
+
+  @media screen and (width >= 900px) {
+    padding: 48px 0 40px;
+  }
 }
 
 .container {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
+  grid-template-columns: 1fr;
 
   max-width: var(--container-max-width);
   margin: 0 auto;
   padding: 0 16px;
+  text-align: center;
+
+  @media screen and (width >= 900px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
 }
 
 .sidebar {
@@ -89,6 +98,7 @@
   flex-direction: column;
   flex-grow: 1;
   width: 100%;
+  padding-top: 16px;
 }
 
 .posts a {
