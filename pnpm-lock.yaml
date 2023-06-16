@@ -11,20 +11,20 @@ dependencies:
     specifier: ^3.5.0
     version: 3.5.0(@algolia/client-search@4.17.2)(search-insights@2.6.0)
   '@fontsource-variable/outfit':
-    specifier: ^5.0.2
-    version: 5.0.2
+    specifier: ^5.0.3
+    version: 5.0.3
   '@fontsource-variable/space-grotesk':
     specifier: ^5.0.3
     version: 5.0.3
   '@fontsource/righteous':
-    specifier: ^5.0.2
-    version: 5.0.2
+    specifier: ^5.0.3
+    version: 5.0.3
   '@swup/preload-plugin':
     specifier: ^2.2.0
-    version: 2.2.0(swup@3.0.8)
+    version: 2.2.0(swup@3.1.0)
   astro:
-    specifier: ^2.6.2
-    version: 2.6.2(sass@1.63.4)
+    specifier: ^2.6.4
+    version: 2.6.4(sass@1.63.4)
   astro-compress:
     specifier: ^1.1.47
     version: 1.1.47
@@ -35,8 +35,8 @@ dependencies:
     specifier: ^1.1.38
     version: 1.1.38
   astro-rome:
-    specifier: ^0.1.17
-    version: 0.1.17
+    specifier: ^0.1.18
+    version: 0.1.18
   sass:
     specifier: ^1.63.4
     version: 1.63.4
@@ -69,9 +69,12 @@ devDependencies:
   stylelint-config-standard:
     specifier: ^33.0.0
     version: 33.0.0(stylelint@15.7.0)
+  stylelint-config-standard-scss:
+    specifier: ^9.0.0
+    version: 9.0.0(postcss@8.4.24)(stylelint@15.7.0)
   swup:
-    specifier: ^3.0.8
-    version: 3.0.8
+    specifier: ^3.1.0
+    version: 3.1.0
 
 packages:
 
@@ -244,13 +247,13 @@ packages:
       vscode-uri: 3.0.7
     dev: false
 
-  /@astrojs/markdown-remark@2.2.1(astro@2.6.2):
+  /@astrojs/markdown-remark@2.2.1(astro@2.6.4):
     resolution: {integrity: sha512-VF0HRv4GpC1XEMLnsKf6jth7JSmlt9qpqP0josQgA2eSpCIAC/Et+y94mgdBIZVBYH/yFnMoIxgKVe93xfO2GA==}
     peerDependencies:
       astro: ^2.5.0
     dependencies:
       '@astrojs/prism': 2.1.2
-      astro: 2.6.2(sass@1.63.4)
+      astro: 2.6.4(sass@1.63.4)
       github-slugger: 1.5.0
       import-meta-resolve: 2.2.2
       rehype-raw: 6.1.1
@@ -370,7 +373,7 @@ packages:
       '@babel/compat-data': 7.22.5
       '@babel/core': 7.22.5
       '@babel/helper-validator-option': 7.22.5
-      browserslist: 4.21.7
+      browserslist: 4.21.9
       lru-cache: 5.1.1
       semver: 6.3.0
     dev: false
@@ -1528,7 +1531,7 @@ packages:
       babel-plugin-polyfill-corejs2: 0.4.3(@babel/core@7.22.5)
       babel-plugin-polyfill-corejs3: 0.8.1(@babel/core@7.22.5)
       babel-plugin-polyfill-regenerator: 0.5.0(@babel/core@7.22.5)
-      core-js-compat: 3.30.2
+      core-js-compat: 3.31.0
       semver: 6.3.0
     transitivePeerDependencies:
       - supports-color
@@ -1909,16 +1912,16 @@ packages:
     dev: false
     optional: true
 
-  /@fontsource-variable/outfit@5.0.2:
-    resolution: {integrity: sha512-r/vx4NoNV3nxUxQ1PIDJux6ZK8tZB0F09N8DM3xHjI9TP8DrIMPa4VZBUStD2gNZjlcJOqhzuMWZA8regx/hsw==}
+  /@fontsource-variable/outfit@5.0.3:
+    resolution: {integrity: sha512-MhU6+2REjA+OAF6Gd0l+fZ1EH/2tmpEi52vXOq68xcyyFgrVzY7cEv7NlggnHG8DgZI47yDGoByjxSKeLH046g==}
     dev: false
 
   /@fontsource-variable/space-grotesk@5.0.3:
     resolution: {integrity: sha512-hs3U0Zy7+t93swf50/LMkredodBmBJUzkl9UWymeJRZqS8SfbuMUOrcCsEbFp94QPNh8lqGrg5xRIhyfD6rNKw==}
     dev: false
 
-  /@fontsource/righteous@5.0.2:
-    resolution: {integrity: sha512-J0/Ct4T+ar/Q8YYbzbru2iDuRvwbYUjs3KHWA8a8vidHg+hjNF356z6nMS/3Z2hEga0iE5LitfglFRL7kLj7ng==}
+  /@fontsource/righteous@5.0.3:
+    resolution: {integrity: sha512-3ZOOVl20jSATUbkm3syDoCu9zIeRmzl9L9OqrHHIhossThYbeTZV6JZfvWa12O5e/6EXUlLk+9yHN/cZlkqCJg==}
     dev: false
 
   /@jridgewell/gen-mapping@0.3.3:
@@ -2203,20 +2206,20 @@ packages:
       prettier: 2.8.8
       shelljs: 0.8.5
       shelljs-live: 0.0.5(shelljs@0.8.5)
-      swup: 3.0.8
+      swup: 3.1.0
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
       - ts-node
     dev: false
 
-  /@swup/preload-plugin@2.2.0(swup@3.0.8):
+  /@swup/preload-plugin@2.2.0(swup@3.1.0):
     resolution: {integrity: sha512-dzjTlvFICdhSsYejb4WX6mEKQOaBTcLp0XD0l2O1puIOGpX8kcnujKbZOuDsebxmcOkWPM0ZVvDzu6ZXomb6Fw==}
     peerDependencies:
       swup: ^3.0.0
     dependencies:
       '@swup/plugin': 2.0.3
-      swup: 3.0.8
+      swup: 3.1.0
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
@@ -2333,6 +2336,10 @@ packages:
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
     dev: false
 
+  /@types/node@20.3.1:
+    resolution: {integrity: sha512-EhcH/wvidPy1WeML3TtYFGR83UzjxeWRen9V402T8aUGYsCHOmfoisV3ZSg03gAFIbLq8TnWOJ0f4cALtnSEUg==}
+    dev: false
+
   /@types/normalize-package-data@2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
     dev: true
@@ -2348,7 +2355,7 @@ packages:
   /@types/resolve@1.17.1:
     resolution: {integrity: sha512-yy7HuzQhj0dhGpD8RLXSZWEkLsV9ibvxvi6EiJ3bkqLAO1RGo0WbkWQiwpRlSFymTJRz0d3k5LM3kkx8ArDbLw==}
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 20.3.1
     dev: false
 
   /@types/resolve@1.20.2:
@@ -2383,8 +2390,8 @@ packages:
     resolution: {integrity: sha512-/yrv59IEnmh655z1oeDnGcvMYwnEzNzHLgeYcQCkhYX0xBvYWrAuefoiLcPBUkMpJsb46bqQ6Yv4pwTTQ4d3Qg==}
     dev: false
 
-  /acorn@8.8.2:
-    resolution: {integrity: sha512-xjIYgE8HBrkpd/sJqOGNspf8uHG+NOHGOw6a/Urj8taM2EXfdNAH2oFcPeIFfsv3+kz/mJrS5VuMqbNLjCa2vw==}
+  /acorn@8.9.0:
+    resolution: {integrity: sha512-jaVNAFBHNLXspO543WnNNPZFRtavh3skAkITqD0/2aeMkKZTN+254PyhwxFYrk3vQ1xfY+2wbesJMs/JC8/PwQ==}
     engines: {node: '>=0.4.0'}
     hasBin: true
     dev: false
@@ -2539,8 +2546,8 @@ packages:
       files-pipe: 0.0.7
     dev: false
 
-  /astro-rome@0.1.17:
-    resolution: {integrity: sha512-tQQqpR0hGWwGQFNXQ5RDF7cw4O3Tq/p8/Sq7hndUjRTg1lAop66/AGHUWC3lDPIHhBDJo3JVnfurkrRkvQpWPg==}
+  /astro-rome@0.1.18:
+    resolution: {integrity: sha512-jcm0CXQ+nJonw+d7ZfV3pxkmz8AGRQ0VCBJdkmHdyG7pZT6eHLN7NZKKCdRRVVk2hJiytXM2lr6MxqD7vb1X5g==}
     dependencies:
       '@rometools/backend-jsonrpc': 12.1.3
       '@rometools/js-api': 0.3.0(@rometools/wasm-nodejs@12.1.3)
@@ -2553,8 +2560,8 @@ packages:
       - '@rometools/wasm-web'
     dev: false
 
-  /astro@2.6.2(sass@1.63.4):
-    resolution: {integrity: sha512-yscuSbZAtlg3jlHxsGWrzEfbBHz+l5iwl1tfUKVOE4FijepRpwJgFDSCaVI5Z2+af2nXKZpst5H9qAUx+uZ6zg==}
+  /astro@2.6.4(sass@1.63.4):
+    resolution: {integrity: sha512-YM5H9SLHflxCB/3H8S2Bi+1Lbwn/MA9Vl/eOZmkCT491gvBsyuKCTsoUas6fwggeKn+fIR2XpdYd2F+unQve3g==}
     engines: {node: '>=16.12.0', npm: '>=6.14.0'}
     hasBin: true
     peerDependencies:
@@ -2566,7 +2573,7 @@ packages:
       '@astrojs/compiler': 1.5.1
       '@astrojs/internal-helpers': 0.1.0
       '@astrojs/language-server': 1.0.8
-      '@astrojs/markdown-remark': 2.2.1(astro@2.6.2)
+      '@astrojs/markdown-remark': 2.2.1(astro@2.6.4)
       '@astrojs/telemetry': 2.1.1
       '@astrojs/webapi': 2.2.0
       '@babel/core': 7.22.5
@@ -2577,7 +2584,7 @@ packages:
       '@babel/types': 7.22.5
       '@types/babel__core': 7.20.1
       '@types/yargs-parser': 21.0.0
-      acorn: 8.8.2
+      acorn: 8.9.0
       boxen: 6.2.1
       chokidar: 3.5.3
       ci-info: 3.8.0
@@ -2587,7 +2594,7 @@ packages:
       deepmerge-ts: 4.3.0
       devalue: 4.3.2
       diff: 5.1.0
-      es-module-lexer: 1.2.1
+      es-module-lexer: 1.3.0
       esbuild: 0.17.19
       estree-walker: 3.0.0
       execa: 6.1.0
@@ -2605,7 +2612,7 @@ packages:
       preferred-pm: 3.0.3
       prompts: 2.4.2
       rehype: 12.0.1
-      semver: 7.5.1
+      semver: 7.5.2
       server-destroy: 1.0.1
       shiki: 0.14.2
       slash: 4.0.0
@@ -2645,8 +2652,8 @@ packages:
     peerDependencies:
       postcss: ^8.1.0
     dependencies:
-      browserslist: 4.21.7
-      caniuse-lite: 1.0.30001497
+      browserslist: 4.21.9
+      caniuse-lite: 1.0.30001503
       fraction.js: 4.2.0
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -2688,7 +2695,7 @@ packages:
     dependencies:
       '@babel/core': 7.22.5
       '@babel/helper-define-polyfill-provider': 0.4.0(@babel/core@7.22.5)
-      core-js-compat: 3.30.2
+      core-js-compat: 3.31.0
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -2808,15 +2815,15 @@ packages:
       duplexer: 0.1.1
     dev: false
 
-  /browserslist@4.21.7:
-    resolution: {integrity: sha512-BauCXrQ7I2ftSqd2mvKHGo85XR0u7Ru3C/Hxsy/0TkfCtjrmAbPdzLGasmoiBxplpDXlPvdjX9u7srIMfgasNA==}
+  /browserslist@4.21.9:
+    resolution: {integrity: sha512-M0MFoZzbUrRU4KNfCrDLnvyE7gub+peetoTid3TBIqtunaDJyXlwhakT+/VkvSXcfIzFfK/nkCs4nmyTmxdNSg==}
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001497
-      electron-to-chromium: 1.4.427
+      caniuse-lite: 1.0.30001503
+      electron-to-chromium: 1.4.432
       node-releases: 2.0.12
-      update-browserslist-db: 1.0.11(browserslist@4.21.7)
+      update-browserslist-db: 1.0.11(browserslist@4.21.9)
     dev: false
 
   /buffer-from@1.1.2:
@@ -2896,14 +2903,14 @@ packages:
   /caniuse-api@3.0.0:
     resolution: {integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==}
     dependencies:
-      browserslist: 4.21.7
-      caniuse-lite: 1.0.30001497
+      browserslist: 4.21.9
+      caniuse-lite: 1.0.30001503
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
     dev: false
 
-  /caniuse-lite@1.0.30001497:
-    resolution: {integrity: sha512-I4/duVK4wL6rAK/aKZl3HXB4g+lIZvaT4VLAn2rCgJ38jVLb0lv2Xug6QuqmxXFVRJMF74SPPWPJ/1Sdm3vCzw==}
+  /caniuse-lite@1.0.30001503:
+    resolution: {integrity: sha512-Sf9NiF+wZxPfzv8Z3iS0rXM1Do+iOy2Lxvib38glFX+08TCYYYGR5fRJXk4d77C4AYwhUjgYgMsMudbh2TqCKw==}
     dev: false
 
   /ccount@2.0.1:
@@ -3095,10 +3102,10 @@ packages:
     engines: {node: '>= 0.6'}
     dev: false
 
-  /core-js-compat@3.30.2:
-    resolution: {integrity: sha512-nriW1nuJjUgvkEjIot1Spwakz52V9YkYHZAQG6A1eCgC8AA1p0zngrQEP9R0+V6hji5XilWKG1Bd0YRppmGimA==}
+  /core-js-compat@3.31.0:
+    resolution: {integrity: sha512-hM7YCu1cU6Opx7MXNu0NuumM0ezNeAeRKadixyiQELWY3vT3De9S4J5ZBMraWV2vZnrE1Cirl0GtFtDtMUXzPw==}
     dependencies:
-      browserslist: 4.21.7
+      browserslist: 4.21.9
     dev: false
 
   /cosmiconfig@7.1.0:
@@ -3398,7 +3405,7 @@ packages:
   /delegate-it@6.0.1:
     resolution: {integrity: sha512-ZS2hRm/SaoPzaeWcWyYjzVVF4/PgALZqma9FXsunFt4XQGVAtQ79Vx7v57vNQNaI75Rl12C+x6TkLqHS5PNKLg==}
     dependencies:
-      typed-query-selector: 2.10.1
+      typed-query-selector: 2.11.0
 
   /dequal@2.0.3:
     resolution: {integrity: sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA==}
@@ -3508,8 +3515,8 @@ packages:
       jake: 10.8.7
     dev: false
 
-  /electron-to-chromium@1.4.427:
-    resolution: {integrity: sha512-HK3r9l+Jm8dYAm1ctXEWIC+hV60zfcjS9UA5BDlYvnI5S7PU/yytjpvSrTNrSSRRkuu3tDyZhdkwIczh+0DWaw==}
+  /electron-to-chromium@1.4.432:
+    resolution: {integrity: sha512-yz3U/khQgAFT2HURJA3/F4fKIyO2r5eK09BQzBZFd6BvBSSaRuzKc2ZNBHtJcO75/EKiRYbVYJZ2RB0P4BuD2g==}
     dev: false
 
   /emmet@2.4.4:
@@ -3585,8 +3592,8 @@ packages:
       which-typed-array: 1.1.9
     dev: false
 
-  /es-module-lexer@1.2.1:
-    resolution: {integrity: sha512-9978wrXM50Y4rTMmW5kXIC09ZdXQZqkE4mxhwkd8VbzsGkXGPgV4zWuqQJgCEzYngdo2dYDa0l8xhX4fkSwJSg==}
+  /es-module-lexer@1.3.0:
+    resolution: {integrity: sha512-vZK7T0N2CBmBOixhmjdqx2gWVbFZ4DXZ/NyRMZVlJXPa7CyFS+/a4QQsDGDQy9ZfEzxFuNEsMLeQJnKP2p5/JA==}
     dev: false
 
   /es-set-tostringtag@2.0.1:
@@ -4222,7 +4229,7 @@ packages:
       entities: 4.5.0
       param-case: 3.0.4
       relateurl: 0.2.7
-      terser: 5.17.7
+      terser: 5.18.0
     dev: false
 
   /html-tags@3.3.1:
@@ -4577,7 +4584,7 @@ packages:
     resolution: {integrity: sha512-KWYVV1c4i+jbMpaBC+U++4Va0cp8OisU185o73T1vo99hqi7w8tSJfUXYswwqqrjzwxa6KpRK54WhPvwf5w6PQ==}
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 20.3.1
       merge-stream: 2.0.0
       supports-color: 7.2.0
     dev: false
@@ -5009,7 +5016,7 @@ packages:
       rollup-plugin-typescript2: 0.32.1(rollup@2.79.1)(typescript@4.9.5)
       rollup-plugin-visualizer: 5.9.2(rollup@2.79.1)
       sade: 1.8.1
-      terser: 5.17.7
+      terser: 5.18.0
       tiny-glob: 0.2.9
       tslib: 2.5.3
       typescript: 4.9.5
@@ -5362,7 +5369,7 @@ packages:
     resolution: {integrity: sha512-iwXuFrMAcFVi/ZoZiqq8BzAdsLw9kxDfTC0HMyjXfSL/6CSDAGD5UmR7azrAgWV1zKYq7dUUMj4owusBWKLsiQ==}
     engines: {node: '>=10'}
     dependencies:
-      semver: 7.5.1
+      semver: 7.5.2
     dev: false
 
   /node-addon-api@6.1.0:
@@ -5388,7 +5395,7 @@ packages:
     dependencies:
       hosted-git-info: 4.1.0
       is-core-module: 2.12.1
-      semver: 7.5.1
+      semver: 7.5.2
       validate-npm-package-license: 3.0.4
     dev: true
 
@@ -5679,7 +5686,7 @@ packages:
     peerDependencies:
       postcss: ^8.2.15
     dependencies:
-      browserslist: 4.21.7
+      browserslist: 4.21.9
       caniuse-api: 3.0.0
       colord: 2.9.3
       postcss: 8.4.24
@@ -5692,7 +5699,7 @@ packages:
     peerDependencies:
       postcss: ^8.2.15
     dependencies:
-      browserslist: 4.21.7
+      browserslist: 4.21.9
       postcss: 8.4.24
       postcss-value-parser: 4.2.0
     dev: false
@@ -5781,7 +5788,7 @@ packages:
     peerDependencies:
       postcss: ^8.2.15
     dependencies:
-      browserslist: 4.21.7
+      browserslist: 4.21.9
       caniuse-api: 3.0.0
       cssnano-utils: 3.1.0(postcss@8.4.24)
       postcss: 8.4.24
@@ -5816,7 +5823,7 @@ packages:
     peerDependencies:
       postcss: ^8.2.15
     dependencies:
-      browserslist: 4.21.7
+      browserslist: 4.21.9
       cssnano-utils: 3.1.0(postcss@8.4.24)
       postcss: 8.4.24
       postcss-value-parser: 4.2.0
@@ -5954,7 +5961,7 @@ packages:
     peerDependencies:
       postcss: ^8.2.15
     dependencies:
-      browserslist: 4.21.7
+      browserslist: 4.21.9
       postcss: 8.4.24
       postcss-value-parser: 4.2.0
     dev: false
@@ -5997,7 +6004,7 @@ packages:
     peerDependencies:
       postcss: ^8.2.15
     dependencies:
-      browserslist: 4.21.7
+      browserslist: 4.21.9
       caniuse-api: 3.0.0
       postcss: 8.4.24
     dev: false
@@ -6021,6 +6028,15 @@ packages:
     engines: {node: '>=12.0'}
     peerDependencies:
       postcss: ^8.3.3
+    dependencies:
+      postcss: 8.4.24
+    dev: true
+
+  /postcss-scss@4.0.6(postcss@8.4.24):
+    resolution: {integrity: sha512-rLDPhJY4z/i4nVFZ27j9GqLxj1pwxE80eAzUNRMXtcpipFYIeowerzBgG3yJhMtObGEXidtIgbUpQ3eLDsf5OQ==}
+    engines: {node: '>=12.0'}
+    peerDependencies:
+      postcss: ^8.4.19
     dependencies:
       postcss: 8.4.24
     dev: true
@@ -6489,7 +6505,7 @@ packages:
       jest-worker: 26.6.2
       rollup: 2.79.1
       serialize-javascript: 4.0.0
-      terser: 5.17.7
+      terser: 5.18.0
     dev: false
 
   /rollup-plugin-typescript2@0.32.1(rollup@2.79.1)(typescript@4.9.5):
@@ -6538,8 +6554,8 @@ packages:
       fsevents: 2.3.2
     dev: false
 
-  /rollup@3.24.0:
-    resolution: {integrity: sha512-OgraHOIg2YpHQTjl0/ymWfFNBEyPucB7lmhXrQUh38qNOegxLapSPFs9sNr0qKR75awW41D93XafoR2QfhBdUQ==}
+  /rollup@3.25.1:
+    resolution: {integrity: sha512-tywOR+rwIt5m2ZAWSe5AIJcTat8vGlnPFAv15ycCrw33t6iFsXZ6mzHVFh2psSjxQPmI+xgzMZZizUAukBI4aQ==}
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
@@ -6641,8 +6657,8 @@ packages:
     hasBin: true
     dev: false
 
-  /semver@7.5.1:
-    resolution: {integrity: sha512-Wvss5ivl8TMRZXXESstBA4uR5iXgEN/VC5/sOcuXdVLzcdkz4HWetIoRfG5gb5X+ij/G9rw9YoGn3QoQ8OCSpw==}
+  /semver@7.5.2:
+    resolution: {integrity: sha512-SoftuTROv/cRjCze/scjGyiDtcUyxw1rgYQSZY7XTmtR5hX+dm76iDbTH8TkLPHCQmlbQVSSbNZCPM2hb0knnQ==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
@@ -6667,7 +6683,7 @@ packages:
       detect-libc: 2.0.1
       node-addon-api: 6.1.0
       prebuild-install: 7.1.1
-      semver: 7.5.1
+      semver: 7.5.2
       simple-get: 4.0.1
       tar-fs: 2.1.1
       tunnel-agent: 0.6.0
@@ -6997,7 +7013,7 @@ packages:
     peerDependencies:
       postcss: ^8.2.15
     dependencies:
-      browserslist: 4.21.7
+      browserslist: 4.21.9
       postcss: 8.4.24
       postcss-selector-parser: 6.0.13
     dev: false
@@ -7022,12 +7038,43 @@ packages:
       stylelint: 15.7.0
     dev: true
 
+  /stylelint-config-recommended-scss@11.0.0(postcss@8.4.24)(stylelint@15.7.0):
+    resolution: {integrity: sha512-EDghTDU7aOv2LTsRZvcT1w8mcjUaMhuy+t38iV5I/0Qiu6ixdkRwhLEMul3K/fnB2v9Nwqvb3xpvJfPH+HduDw==}
+    peerDependencies:
+      postcss: ^8.3.3
+      stylelint: ^15.5.0
+    peerDependenciesMeta:
+      postcss:
+        optional: true
+    dependencies:
+      postcss: 8.4.24
+      postcss-scss: 4.0.6(postcss@8.4.24)
+      stylelint: 15.7.0
+      stylelint-config-recommended: 12.0.0(stylelint@15.7.0)
+      stylelint-scss: 4.7.0(stylelint@15.7.0)
+    dev: true
+
   /stylelint-config-recommended@12.0.0(stylelint@15.7.0):
     resolution: {integrity: sha512-x6x8QNARrGO2sG6iURkzqL+Dp+4bJorPMMRNPScdvaUK8PsynriOcMW7AFDKqkWAS5wbue/u8fUT/4ynzcmqdQ==}
     peerDependencies:
       stylelint: ^15.5.0
     dependencies:
       stylelint: 15.7.0
+    dev: true
+
+  /stylelint-config-standard-scss@9.0.0(postcss@8.4.24)(stylelint@15.7.0):
+    resolution: {integrity: sha512-yPKpJsrZn4ybuQZx/DkEHuCjw7pJginErE/47dFhCnrvD48IJ4UYec8tSiCuJWMA3HRjbIa3nh5ZeSauDGuVAg==}
+    peerDependencies:
+      postcss: ^8.3.3
+      stylelint: ^15.5.0
+    peerDependenciesMeta:
+      postcss:
+        optional: true
+    dependencies:
+      postcss: 8.4.24
+      stylelint: 15.7.0
+      stylelint-config-recommended-scss: 11.0.0(postcss@8.4.24)(stylelint@15.7.0)
+      stylelint-config-standard: 33.0.0(stylelint@15.7.0)
     dev: true
 
   /stylelint-config-standard@33.0.0(stylelint@15.7.0):
@@ -7046,6 +7093,18 @@ packages:
     dependencies:
       postcss: 8.4.24
       postcss-sorting: 8.0.2(postcss@8.4.24)
+      stylelint: 15.7.0
+    dev: true
+
+  /stylelint-scss@4.7.0(stylelint@15.7.0):
+    resolution: {integrity: sha512-TSUgIeS0H3jqDZnby1UO1Qv3poi1N8wUYIJY6D1tuUq2MN3lwp/rITVo0wD+1SWTmRm0tNmGO0b7nKInnqF6Hg==}
+    peerDependencies:
+      stylelint: ^14.5.1 || ^15.0.0
+    dependencies:
+      postcss-media-query-parser: 0.2.3
+      postcss-resolve-nested-selector: 0.1.1
+      postcss-selector-parser: 6.0.13
+      postcss-value-parser: 4.2.0
       stylelint: 15.7.0
     dev: true
 
@@ -7172,8 +7231,8 @@ packages:
       picocolors: 1.0.0
     dev: false
 
-  /swup@3.0.8:
-    resolution: {integrity: sha512-9ryeG1j+9iEFzvWp0MIBYNB+At6rOwVJrkBMJuzpaepqkblt6B/HEBZAYe3gXq9rFMzIEkGO9cCI8ygvaqNJiw==}
+  /swup@3.1.0:
+    resolution: {integrity: sha512-F2gVPvB6lJPvHaa9uzgaSAYHQ/L+a6rIg7OBOgHZLNpTxB4c7K7/Yo93KFAU5qU2DD9gHoTcpKh0StQQeA4GTg==}
     requiresBuild: true
     dependencies:
       delegate-it: 6.0.1
@@ -7224,7 +7283,18 @@ packages:
     hasBin: true
     dependencies:
       '@jridgewell/source-map': 0.3.3
-      acorn: 8.8.2
+      acorn: 8.9.0
+      commander: 2.20.3
+      source-map-support: 0.5.21
+    dev: false
+
+  /terser@5.18.0:
+    resolution: {integrity: sha512-pdL757Ig5a0I+owA42l6tIuEycRuM7FPY4n62h44mRLRfnOxJkkOHd6i89dOpwZlpF6JXBwaAHF6yWzFrt+QyA==}
+    engines: {node: '>=10'}
+    hasBin: true
+    dependencies:
+      '@jridgewell/source-map': 0.3.3
+      acorn: 8.9.0
       commander: 2.20.3
       source-map-support: 0.5.21
     dev: false
@@ -7319,8 +7389,8 @@ packages:
       is-typed-array: 1.1.10
     dev: false
 
-  /typed-query-selector@2.10.1:
-    resolution: {integrity: sha512-VyNeetDghQngbLWOVyxUFB95nZF3z3QIrvdsWmuDwwYbePEup9hjZbNT1IK5YP3t8LqicnYNnDpQPW3vq7iCTQ==}
+  /typed-query-selector@2.11.0:
+    resolution: {integrity: sha512-qBs4sfmnLlPOyo2oSdvHbIFHe2CPgU54/1UGfSNceb7LARpIEVxUaeRX0Doje6oKpuySS2stqy90R3YrynR8Kg==}
 
   /typescript@4.9.5:
     resolution: {integrity: sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==}
@@ -7449,13 +7519,13 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
-  /update-browserslist-db@1.0.11(browserslist@4.21.7):
+  /update-browserslist-db@1.0.11(browserslist@4.21.9):
     resolution: {integrity: sha512-dCwEFf0/oT85M1fHBg4F0jtLwJrutGoHSQXCh7u4o2t1drG+c0a9Flnqww6XUKSfQMPpJBRjU8d4RXB09qtvaA==}
     hasBin: true
     peerDependencies:
       browserslist: '>= 4.21.0'
     dependencies:
-      browserslist: 4.21.7
+      browserslist: 4.21.9
       escalade: 3.1.1
       picocolors: 1.0.0
     dev: false
@@ -7541,7 +7611,7 @@ packages:
     dependencies:
       esbuild: 0.17.19
       postcss: 8.4.24
-      rollup: 3.24.0
+      rollup: 3.25.1
       sass: 1.63.4
     optionalDependencies:
       fsevents: 2.3.2
