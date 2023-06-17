@@ -18,6 +18,7 @@ module.exports = {
         return `Expected class selector "${selectorValue}" to match BEM CSS pattern https://en.bem.info/methodology/css. Selector validation tool: https://regexr.com/3apms`;
       },
       },
-    ]
+    ],
+    'scss/at-import-partial-extension': null,
   }
 }
