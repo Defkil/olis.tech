@@ -1,4 +1,5 @@
-import style from './styles.module.scss';
+import style from "./styles.module.scss";
+
 export const styles = {
   "color-black": style["color-black"],
   "color-white": style["color-white"],
