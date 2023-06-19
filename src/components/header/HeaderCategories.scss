@@ -12,20 +12,31 @@ $breakpoint-desktop: 900px;
 
 .container {
   display: grid;
+  grid-template: "sidebar"
+                 "info"
+                 "posts";
   grid-template-columns: 1fr;
 
   max-width: var(--container-max-width);
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 16px 0 8px;
 
   text-align: center;
 
-  @media screen and (width >= $breakpoint-desktop) {
+  @media screen and (width >= 800px) {
+    grid-template: "sidebar info"
+    "posts posts";
+    grid-template-columns: 400px 1fr;
+  }
+
+  @media screen and (width >= 1100px) {
+    grid-template: "sidebar info posts";
     grid-template-columns: 350px 400px 1fr;
   }
 }
 
 .sidebar {
+  grid-area: sidebar;
   width: 100%;
   padding: 26px 0;
 }
@@ -44,13 +55,14 @@ $breakpoint-desktop: 900px;
 
 .sidebar__button {
   cursor: pointer;
-  margin: 6px 24px 6px 0;
+  margin: 6px 18px 6px 0;
   padding: 10px 20px;
   border-radius: var(--border-radius);
 }
 
 .info {
   display: flex;
+  grid-area: info;
   flex-direction: column;
   height: 100%;
 
@@ -100,8 +112,10 @@ $breakpoint-desktop: 900px;
 
 .posts {
   display: flex;
+  grid-area: posts;
   flex-direction: column;
   flex-grow: 1;
+
   width: 100%;
 }
 
