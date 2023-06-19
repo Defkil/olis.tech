@@ -1,6 +1,7 @@
 @import "../../const/styles.module";
 
 .header {
+  padding-bottom: 24px;
   background: var(--color-secondary);
 
   @media screen and (width >= 900px) {
