@@ -1,6 +1,6 @@
 ---
 import {WaveSeparatorColors} from "../../const/styles";
-const separatorColors = WaveSeparatorColors.map(color => color.replace('#', ''));
+const separatorColors = WaveSeparatorColors.map(color => color!.replace('#', ''));
 ---
 <svg height="0" width="0" style="position: absolute;">
   {separatorColors.map(color => (
