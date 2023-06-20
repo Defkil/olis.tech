@@ -1,11 +1,11 @@
 @import "../../const/styles.module";
 
 .header {
-  padding-bottom: 24px;
+  padding-bottom: 40px;
   background: var(--color-secondary);
 
   @media screen and (width >= 900px) {
-    padding: 60px 0 40px;
+    padding-top: 60px;
   }
 }
 
@@ -20,7 +20,6 @@
 
   display: grid;
   grid-template-columns: 1fr;
-  gap: 18px;
 
   @media screen and (width >= 900px) {
     grid-template-columns: 1fr auto;
