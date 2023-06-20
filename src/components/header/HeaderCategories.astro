@@ -63,16 +63,18 @@ if (selectedCategory) {
     <div class="container">
       <div class="sidebar">
         <h2 class="sidebar__title">Kategorien</h2>
-        {categoriesData.map((category) => (
-          <button
-            class="sidebar__button border shadow shadow--hover js--category-button"
-            data-link={category.link}
-            data-description={category.description}
-            data-count={category.count}
-            data-last-publish-or-update={category.lastPublishOrUpdate}
-            data-last-posts={category.lastPosts}>
-            {category.title}
-          </button>))}
+        <div class="sidebar__container">
+          {categoriesData.map((category) => (
+            <button
+              class="sidebar__button border shadow shadow--hover js--category-button"
+              data-link={category.link}
+              data-description={category.description}
+              data-count={category.count}
+              data-last-publish-or-update={category.lastPublishOrUpdate}
+              data-last-posts={category.lastPosts}>
+              {category.title}
+            </button>))}
+        </div>
       </div>
       <div class="info">
         <h2 class="info__title js--title" class:list={[{'info__title--small': initialCategory.title.length > 12}]}>
@@ -80,7 +82,7 @@ if (selectedCategory) {
         <p class="info__description js--description">{initialCategory.description}</p>
         <div class="info__details">
           <span>Beiträge: <span class="js--details__count">{initialCategory.count}</span></span>
-          <span>Letzte Änderung am <span class="js--details__last">{initialCategory.lastPublishOrUpdate}</span></span>
+          <span>Update am <span class="js--details__last">{initialCategory.lastPublishOrUpdate}</span></span>
         </div>
       </div>
       <div class="posts">

@@ -1,11 +1,12 @@
-$breakpoint-desktop: 900px;
+$breakpoint-tablet: 800px;
+$breakpoint-desktop: 1100px;
 
 .background {
   min-height: 280px;
   padding: 24px 0;
   background-color: var(--color-quaternary);
 
-  @media screen and (width >= $breakpoint-desktop) {
+  @media screen and (width >= $breakpoint-tablet) {
     padding: 48px 0 40px;
   }
 }
@@ -23,13 +24,13 @@ $breakpoint-desktop: 900px;
 
   text-align: center;
 
-  @media screen and (width >= 800px) {
+  @media screen and (width >= $breakpoint-tablet) {
     grid-template: "sidebar info"
     "posts posts";
     grid-template-columns: 400px 1fr;
   }
 
-  @media screen and (width >= 1100px) {
+  @media screen and (width >= $breakpoint-desktop) {
     grid-template: "sidebar info posts";
     grid-template-columns: 350px 400px 1fr;
   }
@@ -38,7 +39,7 @@ $breakpoint-desktop: 900px;
 .sidebar {
   grid-area: sidebar;
   width: 100%;
-  padding: 26px 0;
+  padding: 26px 8px 26px 0;
 }
 
 .sidebar__title {
@@ -53,9 +54,19 @@ $breakpoint-desktop: 900px;
 
 /* todo active button with a star */
 
+.sidebar__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  @media screen and (width >= 550px) { gap: 16px; }
+  @media screen and (width >= 630px) { gap: 22px; }
+}
+
 .sidebar__button {
   cursor: pointer;
-  margin: 6px 18px 6px 0;
+  //margin: 6px 18px 6px 0;
   padding: 10px 20px;
   border-radius: var(--border-radius);
 }
@@ -66,7 +77,7 @@ $breakpoint-desktop: 900px;
   flex-direction: column;
   height: 100%;
 
-  @media screen and (width >= $breakpoint-desktop) {
+  @media screen and (width >= $breakpoint-tablet) {
     padding-right: 26px;
   }
 }
@@ -105,7 +116,7 @@ $breakpoint-desktop: 900px;
   justify-content: space-between;
 
   margin-top: auto;
-  padding: 0 0 24px;
+  padding: 16px 0 24px;
 
   font-size: 1.2rem;
 }
@@ -117,6 +128,11 @@ $breakpoint-desktop: 900px;
   flex-grow: 1;
 
   width: 100%;
+
+  padding-top: 18px;
+  @media screen and (width >= $breakpoint-desktop) {
+    padding: 0;
+  }
 }
 
 .posts a {
