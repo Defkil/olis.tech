@@ -1,15 +1,19 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   '@astrojs/sitemap':
     specifier: ^1.3.3
     version: 1.3.3
   '@docsearch/css':
-    specifier: ^3.5.0
-    version: 3.5.0
+    specifier: ^3.5.1
+    version: 3.5.1
   '@docsearch/js':
-    specifier: ^3.5.0
-    version: 3.5.0(@algolia/client-search@4.17.2)(search-insights@2.6.0)
+    specifier: ^3.5.1
+    version: 3.5.1(@algolia/client-search@4.17.2)(search-insights@2.6.0)
   '@fontsource-variable/outfit':
     specifier: ^5.0.3
     version: 5.0.3
@@ -23,8 +27,8 @@ dependencies:
     specifier: ^2.2.0
     version: 2.2.0(swup@3.1.0)
   astro:
-    specifier: ^2.6.4
-    version: 2.6.4(sass@1.63.4)
+    specifier: ^2.6.6
+    version: 2.6.6(sass@1.63.5)
   astro-compress:
     specifier: ^1.1.47
     version: 1.1.47
@@ -38,13 +42,13 @@ dependencies:
     specifier: ^0.1.18
     version: 0.1.18
   sass:
-    specifier: ^1.63.4
-    version: 1.63.4
+    specifier: ^1.63.5
+    version: 1.63.5
 
 devDependencies:
   '@namics/stylelint-bem':
     specifier: ^8.1.0
-    version: 8.1.0(stylelint@15.7.0)
+    version: 8.1.0(stylelint@15.8.0)
   '@swup/head-plugin':
     specifier: ^1.3.0
     version: 1.3.0
@@ -61,62 +65,62 @@ devDependencies:
     specifier: 12.1.3
     version: 12.1.3
   stylelint:
-    specifier: ^15.7.0
-    version: 15.7.0
+    specifier: ^15.8.0
+    version: 15.8.0
   stylelint-config-clean-order:
     specifier: ^5.0.1
-    version: 5.0.1(stylelint@15.7.0)
+    version: 5.0.1(stylelint@15.8.0)
   stylelint-config-html:
     specifier: ^1.1.0
-    version: 1.1.0(postcss-html@1.5.0)(stylelint@15.7.0)
+    version: 1.1.0(postcss-html@1.5.0)(stylelint@15.8.0)
   stylelint-config-standard:
     specifier: ^33.0.0
-    version: 33.0.0(stylelint@15.7.0)
+    version: 33.0.0(stylelint@15.8.0)
   stylelint-config-standard-scss:
     specifier: ^9.0.0
-    version: 9.0.0(postcss@8.4.24)(stylelint@15.7.0)
+    version: 9.0.0(postcss@8.4.24)(stylelint@15.8.0)
   swup:
     specifier: ^3.1.0
     version: 3.1.0
 
 packages:
 
-  /@algolia/autocomplete-core@1.9.2(@algolia/client-search@4.17.2)(algoliasearch@4.17.2)(search-insights@2.6.0):
-    resolution: {integrity: sha512-hkG80c9kx9ClVAEcUJbTd2ziVC713x9Bji9Ty4XJfKXlxlsx3iXsoNhAwfeR4ulzIUg7OE5gez0UU1zVDdG7kg==}
+  /@algolia/autocomplete-core@1.9.3(@algolia/client-search@4.17.2)(algoliasearch@4.17.2)(search-insights@2.6.0):
+    resolution: {integrity: sha512-009HdfugtGCdC4JdXUbVJClA0q0zh24yyePn+KUGk3rP7j8FEe/m5Yo/z65gn6nP/cM39PxpzqKrL7A6fP6PPw==}
     dependencies:
-      '@algolia/autocomplete-plugin-algolia-insights': 1.9.2(@algolia/client-search@4.17.2)(algoliasearch@4.17.2)(search-insights@2.6.0)
-      '@algolia/autocomplete-shared': 1.9.2(@algolia/client-search@4.17.2)(algoliasearch@4.17.2)
+      '@algolia/autocomplete-plugin-algolia-insights': 1.9.3(@algolia/client-search@4.17.2)(algoliasearch@4.17.2)(search-insights@2.6.0)
+      '@algolia/autocomplete-shared': 1.9.3(@algolia/client-search@4.17.2)(algoliasearch@4.17.2)
     transitivePeerDependencies:
       - '@algolia/client-search'
       - algoliasearch
       - search-insights
     dev: false
 
-  /@algolia/autocomplete-plugin-algolia-insights@1.9.2(@algolia/client-search@4.17.2)(algoliasearch@4.17.2)(search-insights@2.6.0):
-    resolution: {integrity: sha512-2LVsf4W66hVHQ3Ua/8k15oPlxjELCztbAkQm/hP42Sw+GLkHAdY1vaVRYziaWq64+Oljfg6FKkZHCdgXH+CGIA==}
+  /@algolia/autocomplete-plugin-algolia-insights@1.9.3(@algolia/client-search@4.17.2)(algoliasearch@4.17.2)(search-insights@2.6.0):
+    resolution: {integrity: sha512-a/yTUkcO/Vyy+JffmAnTWbr4/90cLzw+CC3bRbhnULr/EM0fGNvM13oQQ14f2moLMcVDyAx/leczLlAOovhSZg==}
     peerDependencies:
       search-insights: '>= 1 < 3'
     dependencies:
-      '@algolia/autocomplete-shared': 1.9.2(@algolia/client-search@4.17.2)(algoliasearch@4.17.2)
+      '@algolia/autocomplete-shared': 1.9.3(@algolia/client-search@4.17.2)(algoliasearch@4.17.2)
       search-insights: 2.6.0
     transitivePeerDependencies:
       - '@algolia/client-search'
       - algoliasearch
     dev: false
 
-  /@algolia/autocomplete-preset-algolia@1.9.2(@algolia/client-search@4.17.2)(algoliasearch@4.17.2):
-    resolution: {integrity: sha512-pqgIm2GNqtCT59Y1ICctIPrYTi34+wNPiNWEclD/yDzp5uDUUsyGe5XrUjCNyQRTKonAlmYxoaEHOn8FWgmBHA==}
+  /@algolia/autocomplete-preset-algolia@1.9.3(@algolia/client-search@4.17.2)(algoliasearch@4.17.2):
+    resolution: {integrity: sha512-d4qlt6YmrLMYy95n5TB52wtNDr6EgAIPH81dvvvW8UmuWRgxEtY0NJiPwl/h95JtG2vmRM804M0DSwMCNZlzRA==}
     peerDependencies:
       '@algolia/client-search': '>= 4.9.1 < 6'
       algoliasearch: '>= 4.9.1 < 6'
     dependencies:
-      '@algolia/autocomplete-shared': 1.9.2(@algolia/client-search@4.17.2)(algoliasearch@4.17.2)
+      '@algolia/autocomplete-shared': 1.9.3(@algolia/client-search@4.17.2)(algoliasearch@4.17.2)
       '@algolia/client-search': 4.17.2
       algoliasearch: 4.17.2
     dev: false
 
-  /@algolia/autocomplete-shared@1.9.2(@algolia/client-search@4.17.2)(algoliasearch@4.17.2):
-    resolution: {integrity: sha512-XxX6YDn+7LG+SmdpXEOnj7fc3TjiVpQ0CbGhjLwrd2tYr6LVY2D4Iiu/iuYJ4shvVDWWnpwArSk0uIWC/8OPUA==}
+  /@algolia/autocomplete-shared@1.9.3(@algolia/client-search@4.17.2)(algoliasearch@4.17.2):
+    resolution: {integrity: sha512-Wnm9E4Ye6Rl6sTTqjoymD+l8DjSTHsHboVRYrKgEt8Q7UHm9nYbqhN/i0fhUYA3OAEH7WA8x3jfpnmJm3rKvaQ==}
     peerDependencies:
       '@algolia/client-search': '>= 4.9.1 < 6'
       algoliasearch: '>= 4.9.1 < 6'
@@ -237,7 +241,7 @@ packages:
     dependencies:
       '@astrojs/compiler': 1.5.1
       '@jridgewell/trace-mapping': 0.3.18
-      '@vscode/emmet-helper': 2.8.9
+      '@vscode/emmet-helper': 2.9.1
       events: 3.3.0
       prettier: 2.8.8
       prettier-plugin-astro: 0.9.1
@@ -250,13 +254,13 @@ packages:
       vscode-uri: 3.0.7
     dev: false
 
-  /@astrojs/markdown-remark@2.2.1(astro@2.6.4):
+  /@astrojs/markdown-remark@2.2.1(astro@2.6.6):
     resolution: {integrity: sha512-VF0HRv4GpC1XEMLnsKf6jth7JSmlt9qpqP0josQgA2eSpCIAC/Et+y94mgdBIZVBYH/yFnMoIxgKVe93xfO2GA==}
     peerDependencies:
       astro: ^2.5.0
     dependencies:
       '@astrojs/prism': 2.1.2
-      astro: 2.6.4(sass@1.63.4)
+      astro: 2.6.6(sass@1.63.5)
       github-slugger: 1.5.0
       import-meta-resolve: 2.2.2
       rehype-raw: 6.1.1
@@ -1641,11 +1645,11 @@ packages:
     engines: {node: ^14 || ^16 || >=18}
     dev: true
 
-  /@csstools/media-query-list-parser@2.1.0(@csstools/css-parser-algorithms@2.2.0)(@csstools/css-tokenizer@2.1.1):
-    resolution: {integrity: sha512-MXkR+TeaS2q9IkpyO6jVCdtA/bfpABJxIrfkLswThFN8EZZgI2RfAHhm6sDNDuYV25d5+b8Lj1fpTccIcSLPsQ==}
+  /@csstools/media-query-list-parser@2.1.1(@csstools/css-parser-algorithms@2.2.0)(@csstools/css-tokenizer@2.1.1):
+    resolution: {integrity: sha512-pUjtFbaKbiFNjJo8pprrIaXLvQvWIlwPiFnRI4sEnc4F0NIGTOsw8kaJSR3CmZAKEvV8QYckovgAnWQC0bgLLQ==}
     engines: {node: ^14 || ^16 || >=18}
     peerDependencies:
-      '@csstools/css-parser-algorithms': ^2.1.1
+      '@csstools/css-parser-algorithms': ^2.2.0
       '@csstools/css-tokenizer': ^2.1.1
     dependencies:
       '@csstools/css-parser-algorithms': 2.2.0(@csstools/css-tokenizer@2.1.1)
@@ -1661,14 +1665,14 @@ packages:
       postcss-selector-parser: 6.0.13
     dev: true
 
-  /@docsearch/css@3.5.0:
-    resolution: {integrity: sha512-Ob5FQLubplcBNihAVtriR59FRBeP8u69F6mu4L4yIr60KfsPc10bOV0DoPErJw0zF9IBN2cNLW9qdmt8zWPxyg==}
+  /@docsearch/css@3.5.1:
+    resolution: {integrity: sha512-2Pu9HDg/uP/IT10rbQ+4OrTQuxIWdKVUEdcw9/w7kZJv9NeHS6skJx1xuRiFyoGKwAzcHXnLp7csE99sj+O1YA==}
     dev: false
 
-  /@docsearch/js@3.5.0(@algolia/client-search@4.17.2)(search-insights@2.6.0):
-    resolution: {integrity: sha512-WqB+z+zVKSXDkGq028nClT9RvMzfFlemZuIulX5ZwWkdUtl4k7M9cmZA/c6kuZf7FG24XQsMHWuBjeUo9hLRyA==}
+  /@docsearch/js@3.5.1(@algolia/client-search@4.17.2)(search-insights@2.6.0):
+    resolution: {integrity: sha512-EXi8de5njxgP6TV3N9ytnGRLG9zmBNTEZjR4VzwPcpPLbZxxTLG2gaFyJyKiFVQxHW/DPlMrDJA3qoRRGEkgZw==}
     dependencies:
-      '@docsearch/react': 3.5.0(@algolia/client-search@4.17.2)(search-insights@2.6.0)
+      '@docsearch/react': 3.5.1(@algolia/client-search@4.17.2)(search-insights@2.6.0)
       preact: 10.15.1
     transitivePeerDependencies:
       - '@algolia/client-search'
@@ -1678,8 +1682,8 @@ packages:
       - search-insights
     dev: false
 
-  /@docsearch/react@3.5.0(@algolia/client-search@4.17.2)(search-insights@2.6.0):
-    resolution: {integrity: sha512-3IG8mmSMzSHNGy2S1VuPyYU9tFCxFpj5Ov8SYwsSHM4yMvFsaO9oFxXocA5lSenliIELhuOuS5+BdxHa/Qlf2A==}
+  /@docsearch/react@3.5.1(@algolia/client-search@4.17.2)(search-insights@2.6.0):
+    resolution: {integrity: sha512-t5mEODdLzZq4PTFAm/dvqcvZFdPDMdfPE5rJS5SC8OUq9mPzxEy6b+9THIqNM9P0ocCb4UC5jqBrxKclnuIbzQ==}
     peerDependencies:
       '@types/react': '>= 16.8.0 < 19.0.0'
       react: '>= 16.8.0 < 19.0.0'
@@ -1692,9 +1696,9 @@ packages:
       react-dom:
         optional: true
     dependencies:
-      '@algolia/autocomplete-core': 1.9.2(@algolia/client-search@4.17.2)(algoliasearch@4.17.2)(search-insights@2.6.0)
-      '@algolia/autocomplete-preset-algolia': 1.9.2(@algolia/client-search@4.17.2)(algoliasearch@4.17.2)
-      '@docsearch/css': 3.5.0
+      '@algolia/autocomplete-core': 1.9.3(@algolia/client-search@4.17.2)(algoliasearch@4.17.2)(search-insights@2.6.0)
+      '@algolia/autocomplete-preset-algolia': 1.9.3(@algolia/client-search@4.17.2)(algoliasearch@4.17.2)
+      '@docsearch/css': 3.5.1
       algoliasearch: 4.17.2
     transitivePeerDependencies:
       - '@algolia/client-search'
@@ -1972,7 +1976,7 @@ packages:
     resolution: {integrity: sha512-4/RWEeXDO6bocPONheFe6gX/oQdP/bEpv0oL4HqjPP5DCenBSt0mHgahppY49N0CpsaqffdwPq+TlX9CYOq2Dw==}
     dev: false
 
-  /@namics/stylelint-bem@8.1.0(stylelint@15.7.0):
+  /@namics/stylelint-bem@8.1.0(stylelint@15.8.0):
     resolution: {integrity: sha512-lVK6mqAD1WjKwtXW4pZ/V7T3TM3WFG+aqYtAxqYLp7et3Rm5Tu3JoXYhA63HE4t467XOJTK+K2foIzYz42j69w==}
     engines: {node: '>=14'}
     peerDependencies:
@@ -1980,7 +1984,7 @@ packages:
     dependencies:
       css-selector-classes: 0.1.2
       postcss-resolve-nested-selector: 0.1.1
-      stylelint: 15.7.0
+      stylelint: 15.8.0
     dev: true
 
   /@nodelib/fs.scandir@2.1.5:
@@ -2379,8 +2383,8 @@ packages:
     resolution: {integrity: sha512-iO9ZQHkZxHn4mSakYV0vFHAVDyEOIJQrV2uZ06HxEPcx+mt8swXoZHIbaaJ2crJYFfErySgktuTZ3BeLz+XmFA==}
     dev: false
 
-  /@vscode/emmet-helper@2.8.9:
-    resolution: {integrity: sha512-ygpVStaePHt9aI9zk4NNJWI/NsRaeDSW1vQsZVmtpVRVCOdwYlsc3BfB/eppUu1OucT0x3OHDAzKcxnitjcSXQ==}
+  /@vscode/emmet-helper@2.9.1:
+    resolution: {integrity: sha512-+cdkHZ/QlvSXXsA/fstnyl1EwIFJyKA9Mw4Yz4oC6gXTTewfViYWOddtDPVYKGtda/vA0rcnHTAF/Xl7+QGKgQ==}
     dependencies:
       emmet: 2.4.4
       jsonc-parser: 2.3.1
@@ -2563,8 +2567,8 @@ packages:
       - '@rometools/wasm-web'
     dev: false
 
-  /astro@2.6.4(sass@1.63.4):
-    resolution: {integrity: sha512-YM5H9SLHflxCB/3H8S2Bi+1Lbwn/MA9Vl/eOZmkCT491gvBsyuKCTsoUas6fwggeKn+fIR2XpdYd2F+unQve3g==}
+  /astro@2.6.6(sass@1.63.5):
+    resolution: {integrity: sha512-npeTXVaSOWKYYF6Znj6Yfxfq+WIFZ9u/Q+vtFP3nXbl7/XimvE+LbmWoK+hPFBOXC/KRLHxqQSltXJX5ALFmFg==}
     engines: {node: '>=16.12.0', npm: '>=6.14.0'}
     hasBin: true
     peerDependencies:
@@ -2576,7 +2580,7 @@ packages:
       '@astrojs/compiler': 1.5.1
       '@astrojs/internal-helpers': 0.1.0
       '@astrojs/language-server': 1.0.8
-      '@astrojs/markdown-remark': 2.2.1(astro@2.6.4)
+      '@astrojs/markdown-remark': 2.2.1(astro@2.6.6)
       '@astrojs/telemetry': 2.1.1
       '@astrojs/webapi': 2.2.0
       '@babel/core': 7.22.5
@@ -2626,7 +2630,7 @@ packages:
       typescript: 5.1.3
       unist-util-visit: 4.1.2
       vfile: 5.3.7
-      vite: 4.3.9(sass@1.63.4)
+      vite: 4.3.9(sass@1.63.5)
       vitefu: 0.2.4(vite@4.3.9)
       yargs-parser: 21.1.1
       zod: 3.21.4
@@ -2656,7 +2660,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.21.9
-      caniuse-lite: 1.0.30001503
+      caniuse-lite: 1.0.30001506
       fraction.js: 4.2.0
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -2823,8 +2827,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001503
-      electron-to-chromium: 1.4.432
+      caniuse-lite: 1.0.30001506
+      electron-to-chromium: 1.4.436
       node-releases: 2.0.12
       update-browserslist-db: 1.0.11(browserslist@4.21.9)
     dev: false
@@ -2907,13 +2911,13 @@ packages:
     resolution: {integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==}
     dependencies:
       browserslist: 4.21.9
-      caniuse-lite: 1.0.30001503
+      caniuse-lite: 1.0.30001506
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
     dev: false
 
-  /caniuse-lite@1.0.30001503:
-    resolution: {integrity: sha512-Sf9NiF+wZxPfzv8Z3iS0rXM1Do+iOy2Lxvib38glFX+08TCYYYGR5fRJXk4d77C4AYwhUjgYgMsMudbh2TqCKw==}
+  /caniuse-lite@1.0.30001506:
+    resolution: {integrity: sha512-6XNEcpygZMCKaufIcgpQNZNf00GEqc7VQON+9Rd0K1bMYo8xhMZRAo5zpbnbMNizi4YNgIDAFrdykWsvY3H4Hw==}
     dev: false
 
   /ccount@2.0.1:
@@ -3516,8 +3520,8 @@ packages:
       jake: 10.8.7
     dev: false
 
-  /electron-to-chromium@1.4.432:
-    resolution: {integrity: sha512-yz3U/khQgAFT2HURJA3/F4fKIyO2r5eK09BQzBZFd6BvBSSaRuzKc2ZNBHtJcO75/EKiRYbVYJZ2RB0P4BuD2g==}
+  /electron-to-chromium@1.4.436:
+    resolution: {integrity: sha512-aktOxo8fnrMC8vOIBMVS3PXbT1nrPQ+SouUuN7Y0a+Rw3pOMrvIV92Ybnax7x4tugA+ZpYA5fOHTby7ama8OQQ==}
     dev: false
 
   /emmet@2.4.4:
@@ -4227,7 +4231,7 @@ packages:
       entities: 4.5.0
       param-case: 3.0.4
       relateurl: 0.2.7
-      terser: 5.18.0
+      terser: 5.17.7
     dev: false
 
   /html-tags@3.3.1:
@@ -5012,7 +5016,7 @@ packages:
       rollup-plugin-typescript2: 0.32.1(rollup@2.79.1)(typescript@4.9.5)
       rollup-plugin-visualizer: 5.9.2(rollup@2.79.1)
       sade: 1.8.1
-      terser: 5.18.0
+      terser: 5.18.1
       tiny-glob: 0.2.9
       tslib: 2.5.3
       typescript: 4.9.5
@@ -6499,7 +6503,7 @@ packages:
       jest-worker: 26.6.2
       rollup: 2.79.1
       serialize-javascript: 4.0.0
-      terser: 5.18.0
+      terser: 5.18.1
     dev: false
 
   /rollup-plugin-typescript2@0.32.1(rollup@2.79.1)(typescript@4.9.5):
@@ -6612,8 +6616,8 @@ packages:
       suf-log: 2.5.3
     dev: false
 
-  /sass@1.63.4:
-    resolution: {integrity: sha512-Sx/+weUmK+oiIlI+9sdD0wZHsqpbgQg8wSwSnGBjwb5GwqFhYNwwnI+UWZtLjKvKyFlKkatRK235qQ3mokyPoQ==}
+  /sass@1.63.5:
+    resolution: {integrity: sha512-Q6c5gs482oezdAp+0fWF9cRisvpy7yfYb64knID0OE8AnMgtkluRPfpGMFjeD4/+M4+6QpJZCU6JRSxbjiktkg==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
@@ -7009,16 +7013,16 @@ packages:
       postcss-selector-parser: 6.0.13
     dev: false
 
-  /stylelint-config-clean-order@5.0.1(stylelint@15.7.0):
+  /stylelint-config-clean-order@5.0.1(stylelint@15.8.0):
     resolution: {integrity: sha512-zKLXjTgrkZqiml0VXv7Syl11XLpzRErW+1/qSEjIQ+aHAFjGuRq6Uwal9OzxtDHvpoIhlc4wCYjougWDuLN5aA==}
     peerDependencies:
       stylelint: '>=14'
     dependencies:
-      stylelint: 15.7.0
-      stylelint-order: 6.0.3(stylelint@15.7.0)
+      stylelint: 15.8.0
+      stylelint-order: 6.0.3(stylelint@15.8.0)
     dev: true
 
-  /stylelint-config-html@1.1.0(postcss-html@1.5.0)(stylelint@15.7.0):
+  /stylelint-config-html@1.1.0(postcss-html@1.5.0)(stylelint@15.8.0):
     resolution: {integrity: sha512-IZv4IVESjKLumUGi+HWeb7skgO6/g4VMuAYrJdlqQFndgbj6WJAXPhaysvBiXefX79upBdQVumgYcdd17gCpjQ==}
     engines: {node: ^12 || >=14}
     peerDependencies:
@@ -7026,10 +7030,10 @@ packages:
       stylelint: '>=14.0.0'
     dependencies:
       postcss-html: 1.5.0
-      stylelint: 15.7.0
+      stylelint: 15.8.0
     dev: true
 
-  /stylelint-config-recommended-scss@11.0.0(postcss@8.4.24)(stylelint@15.7.0):
+  /stylelint-config-recommended-scss@11.0.0(postcss@8.4.24)(stylelint@15.8.0):
     resolution: {integrity: sha512-EDghTDU7aOv2LTsRZvcT1w8mcjUaMhuy+t38iV5I/0Qiu6ixdkRwhLEMul3K/fnB2v9Nwqvb3xpvJfPH+HduDw==}
     peerDependencies:
       postcss: ^8.3.3
@@ -7040,20 +7044,20 @@ packages:
     dependencies:
       postcss: 8.4.24
       postcss-scss: 4.0.6(postcss@8.4.24)
-      stylelint: 15.7.0
-      stylelint-config-recommended: 12.0.0(stylelint@15.7.0)
-      stylelint-scss: 4.7.0(stylelint@15.7.0)
+      stylelint: 15.8.0
+      stylelint-config-recommended: 12.0.0(stylelint@15.8.0)
+      stylelint-scss: 4.7.0(stylelint@15.8.0)
     dev: true
 
-  /stylelint-config-recommended@12.0.0(stylelint@15.7.0):
+  /stylelint-config-recommended@12.0.0(stylelint@15.8.0):
     resolution: {integrity: sha512-x6x8QNARrGO2sG6iURkzqL+Dp+4bJorPMMRNPScdvaUK8PsynriOcMW7AFDKqkWAS5wbue/u8fUT/4ynzcmqdQ==}
     peerDependencies:
       stylelint: ^15.5.0
     dependencies:
-      stylelint: 15.7.0
+      stylelint: 15.8.0
     dev: true
 
-  /stylelint-config-standard-scss@9.0.0(postcss@8.4.24)(stylelint@15.7.0):
+  /stylelint-config-standard-scss@9.0.0(postcss@8.4.24)(stylelint@15.8.0):
     resolution: {integrity: sha512-yPKpJsrZn4ybuQZx/DkEHuCjw7pJginErE/47dFhCnrvD48IJ4UYec8tSiCuJWMA3HRjbIa3nh5ZeSauDGuVAg==}
     peerDependencies:
       postcss: ^8.3.3
@@ -7063,31 +7067,31 @@ packages:
         optional: true
     dependencies:
       postcss: 8.4.24
-      stylelint: 15.7.0
-      stylelint-config-recommended-scss: 11.0.0(postcss@8.4.24)(stylelint@15.7.0)
-      stylelint-config-standard: 33.0.0(stylelint@15.7.0)
+      stylelint: 15.8.0
+      stylelint-config-recommended-scss: 11.0.0(postcss@8.4.24)(stylelint@15.8.0)
+      stylelint-config-standard: 33.0.0(stylelint@15.8.0)
     dev: true
 
-  /stylelint-config-standard@33.0.0(stylelint@15.7.0):
+  /stylelint-config-standard@33.0.0(stylelint@15.8.0):
     resolution: {integrity: sha512-eyxnLWoXImUn77+ODIuW9qXBDNM+ALN68L3wT1lN2oNspZ7D9NVGlNHb2QCUn4xDug6VZLsh0tF8NyoYzkgTzg==}
     peerDependencies:
       stylelint: ^15.5.0
     dependencies:
-      stylelint: 15.7.0
-      stylelint-config-recommended: 12.0.0(stylelint@15.7.0)
+      stylelint: 15.8.0
+      stylelint-config-recommended: 12.0.0(stylelint@15.8.0)
     dev: true
 
-  /stylelint-order@6.0.3(stylelint@15.7.0):
+  /stylelint-order@6.0.3(stylelint@15.8.0):
     resolution: {integrity: sha512-1j1lOb4EU/6w49qZeT2SQVJXm0Ht+Qnq9GMfUa3pMwoyojIWfuA+JUDmoR97Bht1RLn4ei0xtLGy87M7d29B1w==}
     peerDependencies:
       stylelint: ^14.0.0 || ^15.0.0
     dependencies:
       postcss: 8.4.24
       postcss-sorting: 8.0.2(postcss@8.4.24)
-      stylelint: 15.7.0
+      stylelint: 15.8.0
     dev: true
 
-  /stylelint-scss@4.7.0(stylelint@15.7.0):
+  /stylelint-scss@4.7.0(stylelint@15.8.0):
     resolution: {integrity: sha512-TSUgIeS0H3jqDZnby1UO1Qv3poi1N8wUYIJY6D1tuUq2MN3lwp/rITVo0wD+1SWTmRm0tNmGO0b7nKInnqF6Hg==}
     peerDependencies:
       stylelint: ^14.5.1 || ^15.0.0
@@ -7096,17 +7100,17 @@ packages:
       postcss-resolve-nested-selector: 0.1.1
       postcss-selector-parser: 6.0.13
       postcss-value-parser: 4.2.0
-      stylelint: 15.7.0
+      stylelint: 15.8.0
     dev: true
 
-  /stylelint@15.7.0:
-    resolution: {integrity: sha512-fQRwHwWuZsDn4ENyE9AsKkOkV9WlD2CmYiVDbdZPdS3iZh0ceypOn1EuwTNuZ8xTrHF+jVeIEzLtFFSlD/nJHg==}
+  /stylelint@15.8.0:
+    resolution: {integrity: sha512-x9qBk84F3MEjMEUNCE7MtWmfj9G9y5XzJ0cpQeJdy2l/IoqjC8Ih0N0ytmOTnXE4Yv0J7I1cmVRQUVNSPCxTsA==}
     engines: {node: ^14.13.1 || >=16.0.0}
     hasBin: true
     dependencies:
       '@csstools/css-parser-algorithms': 2.2.0(@csstools/css-tokenizer@2.1.1)
       '@csstools/css-tokenizer': 2.1.1
-      '@csstools/media-query-list-parser': 2.1.0(@csstools/css-parser-algorithms@2.2.0)(@csstools/css-tokenizer@2.1.1)
+      '@csstools/media-query-list-parser': 2.1.1(@csstools/css-parser-algorithms@2.2.0)(@csstools/css-tokenizer@2.1.1)
       '@csstools/selector-specificity': 2.2.0(postcss-selector-parser@6.0.13)
       balanced-match: 2.0.0
       colord: 2.9.3
@@ -7144,7 +7148,6 @@ packages:
       supports-hyperlinks: 3.0.0
       svg-tags: 1.0.0
       table: 6.8.1
-      v8-compile-cache: 2.3.0
       write-file-atomic: 5.0.1
     transitivePeerDependencies:
       - supports-color
@@ -7279,8 +7282,8 @@ packages:
       source-map-support: 0.5.21
     dev: false
 
-  /terser@5.18.0:
-    resolution: {integrity: sha512-pdL757Ig5a0I+owA42l6tIuEycRuM7FPY4n62h44mRLRfnOxJkkOHd6i89dOpwZlpF6JXBwaAHF6yWzFrt+QyA==}
+  /terser@5.18.1:
+    resolution: {integrity: sha512-j1n0Ao919h/Ai5r43VAnfV/7azUYW43GPxK7qSATzrsERfW7+y2QW9Cp9ufnRF5CQUWbnLSo7UJokSWCqg4tsQ==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
@@ -7541,10 +7544,6 @@ packages:
       sade: 1.8.1
     dev: false
 
-  /v8-compile-cache@2.3.0:
-    resolution: {integrity: sha512-l8lCEmLcLYZh4nbunNZvQCJc5pv7+RCwa8q/LdUx8u7lsWvPDKmpodJAJNwkAhJC//dFY48KuIEmjtd4RViDrA==}
-    dev: true
-
   /validate-npm-package-license@3.0.4:
     resolution: {integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==}
     dependencies:
@@ -7575,7 +7574,7 @@ packages:
       vfile-message: 3.1.4
     dev: false
 
-  /vite@4.3.9(sass@1.63.4):
+  /vite@4.3.9(sass@1.63.5):
     resolution: {integrity: sha512-qsTNZjO9NoJNW7KnOrgYwczm0WctJ8m/yqYAMAK9Lxt4SoySUfS5S8ia9K7JHpa3KEeMfyF8LoJ3c5NeBJy6pg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -7603,7 +7602,7 @@ packages:
       esbuild: 0.17.19
       postcss: 8.4.24
       rollup: 3.25.1
-      sass: 1.63.4
+      sass: 1.63.5
     optionalDependencies:
       fsevents: 2.3.2
     dev: false
@@ -7616,7 +7615,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 4.3.9(sass@1.63.4)
+      vite: 4.3.9(sass@1.63.5)
     dev: false
 
   /vscode-css-languageservice@6.2.6:
