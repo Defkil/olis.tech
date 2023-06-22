@@ -71,7 +71,7 @@ if (selectedCategory) {
               data-description={category.description}
               data-count={category.count}
               data-last-publish-or-update={category.lastPublishOrUpdate}
-              data-last-posts={category.lastPosts}>
+              data-last-posts={JSON.stringify(category.lastPosts)}>
               {category.title}
             </button>))}
         </div>
@@ -86,11 +86,13 @@ if (selectedCategory) {
         </div>
       </div>
       <div class="posts">
-        {initialCategory.lastPosts.map((post) => (<a href={post.link} data-swup-preload>
-          <div class="post border shadow shadow--hover">
-            <div class="post__title">{post.title}</div>
-          </div>
-        </a>))}
+        <div class="js--posts">
+          {initialCategory.lastPosts.map((post) => (<a href={post.link} data-swup-preload>
+            <div class="post border shadow shadow--hover">
+              <div class="post__title">{post.title}</div>
+            </div>
+          </a>))}
+        </div>
         <a class="js--link" href={initialCategory.link} data-swup-preload>
           <div class="post post--small border shadow shadow--hover">
             <div class="post__title post__title--small-centered-text">
@@ -109,7 +111,8 @@ if (selectedCategory) {
       link: this.querySelectorAll('.js--link')!,
       description: this.querySelector('.js--description')!,
       count: this.querySelector('.js--details__count')!,
-      last: this.querySelector('.js--details__last')!
+      last: this.querySelector('.js--details__last')!,
+      posts: this.querySelector('.js--posts')!
     }
 
     connectedCallback() {
@@ -138,8 +141,27 @@ if (selectedCategory) {
           this.dom.description.textContent = button.dataset.description!;
           this.dom.count.textContent = button.dataset.count!;
           this.dom.last.textContent = button.dataset.lastPublishOrUpdate!;
+          this.dom.posts.innerHTML = ''
+          const postData: {title: string, link: string}[] = JSON.parse(button.dataset.lastPosts!)
+          for (let postId in postData) {
+            const post = postData[postId]!
+            const a = document.createElement('a')
+            a.href = post.link
+            a.setAttribute('data-swup-preload', '')
+
+            const div = document.createElement('div')
+            div.classList.add('post', 'border', 'shadow', 'shadow--hover')
+
+            const divPostTitle = document.createElement('div')
+            divPostTitle.classList.add('post__title')
+            divPostTitle.textContent = post.title
+
+            div.appendChild(divPostTitle)
+            a.appendChild(div)
+            this.dom.posts.appendChild(a)
+          }
+
           const swup: any = (window as any).swup;
-          //todo update last posts
           if (swup) {
             swup.preloadPages()
           }
