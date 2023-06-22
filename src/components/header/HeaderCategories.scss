@@ -57,16 +57,17 @@ $breakpoint-desktop: 1100px;
 .sidebar__container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
   gap: 8px;
+  align-items: center;
+  justify-content: center;
+
   @media screen and (width >= 550px) { gap: 16px; }
+
   @media screen and (width >= 630px) { gap: 22px; }
 }
 
 .sidebar__button {
   cursor: pointer;
-  //margin: 6px 18px 6px 0;
   padding: 10px 20px;
   border-radius: var(--border-radius);
 }
@@ -128,8 +129,8 @@ $breakpoint-desktop: 1100px;
   flex-grow: 1;
 
   width: 100%;
-
   padding-top: 18px;
+
   @media screen and (width >= $breakpoint-desktop) {
     padding: 0;
   }
