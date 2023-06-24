@@ -167,7 +167,7 @@ if (selectedCategory) {
       },
       preloadPages: {
         handler: () => {
-          const swup = (window as {swup: {preloadPages: () => {}}}).swup;
+          const swup = (window as unknown as {swup: {preloadPages: () => {}}}).swup;
           if (swup) {
             swup.preloadPages()
           }
