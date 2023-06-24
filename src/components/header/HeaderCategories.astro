@@ -106,13 +106,73 @@ if (selectedCategory) {
 </div>
 <script>
   class HeaderCategories extends HTMLElement {
-    dom = {
-      title: this.querySelectorAll('.js--title')!,
-      link: this.querySelectorAll('.js--link')!,
-      description: this.querySelector('.js--description')!,
-      count: this.querySelector('.js--details__count')!,
-      last: this.querySelector('.js--details__last')!,
-      posts: this.querySelector('.js--posts')!
+    onClick = {
+      title: {
+        dom: this.querySelectorAll('.js--title')!,
+        handler: (data: { title: string}) => {
+          const CLASS_TITLE = 'info__title'
+          const CLASS_TITLE_SMALL = 'info__title--small'
+          this.onClick.title.dom.forEach((elm) => {
+            elm.textContent = data.title
+            if (elm.classList.contains(CLASS_TITLE)){
+              if (elm.textContent!.trim().length > 12) {
+                elm.classList.add(CLASS_TITLE_SMALL)
+              } else {
+                elm.classList.remove(CLASS_TITLE_SMALL)
+              }
+            }
+          });
+        }
+      },
+      link: {
+        dom: this.querySelectorAll('.js--link')!,
+        handler: (data: { link: string}) => {
+          this.onClick.link.dom.forEach((link) => {
+            if (link instanceof HTMLAnchorElement) {
+              link.href = data.link
+            }
+          });
+        }
+      },
+      description: {
+        dom: this.querySelector('.js--description')!,
+        handler: (data: { description: string}) => {
+          this.onClick.description.dom.textContent = data.description
+        }
+      },
+      count: {
+        dom: this.querySelector('.js--details__count')!,
+        handler: (data: { count: string}) => {
+          this.onClick.count.dom.textContent = data.count
+        }
+      },
+      last: {
+        dom: this.querySelector('.js--details__last')!,
+        handler: (data: { lastPublishOrUpdate: string}) => {
+          this.onClick.last.dom.textContent = data.lastPublishOrUpdate
+        }
+      },
+      posts: {
+        dom: this.querySelector('.js--posts')!,
+        handler: (data: { posts: {title: string, link: string}[]}) => {
+          this.onClick.posts.dom.innerHTML = ''
+          for (const post of data.posts) {
+            this.onClick.posts.dom.innerHTML += `<a href="${post.link}" data-swup-preload>
+            <div class="post border shadow shadow--hover">
+              <div class="post__title">${post.title}</div>
+            </div>
+          </a>`
+          }
+        }
+      },
+      preloadPages: {
+        handler: () => {
+          const swup = (window as {swup: {preloadPages: () => {}}}).swup;
+          if (swup) {
+            swup.preloadPages()
+          }
+        }
+      }
     }
 
     connectedCallback() {
@@ -123,47 +183,23 @@ if (selectedCategory) {
       const buttons: NodeListOf<HTMLElement> = this.querySelectorAll('.js--category-button');
       buttons.forEach((button) => {
         button.addEventListener('click', () => {
-          this.dom.title.forEach((title) => {
-            title.textContent = button.textContent
-            if (title.classList.contains('info__title')){
-              if (title.textContent!.trim().length > 12) {
-                title.classList.add('info__title--small')
-              } else {
-                title.classList.remove('info__title--small')
-              }
-            }
-          });
-          this.dom.link.forEach((link) => {
-            if (link instanceof HTMLAnchorElement) {
-              link.href = button.dataset.link!;
-            }
-          });
-          this.dom.description.textContent = button.dataset.description!;
-          this.dom.count.textContent = button.dataset.count!;
-          this.dom.last.textContent = button.dataset.lastPublishOrUpdate!;
-          this.dom.posts.innerHTML = ''
-          const postData: {title: string, link: string}[] = JSON.parse(button.dataset.lastPosts!)
-          for (let postId in postData) {
-            const post = postData[postId]!
-            const a = document.createElement('a')
-            a.href = post.link
-            a.setAttribute('data-swup-preload', '')
-
-            const div = document.createElement('div')
-            div.classList.add('post', 'border', 'shadow', 'shadow--hover')
-
-            const divPostTitle = document.createElement('div')
-            divPostTitle.classList.add('post__title')
-            divPostTitle.textContent = post.title
-
-            div.appendChild(divPostTitle)
-            a.appendChild(div)
-            this.dom.posts.appendChild(a)
+          const data: {
+            title: string,
+            link: string,
+            description: string,
+            count: string,
+            lastPublishOrUpdate: string,
+            posts: {title: string, link: string}[]
+          } = {
+            title: button.textContent!,
+            link: button.dataset.link!,
+            description: button.dataset.description!,
+            count: button.dataset.count!,
+            lastPublishOrUpdate: button.dataset.lastPublishOrUpdate!,
+            posts: JSON.parse(button.dataset.lastPosts!)
           }
-
-          const swup: any = (window as any).swup;
-          if (swup) {
-            swup.preloadPages()
+          for (const handler of Object.values(this.onClick)) {
+            handler.handler(data)
           }
         })
       })
