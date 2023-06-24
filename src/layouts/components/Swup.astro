@@ -1,0 +1,18 @@
+<script>
+  import Swup from 'swup'
+  // @ts-expect-error
+  import SwupHeadPlugin from '@swup/head-plugin'
+  // @ts-expect-error
+  import SwupSlideTheme from '@swup/slide-theme'
+  // @ts-expect-error
+  import SwupPreloadPlugin from '@swup/preload-plugin';
+
+  (window as any)['swup'] = new Swup({
+    plugins: [
+      new SwupPreloadPlugin(),
+      new SwupHeadPlugin(),
+      new SwupSlideTheme({ reversed: false })
+    ],
+  })
+</script>
+
