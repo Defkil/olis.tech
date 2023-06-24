@@ -25,7 +25,7 @@ dependencies:
     version: 5.0.3
   '@swup/preload-plugin':
     specifier: ^2.2.0
-    version: 2.2.0(swup@3.1.0)
+    version: 2.2.0(swup@3.1.1)
   astro:
     specifier: ^2.7.0
     version: 2.7.0(sass@1.63.6)
@@ -80,8 +80,8 @@ devDependencies:
     specifier: ^9.0.0
     version: 9.0.0(postcss@8.4.24)(stylelint@15.9.0)
   swup:
-    specifier: ^3.1.0
-    version: 3.1.0
+    specifier: ^3.1.1
+    version: 3.1.1
 
 packages:
 
@@ -2213,20 +2213,20 @@ packages:
       prettier: 2.8.8
       shelljs: 0.8.5
       shelljs-live: 0.0.5(shelljs@0.8.5)
-      swup: 3.1.0
+      swup: 3.1.1
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
       - ts-node
     dev: false
 
-  /@swup/preload-plugin@2.2.0(swup@3.1.0):
+  /@swup/preload-plugin@2.2.0(swup@3.1.1):
     resolution: {integrity: sha512-dzjTlvFICdhSsYejb4WX6mEKQOaBTcLp0XD0l2O1puIOGpX8kcnujKbZOuDsebxmcOkWPM0ZVvDzu6ZXomb6Fw==}
     peerDependencies:
       swup: ^3.0.0
     dependencies:
       '@swup/plugin': 2.0.3
-      swup: 3.1.0
+      swup: 3.1.1
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
@@ -6550,8 +6550,8 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
 
-  /rollup@3.25.1:
-    resolution: {integrity: sha512-tywOR+rwIt5m2ZAWSe5AIJcTat8vGlnPFAv15ycCrw33t6iFsXZ6mzHVFh2psSjxQPmI+xgzMZZizUAukBI4aQ==}
+  /rollup@3.25.2:
+    resolution: {integrity: sha512-VLnkxZMDr3jpxgtmS8pQZ0UvhslmF4ADq/9w4erkctbgjCqLW9oa89fJuXEs4ZmgyoF7Dm8rMDKSS5b5u2hHUg==}
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
@@ -7225,8 +7225,8 @@ packages:
       picocolors: 1.0.0
     dev: false
 
-  /swup@3.1.0:
-    resolution: {integrity: sha512-F2gVPvB6lJPvHaa9uzgaSAYHQ/L+a6rIg7OBOgHZLNpTxB4c7K7/Yo93KFAU5qU2DD9gHoTcpKh0StQQeA4GTg==}
+  /swup@3.1.1:
+    resolution: {integrity: sha512-fO8ID/SOYTCl5/Cm45rG3wFBFbrxnjeJ+S9q3eKJL1l3pjl6QUCZNqB4Tid4H0eQXlZv5dNDj4KD3AwWK5Il4w==}
     requiresBuild: true
     dependencies:
       delegate-it: 6.0.1
@@ -7601,7 +7601,7 @@ packages:
     dependencies:
       esbuild: 0.17.19
       postcss: 8.4.24
-      rollup: 3.25.1
+      rollup: 3.25.2
       sass: 1.63.6
     optionalDependencies:
       fsevents: 2.3.2
