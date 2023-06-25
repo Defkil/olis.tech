@@ -3,7 +3,7 @@ $breakpoint-desktop: 1100px;
 
 .background {
   min-height: 280px;
-  padding: 24px 0;
+  padding: 48px 0 24px;
   background-color: var(--color-quaternary);
 
   @media screen and (width >= $breakpoint-tablet) {
@@ -20,7 +20,9 @@ $breakpoint-desktop: 1100px;
 
   max-width: var(--container-max-width);
   margin: 0 auto;
-  padding: 0 16px 0 8px;
+  padding: 24px 16px 0 8px;
+
+  gap: 24px 12px;
 
   text-align: center;
 
@@ -39,16 +41,16 @@ $breakpoint-desktop: 1100px;
 .sidebar {
   grid-area: sidebar;
   width: 100%;
-  padding: 26px 8px 26px 0;
+  padding-bottom: 24px;
 }
 
 .sidebar__title {
-  margin: 16px 0 42px;
+  margin: 0 0 42px 0;
 
   font-family: var(--font-family-hightlight);
   font-size: 3rem;
   font-weight: 500;
-  line-height: 0;
+  line-height: 2rem;
   color: var(--color-white);
 }
 
@@ -68,6 +70,7 @@ $breakpoint-desktop: 1100px;
 .sidebar__button {
   cursor: pointer;
   padding: 10px 20px;
+  font-weight: bold;
   border-radius: var(--border-radius);
 }
 
@@ -88,17 +91,16 @@ $breakpoint-desktop: 1100px;
 }
 
 .info__title {
-  padding: 0;
+  padding: 0 0 40px 0;
 
   font-family: var(--font-family-hightlight);
   font-size: 3rem;
   font-weight: 500;
-  line-height: 0;
+  line-height: 2rem;
 }
 
 .info__title--small {
   font-size: 2.5rem;
-  line-height: 1rem;
 }
 
 .info__description {
@@ -128,7 +130,6 @@ $breakpoint-desktop: 1100px;
   flex-grow: 1;
 
   width: 100%;
-  padding-top: 18px;
 
   @media screen and (width >= $breakpoint-desktop) {
     padding: 0;
