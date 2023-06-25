@@ -58,7 +58,6 @@ $breakpoint-desktop: 1100px;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  align-items: center;
   justify-content: center;
 
   @media screen and (width >= 550px) { gap: 16px; }
