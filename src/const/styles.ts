@@ -11,4 +11,4 @@ export const styles = {
   "color-senary": style["color-senary"],
 };
 
-export const WaveSeparatorColors = [styles["color-secondary"], styles["color-quaternary"]];
+export const WaveSeparatorColors = [styles["color-secondary"], styles["color-quaternary"], styles["color-quinary"]];
