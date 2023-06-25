@@ -5,6 +5,8 @@ import PreloadSvg from "./components/PreloadSvg.astro";
 import AlgoliaSearch from "./components/AlgoliaSearch.astro";
 import Swup from "./components/Swup.astro";
 import Footer from "../components/footer/Footer.astro";
+import {styles} from "../const/styles";
+import WaveSeparator from "../components/WaveSeparator.astro";
 
 const { title, description, category } = Astro.props
 ---
@@ -16,9 +18,12 @@ const { title, description, category } = Astro.props
 <body>
 <PreloadSvg />
 <Header category={category} />
-<main id="swup">
-  <slot />
+<main class="content">
+  <div id="swup">
+    <slot />
+  </div>
 </main>
+<WaveSeparator color={styles["color-quinary"]}/>
 <Footer />
 <Swup />
 <AlgoliaSearch />
