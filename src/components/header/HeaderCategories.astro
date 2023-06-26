@@ -85,14 +85,12 @@ if (selectedCategory) {
           <span>Update am <span class="js--details__last">{initialCategory.lastPublishOrUpdate}</span></span>
         </div>
       </div>
-      <div class="posts">
-        <div class="js--posts">
-          {initialCategory.lastPosts.map((post) => (<a href={post.link} data-swup-preload>
-            <div class="post border shadow shadow--hover">
-              <div class="post__title">{post.title}</div>
-            </div>
-          </a>))}
-        </div>
+      <div class="posts js--posts">
+        {initialCategory.lastPosts.map((post) => (<a href={post.link} data-swup-preload>
+          <div class="post border shadow shadow--hover">
+            <div class="post__title">{post.title}</div>
+          </div>
+        </a>))}
         <a class="js--link" href={initialCategory.link} data-swup-preload>
           <div class="post post--small border shadow shadow--hover">
             <div class="post__title post__title--small-centered-text">
@@ -155,14 +153,21 @@ if (selectedCategory) {
       posts: {
         dom: this.querySelector('.js--posts')!,
         handler: (data: { posts: {title: string, link: string}[]}) => {
-          this.onClick.posts.dom.innerHTML = ''
+          const posts = this.onClick.posts.dom.querySelectorAll('a')
+          posts.forEach((post) => {
+            if (!post.classList.contains('js--link')) {
+              post.remove()
+            }
+          })
+          let postHtml = ''
           for (const post of data.posts) {
-            this.onClick.posts.dom.innerHTML += `<a href="${post.link}" data-swup-preload>
+            postHtml += `<a href="${post.link}" data-swup-preload>
             <div class="post border shadow shadow--hover">
               <div class="post__title">${post.title}</div>
             </div>
           </a>`
           }
+          this.onClick.posts.dom.insertAdjacentHTML('afterbegin', postHtml)
         }
       },
       preloadPages: {

@@ -17,12 +17,11 @@ $breakpoint-desktop: 1100px;
                  "info"
                  "posts";
   grid-template-columns: 1fr;
+  gap: 24px 12px;
 
   max-width: var(--container-max-width);
   margin: 0 auto;
   padding: 24px 16px 0 8px;
-
-  gap: 24px 12px;
 
   text-align: center;
 
@@ -45,7 +44,7 @@ $breakpoint-desktop: 1100px;
 }
 
 .sidebar__title {
-  margin: 0 0 42px 0;
+  margin: 0 0 42px;
 
   font-family: var(--font-family-hightlight);
   font-size: 3rem;
@@ -91,7 +90,7 @@ $breakpoint-desktop: 1100px;
 }
 
 .info__title {
-  padding: 0 0 40px 0;
+  padding: 0 0 40px;
 
   font-family: var(--font-family-hightlight);
   font-size: 3rem;
@@ -131,8 +130,10 @@ $breakpoint-desktop: 1100px;
 
   width: 100%;
 
-  @media screen and (width >= $breakpoint-desktop) {
-    padding: 0;
+  @media screen and (width >= 800px) and (width < $breakpoint-desktop) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 16px;
   }
 }
 
