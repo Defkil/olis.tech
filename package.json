@@ -21,7 +21,7 @@
     "@fontsource/righteous": "^5.0.3",
     "@swup/preload-plugin": "^2.3.0",
     "astro": "^2.7.2",
-    "astro-compress": "^1.1.47",
+    "astro-compress": "^1.1.48",
     "astro-compressor": "^0.4.0",
     "astro-critters": "^1.1.38",
     "astro-rome": "^0.1.18",
