@@ -68,8 +68,12 @@ $breakpoint-desktop: 1100px;
 
 .sidebar__button {
   cursor: pointer;
+
   padding: 10px 20px;
+
   font-weight: bold;
+
+  background: var(--color-white);
   border-radius: var(--border-radius);
 }
 
