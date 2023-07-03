@@ -45,7 +45,7 @@ export const categories: CategoryData[] = [
   },
 ];
 
-export const categorySchema = z.object({
+export const postSchema = z.object({
   title: z.string(),
   description: z.string(),
   image: z.string().url().optional(),
@@ -53,9 +53,9 @@ export const categorySchema = z.object({
   updateDate: z.date().optional(),
 });
 
-export type CategorySchema = z.infer<typeof categorySchema>;
+export type PostSchema = z.infer<typeof postSchema>;
 
-export interface CategoryData<T extends CategorySchema = CategorySchema> {
+export interface CategoryData<T extends PostSchema = PostSchema> {
   title: string;
   collection: string;
   description: string;
