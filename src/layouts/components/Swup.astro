@@ -7,12 +7,14 @@
   // @ts-expect-error
   import SwupPreloadPlugin from '@swup/preload-plugin';
 
-  (window as any)['swup'] = new Swup({
+  const swup = (window as any)['swup'] = new Swup({
     plugins: [
       new SwupPreloadPlugin(),
       new SwupHeadPlugin(),
-      new SwupSlideTheme({ reversed: false })
+      new SwupSlideTheme({ reversed: false }),
     ],
   })
+
+  swup.on('contentReplaced', () => document.getElementById('swup')?.scrollIntoView({ behavior: 'smooth' }))
 </script>
 
