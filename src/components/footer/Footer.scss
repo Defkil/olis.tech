@@ -19,7 +19,6 @@
 .footer__container {
   @include container;
 
-  max-width: var(--container-max-width);
   margin: 0 auto;
   padding: 60px 16px 20px;
 
