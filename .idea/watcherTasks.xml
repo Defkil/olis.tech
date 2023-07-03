@@ -5,7 +5,7 @@
       <option name="arguments" value="exec rome format $FilePath$ --write" />
       <option name="checkSyntaxErrors" value="true" />
       <option name="description" />
-      <option name="exitCodeBehavior" value="ALWAYS" />
+      <option name="exitCodeBehavior" value="ERROR" />
       <option name="fileExtension" value="json" />
       <option name="immediateSync" value="true" />
       <option name="name" value="Rome JSON" />
@@ -16,7 +16,7 @@
       <option name="outputFromStdout" value="false" />
       <option name="program" value="pnpm" />
       <option name="runOnExternalChanges" value="true" />
-      <option name="scopeName" value="Project Files" />
+      <option name="scopeName" value="project" />
       <option name="trackOnlyRoot" value="false" />
       <option name="workingDir" value="$PROJECT_DIR$" />
       <envs />
@@ -25,7 +25,7 @@
       <option name="arguments" value="exec rome format $FilePath$ --write" />
       <option name="checkSyntaxErrors" value="true" />
       <option name="description" />
-      <option name="exitCodeBehavior" value="ALWAYS" />
+      <option name="exitCodeBehavior" value="ERROR" />
       <option name="fileExtension" value="ts" />
       <option name="immediateSync" value="true" />
       <option name="name" value="Rome TS" />
@@ -36,7 +36,7 @@
       <option name="outputFromStdout" value="false" />
       <option name="program" value="pnpm" />
       <option name="runOnExternalChanges" value="true" />
-      <option name="scopeName" value="Project Files" />
+      <option name="scopeName" value="project" />
       <option name="trackOnlyRoot" value="false" />
       <option name="workingDir" value="$PROJECT_DIR$" />
       <envs />
@@ -45,7 +45,7 @@
       <option name="arguments" value="exec rome format $FilePath$ --write" />
       <option name="checkSyntaxErrors" value="true" />
       <option name="description" />
-      <option name="exitCodeBehavior" value="ALWAYS" />
+      <option name="exitCodeBehavior" value="ERROR" />
       <option name="fileExtension" value="js" />
       <option name="immediateSync" value="true" />
       <option name="name" value="Rome JS" />
@@ -56,7 +56,7 @@
       <option name="outputFromStdout" value="false" />
       <option name="program" value="pnpm" />
       <option name="runOnExternalChanges" value="true" />
-      <option name="scopeName" value="Project Files" />
+      <option name="scopeName" value="project" />
       <option name="trackOnlyRoot" value="false" />
       <option name="workingDir" value="$PROJECT_DIR$" />
       <envs />
@@ -65,7 +65,7 @@
       <option name="arguments" value="exec stylelint $FilePath$ --fix --config $ProjectFileDir$/.stylelintrc.cjs" />
       <option name="checkSyntaxErrors" value="true" />
       <option name="description" />
-      <option name="exitCodeBehavior" value="ALWAYS" />
+      <option name="exitCodeBehavior" value="ERROR" />
       <option name="fileExtension" value="scss" />
       <option name="immediateSync" value="true" />
       <option name="name" value="Stylelint SCSS" />
@@ -76,7 +76,47 @@
       <option name="outputFromStdout" value="false" />
       <option name="program" value="pnpm" />
       <option name="runOnExternalChanges" value="true" />
-      <option name="scopeName" value="Project Files" />
+      <option name="scopeName" value="project" />
+      <option name="trackOnlyRoot" value="false" />
+      <option name="workingDir" value="$PROJECT_DIR$" />
+      <envs />
+    </TaskOptions>
+    <TaskOptions isEnabled="true">
+      <option name="arguments" value="exec stylelint $FilePath$ --fix --config $ProjectFileDir$/.stylelintrc.cjs" />
+      <option name="checkSyntaxErrors" value="true" />
+      <option name="description" />
+      <option name="exitCodeBehavior" value="ERROR" />
+      <option name="fileExtension" value="css" />
+      <option name="immediateSync" value="true" />
+      <option name="name" value="Stylelint CSS" />
+      <option name="output" value="" />
+      <option name="outputFilters">
+        <array />
+      </option>
+      <option name="outputFromStdout" value="false" />
+      <option name="program" value="pnpm" />
+      <option name="runOnExternalChanges" value="true" />
+      <option name="scopeName" value="project" />
+      <option name="trackOnlyRoot" value="false" />
+      <option name="workingDir" value="$PROJECT_DIR$" />
+      <envs />
+    </TaskOptions>
+    <TaskOptions isEnabled="true">
+      <option name="arguments" value="exec stylelint $FilePath$ --fix --config $ProjectFileDir$/.stylelintrc.cjs" />
+      <option name="checkSyntaxErrors" value="true" />
+      <option name="description" />
+      <option name="exitCodeBehavior" value="ERROR" />
+      <option name="fileExtension" value=".astro" />
+      <option name="immediateSync" value="true" />
+      <option name="name" value="Stylelint Astro" />
+      <option name="output" value="" />
+      <option name="outputFilters">
+        <array />
+      </option>
+      <option name="outputFromStdout" value="false" />
+      <option name="program" value="pnpm" />
+      <option name="runOnExternalChanges" value="true" />
+      <option name="scopeName" value="project" />
       <option name="trackOnlyRoot" value="false" />
       <option name="workingDir" value="$PROJECT_DIR$" />
       <envs />
