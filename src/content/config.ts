@@ -1,6 +1,6 @@
 import { z, defineCollection } from "astro:content";
-import { categories } from "./_categories";
 import type { CollectionConfig } from "astro/dist/content/utils";
+import { categories } from "../const/categories";
 
 const collectionSchemaDefault = z.object({
   title: z.string(),
