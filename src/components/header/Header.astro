@@ -3,13 +3,14 @@ import WaveSeparator from "../WaveSeparator.astro";
 import {styles} from "../../const/styles";
 import HeaderCategories from "./HeaderCategories.astro";
 import './Header.scss'
+import {SITE_TITLE} from "../../const/data";
 const {category} = Astro.props
 ---
 <div class="header">
   <header class='header__container'>
     <h1 class='title'>
       <a href="/" data-swup-preload>
-        <button class="title__button">Olis.tech</button>
+        <button class="title__button">{SITE_TITLE}</button>
       </a>
     </h1>
     <div class='search'>
