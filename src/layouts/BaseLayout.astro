@@ -19,9 +19,11 @@ const { title, description, category } = Astro.props
 <PreloadSvg />
 <Header category={category} />
 <main class="content">
-  <div id="swup">
-    <slot />
-  </div>
+    <div id="swup">
+      <div class="content__inner">
+        <slot />
+      </div>
+    </div>
 </main>
 <WaveSeparator color={styles["color-quinary"]}/>
 <Footer />
