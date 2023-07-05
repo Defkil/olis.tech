@@ -4,7 +4,7 @@ import type { CategoryData } from "../content/_categories";
 import { categories } from "../const/categories";
 import probe from "probe-image-size";
 import type { z } from "astro/zod";
-import { SITE_AUTHOR, SITE_DESCRIPTION, SITE_TITLE } from "../const/data";
+import { SITE_AUTHOR_MAIL, SITE_DESCRIPTION, SITE_TITLE } from "../const/data";
 
 type RSSFeedEnclosure = z.infer<typeof rssSchema>["enclosure"];
 
@@ -32,7 +32,7 @@ async function transformPostToFeedItem(post: any, category: CategoryData, site: 
     pubDate: post.data.publishDate,
     description: post.data.description,
     categories: [category.title],
-    author: SITE_AUTHOR,
+    author: SITE_AUTHOR_MAIL,
     enclosure: post.data.image ? await getImageMetaData(post.data.image) : undefined,
   };
 }
