@@ -25,7 +25,6 @@ async function getImageMetaData(url: string): Promise<RSSFeedEnclosure> {
  * @param site root url
  */
 async function transformPostToFeedItem(post: any, category: CategoryData, site: string): Promise<RSSFeedItem> {
-  console.log(post);
   return {
     link: site + "/" + category.collection + "/" + post.slug,
     content: post.body,
