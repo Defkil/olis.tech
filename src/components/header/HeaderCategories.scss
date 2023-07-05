@@ -82,14 +82,14 @@ $breakpoint-desktop: 1100px;
   flex-direction: column;
 
   height: 100%;
-  margin: -8px 16px 0 0;
+  margin-top: -8px;
   padding: 16px 16px 0;
 
   background: var(--color-senary);
   box-shadow: 6px 6px 0 0 #000;
 
-  @media screen and (width >= $breakpoint-tablet) {
-    padding-right: 26px;
+  @media screen and (width >= $breakpoint-desktop) {
+    margin-right: 16px;
   }
 }
 
