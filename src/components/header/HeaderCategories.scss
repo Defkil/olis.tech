@@ -49,7 +49,7 @@ $breakpoint-desktop: 1100px;
   font-family: var(--font-family-hightlight);
   font-size: 3rem;
   font-weight: 500;
-  line-height: 2rem;
+  line-height: 3rem;
   color: var(--color-black);
 }
 
@@ -82,7 +82,6 @@ $breakpoint-desktop: 1100px;
   flex-direction: column;
 
   height: 100%;
-  margin-top: -8px;
   padding: 16px 16px 0;
 
   background: var(--color-senary);
