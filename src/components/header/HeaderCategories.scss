@@ -25,8 +25,6 @@ $breakpoint-desktop: 1100px;
 
   padding: 24px 16px 0 8px;
 
-  text-align: center;
-
   @media screen and (width >= $breakpoint-tablet) {
     grid-template: "sidebar info"
     "posts posts";
@@ -52,7 +50,7 @@ $breakpoint-desktop: 1100px;
   font-size: 3rem;
   font-weight: 500;
   line-height: 2rem;
-  color: var(--color-white);
+  color: var(--color-black);
 }
 
 /* todo active button with a star */
@@ -61,7 +59,6 @@ $breakpoint-desktop: 1100px;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  justify-content: center;
 
   @media screen and (width >= 550px) { gap: 16px; }
 
@@ -92,7 +89,7 @@ $breakpoint-desktop: 1100px;
 
 .info__title, .info__description, .info__details {
   padding: 0 26px;
-  color: var(--color-white);
+  color: var(--color-black);
 }
 
 .info__title {
