@@ -59,6 +59,7 @@
   /* stylelint-disable selector-class-pattern */
   body .DocSearch-Modal {
     max-width: 600px;
+    padding-bottom: 6px;
     background: var(--color-quinary);
   }
 
@@ -114,8 +115,12 @@
   body .DocSearch-MagnifierLabel,
   body .DocSearch-Input,
   body .DocSearch-Reset {
-    color: var(--color-white);
+    color: var(--color-black);
     transition: color var(--animation-duration) var(--animation-easing);
+  }
+
+  body .DocSearch-Input::placeholder {
+    color: var(--color-black);
   }
 
   body .DocSearch-Reset:hover {
