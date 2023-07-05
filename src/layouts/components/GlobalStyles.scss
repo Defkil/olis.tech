@@ -1,0 +1,77 @@
+@import "../../const/styles.module.scss";
+
+:root {
+  --color-black: #{$color-black};
+  --color-white: #{$color-white};
+  --color-primary: #{$color-primary};
+  --color-secondary: #{$color-secondary};
+  --color-tertiary: #{$color-tertiary};
+  --color-quaternary: #{$color-quaternary};
+  --color-quinary: #{$color-quinary};
+  --color-senary: #{$color-senary};
+  --border-size: 2px;
+  --border-radius: 0.5rem;
+  --shadow-size: 4px;
+  --animation-duration: 0.2s;
+  --animation-easing: ease-in-out;
+  --fontsource-display: 'swap';
+  --font-family-default: 'Outfit Variable', sans-serif;
+  --font-family-hightlight: 'Space Grotesk Variable', sans-serif;
+  --container-max-width: #{$container-max-width};
+}
+
+body {
+  font-family: var(--font-family-default);
+  background: var(--color-quaternary);
+}
+
+.content {
+  padding: 48px 0 24px;
+  word-break: break-all;
+  background: var(--color-quinary);
+}
+
+.content__inner {
+  @include container;
+}
+
+/* Neo Brutalism */
+.border {
+  border: var(--border-size) solid #000;
+}
+
+.shadow {
+  box-shadow: var(--shadow-size) var(--shadow-size) 0 0 #000;
+  transition: transform var(--animation-duration) var(--animation-easing),
+  box-shadow var(--animation-duration) var(--animation-easing);
+}
+
+.shadow--hover:hover {
+  transform: translate(var(--shadow-size), var(--shadow-size));
+  box-shadow: 0 0 0 0 #000;
+}
+
+/* CSS reset */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
