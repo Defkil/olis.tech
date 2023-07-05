@@ -30,8 +30,8 @@ dependencies:
     specifier: ^2.3.0
     version: 2.3.0(swup@3.1.1)
   astro:
-    specifier: ^2.7.3
-    version: 2.7.3(sass@1.63.6)
+    specifier: ^2.7.4
+    version: 2.7.4(sass@1.63.6)
   astro-compress:
     specifier: ^1.1.49
     version: 1.1.49
@@ -263,13 +263,13 @@ packages:
       vscode-uri: 3.0.7
     dev: false
 
-  /@astrojs/markdown-remark@2.2.1(astro@2.7.3):
+  /@astrojs/markdown-remark@2.2.1(astro@2.7.4):
     resolution: {integrity: sha512-VF0HRv4GpC1XEMLnsKf6jth7JSmlt9qpqP0josQgA2eSpCIAC/Et+y94mgdBIZVBYH/yFnMoIxgKVe93xfO2GA==}
     peerDependencies:
       astro: ^2.5.0
     dependencies:
       '@astrojs/prism': 2.1.2
-      astro: 2.7.3(sass@1.63.6)
+      astro: 2.7.4(sass@1.63.6)
       github-slugger: 1.5.0
       import-meta-resolve: 2.2.2
       rehype-raw: 6.1.1
@@ -433,8 +433,8 @@ packages:
       regexpu-core: 5.3.2
     dev: false
 
-  /@babel/helper-define-polyfill-provider@0.4.0(@babel/core@7.22.6):
-    resolution: {integrity: sha512-RnanLx5ETe6aybRi1cO/edaRH+bNYWaryCEmjDDYyNr4wnSzyOp8T0dWipmqVHKEY3AbVKUom50AKSlj1zmKbg==}
+  /@babel/helper-define-polyfill-provider@0.4.1(@babel/core@7.22.6):
+    resolution: {integrity: sha512-kX4oXixDxG197yhX+J3Wp+NpL2wuCFjWQAr6yX2jtCnflK9ulMI51ULFGIrWiX1jGfvAxdHp+XQCcP2bZGPs9A==}
     peerDependencies:
       '@babel/core': ^7.4.0-0
     dependencies:
@@ -444,7 +444,6 @@ packages:
       debug: 4.3.4
       lodash.debounce: 4.0.8
       resolve: 1.22.2
-      semver: 6.3.0
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -1552,9 +1551,9 @@ packages:
       '@babel/preset-modules': 0.1.5(@babel/core@7.22.6)
       '@babel/types': 7.22.5
       '@nicolo-ribaudo/semver-v6': 6.3.3
-      babel-plugin-polyfill-corejs2: 0.4.3(@babel/core@7.22.6)
-      babel-plugin-polyfill-corejs3: 0.8.1(@babel/core@7.22.6)
-      babel-plugin-polyfill-regenerator: 0.5.0(@babel/core@7.22.6)
+      babel-plugin-polyfill-corejs2: 0.4.4(@babel/core@7.22.6)
+      babel-plugin-polyfill-corejs3: 0.8.2(@babel/core@7.22.6)
+      babel-plugin-polyfill-regenerator: 0.5.1(@babel/core@7.22.6)
       core-js-compat: 3.31.0
     transitivePeerDependencies:
       - supports-color
@@ -2426,8 +2425,8 @@ packages:
     resolution: {integrity: sha512-/yrv59IEnmh655z1oeDnGcvMYwnEzNzHLgeYcQCkhYX0xBvYWrAuefoiLcPBUkMpJsb46bqQ6Yv4pwTTQ4d3Qg==}
     dev: false
 
-  /acorn@8.9.0:
-    resolution: {integrity: sha512-jaVNAFBHNLXspO543WnNNPZFRtavh3skAkITqD0/2aeMkKZTN+254PyhwxFYrk3vQ1xfY+2wbesJMs/JC8/PwQ==}
+  /acorn@8.10.0:
+    resolution: {integrity: sha512-F0SAmZ8iUtS//m8DmCTA0jlh6TDKkHQyK6xc6V4KDTyZKA9dnvX9/3sRTVQrWm79glUAZbnmmNcdYwUIHWVybw==}
     engines: {node: '>=0.4.0'}
     hasBin: true
     dev: false
@@ -2596,8 +2595,8 @@ packages:
       - '@rometools/wasm-web'
     dev: false
 
-  /astro@2.7.3(sass@1.63.6):
-    resolution: {integrity: sha512-DwPvvOYElhCNyAWUlFd17HhTNBx+XXnAZfM/PYHq7RicvC/tG4loBjlYk/Yw7x9wQCkbKjoxVRiNYvmvSUmisw==}
+  /astro@2.7.4(sass@1.63.6):
+    resolution: {integrity: sha512-LDALXeMfD4U6jkM6ZywtKuBkGMxMZjSCFqbNXEKtD3OWZr3hiLNhE3YDgUScCBkQJSROWrS0W9/UVPpsS36+ow==}
     engines: {node: '>=16.12.0', npm: '>=6.14.0'}
     hasBin: true
     peerDependencies:
@@ -2609,7 +2608,7 @@ packages:
       '@astrojs/compiler': 1.5.3
       '@astrojs/internal-helpers': 0.1.1
       '@astrojs/language-server': 1.0.8
-      '@astrojs/markdown-remark': 2.2.1(astro@2.7.3)
+      '@astrojs/markdown-remark': 2.2.1(astro@2.7.4)
       '@astrojs/telemetry': 2.1.1
       '@astrojs/webapi': 2.2.0
       '@babel/core': 7.22.6
@@ -2620,7 +2619,7 @@ packages:
       '@babel/types': 7.22.5
       '@types/babel__core': 7.20.1
       '@types/yargs-parser': 21.0.0
-      acorn: 8.9.0
+      acorn: 8.10.0
       boxen: 6.2.1
       chokidar: 3.5.3
       ci-info: 3.8.0
@@ -2709,38 +2708,38 @@ packages:
       resolve: 1.22.2
     dev: false
 
-  /babel-plugin-polyfill-corejs2@0.4.3(@babel/core@7.22.6):
-    resolution: {integrity: sha512-bM3gHc337Dta490gg+/AseNB9L4YLHxq1nGKZZSHbhXv4aTYU2MD2cjza1Ru4S6975YLTaL1K8uJf6ukJhhmtw==}
+  /babel-plugin-polyfill-corejs2@0.4.4(@babel/core@7.22.6):
+    resolution: {integrity: sha512-9WeK9snM1BfxB38goUEv2FLnA6ja07UMfazFHzCXUb3NyDZAwfXvQiURQ6guTTMeHcOsdknULm1PDhs4uWtKyA==}
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/compat-data': 7.22.6
       '@babel/core': 7.22.6
-      '@babel/helper-define-polyfill-provider': 0.4.0(@babel/core@7.22.6)
-      semver: 6.3.0
+      '@babel/helper-define-polyfill-provider': 0.4.1(@babel/core@7.22.6)
+      '@nicolo-ribaudo/semver-v6': 6.3.3
     transitivePeerDependencies:
       - supports-color
     dev: false
 
-  /babel-plugin-polyfill-corejs3@0.8.1(@babel/core@7.22.6):
-    resolution: {integrity: sha512-ikFrZITKg1xH6pLND8zT14UPgjKHiGLqex7rGEZCH2EvhsneJaJPemmpQaIZV5AL03II+lXylw3UmddDK8RU5Q==}
+  /babel-plugin-polyfill-corejs3@0.8.2(@babel/core@7.22.6):
+    resolution: {integrity: sha512-Cid+Jv1BrY9ReW9lIfNlNpsI53N+FN7gE+f73zLAUbr9C52W4gKLWSByx47pfDJsEysojKArqOtOKZSVIIUTuQ==}
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.22.6
-      '@babel/helper-define-polyfill-provider': 0.4.0(@babel/core@7.22.6)
+      '@babel/helper-define-polyfill-provider': 0.4.1(@babel/core@7.22.6)
       core-js-compat: 3.31.0
     transitivePeerDependencies:
       - supports-color
     dev: false
 
-  /babel-plugin-polyfill-regenerator@0.5.0(@babel/core@7.22.6):
-    resolution: {integrity: sha512-hDJtKjMLVa7Z+LwnTCxoDLQj6wdc+B8dun7ayF2fYieI6OzfuvcLMB32ihJZ4UhCBwNYGl5bg/x/P9cMdnkc2g==}
+  /babel-plugin-polyfill-regenerator@0.5.1(@babel/core@7.22.6):
+    resolution: {integrity: sha512-L8OyySuI6OSQ5hFy9O+7zFjyr4WhAfRjLIOkhQGYl+emwJkd/S4XXT1JpfrgR1jrQ1NcGiOh+yAdGlF8pnC3Jw==}
     peerDependencies:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.22.6
-      '@babel/helper-define-polyfill-provider': 0.4.0(@babel/core@7.22.6)
+      '@babel/helper-define-polyfill-provider': 0.4.1(@babel/core@7.22.6)
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -6648,8 +6647,8 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
 
-  /rollup@3.26.0:
-    resolution: {integrity: sha512-YzJH0eunH2hr3knvF3i6IkLO/jTjAEwU4HoMUbQl4//Tnl3ou0e7P5SjxdDr8HQJdeUJShlbEHXrrnEHy1l7Yg==}
+  /rollup@3.26.1:
+    resolution: {integrity: sha512-I5gJCSpSMr3U9wv4D5YA8g7w7cj3eaSDeo7t+JcaFQOmoOUBgu4K9iMp8k3EZnwbJrjQxUMSKxMyB8qEQzzaSg==}
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
@@ -7379,7 +7378,7 @@ packages:
     hasBin: true
     dependencies:
       '@jridgewell/source-map': 0.3.5
-      acorn: 8.9.0
+      acorn: 8.10.0
       commander: 2.20.3
       source-map-support: 0.5.21
     dev: false
@@ -7692,7 +7691,7 @@ packages:
     dependencies:
       esbuild: 0.17.19
       postcss: 8.4.24
-      rollup: 3.26.0
+      rollup: 3.26.1
       sass: 1.63.6
     optionalDependencies:
       fsevents: 2.3.2
