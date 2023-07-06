@@ -10,7 +10,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "lint": "rome check ./src & stylelint \"src/**/*.{astro,css,scss}\"",
-    "format": "rome format ./src --write & stylelint \"src/**/*.{astro,css,scss}\" --fix"
+    "format": "rome format ./src --write & stylelint \"src/**/*.{astro,css,scss}\" --fix",
+    "test": "playwright test --ui"
   },
   "dependencies": {
     "@astrojs/rss": "^2.4.3",
@@ -31,6 +32,7 @@
   },
   "devDependencies": {
     "@namics/stylelint-bem": "^8.1.0",
+    "@playwright/test": "^1.35.1",
     "@swup/head-plugin": "^1.3.0",
     "@swup/slide-theme": "^1.0.5",
     "@types/probe-image-size": "^7.2.0",
