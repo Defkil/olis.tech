@@ -59,8 +59,8 @@ jobs:
 
     - name: start preview and test
       run: |
-          pnpm run preview &
-          pnpm run test 
+        pnpm run preview &
+        pnpm exec playwright test
 
     - uses: actions/upload-artifact@v3
       if: always()
