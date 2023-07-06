@@ -54,12 +54,10 @@ jobs:
       if: steps.cache-playwright-browsers.outputs.cache-hit != 'true'
       run: pnpm exec playwright install --with-deps
 
-    - name: Install Playwright Browsers
-      run: pnpm exec playwright install --with-deps
-
     - name: Start Server and run Playwright tests
       run: |
-        pnpm run start &
+        pnpm run build &
+        pnpm run preview &
         pnpm exec playwright test
 
     - uses: actions/upload-artifact@v3
