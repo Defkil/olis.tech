@@ -159,6 +159,10 @@ $breakpoint-desktop: 1100px;
 
 .post--small {
   display: grid;
+
+  @media screen and (width >= $breakpoint-desktop) {
+    margin-bottom: var(--shadow-size);
+  }
 }
 
 .post__image {
