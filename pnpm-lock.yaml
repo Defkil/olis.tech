@@ -56,8 +56,8 @@ devDependencies:
     specifier: ^8.1.0
     version: 8.1.0(stylelint@15.10.1)
   '@playwright/test':
-    specifier: ^1.35.1
-    version: 1.35.1
+    specifier: ^1.36.0
+    version: 1.36.0
   '@swup/head-plugin':
     specifier: ^1.3.0
     version: 1.3.0
@@ -2234,13 +2234,13 @@ packages:
       tslib: 2.6.0
     dev: false
 
-  /@playwright/test@1.35.1:
-    resolution: {integrity: sha512-b5YoFe6J9exsMYg0pQAobNDR85T1nLumUYgUTtKm4d21iX2L7WqKq9dW8NGJ+2vX0etZd+Y7UeuqsxDXm9+5ZA==}
+  /@playwright/test@1.36.0:
+    resolution: {integrity: sha512-yN+fvMYtiyLFDCQos+lWzoX4XW3DNuaxjBu68G0lkgLgC6BP+m/iTxJQoSicz/x2G5EsrqlZTqTIP9sTgLQerg==}
     engines: {node: '>=16'}
     hasBin: true
     dependencies:
       '@types/node': 20.4.1
-      playwright-core: 1.35.1
+      playwright-core: 1.36.0
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
@@ -3068,7 +3068,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001515
-      electron-to-chromium: 1.4.455
+      electron-to-chromium: 1.4.457
       node-releases: 2.0.13
       update-browserslist-db: 1.0.11(browserslist@4.21.9)
     dev: false
@@ -3782,8 +3782,8 @@ packages:
       jake: 10.8.7
     dev: false
 
-  /electron-to-chromium@1.4.455:
-    resolution: {integrity: sha512-8tgdX0Odl24LtmLwxotpJCVjIndN559AvaOtd67u+2mo+IDsgsTF580NB+uuDCqsHw8yFg53l5+imFV9Fw3cbA==}
+  /electron-to-chromium@1.4.457:
+    resolution: {integrity: sha512-/g3UyNDmDd6ebeWapmAoiyy+Sy2HyJ+/X8KyvNeHfKRFfHaA2W8oF5fxD5F3tjBDcjpwo0iek6YNgxNXDBoEtA==}
     dev: false
 
   /emmet@2.4.5:
@@ -4595,8 +4595,8 @@ packages:
     engines: {node: '>= 4'}
     dev: true
 
-  /immutable@4.3.0:
-    resolution: {integrity: sha512-0AOCmOip+xgJwEVTQj1EfiDDOkPmuyllDuTuEX+DDXUgapLAsBIfkg3sxCYyCEA8mQqZrrxPUGjcOQ2JS3WLkg==}
+  /immutable@4.3.1:
+    resolution: {integrity: sha512-lj9cnmB/kVS0QHsJnYKD1uo3o39nrbKxszjnqS9Fr6NB7bZzW45U6WSGBPKXDL/CvDKqDNPA4r3DoDQ8GTxo2A==}
     dev: false
 
   /import-cwd@3.0.0:
@@ -5989,8 +5989,8 @@ packages:
       find-up: 4.1.0
     dev: false
 
-  /playwright-core@1.35.1:
-    resolution: {integrity: sha512-pNXb6CQ7OqmGDRspEjlxE49w+4YtR6a3X6mT1hZXeJHWmsEz7SunmvZeiG/+y1yyMZdHnnn73WKYdtV1er0Xyg==}
+  /playwright-core@1.36.0:
+    resolution: {integrity: sha512-7RTr8P6YJPAqB+8j5ATGHqD6LvLLM39sYVNsslh78g8QeLcBs5750c6+msjrHUwwGt+kEbczBj1XB22WMwn+WA==}
     engines: {node: '>=16'}
     hasBin: true
     dev: true
@@ -6963,7 +6963,7 @@ packages:
     hasBin: true
     dependencies:
       chokidar: 3.5.3
-      immutable: 4.3.0
+      immutable: 4.3.1
       source-map-js: 1.0.2
     dev: false
 
