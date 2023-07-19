@@ -76,22 +76,19 @@ if (selectedCategory) {
             </button>))}
         </div>
       </div>
-      <div class="info">
-        <h2 class="info__title js--title" class:list={[{'info__title--small': initialCategory.title.length > 12}]}>
-          {initialCategory.title}</h2>
-        <p class="info__description js--description">{initialCategory.description}</p>
-        <div class="info__details">
+      <div class="posts">
+        <div class="posts__details">
           <span>Beiträge: <span class="js--details__count">{initialCategory.count}</span></span>
           <span>Update am <span class="js--details__last">{initialCategory.lastPublishOrUpdate}</span></span>
         </div>
-      </div>
-      <div class="posts js--posts">
-        {initialCategory.lastPosts.map((post) => (<a href={post.link} data-swup-preload>
-          <div class="post border shadow shadow--hover">
-            <div class="post__title">{post.title}</div>
-          </div>
-        </a>))}
-        <a class="js--link" href={initialCategory.link} data-swup-preload>
+        <div class="js--posts">
+          {initialCategory.lastPosts.map((post) => (<a href={post.link}>
+            <div class="post border shadow shadow--hover">
+              <div class="post__title">{post.title}</div>
+            </div>
+          </a>))}
+        </div>
+        <a class="js--link" href={initialCategory.link} style="margin-top: auto">
           <div class="post post--small border shadow shadow--hover">
             <div class="post__title post__title--small-centered-text">
               Alles aus <span class="js--title">{initialCategory.title}</span> anzeigen
@@ -103,80 +100,92 @@ if (selectedCategory) {
   </header-categories>
 </div>
 <script>
-  class HeaderCategories extends HTMLElement {
-    onClick = {
-      title: {
-        dom: this.querySelectorAll('.js--title')!,
-        handler: (data: { title: string}) => {
-          const CLASS_TITLE = 'info__title'
-          const CLASS_TITLE_SMALL = 'info__title--small'
-          this.onClick.title.dom.forEach((elm) => {
-            elm.textContent = data.title
-            if (elm.classList.contains(CLASS_TITLE)){
-              if (elm.textContent!.trim().length > 12) {
-                elm.classList.add(CLASS_TITLE_SMALL)
-              } else {
-                elm.classList.remove(CLASS_TITLE_SMALL)
-              }
-            }
-          });
-        }
-      },
-      link: {
-        dom: this.querySelectorAll('.js--link')!,
-        handler: (data: { link: string}) => {
-          this.onClick.link.dom.forEach((link) => {
-            if (link instanceof HTMLAnchorElement) {
-              link.href = data.link
-            }
-          });
-        }
-      },
-      description: {
-        dom: this.querySelector('.js--description')!,
-        handler: (data: { description: string}) => {
-          this.onClick.description.dom.textContent = data.description
-        }
-      },
-      count: {
-        dom: this.querySelector('.js--details__count')!,
-        handler: (data: { count: string}) => {
-          this.onClick.count.dom.textContent = data.count
-        }
-      },
-      last: {
-        dom: this.querySelector('.js--details__last')!,
-        handler: (data: { lastPublishOrUpdate: string}) => {
-          this.onClick.last.dom.textContent = data.lastPublishOrUpdate
-        }
-      },
-      posts: {
-        dom: this.querySelector('.js--posts')!,
-        handler: (data: { posts: {title: string, link: string}[]}) => {
-          const posts = this.onClick.posts.dom.querySelectorAll('a')
-          posts.forEach((post) => {
-            if (!post.classList.contains('js--link')) {
-              post.remove()
-            }
-          })
-          let postHtml = ''
-          for (const post of data.posts) {
-            postHtml += `<a href="${post.link}" data-swup-preload>
+  interface CategoryData {
+    title: string,
+    link: string,
+    description: string,
+    count: string,
+    lastPublishOrUpdate: string,
+    posts: {title: string, link: string}[]
+  }
+
+  abstract class DomChanger {
+    private domElements: NodeListOf<Element>
+    constructor(private selector: string, private contentAtr: keyof CategoryData) {
+      if (!this.selector || this.selector.length === 0) {
+        throw new Error('Selector is empty')
+      }
+
+      if (!this.contentAtr || this.contentAtr.length === 0) {
+        throw new Error('Content attribute is empty')
+      }
+
+      this.domElements = document.querySelectorAll(selector)
+
+      if (this.domElements.length === 0) {
+        throw new Error('No dom elements found')
+      }
+
+      this.handler = this.handler.bind(this)
+    }
+
+    handler(data: CategoryData) {
+      const content = data[this.contentAtr]
+      this.domElements.forEach((domElement) => {
+        this.setDomContent(domElement, content)
+      })
+    }
+
+    abstract setDomContent(domElement: Element, content: any): void
+  }
+
+  class DomChangerString extends DomChanger {
+    setDomContent(domElement: Element, content: string): void {
+      domElement.textContent = content
+    }
+  }
+
+  class DomChangerLinkHref extends DomChanger {
+    setDomContent(domElement: Element, content: string) {
+      if(domElement instanceof HTMLAnchorElement) {
+        domElement.href = content
+      }
+    }
+  }
+
+  class DomChangerPosts extends DomChanger {
+    setDomContent(domElement: Element, content: {title: string, link: string}[]) {
+      let postHtml = ''
+
+      if(content.length === 0) {
+        content.push({title: 'Keine Beiträge, schau später wieder vorbei!', link: '#'})
+      }
+
+      for (const post of content) {
+        postHtml += `<a href="${post.link}" data-swup-preload>
             <div class="post border shadow shadow--hover">
               <div class="post__title">${post.title}</div>
             </div>
           </a>`
-          }
-          this.onClick.posts.dom.insertAdjacentHTML('afterbegin', postHtml)
-        }
-      },
-      preloadPages: {
-        handler: () => {
-          const swup = (window as unknown as {swup: {preloadPages: () => {}}}).swup;
-          if (swup) {
-            swup.preloadPages()
-          }
-        }
+      }
+
+      domElement.innerHTML = postHtml
+    }
+  }
+
+  class HeaderCategories extends HTMLElement {
+    domChanger: DomChanger[] = [
+      new DomChangerString('.js--title', 'title'),
+      new DomChangerLinkHref('.js--link', 'link'),
+      new DomChangerString('.js--details__count', 'count'),
+      new DomChangerString('.js--details__last', 'lastPublishOrUpdate'),
+      new DomChangerPosts('.js--posts', 'posts')
+    ]
+
+    preloadPages() {
+      const swup = (window as unknown as {swup: {preloadPages: () => {}}}).swup;
+      if (swup) {
+        swup.preloadPages()
       }
     }
 
@@ -188,26 +197,41 @@ if (selectedCategory) {
       const buttons: NodeListOf<HTMLElement> = this.querySelectorAll('.js--category-button');
       buttons.forEach((button) => {
         button.addEventListener('click', () => {
-          const data: {
-            title: string,
-            link: string,
-            description: string,
-            count: string,
-            lastPublishOrUpdate: string,
-            posts: {title: string, link: string}[]
-          } = {
-            title: button.textContent!,
-            link: button.dataset.link!,
-            description: button.dataset.description!,
-            count: button.dataset.count!,
-            lastPublishOrUpdate: button.dataset.lastPublishOrUpdate!,
-            posts: JSON.parse(button.dataset.lastPosts!)
+          const data = this.extractButtonData(button)
+          for (const domChange of this.domChanger) {
+            domChange.handler(data)
           }
-          for (const handler of Object.values(this.onClick)) {
-            handler.handler(data)
-          }
+          this.preloadPages()
         })
       })
+    }
+
+    extractButtonData(button: HTMLElement): CategoryData {
+      let posts: CategoryData['posts'] = []
+      let lastPosts = button.dataset.lastPosts || '[]'
+
+      try {
+        posts = JSON.parse(lastPosts)
+      } catch (e) {
+        throw new Error('Could not parse posts')
+      }
+
+      const data: CategoryData = {
+        title: button.textContent!,
+        link: button.dataset.link!,
+        description: button.dataset.description!,
+        count: button.dataset.count!,
+        lastPublishOrUpdate: button.dataset.lastPublishOrUpdate!,
+        posts: posts
+      }
+
+      const missingKeys = Object.keys(data).filter((key) => !data[key as keyof CategoryData])
+
+      if (missingKeys.length > 0) {
+        throw new Error('Missing data: ' + missingKeys.join(', '));
+      }
+
+      return data
     }
   }
 

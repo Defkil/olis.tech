@@ -1,7 +1,6 @@
 @import "../../const/styles.module";
 
-$breakpoint-tablet: 800px;
-$breakpoint-desktop: 1100px;
+$breakpoint-tablet: 900px;
 
 .background {
   min-height: 280px;
@@ -18,22 +17,14 @@ $breakpoint-desktop: 1100px;
 
   display: grid;
   grid-template: "sidebar"
-                 "info"
                  "posts";
   grid-template-columns: 1fr;
   gap: 24px 12px;
 
-  padding: 24px 16px 0 8px;
 
   @media screen and (width >= $breakpoint-tablet) {
-    grid-template: "sidebar info"
-    "posts posts";
+    grid-template: "sidebar posts";
     grid-template-columns: 400px 1fr;
-  }
-
-  @media screen and (width >= $breakpoint-desktop) {
-    grid-template: "sidebar info posts";
-    grid-template-columns: 350px 400px 1fr;
   }
 }
 
@@ -53,8 +44,6 @@ $breakpoint-desktop: 1100px;
   color: var(--color-black);
 }
 
-/* todo active button with a star */
-
 .sidebar__container {
   display: flex;
   flex-wrap: wrap;
@@ -66,65 +55,12 @@ $breakpoint-desktop: 1100px;
 .sidebar__button {
   cursor: pointer;
 
-  padding: 10px 20px;
+  padding: 10px 18px;
 
   font-weight: bold;
 
   background: var(--color-white);
   border-radius: var(--border-radius);
-}
-
-.info {
-  display: flex;
-  grid-area: info;
-  flex-direction: column;
-
-  height: 100%;
-  padding: 16px 16px 0;
-
-  background: var(--color-senary);
-
-  @media screen and (width >= $breakpoint-desktop) {
-    margin-right: 16px;
-  }
-}
-
-.info__title, .info__description, .info__details {
-  padding: 0 26px;
-  color: var(--color-black);
-}
-
-.info__title {
-  padding: 0 0 40px;
-
-  font-family: var(--font-family-hightlight);
-  font-size: 3rem;
-  font-weight: 500;
-  line-height: 2rem;
-}
-
-.info__title--small {
-  font-size: 2.5rem;
-}
-
-.info__description {
-  margin: 0;
-  padding: 0;
-
-  font-size: 2rem;
-  font-weight: 300;
-  line-height: 2rem;
-}
-
-.info__details {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  margin-top: auto;
-  padding: 12px 0;
-
-  font-size: 1.2rem;
 }
 
 .posts {
@@ -134,17 +70,22 @@ $breakpoint-desktop: 1100px;
   flex-grow: 1;
 
   width: 100%;
-
-  @media screen and (width >= 800px) and (width < $breakpoint-desktop) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 16px;
-  }
 }
 
 .posts a {
   text-decoration: none;
 }
+
+.posts__details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 0 24px;
+
+  font-size: 1.2rem;
+}
+
 
 .post {
   display: flex;
@@ -152,6 +93,7 @@ $breakpoint-desktop: 1100px;
   width: 100%;
   min-height: 40px;
   margin-bottom: 16px;
+  padding: 12px 0;
 
   background: var(--color-quinary);
   border-radius: var(--border-radius);
@@ -159,10 +101,6 @@ $breakpoint-desktop: 1100px;
 
 .post--small {
   display: grid;
-
-  @media screen and (width >= $breakpoint-desktop) {
-    margin-bottom: var(--shadow-size);
-  }
 }
 
 .post__image {
