@@ -78,8 +78,8 @@ if (selectedCategory) {
       </div>
       <div class="posts">
         <div class="posts__details">
-          <span>Beiträge: <span class="js--details__count">{initialCategory.count}</span></span>
-          <span>Update am <span class="js--details__last">{initialCategory.lastPublishOrUpdate}</span></span>
+          <span>Anzahl Beiträge: <span class="js--details__count">{initialCategory.count}</span></span>
+          <span>Letzte Aktualisierung am <span class="js--details__last">{initialCategory.lastPublishOrUpdate}</span></span>
         </div>
         <div class="js--posts">
           {initialCategory.lastPosts.map((post) => (<a href={post.link}>
@@ -190,19 +190,32 @@ if (selectedCategory) {
     }
 
     connectedCallback() {
-      this.registerButtons();
+      this.registerButtons()
     }
+
+    disconnectedCallback() {
+      for (const {button, eventListener} of this.buttonEventListeners) {
+        button.removeEventListener('click', eventListener)
+      }
+    }
+
+    buttonEventListeners: {
+      button: HTMLElement,
+      eventListener: () => void
+    }[] = []
 
     registerButtons() {
       const buttons: NodeListOf<HTMLElement> = this.querySelectorAll('.js--category-button');
       buttons.forEach((button) => {
-        button.addEventListener('click', () => {
+        const eventListener = () => {
           const data = this.extractButtonData(button)
           for (const domChange of this.domChanger) {
             domChange.handler(data)
           }
           this.preloadPages()
-        })
+        }
+        button.addEventListener('click', eventListener)
+        this.buttonEventListeners.push({button, eventListener})
       })
     }
 
