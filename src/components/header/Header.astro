@@ -32,12 +32,19 @@ const {category} = Astro.props
     dom = {
       input: this.querySelector('.js--search-input') as HTMLInputElement
     }
+
     connectedCallback() {
-      this.dom.input.addEventListener('click', this.openSearch.bind(this))
-      this.dom.input.addEventListener('input', this.openSearch.bind(this))
+      this.dom.input.addEventListener('click', this.openSearch)
+      this.dom.input.addEventListener('input', this.openSearch)
     }
 
-    openSearch() {
+    disconnectedCallback() {
+      this.dom.input.removeEventListener('click', this.openSearch)
+      this.dom.input.removeEventListener('input', this.openSearch)
+    }
+
+    openSearch = this._openSearch.bind(this)
+    _openSearch() {
       this.dom.input.value = ''
       window.dispatchEvent(new KeyboardEvent('keydown', { 'key': 'k', ctrlKey: true, }));
     }
