@@ -10,13 +10,13 @@ interface PostWindowProps {
   excerpt: string
   link: string
 }
-const {
-  post
-}: {
-  post: PostWindowProps
-} = Astro.props
----
 
+const { post }: Record<string, PostWindowProps> = Astro.props
+
+if (!post) {
+  throw new Error('PostWindow: post is undefined')
+}
+---
 <div class="window">
   <a href={post.link} style="text-decoration: none;">
     <div class="window__header">
