@@ -1,0 +1,32 @@
+---
+import './PostWindow.scss';
+
+interface PostWindowProps {
+  collection: string
+  lastPublishOrUpdate: string
+  image: string
+  imageAlt: string
+  titel: string
+  excerpt: string
+  link: string
+}
+const {
+  post
+}: {
+  post: PostWindowProps
+} = Astro.props
+---
+
+<div class="window">
+  <a href={post.link} style="text-decoration: none;">
+    <div class="window__header">
+      <span class="window__header-title">Kategorie</span>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <img class="window__image" loading="lazy" src={post.image} alt={post.imageAlt}>
+    <h2 class="window__title">{post.titel}</h2>
+    <p class="window__excerpt">{post.excerpt}</p>
+  </a>
+</div>
