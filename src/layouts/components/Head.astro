@@ -1,5 +1,7 @@
 ---
-import GlobalStyles from "./GlobalStyles.astro";
+import '@fontsource-variable/space-grotesk';
+import '@fontsource-variable/outfit';
+import './src/const/GlobalStyles.scss'
 const { title, description } = Astro.props
 ---
 <meta charset="utf-8"/>
@@ -9,4 +11,3 @@ const { title, description } = Astro.props
 <meta name="description" content={description}/>
 <link rel="sitemap" href="/sitemap-index.xml"/>
 <title>{title}</title>
-<GlobalStyles />
