@@ -1,0 +1,37 @@
+<div class="masonry">
+  <slot />
+</div>
+<script>
+  import Macy from "macy";
+  import {onPageView} from "../lib/helper/onPageView";
+
+  const CONTAINER_SELECTOR = '.masonry';
+
+  const runMacy = () => {
+    const macy = Macy({
+      container: CONTAINER_SELECTOR,
+      trueOrder: true,
+      waitForImages: false,
+      margin: 24,
+      columns: 1,
+      mobileFirst: true,
+      breakAt: {
+        1200: 3,
+        800: 2,
+      }
+    });
+  };
+
+  runMacy()
+  onPageView(() => {
+    if (document.querySelector(CONTAINER_SELECTOR) === null) {
+      return
+    }
+    runMacy()
+  });
+</script>
+<style>
+  .masonry {
+    overflow: hidden;
+  }
+</style>
