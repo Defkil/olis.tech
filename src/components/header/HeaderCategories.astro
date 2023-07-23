@@ -1,4 +1,5 @@
 ---
+import {showDate} from "../../lib/helper/showDate";
 import {getCollection} from "astro:content";
 import {categories} from "../../const/categories";
 import './HeaderCategories.scss'
@@ -41,9 +42,7 @@ for (const category of categories) {
     collection: category.collection,
     description: category.description,
     count: categoryEntries.length,
-    lastPublishOrUpdate: lastPublishOrUpdate.toLocaleString('de-DE', {
-      year: 'numeric', month: 'numeric', day: 'numeric'
-    }),
+    lastPublishOrUpdate: showDate(lastPublishOrUpdate),
     lastPosts: categoryEntries.slice(0, 3).map((article) => ({
       title: article.data.title, link: '/' + category.collection + '/' + article['slug'],
     })),
