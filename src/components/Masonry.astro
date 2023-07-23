@@ -3,12 +3,11 @@
 </div>
 <script>
   import Macy from "macy";
-  import {onPageView} from "../lib/helper/onPageView";
 
   const CONTAINER_SELECTOR = '.masonry';
 
   const runMacy = () => {
-    Macy({
+    return Macy({
       container: CONTAINER_SELECTOR,
       trueOrder: true,
       waitForImages: false,
@@ -22,12 +21,12 @@
     });
   };
 
-  runMacy()
-  onPageView(() => {
+  runMacy();
+  document.addEventListener('swup:contentReplaced', () => {
     if (document.querySelector(CONTAINER_SELECTOR) === null) {
       return
     }
-    runMacy()
+    runMacy().recalculate(true)
   });
 </script>
 <style>
