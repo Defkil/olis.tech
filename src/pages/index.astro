@@ -1,6 +1,34 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import PostWindow from "../components/post-window/PostWindow.astro";
+import Masonry from "../components/Masonry.astro";
+const postData = {
+  link: '/',
+  image: "http://placekitten.com/300/300",
+  imageAlt: "Placeholder",
+  titel: "Lorem ipsum dolor sit amet",
+  excerpt: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nisl eget tempor aliquam, nunc nisl aliquet nunc, nec aliquam",
+  lastPublishOrUpdate: "12.06.2023"
+}
+
+const postData2 = {
+  ...postData, excerpt: postData.excerpt + postData.excerpt
+}
+
+const postData3 = {
+  ...postData, excerpt: postData2.excerpt + postData2.excerpt
+}
 ---
 <BaseLayout title="Olis.tech - Start" description="Loool">
-  Placeholder
+  <Masonry>
+    <PostWindow post={{...postData, image: "http://placekitten.com/400/300"}}/>
+    <PostWindow post={{...postData2, titel: '2', image: "http://placekitten.com/300/400"}}/>
+    <PostWindow post={{...postData3, titel: '3', image: "http://placekitten.com/400/500"}}/>
+    <PostWindow post={postData2}/>
+    <PostWindow post={postData}/>
+    <PostWindow post={postData2}/>
+    <PostWindow post={postData3}/>
+    <PostWindow post={postData2}/>
+    <PostWindow post={postData}/>
+  </Masonry>
 </BaseLayout>
