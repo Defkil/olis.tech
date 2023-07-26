@@ -15,10 +15,11 @@ export function setupSwup(): Swup {
     plugins: SWUP_PLUGINS,
   });
   window.swup = swup;
+  swup.on("contentReplaced", scrollToSwupContent);
   return swup;
 }
 
 /** Scroll to the top of the swup container */
-export function scrollToSwupContent(): void {
+function scrollToSwupContent(): void {
   document.getElementById(SWUP_CONTAINER_ID)?.scrollIntoView({ behavior: "smooth" });
 }
