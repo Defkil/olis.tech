@@ -75,3 +75,9 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}

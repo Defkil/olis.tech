@@ -21,5 +21,5 @@ export function setupSwup(): Swup {
 
 /** Scroll to the top of the swup container */
 function scrollToSwupContent(): void {
-  document.getElementById(SWUP_CONTAINER_ID)?.scrollIntoView({ behavior: "smooth" });
+  document.getElementById(SWUP_CONTAINER_ID)?.scrollIntoView();
 }
