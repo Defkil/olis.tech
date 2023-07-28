@@ -1,4 +1,4 @@
-export function showDate(date: Date) {
+export function helperShowDate(date: Date) {
   return date.toLocaleDateString("de-DE", {
     year: "numeric",
     month: "long",
