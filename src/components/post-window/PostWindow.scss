@@ -1,3 +1,5 @@
+@import "../../const/styles.module.scss";
+
 .dot {
   width: 16px;
   height: 16px;
@@ -9,8 +11,11 @@
 
 .window {
   position: relative;
+
   width: calc(33% - 10px);
   margin-bottom: 24px;
+
+  background: $color-senary;
   border: var(--shadow-size) solid #000;
 
   @media (width <= 1024px) {
