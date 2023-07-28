@@ -1,8 +1,12 @@
 ---
-import {showDate} from "../../lib/helper/showDate";
-import {getCollection} from "astro:content";
+import {contentLinkPost} from "../../lib/content/contentLink";
+import {helperLastPublishOrUpdate} from "../../lib/helper/helperLastDate";
+import {contentGetCategoryPosts} from "../../lib/content/contentGetPosts";
+import {contentLinkCategory} from "../../lib/content/contentLink";
+import {helperShowDate} from "../../lib/helper/helperShowDate";
 import {categories} from "../../const/categories";
 import './HeaderCategories.scss'
+
 const categoriesData: {
   title: string,
   collection: string,
@@ -16,37 +20,17 @@ const categoriesData: {
 }[] = []
 
 for (const category of categories) {
-  const unsortedCategoryEntries = await getCollection(category.collection as any);
-  const categoryEntries = unsortedCategoryEntries.sort((a, b) => {
-    if (a.data.publishDate > b.data.publishDate) {
-      return -1;
-    }
-    if (a.data.publishDate < b.data.publishDate) {
-      return 1;
-    }
-    return 0;
-  });
-
-  let lastPublishOrUpdate = categoryEntries[0].data.publishDate;
-  for (const article of categoryEntries) {
-    if (article.data.publishDate > lastPublishOrUpdate) {
-      lastPublishOrUpdate = article.data.publishDate;
-    }
-    if (article.data.updateDate > lastPublishOrUpdate) {
-      lastPublishOrUpdate = article.data.updateDate;
-    }
-  }
-
+  const data = await contentGetCategoryPosts(category.collection)
   categoriesData.push({
     title: category.title,
     collection: category.collection,
     description: category.description,
-    count: categoryEntries.length,
-    lastPublishOrUpdate: showDate(lastPublishOrUpdate),
-    lastPosts: categoryEntries.slice(0, 3).map((article) => ({
-      title: article.data.title, link: '/' + category.collection + '/' + article['slug'],
+    count: data.total,
+    lastPublishOrUpdate: helperShowDate(helperLastPublishOrUpdate(data.posts)),
+    lastPosts: data.posts.map((article) => ({
+      title: article.title, link: contentLinkPost(category.collection, article.slug)
     })),
-    link: '/' + category.collection,
+    link: contentLinkCategory(category.collection),
   })
 }
 
