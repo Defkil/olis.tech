@@ -1,5 +1,5 @@
 import { getCollection } from "astro:content";
-import type { PostSchema } from "../../content/_categories";
+import type { PostSchema } from "../../env";
 
 /**
  * Get posts from a category
@@ -41,6 +41,7 @@ export async function contentGetCategoryPosts(
         title: post.data.title,
         description: post.data.description,
         image: post.data.image,
+        imageAlt: post.data.imageAlt,
         publishDate: post.data.publishDate,
         updateDate: post.data.updateDate,
         slug: post.slug,
