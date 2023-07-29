@@ -45,21 +45,22 @@ export class HeaderCategoriesDomLinkHref extends HeaderCategoriesDomHandler {
 }
 
 export class HeaderCategoriesDomPosts extends HeaderCategoriesDomHandler {
+  template = document.querySelector("#header-categories-post") as HTMLTemplateElement;
   setDomContent(domElement: Element, content: { title: string; link: string }[]) {
-    let postHtml = "";
+    const elements: DocumentFragment[] = [];
 
     if (content.length === 0) {
       content.push({ title: "Keine Beiträge, schau später wieder vorbei!", link: "#" });
     }
 
     for (const post of content) {
-      postHtml += `<a href="${post.link}" data-swup-preload>
-            <div class="post border shadow shadow--hover">
-              <div class="post__title">${post.title}</div>
-            </div>
-          </a>`;
+      const clone = this.template.content.cloneNode(true) as DocumentFragment;
+      clone.querySelector("a")!.href = post.link;
+      clone.querySelector(".post__title")!.textContent = post.title;
+      elements.push(clone);
     }
 
-    domElement.innerHTML = postHtml;
+    domElement.innerHTML = "";
+    domElement.append(...elements);
   }
 }
