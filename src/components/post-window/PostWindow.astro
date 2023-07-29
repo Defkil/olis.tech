@@ -1,15 +1,6 @@
 ---
 import './PostWindow.scss';
-
-interface PostWindowProps {
-  collection: string
-  lastPublishOrUpdate: string
-  image: string
-  imageAlt: string
-  titel: string
-  excerpt: string
-  link: string
-}
+import type {PostWindowProps} from "../../env";
 
 const { post }: Record<string, PostWindowProps> = Astro.props
 
@@ -34,6 +25,6 @@ if (!post) {
   </a>
   <div class="window__category">
     Aus
-    <a href="/a" class="window__category-link">{post.collection}</a>
+    <a href={post.categoryLink} class="window__category-link">{post.category}</a>
   </div>
 </div>
