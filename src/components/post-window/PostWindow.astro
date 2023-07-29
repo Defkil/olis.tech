@@ -20,7 +20,7 @@ if (!post) {
 <div class="window">
   <a href={post.link} style="text-decoration: none;">
     <div class="window__header">
-      <span class="window__header-title">Kategorie</span>
+      <span class="window__header-title">{post.lastPublishOrUpdate}</span>
       <div class="dot"></div>
       <div class="dot"></div>
       <div class="dot"></div>
@@ -28,5 +28,12 @@ if (!post) {
     <img class="window__image" loading="lazy" src={post.image} alt={post.imageAlt}>
     <h2 class="window__title">{post.titel}</h2>
     <p class="window__excerpt">{post.excerpt}</p>
+    <div class="window__footer">
+      Weiterlesen ➔
+    </div>
   </a>
+  <div class="window__category">
+    Aus
+    <a href="/a" class="window__category-link">{post.collection}</a>
+  </div>
 </div>

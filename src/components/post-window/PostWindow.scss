@@ -48,7 +48,27 @@
   border-bottom: var(--border-size) solid #000;
 }
 
-.window__title, .window__excerpt {
+.window__title {
+  padding: 4px 8px 0;
+}
+
+.window__excerpt {
   padding: 8px;
 }
 
+.window__footer {
+  padding: 8px;
+  text-align: right;
+  border-top: var(--border-size) solid #000;
+}
+
+.window__category {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 8px 24px 8px 8px;
+}
+
+.window__category-link {
+  color: #000;
+}
