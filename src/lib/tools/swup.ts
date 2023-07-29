@@ -23,3 +23,13 @@ export function setupSwup(): Swup {
 function scrollToSwupContent(): void {
   document.getElementById(SWUP_CONTAINER_ID)?.scrollIntoView();
 }
+
+/**
+ * Preload visible links
+ */
+export function preloadPages() {
+  const swup = (window as unknown as { swup: { preloadPages: () => {} } }).swup;
+  if (swup) {
+    swup.preloadPages();
+  }
+}
