@@ -1,10 +1,10 @@
 import rss, { RSSFeedItem, rssSchema } from "@astrojs/rss";
 import { getCollection } from "astro:content";
-import type { CategoryData } from "../content/_categories";
 import { categories } from "../const/categories";
 import probe from "probe-image-size";
 import type { z } from "astro/zod";
 import { SITE_AUTHOR_MAIL, SITE_DESCRIPTION, SITE_TITLE } from "../const/data";
+import type { CategoryData } from "../env";
 
 type RSSFeedEnclosure = z.infer<typeof rssSchema>["enclosure"];
 
