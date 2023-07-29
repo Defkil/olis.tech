@@ -6,6 +6,7 @@ import {contentLinkCategory} from "../../../lib/content/contentLink";
 import {helperShowDate} from "../../../lib/helper/helperShowDate";
 import {categories} from "../../../const/categories";
 import './HeaderCategories.scss'
+import HeaderCategoriesPost from "./HeaderCategoriesPost.astro";
 
 const categoriesData: {
   title: string,
@@ -28,7 +29,7 @@ for (const category of categories) {
     count: data.total,
     lastPublishOrUpdate: helperShowDate(helperLastPublishOrUpdate(data.posts)),
     lastPosts: data.posts.map((article) => ({
-      title: article.title, link: contentLinkPost(category.collection, article.slug)
+      title: article.title, link: contentLinkPost(category.collection, article["slug"])
     })),
     link: contentLinkCategory(category.collection),
   })
@@ -42,6 +43,9 @@ if (selectedCategory) {
 }
 ---
 <div class="background">
+  <template id="header-categories-post">
+    <HeaderCategoriesPost title="" link="" />
+  </template>
   <header-categories>
     <div class="container">
       <div class="sidebar">
@@ -65,11 +69,9 @@ if (selectedCategory) {
           <span>Letzte Aktualisierung am <span class="js--details__last">{initialCategory.lastPublishOrUpdate}</span></span>
         </div>
         <div class="js--posts">
-          {initialCategory.lastPosts.map((post) => (<a href={post.link}>
-            <div class="post border shadow shadow--hover">
-              <div class="post__title">{post.title}</div>
-            </div>
-          </a>))}
+          {initialCategory.lastPosts.map((post) => (
+            <HeaderCategoriesPost title={post.title} link={post.link}/>
+          ))}
         </div>
         <a class="js--link" href={initialCategory.link} style="margin-top: auto">
           <div class="post post--small border shadow shadow--hover">
