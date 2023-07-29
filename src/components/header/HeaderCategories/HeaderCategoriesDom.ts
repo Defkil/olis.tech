@@ -16,15 +16,15 @@ export abstract class HeaderCategoriesDomHandler {
     if (this.domElements.length === 0) {
       throw new Error("No dom elements found");
     }
-
-    this.handler = this.handler.bind(this);
   }
 
   handler(data: HeaderCategoriesData) {
     const content = data[this.contentAtr];
-    this.domElements.forEach((domElement) => {
-      this.setDomContent(domElement, content);
-    });
+    for (const domElement of this.domElements) {
+      if (domElement) {
+        this.setDomContent(domElement, content);
+      }
+    }
   }
 
   abstract setDomContent(domElement: Element, content: any): void;
