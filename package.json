@@ -22,7 +22,7 @@
     "@fontsource-variable/space-grotesk": "^5.0.5",
     "@fontsource/righteous": "^5.0.5",
     "@swup/preload-plugin": "^2.3.0",
-    "astro": "^2.9.4",
+    "astro": "^2.9.6",
     "astro-compress": "^1.1.50",
     "astro-compressor": "^0.4.0",
     "astro-critters": "^1.1.40",
