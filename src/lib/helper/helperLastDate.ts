@@ -3,14 +3,11 @@
  * @param posts List of posts
  */
 export function helperLastPublishOrUpdate(
-  posts: {
-    publishDate: Date;
-    updateDate?: Date;
-  }[],
+  posts: Partial<{ publishDate: Date; updateDate?: Date | undefined }>[],
 ): Date {
   let lastDate = new Date(0);
   for (const post of posts) {
-    if (post.publishDate > lastDate) {
+    if (post.publishDate && post.publishDate > lastDate) {
       lastDate = post.publishDate;
     }
     if (post.updateDate && post.updateDate > lastDate) {
