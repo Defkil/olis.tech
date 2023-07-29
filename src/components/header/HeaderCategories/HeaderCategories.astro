@@ -1,0 +1,89 @@
+---
+import {contentLinkPost} from "../../../lib/content/contentLink";
+import {helperLastPublishOrUpdate} from "../../../lib/helper/helperLastDate";
+import {contentGetCategoryPosts} from "../../../lib/content/contentGetPosts";
+import {contentLinkCategory} from "../../../lib/content/contentLink";
+import {helperShowDate} from "../../../lib/helper/helperShowDate";
+import {categories} from "../../../const/categories";
+import './HeaderCategories.scss'
+
+const categoriesData: {
+  title: string,
+  collection: string,
+  description: string,
+  count: number,
+  lastPublishOrUpdate: string,
+  link: string,
+  lastPosts: {
+    title: string, link: string
+  }[]
+}[] = []
+
+for (const category of categories) {
+  const data = await contentGetCategoryPosts(category.collection)
+  categoriesData.push({
+    title: category.title,
+    collection: category.collection,
+    description: category.description,
+    count: data.total,
+    lastPublishOrUpdate: helperShowDate(helperLastPublishOrUpdate(data.posts)),
+    lastPosts: data.posts.map((article) => ({
+      title: article.title, link: contentLinkPost(category.collection, article.slug)
+    })),
+    link: contentLinkCategory(category.collection),
+  })
+}
+
+const {selectedCategory} = Astro.props
+
+let initialCategory = categoriesData[0]!;
+if (selectedCategory) {
+  initialCategory = categoriesData.find((category) => category.collection === selectedCategory)!;
+}
+---
+<div class="background">
+  <header-categories>
+    <div class="container">
+      <div class="sidebar">
+        <h2 class="sidebar__title">Kategorien</h2>
+        <div class="sidebar__container">
+          {categoriesData.map((category) => (
+            <button
+              class="sidebar__button border shadow shadow--hover js--category-button"
+              data-link={category.link}
+              data-description={category.description}
+              data-count={category.count}
+              data-last-publish-or-update={category.lastPublishOrUpdate}
+              data-last-posts={JSON.stringify(category.lastPosts)}>
+              {category.title}
+            </button>))}
+        </div>
+      </div>
+      <div class="posts">
+        <div class="posts__details">
+          <span>Anzahl Beiträge: <span class="js--details__count">{initialCategory.count}</span></span>
+          <span>Letzte Aktualisierung am <span class="js--details__last">{initialCategory.lastPublishOrUpdate}</span></span>
+        </div>
+        <div class="js--posts">
+          {initialCategory.lastPosts.map((post) => (<a href={post.link}>
+            <div class="post border shadow shadow--hover">
+              <div class="post__title">{post.title}</div>
+            </div>
+          </a>))}
+        </div>
+        <a class="js--link" href={initialCategory.link} style="margin-top: auto">
+          <div class="post post--small border shadow shadow--hover">
+            <div class="post__title post__title--small-centered-text">
+              Alles aus <span class="js--title">{initialCategory.title}</span> anzeigen
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </header-categories>
+</div>
+<script>
+  import {HeaderCategories} from "./HeaderCategories";
+
+  customElements.define('header-categories', HeaderCategories);
+</script>
