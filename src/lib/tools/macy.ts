@@ -18,7 +18,7 @@ export function createMacy() {
       1200: 3,
       800: 2,
     },
-  });
+  }).recalculate(true);
 }
 
 export function renewMacyOnPageChange() {

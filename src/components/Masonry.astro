@@ -41,7 +41,9 @@ const nextLink = collectionLink + (page * 1 + 1)
 <script>
   import {setupMacy} from "../lib/tools/macy";
 
-  setupMacy()
+  document.addEventListener('DOMContentLoaded', () => {
+    setupMacy();
+  })
 </script>
 <style>
   .masonry {
