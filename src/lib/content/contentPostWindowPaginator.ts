@@ -4,7 +4,7 @@ import { contentLinkCategory, contentLinkPost } from "./contentLink";
 import { getCategoryData } from "./contentCategories";
 import { contentGetCategoryPosts } from "./contentGetCategoryPosts";
 
-const PAGE_SIZE = 10;
+const PAGE_SIZE = 9;
 
 /** for date sorting */
 interface DateSort {
