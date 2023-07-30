@@ -28,7 +28,7 @@ const {title, description} = getCategoryData(category)
 ---
 
 <BaseLayout title={'Olis.tech - Kategorie ' + title} description={description}>
-  <h1>Alle Beiträge aus {title}</h1>
+  <h1>Alle Beiträge aus der Kategorie {title}</h1>
   <br>
   <Masonry page="1" collection={category} />
 </BaseLayout>
