@@ -8,17 +8,17 @@ const {posts, totalPages}  = await contentPostWindowPaginator(page, collection);
 
 let collectionLink = '/'
 if (collection) {
-  collectionLink = '/' + collection
+  collectionLink = '/' + collection + '/'
 }
 
 let prevLink: string | undefined
 if (page == 2) {
   prevLink = collectionLink
 } else if (page > 2) {
-  prevLink = collectionLink + '/' + (page - 1)
+  prevLink = collectionLink + (page - 1)
 }
 
-const nextLink = collectionLink + '/' + (page + 1)
+const nextLink = collectionLink + (page * 1 + 1)
 ---
 {prevLink && (
 <a href={prevLink} class="paginator-link">
