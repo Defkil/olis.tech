@@ -21,14 +21,14 @@
 }
 
 body {
-  font-family: var(--font-family-default);
-  background: var(--color-quaternary);
+  font-family: $font-family-default;
+  background: $color-quinary;
 }
 
 .content {
-  padding: 48px 0 24px;
-  word-break: break-all;
-  background: var(--color-quinary);
+  padding: $spacing-11 0 $spacing-08;
+  word-break: break-word;
+  background: $color-quinary;
 }
 
 .content__inner {
@@ -37,17 +37,17 @@ body {
 
 /* Neo Brutalism */
 .border {
-  border: var(--border-size) solid #000;
+  border: $spacing-border solid #000;
 }
 
 .shadow {
-  box-shadow: var(--shadow-size) var(--shadow-size) 0 0 #000;
-  transition: transform var(--animation-duration) var(--animation-easing),
-  box-shadow var(--animation-duration) var(--animation-easing);
+  box-shadow: $spacing-shadow $spacing-shadow 0 0 #000;
+  transition: transform $animation-duration $animation-easing,
+  box-shadow $animation-duration $animation-easing;
 }
 
 .shadow--hover:hover {
-  transform: translate(var(--shadow-size), var(--shadow-size));
+  transform: translate($spacing-shadow, $spacing-shadow);
   box-shadow: 0 0 0 0 #000;
 }
 

@@ -33,7 +33,7 @@ const nextLink = collectionLink + (page * 1 + 1)
   ))}
 </div>
 {totalPages > page && (
-<div class="paginator">
+<div class="paginator paginator--margin-top">
   <a href={nextLink} class="paginator-link border shadow shadow--hover">
     Nächste Seite
   </a>
@@ -54,13 +54,17 @@ const nextLink = collectionLink + (page * 1 + 1)
   }
 
   .paginator--margin-bottom {
-    margin-bottom: 24px;
+    margin-bottom: 32px;
+  }
+
+  .paginator--margin-top {
+    margin-top: 8px;
   }
 
   .paginator-link {
     display: block;
 
-    padding: 8px;
+    padding: 16px 24px;
 
     color: var(--color-black);
     text-decoration: none;

@@ -3,12 +3,11 @@
 $breakpoint-tablet: 900px;
 
 .background {
-  min-height: 280px;
-  padding: 48px 0 24px;
-  background-color: var(--color-quaternary);
+  padding: $spacing-11 0 $spacing-08;
+  background-color: $color-quaternary;
 
   @media screen and (width >= $breakpoint-tablet) {
-    padding: 48px 0 40px;
+    padding-bottom: $spacing-12;
   }
 }
 
@@ -19,7 +18,7 @@ $breakpoint-tablet: 900px;
   grid-template: "sidebar"
                  "posts";
   grid-template-columns: 1fr;
-  gap: 24px 12px;
+  gap: $spacing-04;
 
 
   @media screen and (width >= $breakpoint-tablet) {
@@ -31,36 +30,35 @@ $breakpoint-tablet: 900px;
 .sidebar {
   grid-area: sidebar;
   width: 100%;
-  padding-bottom: 24px;
+  padding-bottom: $spacing-04;
 }
 
 .sidebar__title {
-  margin: 0 0 42px;
+  margin: 0 0 $spacing-05;
 
-  font-family: var(--font-family-hightlight);
-  font-size: 3rem;
-  font-weight: 500;
-  line-height: 3rem;
-  color: var(--color-black);
+  font-family: $font-family-highlight;
+  font-size: $font-size-xlarge;
+  font-weight: $font-weight-medium;
+  line-height: $font-size-xlarge;
+  color: $color-black;
 }
 
 .sidebar__container {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
-
-  @media screen and (width >= 630px) { gap: 22px; }
+  gap: $spacing-05;
 }
 
 .sidebar__button {
   cursor: pointer;
 
-  padding: 10px 18px;
+  padding: $spacing-03 $spacing-04;
 
-  font-weight: bold;
+  font-size: $font-size-medium;
+  font-weight: $font-weight-bold;
 
-  background: var(--color-white);
-  border-radius: var(--border-radius);
+  background: $color-white;
+  border-radius: $border-radius;
 }
 
 .posts {
@@ -80,36 +78,35 @@ $breakpoint-tablet: 900px;
   text-decoration: none;
 }
 
+.posts__container {
+  @media screen and (width >= $breakpoint-tablet) {
+    min-height: 245px;
+  }
+}
+
 .post {
   display: flex;
 
   width: 100%;
   min-height: 40px;
-  margin-bottom: 16px;
-  padding: 12px 0;
+  margin-bottom: $spacing-04;
+  padding: $spacing-04 0;
 
-  background: var(--color-quinary);
-  border-radius: var(--border-radius);
+  background: $color-quinary;
+  border-radius: $border-radius;
 }
 
 .post--small {
   display: grid;
 }
 
-.post__image {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: var(--border-radius) 0 0 var(--border-radius);
-}
-
 .post__title {
   margin: auto 0;
-  padding: 0 26px;
+  padding: 0 $spacing-04;
 
   font-size: 1.5rem;
-  font-weight: 500;
-  color: var(--color-black);
+  font-weight: $font-weight-medium;
+  color: $color-black;
 }
 
 .post__title--small-centered-text {

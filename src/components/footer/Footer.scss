@@ -2,15 +2,15 @@
 
 .footer {
   position: absolute;
-  gap: 40px;
+  gap: $spacing-08;
   width: 100%;
-  background: var(--color-quaternary);
+  background: $color-quaternary;
 }
 
 .list {
   display: flex;
   flex-wrap: wrap;
-  gap: 18px;
+  gap: $spacing-04;
   justify-content: center;
 
   margin-bottom: 8px;
@@ -19,7 +19,7 @@
 .footer__container {
   @include container;
 
-  padding: 60px 16px 20px;
+  padding: $spacing-12 $spacing-04 $spacing-09;
 
   @media screen and (width >= 900px) {
     justify-content: space-between;
@@ -29,16 +29,16 @@
 .more-link {
   display: block;
 
-  padding: 10px 20px;
+  padding: $spacing-03 $spacing-04;
 
-  font-family: var(--font-family-hightlight);
-  font-size: 1.2rem;
-  font-weight: 800;
-  color: var(--color-black);
+  font-family: $font-family-highlight;
+  font-size: $font-size-large;
+  font-weight: $font-weight-extra-bold;
+  color: $font-color-black;
   text-decoration: none;
 
-  background: var(--color-white);
-  border-radius: var(--border-radius);
+  background: $color-white;
+  border-radius: $border-radius;
 }
 
 .legal > li {
@@ -48,5 +48,5 @@
 .legal__link {
   display: inline-block;
   align-self: flex-end;
-  color: var(--color-black);
+  color: $font-color-black;
 }

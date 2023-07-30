@@ -51,7 +51,7 @@ const initialCategory = categoriesData[0]!;
         </div>
       </div>
       <div class="posts">
-        <div class="js--posts">
+        <div class="posts__container js--posts">
           {initialCategory.lastPosts.map((post) => (
             <HeaderCategoriesPost title={post.title} link={post.link}/>
           ))}

@@ -1,11 +1,13 @@
 @import "../../const/styles.module.scss";
 
+$main-size: $spacing-04;
+
 .dot {
   width: 16px;
   height: 16px;
   margin-top: 3px;
 
-  border: var(--border-size) solid #000;
+  border: $spacing-border solid #000;
   border-radius: 50%;
 }
 
@@ -13,7 +15,7 @@
   position: relative;
 
   width: calc(33% - 10px);
-  margin-bottom: 24px;
+  margin-bottom: $main-size;
 
   background: $color-senary;
   border: var(--shadow-size) solid #000;
@@ -29,9 +31,9 @@
 
 .window__header {
   display: flex;
-  gap: 8px;
+  gap: $main-size;
   justify-content: flex-end;
-  padding: 8px;
+  padding: $main-size;
 }
 
 .window__header-title {
@@ -43,8 +45,8 @@
   height: 300px;
 
   background: rgb(0 0 0 / 20%);
-  border-top: var(--border-size) solid #000;
-  border-bottom: var(--border-size) solid #000;
+  border-top: $spacing-border solid #000;
+  border-bottom: $spacing-border solid #000;
 }
 
 .window__image {
@@ -54,24 +56,24 @@
 }
 
 .window__title {
-  padding: 4px 8px 0;
+  padding: $main-size $main-size 0;
 }
 
 .window__excerpt {
-  padding: 8px;
+  padding: $main-size;
 }
 
 .window__footer {
-  padding: 8px;
+  padding: $main-size;
   text-align: right;
-  border-top: var(--border-size) solid #000;
+  border-top: $spacing-border solid #000;
 }
 
 .window__category {
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 8px 24px 8px 8px;
+  padding: $main-size $main-size * 4 $main-size $main-size;
 }
 
 .window__category-link {
