@@ -27,7 +27,6 @@
     "astro-compressor": "^0.4.0",
     "astro-critters": "^1.1.40",
     "astro-rome": "^0.1.18",
-    "macy": "^2.5.1",
     "probe-image-size": "^7.2.3",
     "sass": "^1.64.1"
   },

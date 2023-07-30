@@ -44,9 +44,6 @@ dependencies:
   astro-rome:
     specifier: ^0.1.18
     version: 0.1.18
-  macy:
-    specifier: ^2.5.1
-    version: 2.5.1
   probe-image-size:
     specifier: ^7.2.3
     version: 7.2.3
@@ -5062,11 +5059,6 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       yallist: 4.0.0
-
-  /macy@2.5.1:
-    resolution: {integrity: sha512-+y4WYyh3rl4G8UczZP30pXxhLQRZ941QcaDmWoGefzUBXdwNW8TOhjjN1g5i/VG3SmiSsHgpjVXhlnZ84P2QMw==}
-    engines: {node: '>= 0.9'}
-    dev: false
 
   /magic-string@0.25.9:
     resolution: {integrity: sha512-RmF0AsMzgt25qzqqLc1+MbHmhdx0ojF2Fvs4XnOqz2ZOBXzzkEwc/dJQZCYHAn7v1jbVOjAZfK8msRn4BxO4VQ==}
