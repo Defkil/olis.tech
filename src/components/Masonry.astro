@@ -21,9 +21,11 @@ if (page == 2) {
 const nextLink = collectionLink + (page * 1 + 1)
 ---
 {prevLink && (
-<a href={prevLink} class="paginator-link">
-  Vorherige Seite
-</a>)}
+<div class="paginator paginator--margin-bottom">
+  <a href={prevLink} class="paginator-link border shadow shadow--hover">
+    Vorherige Seite
+  </a>
+</div>)}
 
 <div class="masonry">
   {posts.map((post: PostWindowProps) => (
@@ -31,9 +33,11 @@ const nextLink = collectionLink + (page * 1 + 1)
   ))}
 </div>
 {totalPages > page && (
-<a href={nextLink} class="paginator-link">
-  Nächste Seite
-</a>)}
+<div class="paginator">
+  <a href={nextLink} class="paginator-link border shadow shadow--hover">
+    Nächste Seite
+  </a>
+</div>)}
 <script>
   import {setupMacy} from "../lib/tools/macy";
 
@@ -44,13 +48,24 @@ const nextLink = collectionLink + (page * 1 + 1)
     overflow: hidden;
   }
 
+  .paginator {
+    display: flex;
+    justify-content: center;
+  }
+
+  .paginator--margin-bottom {
+    margin-bottom: 24px;
+  }
+
   .paginator-link {
     display: block;
 
-    margin: 16px 0;
+    padding: 8px;
 
-    font-size: 32px;
-    color: black;
-    text-align: center;
+    color: var(--color-black);
+    text-decoration: none;
+
+    background: var(--color-white);
+    border-radius: var(--border-radius);
   }
 </style>
