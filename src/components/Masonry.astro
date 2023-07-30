@@ -1,15 +1,39 @@
 ---
 import {contentPostWindowPaginator} from "../lib/content/contentPostWindowPaginator";
 import PostWindow from "./post-window/PostWindow.astro";
+import type {PostWindowProps} from "../env";
 
 const { page, collection } = Astro.props
 const {posts, totalPages}  = await contentPostWindowPaginator(page, collection);
+
+let collectionLink = '/'
+if (collection) {
+  collectionLink = '/' + collection
+}
+
+let prevLink: string | undefined
+if (page == 2) {
+  prevLink = collectionLink
+} else if (page > 2) {
+  prevLink = collectionLink + '/' + (page - 1)
+}
+
+const nextLink = collectionLink + '/' + (page + 1)
 ---
+{prevLink && (
+<a href={prevLink} class="paginator-link">
+  Vorherige Seite
+</a>)}
+
 <div class="masonry">
-  {posts.map((post) => (
+  {posts.map((post: PostWindowProps) => (
     <PostWindow post={post} />
   ))}
 </div>
+{totalPages > page && (
+<a href={nextLink} class="paginator-link">
+  Nächste Seite
+</a>)}
 <script>
   import {setupMacy} from "../lib/tools/macy";
 
@@ -18,5 +42,15 @@ const {posts, totalPages}  = await contentPostWindowPaginator(page, collection);
 <style>
   .masonry {
     overflow: hidden;
+  }
+
+  .paginator-link {
+    display: block;
+
+    margin: 16px 0;
+
+    font-size: 32px;
+    color: black;
+    text-align: center;
   }
 </style>
