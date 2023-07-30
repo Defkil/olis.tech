@@ -8,7 +8,7 @@ import Footer from "../components/footer/Footer.astro";
 import {styles} from "../const/styles";
 import WaveSeparator from "../components/WaveSeparator.astro";
 
-const { title, description, category } = Astro.props
+const { title, description } = Astro.props
 ---
 
 <html lang="de">
@@ -17,7 +17,7 @@ const { title, description, category } = Astro.props
 </head>
 <body>
 <PreloadSvg />
-<Header category={category} />
+<Header />
 <main class="content">
     <div id="swup">
       <div class="content__inner">
