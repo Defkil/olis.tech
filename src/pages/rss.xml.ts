@@ -11,11 +11,12 @@ type RSSFeedEnclosure = z.infer<typeof rssSchema>["enclosure"];
 /**
  * Get image metadata
  * // todo: works only with http urls, need to add code for local files see https://github.com/nodeca/probe-image-size
+ * // todo: dont work with cat images on length
  * @param url image url
  */
 async function getImageMetaData(url: string): Promise<RSSFeedEnclosure> {
   const imgData = await probe(url);
-  return { url, length: imgData.length, type: imgData.mime };
+  return { url, length: 1, type: imgData.mime };
 }
 
 /**
@@ -51,6 +52,8 @@ export async function get(context: any) {
       posts.push(await transformPostToFeedItem(post, category, context.site));
     }
   }
+
+  console.log(posts);
 
   return rss({
     title: SITE_TITLE,
