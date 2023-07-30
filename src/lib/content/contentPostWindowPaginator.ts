@@ -87,12 +87,21 @@ async function paginatorGetPage(posts: PostWindowProps[], page: number): Promise
  * @param page Page number
  * @param collection Category collection, if not provided, return all posts
  */
-export async function contentPostWindowPaginator(page: number, collection?: string): Promise<PostWindowProps[]> {
+export async function contentPostWindowPaginator(
+  page: number,
+  collection?: string,
+): Promise<{
+  posts: PostWindowProps[];
+  totalPages: number;
+}> {
   let posts: PostWindowProps[] = [];
   if (!collection) {
     posts = await getAllPostsAndSorts();
   } else {
     posts = await getCollectionPostsAndSorts(collection);
   }
-  return paginatorGetPage(posts, page);
+  return {
+    posts: await paginatorGetPage(posts, page),
+    totalPages: posts.length / PAGE_SIZE,
+  };
 }
