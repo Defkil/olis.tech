@@ -1,0 +1,31 @@
+---
+import {collections} from "../../content/config";
+import {contentPostWindowPaginator} from "../../lib/content/contentPostWindowPaginator";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Masonry from "../../components/Masonry.astro";
+export async function getStaticPaths() {
+  const routes: {
+    params: {
+      index: string;
+      category: string;
+    }
+  }[] = []
+  for (const collection of Object.keys(collections)) {
+    const paginator = await contentPostWindowPaginator(1, collection)
+    for (let i = 1; i < paginator.totalPages; i++) {
+      routes.push({
+        params: {
+          index: (i + 1).toString(),
+          category: collection
+        }
+      })
+    }
+  }
+  return routes
+}
+const { index, category } = Astro.params;
+
+---
+<BaseLayout title={'Olis.tech - Seite ' + index}>
+  <Masonry page={index} collection={category} />
+</BaseLayout>
