@@ -16,7 +16,9 @@ if (!post) {
       <div class="dot"></div>
       <div class="dot"></div>
     </div>
-    <img class="window__image" loading="lazy" src={post.image} alt={post.imageAlt}>
+    <div class="window__image-container">
+      <img class="window__image" loading="lazy" src={post.image} alt={post.imageAlt}>
+    </div>
     <h2 class="window__title">{post.titel}</h2>
     <p class="window__excerpt">{post.excerpt}</p>
     <div class="window__footer">
