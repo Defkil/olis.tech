@@ -10,8 +10,6 @@ export interface HeaderCategoriesData {
   title: string;
   link: string;
   description: string;
-  count: string;
-  lastPublishOrUpdate: string;
   posts: { title: string; link: string }[];
 }
 
@@ -19,8 +17,6 @@ export class HeaderCategories extends HTMLElement {
   domChanger: HeaderCategoriesDomHandler[] = [
     new HeaderCategoriesDomString(".js--title", "title"),
     new HeaderCategoriesDomLinkHref(".js--link", "link"),
-    new HeaderCategoriesDomString(".js--details__count", "count"),
-    new HeaderCategoriesDomString(".js--details__last", "lastPublishOrUpdate"),
     new HeaderCategoriesDomPosts(".js--posts", "posts"),
   ];
 
@@ -70,8 +66,6 @@ export class HeaderCategories extends HTMLElement {
       title: button.textContent!,
       link: button.dataset.link!,
       description: button.dataset.description!,
-      count: button.dataset.count!,
-      lastPublishOrUpdate: button.dataset.lastPublishOrUpdate!,
       posts: posts,
     };
 

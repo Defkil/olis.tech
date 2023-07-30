@@ -70,22 +70,15 @@ $breakpoint-tablet: 900px;
   flex-grow: 1;
 
   width: 100%;
+
+  @media screen and (width >= $breakpoint-tablet) {
+    height: 288px;
+  }
 }
 
 .posts a {
   text-decoration: none;
 }
-
-.posts__details {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  padding: 12px 0 24px;
-
-  font-size: 1.2rem;
-}
-
 
 .post {
   display: flex;

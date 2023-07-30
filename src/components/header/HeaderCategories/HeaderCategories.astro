@@ -1,9 +1,7 @@
 ---
 import {contentLinkPost} from "../../../lib/content/contentLink";
-import {helperLastPublishOrUpdate} from "../../../lib/helper/helperLastDate";
 import {contentGetCategoryPosts} from "../../../lib/content/contentGetCategoryPosts";
 import {contentLinkCategory} from "../../../lib/content/contentLink";
-import {helperShowDate} from "../../../lib/helper/helperShowDate";
 import {categories} from "../../../const/categories";
 import './HeaderCategories.scss'
 import HeaderCategoriesPost from "./HeaderCategoriesPost.astro";
@@ -12,8 +10,6 @@ const categoriesData: {
   title: string,
   collection: string,
   description: string,
-  count: number,
-  lastPublishOrUpdate: string,
   link: string,
   lastPosts: {
     title: string, link: string
@@ -21,13 +17,11 @@ const categoriesData: {
 }[] = []
 
 for (const category of categories) {
-  const data = await contentGetCategoryPosts(category.collection)
+  const data = await contentGetCategoryPosts(category.collection, 3)
   categoriesData.push({
     title: category.title,
     collection: category.collection,
     description: category.description,
-    count: data.total,
-    lastPublishOrUpdate: helperShowDate(helperLastPublishOrUpdate(data.posts)),
     lastPosts: data.posts.map((article) => ({
       title: article.title, link: contentLinkPost(category.collection, article["slug"])
     })),
@@ -51,18 +45,12 @@ const initialCategory = categoriesData[0]!;
               class="sidebar__button border shadow shadow--hover js--category-button"
               data-link={category.link}
               data-description={category.description}
-              data-count={category.count}
-              data-last-publish-or-update={category.lastPublishOrUpdate}
               data-last-posts={JSON.stringify(category.lastPosts)}>
               {category.title}
             </button>))}
         </div>
       </div>
       <div class="posts">
-        <div class="posts__details">
-          <span>Anzahl Beiträge: <span class="js--details__count">{initialCategory.count}</span></span>
-          <span>Letzte Aktualisierung am <span class="js--details__last">{initialCategory.lastPublishOrUpdate}</span></span>
-        </div>
         <div class="js--posts">
           {initialCategory.lastPosts.map((post) => (
             <HeaderCategoriesPost title={post.title} link={post.link}/>
