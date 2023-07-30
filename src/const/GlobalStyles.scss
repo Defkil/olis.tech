@@ -26,6 +26,7 @@ body {
 }
 
 .content {
+  min-height: 800px;
   padding: $spacing-11 0 $spacing-08;
   word-break: break-word;
   background: $color-quinary;
