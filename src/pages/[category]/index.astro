@@ -3,7 +3,7 @@ import {collections} from "../../content/config";
 import {getCollection} from 'astro:content';
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import {getCategoryData} from "../../lib/content/contentCategories";
-import Masonry from "../../components/Masonry.astro";
+import Masonry from "../../components/Masonry/Masonry.astro";
 
 export async function getStaticPaths() {
   const routes: {

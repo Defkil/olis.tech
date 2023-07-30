@@ -1,7 +1,7 @@
 ---
-import {contentPostWindowPaginator} from "../lib/content/contentPostWindowPaginator";
-import PostWindow from "./post-window/PostWindow.astro";
-import type {PostWindowProps} from "../env";
+import {contentPostWindowPaginator} from "../../lib/content/contentPostWindowPaginator";
+import PostWindow from "../post-window/PostWindow.astro";
+import type {PostWindowProps} from "../../env";
 
 const { page, collection } = Astro.props
 const {posts, totalPages}  = await contentPostWindowPaginator(page, collection);
@@ -27,11 +27,11 @@ const nextLink = collectionLink + (page * 1 + 1)
   </a>
 </div>)}
 
-<div class="masonry">
+<masonry-grid>
   {posts.map((post: PostWindowProps) => (
     <PostWindow post={post} />
   ))}
-</div>
+</masonry-grid>
 {totalPages > page && (
 <div class="paginator paginator--margin-top">
   <a href={nextLink} class="paginator-link border shadow shadow--hover">
@@ -39,11 +39,32 @@ const nextLink = collectionLink + (page * 1 + 1)
   </a>
 </div>)}
 <script>
-  import {setupMacy} from "../lib/tools/macy";
+  function debounce(func, wait) {
+    let timeout;
 
-  document.addEventListener('DOMContentLoaded', () => {
-    setupMacy();
-  })
+    return function executedFunction(...args) {
+      const later = () => {
+        clearTimeout(timeout);
+        func(...args);
+      };
+
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
+  }
+
+  class MasonryGrid extends HTMLElement {
+    debounceHandleResize = debounce(this.handleResize, 200);
+    connectedCallback() {
+      window.addEventListener('resize', this.debounceHandleResize);
+    }
+    disconnectedCallback() {
+      window.removeEventListener('resize', this.debounceHandleResize);
+    }
+    handleResize() {
+    }
+  }
+  customElements.define('masonry-grid', MasonryGrid);
 </script>
 <style>
   .masonry {
