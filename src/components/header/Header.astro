@@ -4,7 +4,6 @@ import {styles} from "../../const/styles";
 import HeaderCategories from "./HeaderCategories/HeaderCategories.astro";
 import './Header.scss'
 import {SITE_TITLE} from "../../const/data";
-const {category} = Astro.props
 ---
 <div class="header">
   <header class='header__container'>
@@ -24,7 +23,7 @@ const {category} = Astro.props
 </div>
 <div class="header__categories">
   <WaveSeparator color={styles["color-secondary"]}/>
-  <HeaderCategories selectedCategory={category}/>
+  <HeaderCategories />
   <WaveSeparator color={styles["color-quaternary"]}/>
 </div>
 <script>
