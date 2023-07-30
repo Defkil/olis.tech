@@ -7,12 +7,12 @@
 
 ## Performance
 > Features die die Performance verbessern sollten
-- Fonts besser laden & nicht über npm
 
 ## Nice to have
 > Features die nicht unbedingt notwendig sind, aber trotzdem nice to have wären
 - Pre commit Hook mit rome & stylelint & spellcheck
 - Separator unter dem Content spiegeln, damit die Animation besser aussieht
+- STRG + K Zeichen am Inputfeld
 
 ## Problemkinder
 > Features die beim Versuch zu viel Zeit verbrannt habenAthletic Greens 
