@@ -15,6 +15,7 @@ $main-size: $spacing-04;
   position: relative;
 
   width: calc(33% - 10px);
+  min-height: 600px;
   margin-bottom: $main-size;
 
   background: $color-senary;
