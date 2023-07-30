@@ -1,15 +1,9 @@
 ---
 import {contentPostWindowPaginator} from "../lib/content/contentPostWindowPaginator";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import PostWindow from "../components/post-window/PostWindow.astro";
 import Masonry from "../components/Masonry.astro";
-const posts = await contentPostWindowPaginator(1);
+const {posts, totalPages}  = await contentPostWindowPaginator(1);
 ---
 <BaseLayout title="Olis.tech - Start" description="Code, Tux & Bytes: Ein Entwickler-Tagebuch">
-  <Masonry>
-    {posts.map((post) => (
-      <PostWindow post={post} />
-    ))}
-  </Masonry>
-  <!-- todo: next page -->
+  <Masonry page="1" />
 </BaseLayout>

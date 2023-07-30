@@ -1,8 +1,11 @@
 ---
+import {contentPostWindowPaginator} from "../../lib/content/contentPostWindowPaginator";
 import {collections} from "../../content/config";
 import {getCollection} from 'astro:content';
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import {getCategoryData} from "../../content/_categories";
+import {getCategoryData} from "../../lib/content/contentCategories";
+import Masonry from "../../components/Masonry.astro";
+
 export async function getStaticPaths() {
   const routes: {
     params: {
@@ -23,9 +26,11 @@ export async function getStaticPaths() {
 
 const {category} = Astro.props;
 const {title, description} = getCategoryData(category)
+const {posts, totalPages} = await contentPostWindowPaginator(1, category);
 ---
 
 <BaseLayout title={'Olis.tech - Kategorie ' + title} description={description} category={category}>
-  <h1>{title}</h1>
-  <!-- todo show description and posts -->
+  <h1>Alle Beiträge aus {title}</h1>
+  <br>
+  <Masonry page="1" collection={category} />
 </BaseLayout>
