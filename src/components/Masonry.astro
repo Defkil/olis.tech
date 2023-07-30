@@ -1,5 +1,14 @@
+---
+import {contentPostWindowPaginator} from "../lib/content/contentPostWindowPaginator";
+import PostWindow from "./post-window/PostWindow.astro";
+
+const { page, collection } = Astro.props
+const {posts, totalPages}  = await contentPostWindowPaginator(page, collection);
+---
 <div class="masonry">
-  <slot />
+  {posts.map((post) => (
+    <PostWindow post={post} />
+  ))}
 </div>
 <script>
   import {setupMacy} from "../lib/tools/macy";
