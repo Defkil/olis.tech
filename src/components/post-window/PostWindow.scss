@@ -14,20 +14,12 @@ $main-size: $spacing-04;
 .window {
   position: relative;
 
-  width: calc(33% - 10px);
-  min-height: 600px;
-  margin-bottom: $main-size;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto $main-size auto;
 
   background: $color-senary;
   border: var(--shadow-size) solid #000;
-
-  @media (width <= 1024px) {
-    width: calc(50% - 10px);
-  }
-
-  @media (width <= 768px) {
-    width: 100%;
-  }
 }
 
 .window__header {
