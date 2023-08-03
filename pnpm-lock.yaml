@@ -18,20 +18,20 @@ dependencies:
     specifier: ^3.5.1
     version: 3.5.1(@algolia/client-search@4.19.1)(search-insights@2.7.0)
   '@fontsource-variable/outfit':
-    specifier: ^5.0.5
-    version: 5.0.5
+    specifier: ^5.0.7
+    version: 5.0.7
   '@fontsource-variable/space-grotesk':
-    specifier: ^5.0.5
-    version: 5.0.5
+    specifier: ^5.0.7
+    version: 5.0.7
   '@fontsource/righteous':
-    specifier: ^5.0.5
-    version: 5.0.5
+    specifier: ^5.0.7
+    version: 5.0.7
   '@swup/preload-plugin':
     specifier: ^2.3.0
     version: 2.3.0(swup@3.1.1)
   astro:
-    specifier: ^2.9.7
-    version: 2.9.7(sass@1.64.2)
+    specifier: ^2.10.1
+    version: 2.10.1(sass@1.64.2)
   astro-compress:
     specifier: ^1.1.50
     version: 1.1.50
@@ -243,8 +243,8 @@ packages:
     resolution: {integrity: sha512-E0TI/uyO8n+IPSZ4Fvl9Lne8JKEasR6ZMGvE2G096oTWOXSsPAhRs2LomV3z+/VRepo2h+t/SdVo54wox4eJwA==}
     dev: false
 
-  /@astrojs/internal-helpers@0.1.1:
-    resolution: {integrity: sha512-+LySbvFbjv2nO2m/e78suleQOGEru4Cnx73VsZbrQgB2u7A4ddsQg3P2T0zC0e10jgcT+c6nNlKeLpa6nRhQIg==}
+  /@astrojs/internal-helpers@0.1.2:
+    resolution: {integrity: sha512-YXLk1CUDdC9P5bjFZcGjz+cE/ZDceXObDTXn/GCID4r8LjThuexxi+dlJqukmUpkSItzQqgzfWnrPLxSFPejdA==}
     dev: false
 
   /@astrojs/language-server@1.0.8:
@@ -266,13 +266,13 @@ packages:
       vscode-uri: 3.0.7
     dev: false
 
-  /@astrojs/markdown-remark@2.2.1(astro@2.9.7):
+  /@astrojs/markdown-remark@2.2.1(astro@2.10.1):
     resolution: {integrity: sha512-VF0HRv4GpC1XEMLnsKf6jth7JSmlt9qpqP0josQgA2eSpCIAC/Et+y94mgdBIZVBYH/yFnMoIxgKVe93xfO2GA==}
     peerDependencies:
       astro: ^2.5.0
     dependencies:
       '@astrojs/prism': 2.1.2
-      astro: 2.9.7(sass@1.64.2)
+      astro: 2.10.1(sass@1.64.2)
       github-slugger: 1.5.0
       import-meta-resolve: 2.2.2
       rehype-raw: 6.1.1
@@ -320,7 +320,7 @@ packages:
       dset: 3.1.2
       is-docker: 3.0.0
       is-wsl: 2.2.0
-      undici: 5.22.1
+      undici: 5.23.0
       which-pm-runs: 1.1.0
     transitivePeerDependencies:
       - supports-color
@@ -329,7 +329,7 @@ packages:
   /@astrojs/webapi@2.2.0:
     resolution: {integrity: sha512-mHAOApWyjqSe5AQMOUD9rsZJqbMQqe3Wosb1a40JV6Okvyxj1G6GTlthwYadWCymq/lbgwh0PLiY8Fr4eFxtuQ==}
     dependencies:
-      undici: 5.22.1
+      undici: 5.23.0
     dev: false
 
   /@babel/code-frame@7.22.5:
@@ -2097,16 +2097,16 @@ packages:
     dev: false
     optional: true
 
-  /@fontsource-variable/outfit@5.0.5:
-    resolution: {integrity: sha512-kksftW3oHodECRMU7a2TiaqhiX7dU+v7jKEd9CAb0ZZRNeyAichik+LfDxWdXq+U22g6nqkNSQD8JLNFCuMkxA==}
+  /@fontsource-variable/outfit@5.0.7:
+    resolution: {integrity: sha512-xLZMsk59BVeR2kOC20OiOiEl26KDXbl9/RN7V5ZboLJhhtLpHxHjnLy9N9jXB2c5fhoI7tHT80WovclBfg+sVQ==}
     dev: false
 
-  /@fontsource-variable/space-grotesk@5.0.5:
-    resolution: {integrity: sha512-8sTfVSwlIqi8itTJT6D7cWZcd8x9CuRLiG+JmUdMZ8t2jNDpkDpEOfJyOubXshwVl59MWox3XtlMzHXLw8vACg==}
+  /@fontsource-variable/space-grotesk@5.0.7:
+    resolution: {integrity: sha512-kUekYSzgOf8wSE46fUOv6Ab9ufiY3WMbQfi3DtzkgY7nnXHSY6gx0Uqt/AVkX/SQLFXDPMU76cm3uev618zx5A==}
     dev: false
 
-  /@fontsource/righteous@5.0.5:
-    resolution: {integrity: sha512-U7c7rPw3ZkrMldGhZ3COGLE1evZcAzUnXo/sBWtMZMZqak4CDix3YPtlJBlkE/wsPIjQlC+vCjK6XZ3f5ePc0Q==}
+  /@fontsource/righteous@5.0.7:
+    resolution: {integrity: sha512-oYU565DauxCFJi6pGD+EPiWxfADNTS5AypJD0FDco0UNmBvg4xxO3j8ewds20Ef1g9bOoTz3l+PEb+K/QCA/GQ==}
     dev: false
 
   /@jridgewell/gen-mapping@0.3.3:
@@ -2780,8 +2780,8 @@ packages:
       - '@rometools/wasm-web'
     dev: false
 
-  /astro@2.9.7(sass@1.64.2):
-    resolution: {integrity: sha512-gEm6SyiF2sh2qn9smPd/Z5yXhSLlsNqM5hsOo2B1ibb5S3BjxE1srmGGW7cUhM0dcxxIwixdevgamS4oxUNa/A==}
+  /astro@2.10.1(sass@1.64.2):
+    resolution: {integrity: sha512-t3y9laRaOZTAu6omVpI5x/wE80t2yTCWO/UTCPJYAYy2Aoi+snupwk8ZFBLgVd0lwO7KhjRKA0pUScfkn3bnXw==}
     engines: {node: '>=16.12.0', npm: '>=6.14.0'}
     hasBin: true
     peerDependencies:
@@ -2791,9 +2791,9 @@ packages:
         optional: true
     dependencies:
       '@astrojs/compiler': 1.8.0
-      '@astrojs/internal-helpers': 0.1.1
+      '@astrojs/internal-helpers': 0.1.2
       '@astrojs/language-server': 1.0.8
-      '@astrojs/markdown-remark': 2.2.1(astro@2.9.7)
+      '@astrojs/markdown-remark': 2.2.1(astro@2.10.1)
       '@astrojs/telemetry': 2.1.1
       '@astrojs/webapi': 2.2.0
       '@babel/core': 7.22.9
@@ -2825,7 +2825,7 @@ packages:
       html-escaper: 3.0.3
       js-yaml: 4.1.0
       kleur: 4.1.5
-      magic-string: 0.27.0
+      magic-string: 0.30.2
       mime: 3.0.0
       network-information-types: 0.1.1(typescript@5.1.6)
       ora: 6.3.1
@@ -2875,7 +2875,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.21.10
-      caniuse-lite: 1.0.30001518
+      caniuse-lite: 1.0.30001519
       fraction.js: 4.2.0
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -3046,8 +3046,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001518
-      electron-to-chromium: 1.4.481
+      caniuse-lite: 1.0.30001519
+      electron-to-chromium: 1.4.483
       node-releases: 2.0.13
       update-browserslist-db: 1.0.11(browserslist@4.21.10)
     dev: false
@@ -3125,13 +3125,13 @@ packages:
     resolution: {integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==}
     dependencies:
       browserslist: 4.21.10
-      caniuse-lite: 1.0.30001518
+      caniuse-lite: 1.0.30001519
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
     dev: false
 
-  /caniuse-lite@1.0.30001518:
-    resolution: {integrity: sha512-rup09/e3I0BKjncL+FesTayKtPrdwKhUufQFd3riFw1hHg8JmIFoInYfB102cFcY/pPgGmdyl/iy+jgiDi2vdA==}
+  /caniuse-lite@1.0.30001519:
+    resolution: {integrity: sha512-0QHgqR+Jv4bxHMp8kZ1Kn8CH55OikjKJ6JmKkZYP1F3D7w+lnFXF70nG5eNfsZS89jadi5Ywy5UCSKLAglIRkg==}
     dev: false
 
   /ccount@2.0.1:
@@ -3761,8 +3761,8 @@ packages:
       jake: 10.8.7
     dev: false
 
-  /electron-to-chromium@1.4.481:
-    resolution: {integrity: sha512-25DitMKGaWUPjv3kCt2H3UqgMhmdN+ufG+PoSjnQtheR64Dvo75RbojLPzUmnwrEuLEzR5YrbTzOUq9DtnTUUw==}
+  /electron-to-chromium@1.4.483:
+    resolution: {integrity: sha512-YLwU0iF//9R3cCEfq0wgL+pf9vglE4kwAg4S5tkVVZljUDKv7Wcz67mTY4OOj+T7YUbTGuqlbqgdl/s+7Q8KTw==}
     dev: false
 
   /emmet@2.4.6:
@@ -4590,8 +4590,8 @@ packages:
     engines: {node: '>= 4'}
     dev: true
 
-  /immutable@4.3.1:
-    resolution: {integrity: sha512-lj9cnmB/kVS0QHsJnYKD1uo3o39nrbKxszjnqS9Fr6NB7bZzW45U6WSGBPKXDL/CvDKqDNPA4r3DoDQ8GTxo2A==}
+  /immutable@4.3.2:
+    resolution: {integrity: sha512-oGXzbEDem9OOpDWZu88jGiYCvIsLHMvGw+8OXlpsvTFvIQplQbjg1B1cvKg8f7Hoch6+NGjpPsH1Fr+Mc2D1aA==}
     dev: false
 
   /import-cwd@3.0.0:
@@ -5066,8 +5066,8 @@ packages:
       sourcemap-codec: 1.4.8
     dev: false
 
-  /magic-string@0.27.0:
-    resolution: {integrity: sha512-8UnnX2PeRAPZuN12svgR9j7M1uWMovg/CEnIwIG0LFkXSJJe4PdfUGiTGl8V9bsBHFUtfVINcSyYxd7q+kx9fA==}
+  /magic-string@0.30.2:
+    resolution: {integrity: sha512-lNZdu7pewtq/ZvWUp9Wpf/x7WzMTsR26TWV03BRZrXFsv+BI6dy8RAiKgm1uM/kyR0rCfUcqvOlXKG66KhIGug==}
     engines: {node: '>=12'}
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.15
@@ -6455,7 +6455,7 @@ packages:
     dependencies:
       '@astrojs/compiler': 1.8.0
       prettier: 2.8.8
-      sass-formatter: 0.7.6
+      sass-formatter: 0.7.7
       synckit: 0.8.5
     dev: false
 
@@ -6894,8 +6894,8 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
 
-  /rollup@3.27.0:
-    resolution: {integrity: sha512-aOltLCrYZ0FhJDm7fCqwTjIUEVjWjcydKBV/Zeid6Mn8BWgDCUBBWT5beM5ieForYNo/1ZHuGJdka26kvQ3Gzg==}
+  /rollup@3.27.1:
+    resolution: {integrity: sha512-tXNDFwOkN6C2w5Blj1g6ForKeFw6c1mDu5jxoeDO3/pmYjgt+8yvIFjKzH5FQUq70OKZBkOt0zzv0THXL7vwzQ==}
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
@@ -6968,8 +6968,8 @@ packages:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
     dev: false
 
-  /sass-formatter@0.7.6:
-    resolution: {integrity: sha512-hXdxU6PCkiV3XAiSnX+XLqz2ohHoEnVUlrd8LEVMAI80uB1+OTScIkH9n6qQwImZpTye1r1WG1rbGUteHNhoHg==}
+  /sass-formatter@0.7.7:
+    resolution: {integrity: sha512-axtQ7c7Cf4UgHsD8e4okhIkkc90+tdgBIfUMx69+qJuMNq9EOo2k+RH/mDKj0XeA5z3nC1Ca5TCntuxRhI+1MA==}
     dependencies:
       suf-log: 2.5.3
     dev: false
@@ -6980,7 +6980,7 @@ packages:
     hasBin: true
     dependencies:
       chokidar: 3.5.3
-      immutable: 4.3.1
+      immutable: 4.3.2
       source-map-js: 1.0.2
     dev: false
 
@@ -7793,8 +7793,8 @@ packages:
       which-boxed-primitive: 1.0.2
     dev: false
 
-  /undici@5.22.1:
-    resolution: {integrity: sha512-Ji2IJhFXZY0x/0tVBXeQwgPlLWw13GVzpsWPQ3rV50IFMMof2I55PZZxtm4P6iNq+L5znYN9nSTAq0ZyE6lSJw==}
+  /undici@5.23.0:
+    resolution: {integrity: sha512-1D7w+fvRsqlQ9GscLBwcAJinqcZGHUKjbOmXdlE/v8BvEGXjeWAax+341q44EuTcHXXnfyKNbKRq4Lg7OzhMmg==}
     engines: {node: '>=14.0'}
     dependencies:
       busboy: 1.6.0
@@ -7990,7 +7990,7 @@ packages:
     dependencies:
       esbuild: 0.18.17
       postcss: 8.4.27
-      rollup: 3.27.0
+      rollup: 3.27.1
       sass: 1.64.2
     optionalDependencies:
       fsevents: 2.3.2
