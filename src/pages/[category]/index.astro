@@ -3,7 +3,7 @@ import {collections} from "../../content/config";
 import {getCollection} from 'astro:content';
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import {getCategoryData} from "../../lib/content/contentCategories";
-import Masonry from "../../components/masonry/Masonry.astro";
+import ContentGrid from "../../components/content-grid/ContentGrid.astro";
 
 export async function getStaticPaths() {
   const routes: {
@@ -30,5 +30,5 @@ const {title, description} = getCategoryData(category)
 <BaseLayout title={'Olis.tech - Kategorie ' + title} description={description}>
   <h1>Alle Beiträge aus der Kategorie {title}</h1>
   <br>
-  <Masonry page="1" collection={category} />
+  <ContentGrid page="1" collection={category} />
 </BaseLayout>

@@ -1,0 +1,150 @@
+---
+import PostWindow from "../../post-window/PostWindow.astro";
+import type {PostWindowProps} from "../../../env";
+
+const {posts} = Astro.props
+---
+<masonry-grid>
+  <div class="hidden js--src">
+    {posts.map((post: PostWindowProps) => (
+      <PostWindow post={post}/>))}
+  </div>
+  <div class="js--dest masonry">
+    <!--
+    todo auf diese logik muss alles umgeschrieben werden, in js--src werden alle gerechnet. Vlt ist das dann ein grid mit gap usw
+    und dann wird alles berechnet und in js--dest wird dann alles reingepackt, in der richtigen reihenfolge
+    die jeweiligen columns sind dann einfach display: flex und flex-direction: column und dann werden die children reingepackt
+    -->asd
+  </div>
+</masonry-grid>
+<script>
+  import {debounce} from "../../../lib/helper/debounce";
+
+  const HEIGHT_GAP = 70;
+  const WIDTH_GAP = 24;
+
+  interface MasonryChild {
+    dom: HTMLElement;
+    height: number;
+  }
+
+  class MasonryGrid extends HTMLElement {
+    debounceHandleResize = debounce(this.handleResize, 200);
+
+    connectedCallback() {
+      window.addEventListener('resize', this.debounceHandleResize);
+      if (document.fonts) {
+        document.fonts.load('1em "Outfit Variable"').then(() => {
+          this.setupMasonry();
+        });
+      } else {
+        this.setupMasonry();
+      }
+    }
+
+    disconnectedCallback() {
+      window.removeEventListener('resize', this.debounceHandleResize);
+    }
+
+    handleResize() {
+      this.setupMasonry();
+    }
+
+    renderElementHeights(): MasonryChild[] {
+      return Array.from(this.querySelectorAll('.js--src > *')).map((dom) => {
+        const height = dom.getBoundingClientRect().height;
+        return {
+          dom: dom as HTMLElement, height,
+        };
+      });
+    }
+
+    calculateColumnCount(): number {
+      const screenWidth = window.innerWidth;
+      if (screenWidth <= 768) {
+        return 1;
+      } else if (screenWidth <= 1024) {
+        return 2;
+      }
+      return 3;
+    }
+
+    calculateColumnHeight(column: MasonryChild[]): number {
+      // with gap
+      return column.reduce((sum, child) => sum + child.height, 0) + (column.length - 1) * HEIGHT_GAP;
+    }
+
+    calculateSmallColumnIndex(columns: MasonryChild[][]): number {
+      return columns.reduce((smallestIndex, column, index) => {
+        if (this.calculateColumnHeight(column) < this.calculateColumnHeight(columns[smallestIndex]!)) {
+          return index;
+        }
+        return smallestIndex;
+      }, 0);
+    }
+
+    calculateColumns(children: MasonryChild[], columnCount: number): MasonryChild[][] {
+      const columns: MasonryChild[][] = Array.from({length: columnCount}, () => []);
+
+      for (const child of children) {
+        const smallColumnIndex = this.calculateSmallColumnIndex(columns);
+        columns[smallColumnIndex]!.push(child);
+      }
+
+      return columns;
+    }
+
+    calculateColumnWidth(columns: number) {
+      const parentWidth = this.parentElement!.getBoundingClientRect().width;
+      if (columns === 1) {
+        return parentWidth;
+      } else if (columns === 2) {
+        return (parentWidth - WIDTH_GAP * 2) / columns;
+      }
+      return (parentWidth - WIDTH_GAP * 3) / columns;
+    }
+
+    setupMasonry() {
+      const elements = this.renderElementHeights();
+      const columnsCount = this.calculateColumnCount();
+      const columnWidth = this.calculateColumnWidth(columnsCount);
+
+      const columns = this.calculateColumns(elements, columnsCount);
+
+      const htmlColumns = columns.map((column) => {
+        const columnHeight = this.calculateColumnHeight(column);
+        const columnHtml = column.map((child) => {
+          return child.dom.outerHTML;
+        }).join('');
+        return `<div class="masonry__column" style="width: ${columnWidth}px; height: ${columnHeight}px;">${columnHtml}</div>`;
+      }).join('');
+
+      // Get js--dest and append the new columns to it
+      const dest = this.querySelector('.js--dest')!;
+      dest.innerHTML = htmlColumns;
+
+    }
+  }
+
+  customElements.define('masonry-grid', MasonryGrid);
+</script>
+
+<style is:global>
+
+  .masonry {
+    display: flex;
+    gap: 24px;
+  }
+
+  .masonry__column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .hidden {
+    position: absolute;
+    top: -1000px;
+    left: -1000px;
+  }
+</style>

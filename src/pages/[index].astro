@@ -1,7 +1,7 @@
 ---
 import {contentPostWindowPaginator} from "../lib/content/contentPostWindowPaginator";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Masonry from "../components/masonry/Masonry.astro";
+import ContentGrid from "../components/content-grid/ContentGrid.astro";
 export async function getStaticPaths() {
   const routes: {
     params: {
@@ -23,5 +23,5 @@ const { index } = Astro.params;
 
 ---
 <BaseLayout title={'Olis.tech - Seite ' + index}>
-  <Masonry page={index} />
+  <ContentGrid page={index} />
 </BaseLayout>
