@@ -20,7 +20,17 @@ const {posts} = Astro.props
   }
 
   class MasonryGrid extends HTMLElement {
-    debounceHandleResize = debounce(this.handleResize.bind(this), 200)
+    debounceHandleResize = this.runOnWidthChange(debounce(this.setupMasonry.bind(this), 200))
+
+    lastWidth = window.innerWidth;
+    runOnWidthChange(cb: () => void): () => void {
+      return () => {
+        if (window.innerWidth !== this.lastWidth) {
+          this.lastWidth = window.innerWidth;
+          cb();
+        }
+      }
+    }
 
     connectedCallback() {
       window.addEventListener('resize', this.debounceHandleResize);
@@ -35,10 +45,6 @@ const {posts} = Astro.props
 
     disconnectedCallback() {
       window.removeEventListener('resize', this.debounceHandleResize);
-    }
-
-    handleResize() {
-      this.setupMasonry();
     }
 
     renderElementHeights(): MasonryChild[] {
