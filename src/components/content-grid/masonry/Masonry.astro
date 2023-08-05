@@ -9,19 +9,10 @@ const {posts} = Astro.props
     {posts.map((post: PostWindowProps) => (
       <PostWindow post={post}/>))}
   </div>
-  <div class="js--dest masonry">
-    <!--
-    todo auf diese logik muss alles umgeschrieben werden, in js--src werden alle gerechnet. Vlt ist das dann ein grid mit gap usw
-    und dann wird alles berechnet und in js--dest wird dann alles reingepackt, in der richtigen reihenfolge
-    die jeweiligen columns sind dann einfach display: flex und flex-direction: column und dann werden die children reingepackt
-    -->asd
-  </div>
+  <div class="js--dest masonry"></div>
 </masonry-grid>
 <script>
   import {debounce} from "../../../lib/helper/debounce";
-
-  const HEIGHT_GAP = 70;
-  const WIDTH_GAP = 24;
 
   interface MasonryChild {
     dom: HTMLElement;
@@ -29,7 +20,7 @@ const {posts} = Astro.props
   }
 
   class MasonryGrid extends HTMLElement {
-    debounceHandleResize = debounce(this.handleResize, 200);
+    debounceHandleResize = debounce(this.handleResize.bind(this), 200)
 
     connectedCallback() {
       window.addEventListener('resize', this.debounceHandleResize);
@@ -70,16 +61,8 @@ const {posts} = Astro.props
     }
 
     calculateColumnHeight(column: MasonryChild[]): number {
-      // with gap
-      return column.reduce((sum, child) => sum + child.height, 0) + (column.length - 1) * HEIGHT_GAP;
-    }
-
-    calculateSmallColumnIndex(columns: MasonryChild[][]): number {
-      return columns.reduce((smallestIndex, column, index) => {
-        if (this.calculateColumnHeight(column) < this.calculateColumnHeight(columns[smallestIndex]!)) {
-          return index;
-        }
-        return smallestIndex;
+      return column.reduce((height, child) => {
+        return height + child.height;
       }, 0);
     }
 
@@ -87,42 +70,32 @@ const {posts} = Astro.props
       const columns: MasonryChild[][] = Array.from({length: columnCount}, () => []);
 
       for (const child of children) {
-        const smallColumnIndex = this.calculateSmallColumnIndex(columns);
+        const smallColumnIndex = columns.reduce((smallestIndex, column, index) => {
+          if (this.calculateColumnHeight(column) < this.calculateColumnHeight(columns[smallestIndex]!)) {
+            return index;
+          }
+          return smallestIndex;
+        }, 0);
         columns[smallColumnIndex]!.push(child);
       }
 
       return columns;
     }
 
-    calculateColumnWidth(columns: number) {
-      const parentWidth = this.parentElement!.getBoundingClientRect().width;
-      if (columns === 1) {
-        return parentWidth;
-      } else if (columns === 2) {
-        return (parentWidth - WIDTH_GAP * 2) / columns;
-      }
-      return (parentWidth - WIDTH_GAP * 3) / columns;
-    }
-
     setupMasonry() {
       const elements = this.renderElementHeights();
       const columnsCount = this.calculateColumnCount();
-      const columnWidth = this.calculateColumnWidth(columnsCount);
-
       const columns = this.calculateColumns(elements, columnsCount);
 
       const htmlColumns = columns.map((column) => {
-        const columnHeight = this.calculateColumnHeight(column);
         const columnHtml = column.map((child) => {
           return child.dom.outerHTML;
         }).join('');
-        return `<div class="masonry__column" style="width: ${columnWidth}px; height: ${columnHeight}px;">${columnHtml}</div>`;
+        return `<div class="masonry__column">${columnHtml}</div>`;
       }).join('');
 
-      // Get js--dest and append the new columns to it
       const dest = this.querySelector('.js--dest')!;
       dest.innerHTML = htmlColumns;
-
     }
   }
 
@@ -140,11 +113,13 @@ const {posts} = Astro.props
     display: flex;
     flex-direction: column;
     gap: 24px;
+    margin: 0 auto;
   }
 
   .hidden {
     position: absolute;
-    top: -1000px;
-    left: -1000px;
+    top: -10000px;
+    right: 0;
+    display: flex;
   }
 </style>
