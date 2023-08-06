@@ -34,7 +34,7 @@ export default defineConfig({
             if (id.includes("algolia")) {
               return "algolia";
             }
-            if (id.includes("_astro/Swup")) {
+            if (id.includes("@swup/astro")) {
               return "swup";
             }
           },
