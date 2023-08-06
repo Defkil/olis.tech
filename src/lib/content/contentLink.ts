@@ -3,7 +3,7 @@
  * @param categoryCollection Category collection name
  */
 export function contentLinkCategory(categoryCollection: string): string {
-  return "/" + categoryCollection;
+  return "/" + categoryCollection + "/";
 }
 
 /**
@@ -12,5 +12,5 @@ export function contentLinkCategory(categoryCollection: string): string {
  * @param slug Post slug
  */
 export function contentLinkPost(categoryCollection: string, slug: string): string {
-  return "/" + categoryCollection + "/" + slug;
+  return "/" + categoryCollection + "/" + slug + "/";
 }
