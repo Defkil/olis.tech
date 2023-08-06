@@ -4,6 +4,7 @@ import {styles} from "../../const/styles";
 import HeaderCategories from "./header-categories/HeaderCategories.astro";
 import './Header.scss'
 import {SITE_TITLE} from "../../const/data";
+import Welcome from "./welcome/Welcome.astro";
 ---
 <div class="header">
   <header class='header__container'>
@@ -19,8 +20,12 @@ import {SITE_TITLE} from "../../const/data";
     </header-search>
   </header>
 </div>
+<WaveSeparator color={styles["color-secondary"]}/>
+<div class="header__welcome">
+  <Welcome />
+</div>
 <div class="header__categories">
-  <WaveSeparator color={styles["color-secondary"]}/>
+  <WaveSeparator color={styles["color-quinary"]}/>
   <HeaderCategories />
   <WaveSeparator color={styles["color-quaternary"]}/>
 </div>
