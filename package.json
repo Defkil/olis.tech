@@ -20,7 +20,8 @@
     "@docsearch/js": "^3.5.1",
     "@fontsource-variable/outfit": "^5.0.7",
     "@fontsource-variable/space-grotesk": "^5.0.7",
-    "@fontsource/righteous": "^5.0.7",
+    "@fontsource/righteous": "^5.0.8",
+    "@swup/astro": "^1.0.2",
     "astro": "^2.10.1",
     "astro-compress": "^1.1.50",
     "astro-compressor": "^0.4.0",
@@ -32,9 +33,6 @@
   "devDependencies": {
     "@namics/stylelint-bem": "^8.1.0",
     "@playwright/test": "^1.36.2",
-    "@swup/head-plugin": "^2.1.1",
-    "@swup/preload-plugin": "^3.1.2",
-    "@swup/slide-theme": "^2.0.0",
     "@types/probe-image-size": "^7.2.0",
     "postcss-html": "^1.5.0",
     "rollup-plugin-visualizer": "^5.9.2",
@@ -43,7 +41,6 @@
     "stylelint-config-clean-order": "^5.0.1",
     "stylelint-config-html": "^1.1.0",
     "stylelint-config-standard": "^34.0.0",
-    "stylelint-config-standard-scss": "^10.0.0",
-    "swup": "^4.1.0"
+    "stylelint-config-standard-scss": "^10.0.0"
   }
 }
