@@ -14,6 +14,9 @@ const { title, description } = Astro.props
 <html lang="de">
 <head>
   <Head title={title} description={description} />
+  <style is:global>
+    @import "./components/Fonts.scss";
+  </style>
 </head>
 <body>
 <PreloadSvg />
