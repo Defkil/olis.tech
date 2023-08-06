@@ -102,6 +102,7 @@ const {posts} = Astro.props
 
       const dest = this.querySelector('.js--dest')!;
       dest.innerHTML = htmlColumns;
+      this.querySelector('.js--src')!.remove();
     }
   }
 
