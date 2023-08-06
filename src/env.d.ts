@@ -60,3 +60,9 @@ declare module "macy" {
     runOnImageLoad: (cb: () => void, onEveryImage?: boolean) => void;
   };
 }
+
+declare global {
+  interface Window {
+    swup: any;
+  }
+}
