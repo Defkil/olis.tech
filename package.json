@@ -23,10 +23,7 @@
     "@fontsource/righteous": "^5.0.8",
     "@swup/astro": "^1.0.2",
     "astro": "^2.10.1",
-    "astro-compress": "^1.1.50",
     "astro-compressor": "^0.4.0",
-    "astro-critters": "^1.1.40",
-    "astro-rome": "^0.1.18",
     "probe-image-size": "^7.2.3",
     "sass": "^1.64.2"
   },

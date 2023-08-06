@@ -1,8 +1,8 @@
 import { defineConfig } from "astro/config";
-import compress from "astro-compress";
+// import compress from "astro-compress";
 import sitemap from "@astrojs/sitemap";
-import rome from "astro-rome";
-import critters from "astro-critters";
+// import rome from "astro-rome";
+// import critters from "astro-critters";
 import compressor from "astro-compressor";
 import { visualizer } from "rollup-plugin-visualizer";
 import { SITE_LINK } from "./src/const/data";
@@ -19,10 +19,10 @@ export default defineConfig({
       smoothScrolling: false,
     }),
     sitemap(),
-    rome(),
-    critters(),
+    // rome(),
+    // critters(),
     compressor(),
-    compress({ css: false }),
+    // compress({ css: false }),
   ],
   vite: {
     plugins: [visualizer({ filename: "./dist/_astro/stats.html", gzipSize: true, brotliSize: true }) as any],
