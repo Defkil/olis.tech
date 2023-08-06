@@ -1,4 +1,4 @@
-import rss, { RSSFeedItem, rssSchema } from "@astrojs/rss";
+import rss, { type RSSFeedItem, rssSchema } from "@astrojs/rss";
 import { getCollection } from "astro:content";
 import { categories } from "../const/categories";
 import probe from "probe-image-size";
@@ -52,8 +52,6 @@ export async function get(context: any) {
       posts.push(await transformPostToFeedItem(post, category, context.site));
     }
   }
-
-  console.log(posts);
 
   return rss({
     title: SITE_TITLE,
