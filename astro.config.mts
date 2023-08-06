@@ -6,7 +6,7 @@ import sitemap from "@astrojs/sitemap";
 import compressor from "astro-compressor";
 import { visualizer } from "rollup-plugin-visualizer";
 import { SITE_LINK } from "./src/const/data";
-import swup from "@swup/astro";
+import swup, { Theme } from "@swup/astro";
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,9 +14,9 @@ export default defineConfig({
   output: "static",
   integrations: [
     swup({
-      theme: "slide" as any,
-      containers: ["#swup"],
+      theme: Theme.slide,
       smoothScrolling: false,
+      globalInstance: true,
     }),
     sitemap(),
     // rome(),

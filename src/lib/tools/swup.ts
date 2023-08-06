@@ -1,11 +1,19 @@
-const SWUP_CONTAINER_ID = "swup";
+const SWUP_CONTAINER = "main";
 /**
- * Setup swup with plugins and assign it to window.swup
- * called from layout
+ * disable scroll reset on page change
+ * scroll to content on page change
  */
 export function setupSwup(): void {
-  document.addEventListener("swup:visit:end", () => {
-    document.getElementById(SWUP_CONTAINER_ID)?.scrollIntoView();
+  window.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+      window.swup.hooks.on("visit:start", (visit: { scroll: { reset: boolean } }) => {
+        visit.scroll.reset = false;
+      });
+
+      window.swup.hooks.on("visit:end", () => {
+        document.querySelector(SWUP_CONTAINER)?.scrollIntoView();
+      });
+    }, 1000);
   });
 }
 
@@ -15,6 +23,6 @@ export function setupSwup(): void {
 export function preloadPages() {
   const swup = (window as unknown as { swup: { preloadPages: () => {} } }).swup;
   if (swup) {
-    swup.preloadPages();
+    window.swup.preloadPages();
   }
 }

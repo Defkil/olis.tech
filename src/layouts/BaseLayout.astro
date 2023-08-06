@@ -21,13 +21,13 @@ const { title, description } = Astro.props
 <body>
 <PreloadSvg />
 <Header />
-<main class="content">
-    <div id="swup">
+<div class="content">
+    <main>
       <div class="content__inner">
         <slot />
       </div>
-    </div>
-</main>
+    </main>
+</div>
 <WaveSeparator color={styles["color-quinary"]}/>
 <Footer />
 <FooterScripts />
