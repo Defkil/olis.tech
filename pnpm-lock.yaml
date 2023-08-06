@@ -18,11 +18,11 @@ dependencies:
     specifier: ^3.5.1
     version: 3.5.1(@algolia/client-search@4.19.1)(search-insights@2.7.0)
   '@fontsource-variable/outfit':
-    specifier: ^5.0.7
-    version: 5.0.7
+    specifier: ^5.0.8
+    version: 5.0.8
   '@fontsource-variable/space-grotesk':
-    specifier: ^5.0.7
-    version: 5.0.7
+    specifier: ^5.0.8
+    version: 5.0.8
   '@fontsource/righteous':
     specifier: ^5.0.8
     version: 5.0.8
@@ -2079,12 +2079,12 @@ packages:
     dev: false
     optional: true
 
-  /@fontsource-variable/outfit@5.0.7:
-    resolution: {integrity: sha512-xLZMsk59BVeR2kOC20OiOiEl26KDXbl9/RN7V5ZboLJhhtLpHxHjnLy9N9jXB2c5fhoI7tHT80WovclBfg+sVQ==}
+  /@fontsource-variable/outfit@5.0.8:
+    resolution: {integrity: sha512-j4JHCbuk2+Nl7PwTVT+RJKTDMDw7TWWt/85CIucD7KvOS7Iv0IiymE5ur21/aFbTwamOHrXX91WrQZHN7QDrmw==}
     dev: false
 
-  /@fontsource-variable/space-grotesk@5.0.7:
-    resolution: {integrity: sha512-kUekYSzgOf8wSE46fUOv6Ab9ufiY3WMbQfi3DtzkgY7nnXHSY6gx0Uqt/AVkX/SQLFXDPMU76cm3uev618zx5A==}
+  /@fontsource-variable/space-grotesk@5.0.8:
+    resolution: {integrity: sha512-vrj5WdSqVpQGqOug8hEWvgvnXq2Hsc63LKXHGYRA9lGJhYbru0WQKH3EEei97DkAUdgBOn/NKQpfbUS0V35Kgw==}
     dev: false
 
   /@fontsource/righteous@5.0.8:
