@@ -43,7 +43,7 @@ async function transformPostToFeedItem(post: any, category: CategoryData, site: 
  * // todo: pagination or limit
  * @param context astro context
  */
-export async function get(context: any) {
+export async function GET(context: any) {
   const posts: RSSFeedItem[] = [];
 
   for (const category of categories) {
