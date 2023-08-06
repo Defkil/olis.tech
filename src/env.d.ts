@@ -38,12 +38,6 @@ export interface PostWindowProps {
   link: string;
 }
 
-// window types
-
-interface Window {
-  swup: import("swup").default;
-}
-
 // external modules
 
 declare module "macy" {
@@ -66,6 +60,3 @@ declare module "macy" {
     runOnImageLoad: (cb: () => void, onEveryImage?: boolean) => void;
   };
 }
-declare module "@swup/head-plugin";
-declare module "@swup/slide-theme";
-declare module "@swup/preload-plugin";
