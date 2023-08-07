@@ -1,7 +1,9 @@
 ---
+import {transformEntryToPostWindow} from "../../lib/helper/transformEntryToPostWindow";
 import { collections } from "../../content/config";
 import { getCollection } from 'astro:content';
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Post from "../../components/post/Post.astro";
 export async function getStaticPaths() {
   const routes: {
     params: {
@@ -22,8 +24,12 @@ export async function getStaticPaths() {
 }
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+
+const post = transformEntryToPostWindow(entry)
 ---
 <BaseLayout title={'Olis.tech - ' + entry.data.title}>
-  <h1>{entry.data.title}</h1>
-  <Content />
+  <Post post={post} bigWindow="true">
+    <span slot="title">{entry.data.title}</span>
+    <Content />
+  </Post>
 </BaseLayout>
