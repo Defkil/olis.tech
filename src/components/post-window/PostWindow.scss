@@ -13,10 +13,7 @@ $main-size: $spacing-04;
 
 .window {
   position: relative;
-
   width: 100%;
-  max-width: 500px;
-
   background: $color-senary;
   border: var(--shadow-size) solid #000;
 }
