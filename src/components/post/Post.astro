@@ -1,0 +1,32 @@
+---
+import './Post.scss';
+import type {PostWindowProps} from "../../env";
+import PostWindow from "../post-window/PostWindow.astro";
+
+const { post, bigWindow }: {
+  post: PostWindowProps,
+  bigWindow?: boolean
+} = Astro.props
+
+const isBigWindow = bigWindow || false
+
+if (!post) {
+  throw new Error('PostWindow: post is undefined')
+}
+---
+<div>
+  {!bigWindow && (
+    <a href={post.link} style="text-decoration: none">
+      <PostWindow post={post} bigWindow={isBigWindow}>
+        <slot name="title"/>
+        <slot />
+      </PostWindow>
+    </a>
+  )}
+  {bigWindow && (
+    <PostWindow post={post} bigWindow={isBigWindow}>
+      <slot name="title"/>
+      <slot />
+    </PostWindow>
+  )}
+</div>

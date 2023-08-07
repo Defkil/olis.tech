@@ -1,13 +1,13 @@
 ---
-import PostWindow from "../../post-window/PostWindow.astro";
 import type {PostWindowProps} from "../../../env";
+import Post from "../../post/Post.astro";
 
 const {posts} = Astro.props
 ---
 <masonry-grid>
   <div class="hidden js--src">
     {posts.map((post: PostWindowProps) => (
-      <PostWindow post={post}/>))}
+      <Post post={post}/>))}
   </div>
   <div class="js--dest masonry"></div>
 </masonry-grid>
@@ -117,8 +117,11 @@ const {posts} = Astro.props
 
   .masonry__column {
     display: flex;
+    flex-basis: 100%;
     flex-direction: column;
     gap: 24px;
+
+    max-width: 500px;
     margin: 0 auto;
   }
 
