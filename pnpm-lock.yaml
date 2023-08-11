@@ -40,7 +40,7 @@ dependencies:
     version: 1.0.2
   astro:
     specifier: 3.0.0-beta.0
-    version: 3.0.0-beta.0(sass@1.64.2)(typescript@5.1.6)
+    version: 3.0.0-beta.0(sass@1.65.1)(typescript@5.1.6)
   astro-compressor:
     specifier: ^0.4.0
     version: 0.4.0
@@ -48,16 +48,16 @@ dependencies:
     specifier: ^7.2.3
     version: 7.2.3
   sass:
-    specifier: ^1.64.2
-    version: 1.64.2
+    specifier: ^1.65.1
+    version: 1.65.1
 
 devDependencies:
   '@namics/stylelint-bem':
     specifier: ^8.1.0
     version: 8.1.0(stylelint@15.10.2)
   '@playwright/test':
-    specifier: ^1.36.2
-    version: 1.36.2
+    specifier: ^1.37.0
+    version: 1.37.0
   '@types/probe-image-size':
     specifier: ^7.2.0
     version: 7.2.0
@@ -244,7 +244,7 @@ packages:
       astro: ^3.0.0-beta.0
     dependencies:
       '@astrojs/prism': 3.0.0-beta.0
-      astro: 3.0.0-beta.0(sass@1.64.2)(typescript@5.1.6)
+      astro: 3.0.0-beta.0(sass@1.65.1)(typescript@5.1.6)
       github-slugger: 1.5.0
       import-meta-resolve: 2.2.2
       rehype-raw: 6.1.1
@@ -1945,13 +1945,13 @@ packages:
       - '@rometools/wasm-web'
     dev: false
 
-  /@playwright/test@1.36.2:
-    resolution: {integrity: sha512-2rVZeyPRjxfPH6J0oGJqE8YxiM1IBRyM8hyrXYK7eSiAqmbNhxwcLa7dZ7fy9Kj26V7FYia5fh9XJRq4Dqme+g==}
+  /@playwright/test@1.37.0:
+    resolution: {integrity: sha512-181WBLk4SRUyH1Q96VZl7BP6HcK0b7lbdeKisn3N/vnjitk+9HbdlFz/L5fey05vxaAhldIDnzo8KUoy8S3mmQ==}
     engines: {node: '>=16'}
     hasBin: true
     dependencies:
-      '@types/node': 20.4.9
-      playwright-core: 1.36.2
+      '@types/node': 20.4.10
+      playwright-core: 1.37.0
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
@@ -2149,7 +2149,7 @@ packages:
       '@swup/body-class-plugin': 3.1.1(swup@4.2.0)
       '@swup/debug-plugin': 4.0.1(swup@4.2.0)
       '@swup/fade-theme': 2.0.0(swup@4.2.0)
-      '@swup/forms-plugin': 3.1.0(swup@4.2.0)
+      '@swup/forms-plugin': 3.2.0(swup@4.2.0)
       '@swup/head-plugin': 2.1.1(swup@4.2.0)
       '@swup/overlay-theme': 2.0.0(swup@4.2.0)
       '@swup/parallel-plugin': 0.1.1(swup@4.2.0)
@@ -2157,7 +2157,7 @@ packages:
       '@swup/progress-plugin': 3.1.0(swup@4.2.0)
       '@swup/route-name-plugin': 4.1.0(swup@4.2.0)
       '@swup/scripts-plugin': 2.0.0(swup@4.2.0)
-      '@swup/scroll-plugin': 3.1.0(swup@4.2.0)
+      '@swup/scroll-plugin': 3.1.1(swup@4.2.0)
       '@swup/slide-theme': 2.0.0(swup@4.2.0)
       swup: 4.2.0
     transitivePeerDependencies:
@@ -2210,8 +2210,8 @@ packages:
       - ts-node
     dev: false
 
-  /@swup/forms-plugin@3.1.0(swup@4.2.0):
-    resolution: {integrity: sha512-FG9Zm2mNuK/H4AuN3W6bAH8SQxKrqOfxi7nh8WAxndJaJsgAkkqt7JpR0AzMW4gEfPtnP7zA6EDVSLEmfVKjrQ==}
+  /@swup/forms-plugin@3.2.0(swup@4.2.0):
+    resolution: {integrity: sha512-scI8gZLEfqhiRmUUC5+QqTWLXWXr1fcyVbKdDlY67zMl2P7xOqx53kOUz4WRASIpKc93Q+2dyEwD0gZgX3dQ2A==}
     peerDependencies:
       swup: ^4.0.0
     dependencies:
@@ -2337,10 +2337,10 @@ packages:
       - ts-node
     dev: false
 
-  /@swup/scroll-plugin@3.1.0(swup@4.2.0):
-    resolution: {integrity: sha512-1qPsNLFwwaWLyrXPpw/GplgN90auoPdGv3xReQX5HWF7YOyMpyeVWypXc2nNs//74xYp1CPY//+4RfGowweg0A==}
+  /@swup/scroll-plugin@3.1.1(swup@4.2.0):
+    resolution: {integrity: sha512-aoMz1oA1cO0EQX6Ggcaoucxn3e1n5AZJ7vD79ztKOsrLJzxiMP0ZMvZa0UzBGGzIus9DV5Ju3rEsJOLLwjxE8A==}
     peerDependencies:
-      swup: ^4.0.0
+      swup: ^4.2.0
     dependencies:
       '@swup/plugin': 3.0.0
       scrl: 2.0.0
@@ -2471,7 +2471,7 @@ packages:
   /@types/needle@3.2.0:
     resolution: {integrity: sha512-6XzvzEyJ2ozFNfPajFmqH9JOt0Hp+9TawaYpJT59iIP/zR0U37cfWCRwosyIeEBBZBi021Osq4jGAD3AOju5fg==}
     dependencies:
-      '@types/node': 20.4.9
+      '@types/node': 20.4.10
     dev: true
 
   /@types/nlcst@1.0.1:
@@ -2484,8 +2484,8 @@ packages:
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
     dev: false
 
-  /@types/node@20.4.9:
-    resolution: {integrity: sha512-8e2HYcg7ohnTUbHk8focoklEQYvemQmu9M/f43DZVx43kHn0tE3BY/6gSDxS7k0SprtS0NHvj+L80cGLnoOUcQ==}
+  /@types/node@20.4.10:
+    resolution: {integrity: sha512-vwzFiiy8Rn6E0MtA13/Cxxgpan/N6UeNYR9oUu6kuJWxu6zCk98trcDp8CBhbtaeuq9SykCmXkFr2lWLoPcvLg==}
 
   /@types/normalize-package-data@2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
@@ -2503,13 +2503,13 @@ packages:
     resolution: {integrity: sha512-R5H3vw62gHNHrn+JGZbKejb+Z2D/6E5UNVlhCzIaBBLroMQMOFqy5Pap2gM+ZZHdqBtVU0/cx/M6to+mOJcoew==}
     dependencies:
       '@types/needle': 3.2.0
-      '@types/node': 20.4.9
+      '@types/node': 20.4.10
     dev: true
 
   /@types/resolve@1.17.1:
     resolution: {integrity: sha512-yy7HuzQhj0dhGpD8RLXSZWEkLsV9ibvxvi6EiJ3bkqLAO1RGo0WbkWQiwpRlSFymTJRz0d3k5LM3kkx8ArDbLw==}
     dependencies:
-      '@types/node': 20.4.9
+      '@types/node': 20.4.10
     dev: false
 
   /@types/resolve@1.20.2:
@@ -2678,7 +2678,7 @@ packages:
     resolution: {integrity: sha512-yw6wM+cjkdyAMc6HW2lrdinOxt64PwQuL5NCAe71cXF/5xjnyJhgg9nyyFE32oQtmtd5I/57Pyp/kPe9IfYAxg==}
     dev: false
 
-  /astro@3.0.0-beta.0(sass@1.64.2)(typescript@5.1.6):
+  /astro@3.0.0-beta.0(sass@1.65.1)(typescript@5.1.6):
     resolution: {integrity: sha512-S+6ZPz7EvnN6GYj8swkqK+TurzlkRd4y+gVXvpaJjEUkTNM9CvPRUfEiL6BDlPFBFpIlxGvuADFT9nw7ttekxg==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
@@ -2734,7 +2734,7 @@ packages:
       tsconfig-resolver: 3.0.1
       unist-util-visit: 4.1.2
       vfile: 5.3.7
-      vite: 4.4.9(sass@1.64.2)
+      vite: 4.4.9(sass@1.65.1)
       vitefu: 0.2.4(vite@4.4.9)
       which-pm: 2.0.0
       yargs-parser: 21.1.1
@@ -2927,7 +2927,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001519
-      electron-to-chromium: 1.4.488
+      electron-to-chromium: 1.4.490
       node-releases: 2.0.13
       update-browserslist-db: 1.0.11(browserslist@4.21.10)
     dev: false
@@ -3612,8 +3612,8 @@ packages:
       jake: 10.8.7
     dev: false
 
-  /electron-to-chromium@1.4.488:
-    resolution: {integrity: sha512-Dv4sTjiW7t/UWGL+H8ZkgIjtUAVZDgb/PwGWvMsCT7jipzUV/u5skbLXPFKb6iV0tiddVi/bcS2/kUrczeWgIQ==}
+  /electron-to-chromium@1.4.490:
+    resolution: {integrity: sha512-6s7NVJz+sATdYnIwhdshx/N/9O6rvMxmhVoDSDFdj6iA45gHR8EQje70+RYsF4GeB+k0IeNSBnP7yG9ZXJFr7A==}
     dev: false
 
   /emoji-regex@8.0.0:
@@ -4634,7 +4634,7 @@ packages:
     resolution: {integrity: sha512-KWYVV1c4i+jbMpaBC+U++4Va0cp8OisU185o73T1vo99hqi7w8tSJfUXYswwqqrjzwxa6KpRK54WhPvwf5w6PQ==}
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/node': 20.4.9
+      '@types/node': 20.4.10
       merge-stream: 2.0.0
       supports-color: 7.2.0
     dev: false
@@ -5724,8 +5724,8 @@ packages:
       find-up: 4.1.0
     dev: false
 
-  /playwright-core@1.36.2:
-    resolution: {integrity: sha512-sQYZt31dwkqxOrP7xy2ggDfEzUxM1lodjhsQ3NMMv5uGTRDsLxU0e4xf4wwMkF2gplIxf17QMBCodSFgm6bFVQ==}
+  /playwright-core@1.37.0:
+    resolution: {integrity: sha512-1c46jhTH/myQw6sesrcuHVtLoSNfJv8Pfy9t3rs6subY7kARv0HRw5PpyfPYPpPtQvBOmgbE6K+qgYUpj81LAA==}
     engines: {node: '>=16'}
     hasBin: true
     dev: true
@@ -6679,8 +6679,8 @@ packages:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
     dev: false
 
-  /sass@1.64.2:
-    resolution: {integrity: sha512-TnDlfc+CRnUAgLO9D8cQLFu/GIjJIzJCGkE7o4ekIGQOH7T3GetiRR/PsTWJUHhkzcSPrARkPI+gNWn5alCzDg==}
+  /sass@1.65.1:
+    resolution: {integrity: sha512-9DINwtHmA41SEd36eVPQ9BJKpn7eKDQmUHmpI0y5Zv2Rcorrh0zS+cFrt050hdNbmmCNKTW3hV5mWfuegNRsEA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
@@ -7662,7 +7662,7 @@ packages:
       vfile-message: 3.1.4
     dev: false
 
-  /vite@4.4.9(sass@1.64.2):
+  /vite@4.4.9(sass@1.65.1):
     resolution: {integrity: sha512-2mbUn2LlUmNASWwSCNSJ/EG2HuSRTnVNaydp6vMCm5VIqJsjMfbIWtbH2kDuwUVW5mMUKKZvGPX/rqeqVvv1XA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -7693,7 +7693,7 @@ packages:
       esbuild: 0.18.20
       postcss: 8.4.27
       rollup: 3.28.0
-      sass: 1.64.2
+      sass: 1.65.1
     optionalDependencies:
       fsevents: 2.3.2
     dev: false
@@ -7706,7 +7706,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 4.4.9(sass@1.64.2)
+      vite: 4.4.9(sass@1.65.1)
     dev: false
 
   /vscode-oniguruma@1.7.0:
