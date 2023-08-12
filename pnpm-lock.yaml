@@ -74,8 +74,8 @@ devDependencies:
     specifier: ^15.10.2
     version: 15.10.2
   stylelint-config-clean-order:
-    specifier: ^5.0.1
-    version: 5.0.1(stylelint@15.10.2)
+    specifier: ^5.1.0
+    version: 5.1.0(stylelint@15.10.2)
   stylelint-config-html:
     specifier: ^1.1.0
     version: 1.1.0(postcss-html@1.5.0)(stylelint@15.10.2)
@@ -7084,8 +7084,8 @@ packages:
       postcss-selector-parser: 6.0.13
     dev: false
 
-  /stylelint-config-clean-order@5.0.1(stylelint@15.10.2):
-    resolution: {integrity: sha512-zKLXjTgrkZqiml0VXv7Syl11XLpzRErW+1/qSEjIQ+aHAFjGuRq6Uwal9OzxtDHvpoIhlc4wCYjougWDuLN5aA==}
+  /stylelint-config-clean-order@5.1.0(stylelint@15.10.2):
+    resolution: {integrity: sha512-WDEPK+eBHxWJH+8z8ypvM6dHNjb65ODxGr8jSgHqwf/wp9XOn4reqGdza78EEZ+PtWRUP5feizPnrEbgSNiJGw==}
     peerDependencies:
       stylelint: '>=14'
     dependencies:
