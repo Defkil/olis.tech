@@ -24,7 +24,7 @@
     "@otterlord/astro-compress": "^1.1.48",
     "@otterlord/astro-critters": "^1.1.41",
     "@otterlord/astro-rome": "^0.1.21",
-    "@swup/astro": "^1.0.2",
+    "@swup/astro": "^1.1.0",
     "astro": "3.0.0-beta.0",
     "astro-compressor": "^0.4.0",
     "probe-image-size": "^7.2.3",

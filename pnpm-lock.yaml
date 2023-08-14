@@ -36,8 +36,8 @@ dependencies:
     specifier: ^0.1.21
     version: 0.1.21
   '@swup/astro':
-    specifier: ^1.0.2
-    version: 1.0.2
+    specifier: ^1.1.0
+    version: 1.1.0
   astro:
     specifier: 3.0.0-beta.0
     version: 3.0.0-beta.0(sass@1.65.1)(typescript@5.1.6)
@@ -1604,7 +1604,7 @@ packages:
     resolution: {integrity: sha512-EXi8de5njxgP6TV3N9ytnGRLG9zmBNTEZjR4VzwPcpPLbZxxTLG2gaFyJyKiFVQxHW/DPlMrDJA3qoRRGEkgZw==}
     dependencies:
       '@docsearch/react': 3.5.1(@algolia/client-search@4.19.1)(search-insights@2.7.0)
-      preact: 10.16.0
+      preact: 10.17.0
     transitivePeerDependencies:
       - '@algolia/client-search'
       - '@types/react'
@@ -1950,7 +1950,7 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
     dependencies:
-      '@types/node': 20.4.10
+      '@types/node': 20.5.0
       playwright-core: 1.37.0
     optionalDependencies:
       fsevents: 2.3.2
@@ -2142,8 +2142,8 @@ packages:
       - ts-node
     dev: false
 
-  /@swup/astro@1.0.2:
-    resolution: {integrity: sha512-2BdiXS4XGtLuH/svF0ZrdNmUjgjhiOXlnggtnsFgx8Vc/0LTO+vq1khoEAnEy2ufUh3IrclX0T7c0jWMA06Wtg==}
+  /@swup/astro@1.1.0:
+    resolution: {integrity: sha512-gv6/G1o03WDlM7Dpbizm458lRwBDlrT5khxgk6gzjqUg3dkR0Dqxkr7NsuHfn2df4cmz/cBITgn93p5/Tyu4GA==}
     dependencies:
       '@swup/a11y-plugin': 4.1.1(swup@4.2.0)
       '@swup/body-class-plugin': 3.1.1(swup@4.2.0)
@@ -2472,7 +2472,7 @@ packages:
   /@types/needle@3.2.0:
     resolution: {integrity: sha512-6XzvzEyJ2ozFNfPajFmqH9JOt0Hp+9TawaYpJT59iIP/zR0U37cfWCRwosyIeEBBZBi021Osq4jGAD3AOju5fg==}
     dependencies:
-      '@types/node': 20.4.10
+      '@types/node': 20.5.0
     dev: true
 
   /@types/nlcst@1.0.1:
@@ -2485,8 +2485,8 @@ packages:
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
     dev: false
 
-  /@types/node@20.4.10:
-    resolution: {integrity: sha512-vwzFiiy8Rn6E0MtA13/Cxxgpan/N6UeNYR9oUu6kuJWxu6zCk98trcDp8CBhbtaeuq9SykCmXkFr2lWLoPcvLg==}
+  /@types/node@20.5.0:
+    resolution: {integrity: sha512-Mgq7eCtoTjT89FqNoTzzXg2XvCi5VMhRV6+I2aYanc6kQCBImeNaAYRs/DyoVqk1YEUJK5gN9VO7HRIdz4Wo3Q==}
 
   /@types/normalize-package-data@2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
@@ -2504,13 +2504,13 @@ packages:
     resolution: {integrity: sha512-R5H3vw62gHNHrn+JGZbKejb+Z2D/6E5UNVlhCzIaBBLroMQMOFqy5Pap2gM+ZZHdqBtVU0/cx/M6to+mOJcoew==}
     dependencies:
       '@types/needle': 3.2.0
-      '@types/node': 20.4.10
+      '@types/node': 20.5.0
     dev: true
 
   /@types/resolve@1.17.1:
     resolution: {integrity: sha512-yy7HuzQhj0dhGpD8RLXSZWEkLsV9ibvxvi6EiJ3bkqLAO1RGo0WbkWQiwpRlSFymTJRz0d3k5LM3kkx8ArDbLw==}
     dependencies:
-      '@types/node': 20.4.10
+      '@types/node': 20.5.0
     dev: false
 
   /@types/resolve@1.20.2:
@@ -4635,7 +4635,7 @@ packages:
     resolution: {integrity: sha512-KWYVV1c4i+jbMpaBC+U++4Va0cp8OisU185o73T1vo99hqi7w8tSJfUXYswwqqrjzwxa6KpRK54WhPvwf5w6PQ==}
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/node': 20.4.10
+      '@types/node': 20.5.0
       merge-stream: 2.0.0
       supports-color: 7.2.0
     dev: false
@@ -6149,8 +6149,8 @@ packages:
       picocolors: 1.0.0
       source-map-js: 1.0.2
 
-  /preact@10.16.0:
-    resolution: {integrity: sha512-XTSj3dJ4roKIC93pald6rWuB2qQJO9gO2iLLyTe87MrjQN+HklueLsmskbywEWqCHlclgz3/M4YLL2iBr9UmMA==}
+  /preact@10.17.0:
+    resolution: {integrity: sha512-SNsI8cbaCcUS5tbv9nlXuCfIXnJ9ysBMWk0WnB6UWwcVA3qZ2O6FxqDFECMAMttvLQcW/HaNZUe2BLidyvrVYw==}
     dev: false
 
   /prebuild-install@7.1.1:
