@@ -3,9 +3,8 @@ import './Post.scss';
 import type {PostWindowProps} from "../../env";
 import PostWindow from "../post-window/PostWindow.astro";
 
-const { post, bigWindow }: {
-  post: PostWindowProps,
-  bigWindow?: boolean
+const {post, bigWindow}: {
+  post: PostWindowProps, bigWindow?: boolean
 } = Astro.props
 
 const isBigWindow = bigWindow || false
@@ -16,17 +15,23 @@ if (!post) {
 ---
 <div>
   {!bigWindow && (
-    <a href={post.link} style="text-decoration: none">
-      <PostWindow post={post} bigWindow={isBigWindow}>
-        <slot name="title"/>
-        <slot />
-      </PostWindow>
-    </a>
-  )}
+    <post-transformer>
+      <a href={post.link} class="post-link" data-swup-preload>
+        <PostWindow post={post} bigWindow={isBigWindow} />
+      </a>
+    </post-transformer>
+    )}
   {bigWindow && (
     <PostWindow post={post} bigWindow={isBigWindow}>
-      <slot name="title"/>
-      <slot />
+      <span slot="title"><slot name="title"/></span>
+      <slot/>
     </PostWindow>
   )}
 </div>
+
+<style>
+  .post-link {
+    color: black;
+    text-decoration: none
+  }
+</style>
