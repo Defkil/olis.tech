@@ -22,7 +22,7 @@ export default defineConfig({
     rome(),
     critters(),
     compressor(),
-    compress({ css: false }),
+    compress({ CSS: false }),
   ],
   vite: {
     plugins: [visualizer({ filename: "./dist/_astro/stats.html", gzipSize: true, brotliSize: true }) as any],
