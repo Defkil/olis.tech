@@ -2,9 +2,8 @@
 import './PostWindow.scss';
 import type {PostWindowProps} from "../../env";
 
-const { post, bigWindow }: {
-  post: PostWindowProps,
-  bigWindow?: boolean
+const {post, bigWindow}: {
+  post: PostWindowProps, bigWindow?: boolean
 } = Astro.props
 
 const isBigWindow = bigWindow || false
@@ -15,13 +14,17 @@ if (!post) {
 ---
 <div class="window">
   <div class="window__header">
-    <span class="window__header-title">{post.lastPublishOrUpdate}</span>
-    <span class="window__header-title"><slot name="title"/></span>
-    <div class="dot"></div>
-    <div class="dot"></div>
-    <div class="dot"></div>
+    <span class="window__date">{post.lastPublishOrUpdate}</span>
+    <div class="window__dots">
+      <div class="window__dot"></div>
+      <div class="window__dot"></div>
+      <div class="window__dot"></div>
+    </div>
   </div>
-  <div class="window__image-container">
+  <h1 class="window__header-title">
+    <slot name="title"/>
+  </h1>
+  <div class="window__image-container" class:list={[{'window__image-container--big': bigWindow}]}>
     <img class="window__image" loading="lazy" src={post.image} alt={post.imageAlt}>
   </div>
   {!isBigWindow && (
@@ -31,9 +34,14 @@ if (!post) {
       Weiterlesen ➔
     </div>
   )}
-  <div>
-    <slot />
-  </div>
+  {isBigWindow && (
+    <div class="window__slot">
+      <slot/>
+    </div>
+    <div class="window__footer">
+      Teilen
+    </div>
+  )}
   <div class="window__category">
     Aus
     <a href={post.categoryLink} class="window__category-link">{post.category}</a>
