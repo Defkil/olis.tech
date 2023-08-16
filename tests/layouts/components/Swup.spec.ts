@@ -10,8 +10,8 @@ test("swup will change the content at #swup", async ({ page }) => {
 
 test("swup will scroll down after changing the page", async ({ page }) => {
   await page.goto("http://localhost:3000/");
-  await page.click("text=Impressum");
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await page.click(".js--posts>a:first-child");
   await page.waitForTimeout(1000);
-  const scrollPosition = await page.evaluate(() => window.scrollY);
-  expect(scrollPosition).toBeGreaterThan(0);
+  await expect(page.locator("main")).toBeInViewport();
 });
