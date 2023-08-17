@@ -248,7 +248,7 @@ packages:
       github-slugger: 1.5.0
       import-meta-resolve: 2.2.2
       rehype-raw: 6.1.1
-      rehype-stringify: 9.0.3
+      rehype-stringify: 9.0.4
       remark-gfm: 3.0.1
       remark-parse: 10.0.2
       remark-rehype: 10.1.0
@@ -2096,7 +2096,7 @@ packages:
       string.prototype.matchall: 4.0.8
     dev: false
 
-  /@swup/a11y-plugin@4.1.1(swup@4.3.0):
+  /@swup/a11y-plugin@4.1.1(swup@4.3.1):
     resolution: {integrity: sha512-3SJxM9L71jGW1bBrE9NATW9wRt2qFB9spzWZjRVjag3//C9JlElzaSFTJeWDX7LyPra2+jpSXXlkajxGCbla/A==}
     peerDependencies:
       swup: ^4.0.0
@@ -2104,7 +2104,7 @@ packages:
       '@swup/plugin': 3.0.0
       focus-options-polyfill: 1.6.0
       on-demand-live-region: 0.1.3
-      swup: 4.3.0
+      swup: 4.3.1
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
@@ -2114,34 +2114,34 @@ packages:
   /@swup/astro@1.1.1:
     resolution: {integrity: sha512-nXudDu09G+WQLl1DtbV63Tt1fE6jYhjj0zUnj91Csp7VK15Y53vbhbZdKmBFrxNeNrLaO68rqv+I1X4yr/xQdw==}
     dependencies:
-      '@swup/a11y-plugin': 4.1.1(swup@4.3.0)
-      '@swup/body-class-plugin': 3.1.1(swup@4.3.0)
-      '@swup/debug-plugin': 4.0.1(swup@4.3.0)
-      '@swup/fade-theme': 2.0.0(swup@4.3.0)
-      '@swup/forms-plugin': 3.2.0(swup@4.3.0)
-      '@swup/head-plugin': 2.1.1(swup@4.3.0)
-      '@swup/overlay-theme': 2.0.0(swup@4.3.0)
-      '@swup/parallel-plugin': 0.1.1(swup@4.3.0)
-      '@swup/preload-plugin': 3.2.2(swup@4.3.0)
-      '@swup/progress-plugin': 3.1.0(swup@4.3.0)
-      '@swup/route-name-plugin': 4.1.0(swup@4.3.0)
-      '@swup/scripts-plugin': 2.0.0(swup@4.3.0)
-      '@swup/scroll-plugin': 3.1.1(swup@4.3.0)
-      '@swup/slide-theme': 2.0.0(swup@4.3.0)
-      swup: 4.3.0
+      '@swup/a11y-plugin': 4.1.1(swup@4.3.1)
+      '@swup/body-class-plugin': 3.1.1(swup@4.3.1)
+      '@swup/debug-plugin': 4.0.1(swup@4.3.1)
+      '@swup/fade-theme': 2.0.0(swup@4.3.1)
+      '@swup/forms-plugin': 3.2.0(swup@4.3.1)
+      '@swup/head-plugin': 2.1.1(swup@4.3.1)
+      '@swup/overlay-theme': 2.0.0(swup@4.3.1)
+      '@swup/parallel-plugin': 0.1.1(swup@4.3.1)
+      '@swup/preload-plugin': 3.2.2(swup@4.3.1)
+      '@swup/progress-plugin': 3.1.0(swup@4.3.1)
+      '@swup/route-name-plugin': 4.1.0(swup@4.3.1)
+      '@swup/scripts-plugin': 2.0.0(swup@4.3.1)
+      '@swup/scroll-plugin': 3.1.1(swup@4.3.1)
+      '@swup/slide-theme': 2.0.0(swup@4.3.1)
+      swup: 4.3.1
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
       - ts-node
     dev: false
 
-  /@swup/body-class-plugin@3.1.1(swup@4.3.0):
+  /@swup/body-class-plugin@3.1.1(swup@4.3.1):
     resolution: {integrity: sha512-HX9N2QWNpqk3JQcD46cdpmJ0WTZpMHH7GYMbY6OQZTrxYgE3/3pBKKkVibs6icY+5nscATmzgb39WhCisi1qDQ==}
     peerDependencies:
       swup: ^4.0.0
     dependencies:
       '@swup/plugin': 3.0.0
-      swup: 4.3.0
+      swup: 4.3.1
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
@@ -2152,80 +2152,80 @@ packages:
     resolution: {integrity: sha512-/3nBqG7LqmK1uqaCSTA6s2NwQBDQXNyLAFBzlX6uaxqjIQcAZyq6K+sgcQ40oj02Vn/2mLSkeL9DOfP7BPOwVA==}
     dev: false
 
-  /@swup/debug-plugin@4.0.1(swup@4.3.0):
+  /@swup/debug-plugin@4.0.1(swup@4.3.1):
     resolution: {integrity: sha512-iA03He2WMRJd7oRRlWMvffhGstKQ8DDNp5LGS9kPyLQZqXHV7f5sVvIVotFGgOn264SRgK7FU7g7bYnhCRa1xQ==}
     peerDependencies:
       swup: ^4.0.0
     dependencies:
       '@swup/plugin': 3.0.0
-      swup: 4.3.0
+      swup: 4.3.1
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
       - ts-node
     dev: false
 
-  /@swup/fade-theme@2.0.0(swup@4.3.0):
+  /@swup/fade-theme@2.0.0(swup@4.3.1):
     resolution: {integrity: sha512-gMbrGZyKwkuBop69Ih/GQmQXFw4PxWIOzzIumij7KSH6n4HflgqhEk7RcdCELl4lpAiGJJYGsdVlVVtIRBvcQA==}
     peerDependencies:
       swup: ^4.0.0
     dependencies:
       '@swup/plugin': 3.0.0
-      '@swup/theme': 2.0.0(swup@4.3.0)
-      swup: 4.3.0
+      '@swup/theme': 2.0.0(swup@4.3.1)
+      swup: 4.3.1
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
       - ts-node
     dev: false
 
-  /@swup/forms-plugin@3.2.0(swup@4.3.0):
+  /@swup/forms-plugin@3.2.0(swup@4.3.1):
     resolution: {integrity: sha512-scI8gZLEfqhiRmUUC5+QqTWLXWXr1fcyVbKdDlY67zMl2P7xOqx53kOUz4WRASIpKc93Q+2dyEwD0gZgX3dQ2A==}
     peerDependencies:
       swup: ^4.0.0
     dependencies:
       '@swup/plugin': 3.0.0
-      swup: 4.3.0
+      swup: 4.3.1
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
       - ts-node
     dev: false
 
-  /@swup/head-plugin@2.1.1(swup@4.3.0):
+  /@swup/head-plugin@2.1.1(swup@4.3.1):
     resolution: {integrity: sha512-cquC0/wWWqwC1blHjzSPkATCSy/PYpMcGGmdAs8ncK99v58Zuxtdyo2J+MZuJBWQsUzCe8YqCrJK+pCHmWOrnA==}
     peerDependencies:
       swup: ^4.0.0
     dependencies:
       '@swup/plugin': 3.0.0
-      swup: 4.3.0
+      swup: 4.3.1
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
       - ts-node
     dev: false
 
-  /@swup/overlay-theme@2.0.0(swup@4.3.0):
+  /@swup/overlay-theme@2.0.0(swup@4.3.1):
     resolution: {integrity: sha512-rYim0K5vkih3YeRrZQ1NIM2h9Moo6ajbxRYoCMR4/q8Q25N0BZioK5RJFrQz8CiOvKTBy4Sh3WePsOViteGrNg==}
     peerDependencies:
       swup: ^4.0.0
     dependencies:
       '@swup/plugin': 3.0.0
-      '@swup/theme': 2.0.0(swup@4.3.0)
-      swup: 4.3.0
+      '@swup/theme': 2.0.0(swup@4.3.1)
+      swup: 4.3.1
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
       - ts-node
     dev: false
 
-  /@swup/parallel-plugin@0.1.1(swup@4.3.0):
+  /@swup/parallel-plugin@0.1.1(swup@4.3.1):
     resolution: {integrity: sha512-bCwhVylszanLeyoa7hygipH+0bUoxkdJx/2jE9rvGvmlTR6gAuMHwbxuv+Gx0hUXK/FGD7V6teVEKlSbfJgJnA==}
     peerDependencies:
       swup: ^4.0.0
     dependencies:
       '@swup/plugin': 3.0.0
-      swup: 4.3.0
+      swup: 4.3.1
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
@@ -2243,20 +2243,20 @@ packages:
       prettier: 2.8.8
       shelljs: 0.8.5
       shelljs-live: 0.0.5(shelljs@0.8.5)
-      swup: 4.3.0
+      swup: 4.3.1
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
       - ts-node
     dev: false
 
-  /@swup/preload-plugin@3.2.2(swup@4.3.0):
+  /@swup/preload-plugin@3.2.2(swup@4.3.1):
     resolution: {integrity: sha512-xDa5zQjCowUAjAFnCqBAHHKzluh8iEiCNYAbITmpzvaWAb6Sy4HWbHRiLkLozy31tNw1/wUvz6g6zyGhFN6g6g==}
     peerDependencies:
       swup: ^4.0.0
     dependencies:
       '@swup/plugin': 3.0.0
-      swup: 4.3.0
+      swup: 4.3.1
       throttles: 1.0.1
     transitivePeerDependencies:
       - '@types/babel__core'
@@ -2268,80 +2268,80 @@ packages:
     resolution: {integrity: sha512-EF4DMdIGieEsuY2XK0PuLf7Uw7yUQOMbA6IdCMvvRvKXj03WLLpnNIFfFp+6hmMtXRSUE88VBpRyp6Giiu1Pbg==}
     dev: false
 
-  /@swup/progress-plugin@3.1.0(swup@4.3.0):
+  /@swup/progress-plugin@3.1.0(swup@4.3.1):
     resolution: {integrity: sha512-zre97WXL/F1Ccya7LtWcLCwKA9bRSmvZZvvJcT+jLiw/pj2zHIm0VWGP7wr41v4v5ySyG24GdHFbOXT0QD5qQg==}
     peerDependencies:
       swup: ^4.0.0
     dependencies:
       '@swup/plugin': 3.0.0
-      swup: 4.3.0
+      swup: 4.3.1
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
       - ts-node
     dev: false
 
-  /@swup/route-name-plugin@4.1.0(swup@4.3.0):
+  /@swup/route-name-plugin@4.1.0(swup@4.3.1):
     resolution: {integrity: sha512-1tw3WeExEKwI3pVMXTptCGxFUDOSEpc63D741eeUCjjGW/f9q7ekuqEaPQd5YJ6POpzDjdt1jjuC9yv54CbeXA==}
     peerDependencies:
       swup: ^4.0.0
     dependencies:
       '@swup/plugin': 3.0.0
-      swup: 4.3.0
+      swup: 4.3.1
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
       - ts-node
     dev: false
 
-  /@swup/scripts-plugin@2.0.0(swup@4.3.0):
+  /@swup/scripts-plugin@2.0.0(swup@4.3.1):
     resolution: {integrity: sha512-nb1a0n0qkLGiEW4ITbTr8pLO/wjjKcbGg/dBWfstmJ/6ehwHqmAU0kY+yUn3DISfaPPoo+txO4KolHf2VRSgGQ==}
     peerDependencies:
       swup: ^4.0.0
     dependencies:
       '@swup/plugin': 3.0.0
-      swup: 4.3.0
+      swup: 4.3.1
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
       - ts-node
     dev: false
 
-  /@swup/scroll-plugin@3.1.1(swup@4.3.0):
+  /@swup/scroll-plugin@3.1.1(swup@4.3.1):
     resolution: {integrity: sha512-aoMz1oA1cO0EQX6Ggcaoucxn3e1n5AZJ7vD79ztKOsrLJzxiMP0ZMvZa0UzBGGzIus9DV5Ju3rEsJOLLwjxE8A==}
     peerDependencies:
       swup: ^4.2.0
     dependencies:
       '@swup/plugin': 3.0.0
       scrl: 2.0.0
-      swup: 4.3.0
+      swup: 4.3.1
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
       - ts-node
     dev: false
 
-  /@swup/slide-theme@2.0.0(swup@4.3.0):
+  /@swup/slide-theme@2.0.0(swup@4.3.1):
     resolution: {integrity: sha512-TFIHLY1uVjzHQ6BMKyroTkxNck3z4t38VSzK/3HZRHXblAraL/h+Sb+Omszsloe+5j0w2oWo7Ca/UsXNwec53A==}
     peerDependencies:
       swup: ^4.0.0
     dependencies:
       '@swup/plugin': 3.0.0
-      '@swup/theme': 2.0.0(swup@4.3.0)
-      swup: 4.3.0
+      '@swup/theme': 2.0.0(swup@4.3.1)
+      swup: 4.3.1
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
       - ts-node
     dev: false
 
-  /@swup/theme@2.0.0(swup@4.3.0):
+  /@swup/theme@2.0.0(swup@4.3.1):
     resolution: {integrity: sha512-6lN8huGhFnAUekSDJtSe0qNUiFrhQxf8XEJpApoEItnZ/S6gMPBcp9RColzb+UGb3IjzH1l7WLPZ56w58KtwkQ==}
     peerDependencies:
       swup: ^4.0.0
     dependencies:
       '@swup/plugin': 3.0.0
-      swup: 4.3.0
+      swup: 4.3.1
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
@@ -2931,7 +2931,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001521
-      electron-to-chromium: 1.4.492
+      electron-to-chromium: 1.4.494
       node-releases: 2.0.13
       update-browserslist-db: 1.0.11(browserslist@4.21.10)
     dev: false
@@ -3609,8 +3609,8 @@ packages:
       jake: 10.8.7
     dev: false
 
-  /electron-to-chromium@1.4.492:
-    resolution: {integrity: sha512-36K9b/6skMVwAIEsC7GiQ8I8N3soCALVSHqWHzNDtGemAcI9Xu8hP02cywWM0A794rTHm0b0zHPeLJHtgFVamQ==}
+  /electron-to-chromium@1.4.494:
+    resolution: {integrity: sha512-KF7wtsFFDu4ws1ZsSOt4pdmO1yWVNWCFtijVYZPUeW4SV7/hy/AESjLn/+qIWgq7mHscNOKAwN5AIM1+YAy+Ww==}
     dev: false
 
   /emoji-regex@8.0.0:
@@ -5433,8 +5433,8 @@ packages:
       tslib: 2.6.1
     dev: false
 
-  /node-abi@3.46.0:
-    resolution: {integrity: sha512-LXvP3AqTIrtvH/jllXjkNVbYifpRbt9ThTtymSMSuHmhugQLAWr99QQFTm+ZRht9ziUvdGOgB+esme1C6iE6Lg==}
+  /node-abi@3.47.0:
+    resolution: {integrity: sha512-2s6B2CWZM//kPgwnuI0KrYwNjfdByE25zvAaEpq9IH4zcNsarH8Ihu/UuX6XMPEogDAxkuUFeZn60pXNHAqn3A==}
     engines: {node: '>=10'}
     dependencies:
       semver: 7.5.4
@@ -6157,7 +6157,7 @@ packages:
       minimist: 1.2.8
       mkdirp-classic: 0.5.3
       napi-build-utils: 1.0.2
-      node-abi: 3.46.0
+      node-abi: 3.47.0
       pump: 3.0.0
       rc: 1.2.8
       simple-get: 4.0.1
@@ -6364,8 +6364,8 @@ packages:
       jsesc: 0.5.0
     dev: false
 
-  /rehype-parse@8.0.4:
-    resolution: {integrity: sha512-MJJKONunHjoTh4kc3dsM1v3C9kGrrxvA3U8PxZlP2SjH8RNUSrb+lF7Y0KVaUDnGH2QZ5vAn7ulkiajM9ifuqg==}
+  /rehype-parse@8.0.5:
+    resolution: {integrity: sha512-Ds3RglaY/+clEX2U2mHflt7NlMA72KspZ0JLUJgBBLpRddBcEw3H8uYZQliQriku22NZpYMfjDdSgHcjxue24A==}
     dependencies:
       '@types/hast': 2.3.5
       hast-util-from-parse5: 7.1.2
@@ -6381,8 +6381,8 @@ packages:
       unified: 10.1.2
     dev: false
 
-  /rehype-stringify@9.0.3:
-    resolution: {integrity: sha512-kWiZ1bgyWlgOxpqD5HnxShKAdXtb2IUljn3hQAhySeak6IOQPPt6DeGnsIh4ixm7yKJWzm8TXFuC/lPfcWHJqw==}
+  /rehype-stringify@9.0.4:
+    resolution: {integrity: sha512-Uk5xu1YKdqobe5XpSskwPvo1XeHUUucWEQSl8hTrXt5selvca1e8K1EZ37E6YoZ4BT8BCqCdVfQW7OfHfthtVQ==}
     dependencies:
       '@types/hast': 2.3.5
       hast-util-to-html: 8.0.4
@@ -6393,8 +6393,8 @@ packages:
     resolution: {integrity: sha512-ey6kAqwLM3X6QnMDILJthGvG1m1ULROS9NT4uG9IDCuv08SFyLlreSuvOa//DgEvbXx62DS6elGVqusWhRUbgw==}
     dependencies:
       '@types/hast': 2.3.5
-      rehype-parse: 8.0.4
-      rehype-stringify: 9.0.3
+      rehype-parse: 8.0.5
+      rehype-stringify: 9.0.4
       unified: 10.1.2
     dev: false
 
@@ -7292,8 +7292,8 @@ packages:
       picocolors: 1.0.0
     dev: false
 
-  /swup@4.3.0:
-    resolution: {integrity: sha512-Qu6RjbixbJAPRRKxVGxl9hVyQDRe3kCog9EneZRj1YJqKcXBptk+qp5LwPcyNmvyl9SWpu7zZ1zf13/3wLb47A==}
+  /swup@4.3.1:
+    resolution: {integrity: sha512-Gx3gSGzUHAvypep0nPFINU/fBQqs4ZK1UBDjQbGKWov6fR4ozZ5O14J/ugQq3YrqblqjCcwz7+v7BPo0vTn+jQ==}
     requiresBuild: true
     dependencies:
       delegate-it: 6.0.1
