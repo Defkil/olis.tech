@@ -39,7 +39,9 @@ if (!post) {
       <slot/>
     </div>
     <div class="window__footer">
-      Teilen
+      <share-link class="window__share-link" data-title={post.titel} data-text={post.excerpt} data-url={post.link}>
+        <span class="window__footer-link js--share">Teilen</span>
+      </share-link>
     </div>
   )}
   <div class="window__category">
@@ -47,3 +49,25 @@ if (!post) {
     <a href={post.categoryLink} class="window__category-link">{post.category}</a>
   </div>
 </div>
+<script>
+  import {share} from '../../lib/helper/helperShare'
+
+  class ShareLink extends HTMLElement {
+
+    listener: () => void
+    connectedCallback() {
+      this.listener = () => share(
+        this.dataset.title,
+        this.dataset.text,
+        this.dataset.url
+      )
+      this.addEventListener('click', this.listener)
+    }
+
+    disconnectedCallback() {
+      this.removeEventListener('click', this.listener)
+    }
+  }
+
+  customElements.define('share-link', ShareLink)
+</script>

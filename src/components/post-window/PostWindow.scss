@@ -79,6 +79,12 @@ $main-size: $spacing-04;
   border-top: $spacing-border solid #000;
 }
 
+.window__footer-link {
+  cursor: pointer;
+  color: #000;
+  text-decoration: underline;
+}
+
 .window__slot {
   margin-bottom: $main-size * 3;
   padding: $main-size;
