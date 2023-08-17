@@ -54,7 +54,7 @@ export class HeaderCategories extends HTMLElement {
 
   extractButtonData(button: HTMLElement): HeaderCategoriesData {
     let posts: HeaderCategoriesData["posts"] = [];
-    let lastPosts = button.dataset.lastPosts || "[]";
+    const lastPosts = button.dataset.lastPosts || "[]";
 
     try {
       posts = JSON.parse(lastPosts);
@@ -63,16 +63,16 @@ export class HeaderCategories extends HTMLElement {
     }
 
     const data: HeaderCategoriesData = {
-      title: button.textContent!,
-      link: button.dataset.link!,
-      description: button.dataset.description!,
+      title: button.textContent || "",
+      link: button.dataset.link || "",
+      description: button.dataset.description || "",
       posts: posts,
     };
 
     const missingKeys = Object.keys(data).filter((key) => !data[key as keyof HeaderCategoriesData]);
 
     if (missingKeys.length > 0) {
-      throw new Error("Missing data: " + missingKeys.join(", "));
+      throw new Error(`Missing keys: ${missingKeys.join(", ")}`);
     }
 
     return data;

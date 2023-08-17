@@ -38,31 +38,13 @@ export interface PostWindowProps {
   link: string;
 }
 
-// external modules
-
-declare module "macy" {
-  /**
-   * masonry layout library
-   * https://github.com/bigbite/macy.js
-   * @param options
-   */
-  export default function macy(options: any): {
-    /**
-     * when called this recalculates the entire layout
-     * @param refresh  if true, will recalculate all items
-     */
-    recalculate: (refresh?: boolean) => void;
-    /**
-     * used to do something each time and image loads or after all images have been loaded
-     * @param cb  Function to run on image load
-     * @param onEveryImage If true it will run everytime an image loads
-     */
-    runOnImageLoad: (cb: () => void, onEveryImage?: boolean) => void;
-  };
-}
-
 declare global {
   interface Window {
-    swup: any;
+    swup: {
+      preloadPages: () => void;
+      hooks: {
+        on: (event: string, callback: (data: any) => void) => void;
+      };
+    };
   }
 }

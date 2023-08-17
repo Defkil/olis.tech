@@ -30,8 +30,11 @@ async function getAllPostsAndSorts(): Promise<PostWindowProps[]> {
   const allPosts = import.meta.glob("../../content/**/*.md");
   const result: PostWindowPropsWithDateSort[] = [];
   for (const path in allPosts) {
-    const post = (await allPosts[path]!()) as any;
-    const folderAsCollection = path.split("/").slice(-2, -1)[0]!;
+    const post = (await allPosts[path]?.()) as any;
+    const folderAsCollection = path.split("/").slice(-2, -1)[0];
+    if (folderAsCollection === undefined) {
+      continue;
+    }
     const categoryData = getCategoryData(folderAsCollection);
     const postDate = new Date(post.frontmatter.publishDate);
     result.push({

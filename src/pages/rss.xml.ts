@@ -27,7 +27,7 @@ async function getImageMetaData(url: string): Promise<RSSFeedEnclosure> {
  */
 async function transformPostToFeedItem(post: any, category: CategoryData, site: string): Promise<RSSFeedItem> {
   return {
-    link: site + "/" + category.collection + "/" + post.slug,
+    link: `${site}/${category.collection}/${post.slug}`,
     content: post.body,
     title: post.data.title,
     pubDate: post.data.publishDate,
@@ -58,7 +58,7 @@ export async function GET(context: any) {
     description: SITE_DESCRIPTION,
     site: context.site,
     items: posts,
-    customData: `<language>de-de</language>`,
+    customData: "<language>de-de</language>",
     stylesheet: "/pretty-feed-v3.xsl",
   });
 }

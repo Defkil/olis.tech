@@ -8,12 +8,12 @@ import type { PostSchema } from "../../env";
  */
 export async function contentGetCategoryPosts(
   categoryCollection: string,
-  length: number = -1,
+  length = -1,
 ): Promise<{
   posts: PostSchema[];
   total: number;
 }> {
-  if (length == 0) {
+  if (length === 0) {
     return {
       posts: [],
       total: 0,
