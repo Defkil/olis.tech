@@ -28,7 +28,7 @@ if (!post) {
     <img class="window__image" loading="lazy" src={post.image} alt={post.imageAlt}>
   </div>
   {!isBigWindow && (
-    <h2 class="window__title">{post.titel}</h2>
+    <h2 class="window__title">{post.title}</h2>
     <p class="window__excerpt">{post.excerpt}</p>
     <div class="window__footer">
       Weiterlesen ➔
@@ -39,7 +39,7 @@ if (!post) {
       <slot/>
     </div>
     <div class="window__footer">
-      <share-link class="window__share-link" data-title={post.titel} data-text={post.excerpt} data-url={post.link}>
+      <share-link class="window__share-link" data-title={post.title} data-text={post.excerpt} data-url={post.link}>
         <span class="window__footer-link js--share">Teilen</span>
       </share-link>
     </div>

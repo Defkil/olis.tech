@@ -33,7 +33,7 @@ export interface PostWindowProps {
   lastPublishOrUpdate: string;
   image: string;
   imageAlt: string;
-  titel: string;
+  title: string;
   excerpt: string;
   link: string;
 }

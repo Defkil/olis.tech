@@ -14,7 +14,7 @@ export function transformEntryToPostWindow(entry: any): PostWindowProps {
     lastPublishOrUpdate: helperShowDate(entry.data.publishDate),
     image: entry.data.image,
     imageAlt: entry.data.imageAlt,
-    titel: entry.data.title,
+    title: entry.data.title,
     excerpt: entry.data.description,
     link: contentLinkPost(entry.collection, entry.slug),
   };

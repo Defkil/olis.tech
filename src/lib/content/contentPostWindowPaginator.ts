@@ -44,7 +44,7 @@ async function getAllPostsAndSorts(): Promise<PostWindowProps[]> {
       lastPublishOrUpdate: helperShowDate(postDate),
       image: post.frontmatter.image,
       imageAlt: post.frontmatter.imageAlt,
-      titel: post.frontmatter.title,
+      title: post.frontmatter.title,
       excerpt: post.frontmatter.description,
       link: contentLinkPost(categoryData.collection, post.frontmatter.slug),
     });
@@ -67,7 +67,7 @@ async function getCollectionPostsAndSorts(collection: string): Promise<PostWindo
       lastPublishOrUpdate: helperShowDate(postDate),
       image: post.image,
       imageAlt: post.imageAlt,
-      titel: post.title,
+      title: post.title,
       excerpt: post.description,
       link: contentLinkPost(categoryData.collection, post.slug),
     });
