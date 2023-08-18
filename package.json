@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@namics/stylelint-bem": "^8.1.0",
-    "@playwright/test": "^1.37.0",
+    "@playwright/test": "^1.37.1",
     "@types/probe-image-size": "^7.2.0",
     "postcss-html": "^1.5.0",
     "rollup-plugin-visualizer": "^5.9.2",
