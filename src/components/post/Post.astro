@@ -15,7 +15,7 @@ if (!post) {
 <div>
   {!bigWindow && (
     <post-transformer>
-      <a href={post.link} class="post-link" data-swup-preload>
+      <a href={post.link} class="post-link" data-swup-preload aria-label={post.title}>
         <PostWindow post={post} bigWindow={isBigWindow} />
       </a>
     </post-transformer>
