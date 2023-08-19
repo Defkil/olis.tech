@@ -8,11 +8,11 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Running Page Speed Insights
+      - name: Running on Index Page
         uses: jakepartusch/psi-action@v1.3
         id: psi
         with:
           url: "https://olis.tech/"
-          threshold: 70
+          threshold: 100
           strategy: mobile
           key: ${{ secrets.PAGESPEED }}
