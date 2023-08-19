@@ -18,7 +18,7 @@ if (!post) {
       <PostWindow post={post} bigWindow={isBigWindow} />
       <div class="from-category">
         Aus
-        <a href={post.categoryLink} class="from-category__link">{post.category}</a>
+        <a href={post.categoryLink}>{post.category}</a>
       </div>
     </post-transformer>
     )}
@@ -47,10 +47,6 @@ if (!post) {
     bottom: 0;
     left: 0;
     padding: $spacing-04 $spacing-04 * 4 20px $spacing-04;
-  }
-
-  .from-category__link {
-    color: #000;
   }
 
 </style>
