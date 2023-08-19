@@ -1,0 +1,17 @@
+name: Page Speed Insights Tests
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  test:
+    steps:
+      - name: Running Page Speed Insights
+        uses: jakepartusch/psi-action@v1.3
+        id: psi
+        with:
+          url: "https://olis.tech/"
+          threshold: 70
+          strategy: mobile
+          key: ${{ secrets.PAGESPEED }}
