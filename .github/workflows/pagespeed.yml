@@ -2,12 +2,12 @@ name: Page Speed Insights Tests
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - name: Wait for 3 minutes to let cloudflare update
+        run: sleep 180
       - name: Running on Index Page
         uses: jakepartusch/psi-action@v1.3
         id: psi-index
