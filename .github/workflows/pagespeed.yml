@@ -10,9 +10,17 @@ jobs:
     steps:
       - name: Running on Index Page
         uses: jakepartusch/psi-action@v1.3
-        id: psi
+        id: psi-index
         with:
           url: "https://olis.tech/"
+          threshold: 100
+          strategy: mobile
+          key: ${{ secrets.PAGESPEED }}
+      - name: Running on Impressum Page
+        uses: jakepartusch/psi-action@v1.3
+        id: psi-impressum
+        with:
+          url: "https://olis.tech/impressum/"
           threshold: 100
           strategy: mobile
           key: ${{ secrets.PAGESPEED }}
