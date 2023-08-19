@@ -89,14 +89,3 @@ $main-size: $spacing-04;
   margin-bottom: $main-size * 3;
   padding: $main-size;
 }
-
-.window__category {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: $main-size $main-size * 4 $main-size $main-size;
-}
-
-.window__category-link {
-  color: #000;
-}

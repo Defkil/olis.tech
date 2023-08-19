@@ -14,10 +14,14 @@ if (!post) {
 ---
 <div>
   {!bigWindow && (
-    <post-transformer>
-      <a href={post.link} class="post-link" data-swup-preload aria-label={post.title}>
+    <post-transformer class="post-wrapper">
+      <a href={post.link} class="post-link" data-swup-preload aria-label={ post.lastPublishOrUpdate + ' ' + post.title}>
         <PostWindow post={post} bigWindow={isBigWindow} />
       </a>
+      <div class="from-category">
+        Aus
+        <a href={post.categoryLink} class="from-category__link">{post.category}</a>
+      </div>
     </post-transformer>
     )}
   {bigWindow && (
@@ -28,9 +32,27 @@ if (!post) {
   )}
 </div>
 
-<style>
+<style lang="scss">
+  @import "../../const/styles.module.scss";
+
+  .post-wrapper {
+    position: relative;
+  }
+
   .post-link {
     color: black;
     text-decoration: none
   }
+
+  .from-category {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: $spacing-04 $spacing-04 * 4 $spacing-04 $spacing-04;
+  }
+
+  .from-category__link {
+    color: #000;
+  }
+
 </style>
