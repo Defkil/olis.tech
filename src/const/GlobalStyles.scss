@@ -25,6 +25,13 @@ body {
   background: $color-quinary;
 }
 
+a {
+  color: $color-black;
+  text-decoration-color: $color-black;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
 .content {
   min-height: 800px;
   padding: $spacing-11 0 $spacing-08;
