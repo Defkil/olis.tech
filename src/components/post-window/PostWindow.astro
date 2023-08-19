@@ -22,16 +22,20 @@ if (!post) {
     </div>
   </div>
   <h1 class="window__header-title">
-    <slot name="title"/>
+    <slot name="title" />
   </h1>
   <div class="window__image-container" class:list={[{'window__image-container--big': bigWindow}]}>
     <img class="window__image" loading="lazy" src={post.image} alt={post.imageAlt}>
   </div>
   {!isBigWindow && (
-    <h2 class="window__title">{post.title}</h2>
+    <h2 class="window__title">
+      <a href={post.link} class="window__title-link">
+        {post.title}
+      </a>
+    </h2>
     <p class="window__excerpt">{post.excerpt}</p>
     <div class="window__footer">
-      Weiterlesen ➔
+      <a href={post.link}>Weiterlesen ➔</a>
     </div>
   )}
   {isBigWindow && (

@@ -69,6 +69,10 @@ $main-size: $spacing-04;
   padding: $main-size $main-size 0;
 }
 
+.window__title-link {
+  text-decoration: none;
+}
+
 .window__excerpt {
   padding: $main-size;
 }
