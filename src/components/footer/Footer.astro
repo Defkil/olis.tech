@@ -18,3 +18,23 @@ import {SITE_AUTHOR_MAIL} from "../../const/data";
     </ul>
   </div>
 </footer>
+<script async type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-G89HDLRBGG"></script>
+<script>
+  if (window['gtagClientID'] === undefined || typeof window['gtagClientID'] === 'string') {
+    const randomString = () => Math.random().toString(20).substr(2, length)
+    window['gtagClientID'] = randomString() + randomString()
+  }
+
+  const gScript = `
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { dataLayer.push(arguments); };
+    window.gtag('config', 'G-G89HDLRBGG', {'anonymize_ip': true, 'client_storage': 'none', 'client_id': '${window['gtagClientID']}'});
+    window.gtag('consent', 'default', {'ad_storage': 'denied','analytics_storage': 'denied'});
+    window.gtag('js', new Date());
+  `
+  const script = document.createElement('script');
+  script.type = 'text/partytown';
+  script.innerHTML = gScript;
+  document.head.appendChild(script);
+  window.dispatchEvent(new CustomEvent('ptupdate'));
+</script>
