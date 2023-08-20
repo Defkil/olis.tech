@@ -6,6 +6,7 @@ import { categories } from "../const/categories";
 export const postSchemaDefault = z.object({
   title: z.string(),
   description: z.string(),
+  keywords: z.string().array().optional(),
   image: z.string().url(),
   imageAlt: z.string(),
   publishDate: z.date(),
