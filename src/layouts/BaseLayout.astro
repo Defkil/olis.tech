@@ -8,19 +8,19 @@ import Footer from "../components/footer/Footer.astro";
 import {styles} from "../const/styles";
 import WaveSeparator from "../components/WaveSeparator.astro";
 
-const { title, description } = Astro.props
+const { title, description, keywords } = Astro.props
 ---
 
 <html lang="de">
 <head>
-  <Head title={title} description={description} />
+  <Head title={title} description={description} keywords={keywords} />
   <style is:global>
     @import "./components/Fonts.scss";
   </style>
 </head>
 <body>
 <PreloadSvg />
-<Header />
+<Header description={description} />
 <div class="content">
     <main>
       <div class="content__inner">
