@@ -8,6 +8,8 @@ import { visualizer } from "rollup-plugin-visualizer";
 import { SITE_LINK } from "./src/const/data";
 import swup, { Theme } from "@swup/astro";
 
+import partytown from "@astrojs/partytown";
+
 // https://astro.build/config
 export default defineConfig({
   site: SITE_LINK,
@@ -22,10 +24,19 @@ export default defineConfig({
     rome(),
     critters(),
     compressor(),
-    compress({ CSS: false }),
+    compress({
+      CSS: false,
+    }),
+    partytown({ config: { forward: ["dataLayer.push"] } }),
   ],
   vite: {
-    plugins: [visualizer({ filename: "./dist/_astro/stats.html", gzipSize: true, brotliSize: true }) as any],
+    plugins: [
+      visualizer({
+        filename: "./dist/_astro/stats.html",
+        gzipSize: true,
+        brotliSize: true,
+      }) as any,
+    ],
     build: {
       rollupOptions: {
         treeshake: true,
