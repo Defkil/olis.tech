@@ -21,7 +21,6 @@
     "@fontsource-variable/outfit": "^5.0.8",
     "@fontsource-variable/space-grotesk": "^5.0.8",
     "@fontsource/righteous": "^5.0.9",
-    "@jop-software/astro-matomo": "^1.1.0",
     "@swup/astro": "^1.2.0",
     "astro": "3.0.0-beta.2",
     "astro-compress": "^2.0.14",
