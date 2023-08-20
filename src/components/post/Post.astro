@@ -7,7 +7,6 @@ const {post, bigWindow}: {
 } = Astro.props
 
 const isBigWindow = bigWindow || false
-
 if (!post) {
   throw new Error('PostWindow: post is undefined')
 }
@@ -23,10 +22,16 @@ if (!post) {
     </post-transformer>
     )}
   {bigWindow && (
-    <PostWindow post={post} bigWindow={isBigWindow}>
-      <span slot="title"><slot name="title"/></span>
-      <slot/>
-    </PostWindow>
+    <div class="post-wrapper">
+      <PostWindow post={post} bigWindow={isBigWindow}>
+        <span slot="title"><slot name="title"/></span>
+        <slot/>
+      </PostWindow>
+      <div class="from-category">
+        Gepostet in
+        <a href={post.categoryLink}>{post.category}</a>
+      </div>
+    </div>
   )}
 </div>
 
