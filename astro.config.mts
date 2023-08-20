@@ -8,8 +8,6 @@ import { visualizer } from "rollup-plugin-visualizer";
 import { SITE_LINK } from "./src/const/data";
 import swup, { Theme } from "@swup/astro";
 
-import partytown from "@astrojs/partytown";
-
 // https://astro.build/config
 export default defineConfig({
   site: SITE_LINK,
@@ -27,7 +25,6 @@ export default defineConfig({
     compress({
       CSS: false,
     }),
-    partytown({}),
   ],
   vite: {
     plugins: [
