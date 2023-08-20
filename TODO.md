@@ -5,6 +5,9 @@
 - Analytics with Partytown ( https://docs.astro.build/en/guides/integrations-guide/partytown/ oder https://swup.js.org/plugins/google-analytics-plugin/ )
 - SEO ( https://github.com/jonasmerlin/astro-seo#readme )
 - Scroll Balken färben
+- 404 Page
+- Keywords für Static Seiten
+- keywords für Kategorien
 
 ## Performance
 > Features die die Performance verbessern sollten
@@ -14,6 +17,7 @@
 - Pre commit Hook mit rome & stylelint & spellcheck
 - Separator unter dem Content spiegeln, damit die Animation besser aussieht
 - STRG + K Zeichen am Inputfeld
+- Uhrzeit Anzeige zum erstellen von Posts, aktuell -> https://www.timestamp-converter.com/
 
 ## Problemkinder
 > Features die beim Versuch zu viel Zeit verbrannt habenAthletic Greens 
