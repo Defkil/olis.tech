@@ -21,9 +21,7 @@ if (!post) {
       <div class="window__dot"></div>
     </div>
   </div>
-  <h1 class="window__header-title">
-    <slot name="title" />
-  </h1>
+
   <div class="window__image-container" class:list={[{'window__image-container--big': bigWindow}]}>
     <img class="window__image" loading="lazy" src={post.image} alt={post.imageAlt}>
   </div>
@@ -39,6 +37,9 @@ if (!post) {
     </div>
   )}
   {isBigWindow && (
+    <h1 class="window__header-title">
+      <slot name="title" />
+    </h1>
     <div class="window__slot">
       <slot/>
     </div>
