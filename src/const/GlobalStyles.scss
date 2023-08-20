@@ -89,3 +89,14 @@ img {
     scroll-behavior: smooth;
   }
 }
+
+/* Blog Posts */
+p {
+  padding: $spacing-04 0;
+}
+
+hr {
+  margin: $spacing-06 0;
+  border: none;
+  border-top: $spacing-border solid #000;
+}
