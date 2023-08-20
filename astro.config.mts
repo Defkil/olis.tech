@@ -27,7 +27,7 @@ export default defineConfig({
     compress({
       CSS: false,
     }),
-    partytown({ config: { forward: ["dataLayer.push", "gtag"] } }),
+    partytown({}),
   ],
   vite: {
     plugins: [
