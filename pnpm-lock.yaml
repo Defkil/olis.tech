@@ -26,6 +26,9 @@ dependencies:
   '@fontsource/righteous':
     specifier: ^5.0.9
     version: 5.0.9
+  '@jop-software/astro-matomo':
+    specifier: ^1.1.0
+    version: 1.1.0
   '@swup/astro':
     specifier: ^1.2.0
     version: 1.2.0
@@ -1849,6 +1852,10 @@ packages:
 
   /@fontsource/righteous@5.0.9:
     resolution: {integrity: sha512-GESCC2QefJanZwAKfXA8oRwjK5+Hkpn0uKQOh2gr4LfFpmEuAnXSCDw8xlfxagGGuUfEh0byrlni8mJw+qtw+Q==}
+    dev: false
+
+  /@jop-software/astro-matomo@1.1.0:
+    resolution: {integrity: sha512-yke+4cGqtp7cN/iY0jiEkIRgU7TpmS7cKd9VPOrcoRo8p3pdXCumHfKvLCMNtqlQ3AYUn9GW+BRvoNQJUpMTaA==}
     dev: false
 
   /@jridgewell/gen-mapping@0.3.3:

@@ -2,7 +2,6 @@
 
 ## Vor dem Release
 > Features die vor dem Release fertig sein sollten
-- Analytics with Partytown ( https://docs.astro.build/en/guides/integrations-guide/partytown/ oder https://swup.js.org/plugins/google-analytics-plugin/ )
 - SEO ( https://github.com/jonasmerlin/astro-seo#readme )
 - Scroll Balken färben
 - 404 Page

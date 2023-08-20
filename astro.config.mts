@@ -7,6 +7,8 @@ import compressor from "astro-compressor";
 import { visualizer } from "rollup-plugin-visualizer";
 import { SITE_LINK } from "./src/const/data";
 import swup, { Theme } from "@swup/astro";
+// @ts-ignore
+import matomo from "@jop-software/astro-matomo";
 
 // https://astro.build/config
 export default defineConfig({
@@ -21,6 +23,10 @@ export default defineConfig({
     sitemap(),
     rome(),
     critters(),
+    matomo({
+      baseUrl: "https://1bx.de/",
+      siteId: 2,
+    }),
     compressor(),
     compress({
       CSS: false,
