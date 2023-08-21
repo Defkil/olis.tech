@@ -27,8 +27,8 @@ dependencies:
     specifier: ^5.0.9
     version: 5.0.9
   '@swup/astro':
-    specifier: ^1.2.0
-    version: 1.2.0
+    specifier: ^1.2.1
+    version: 1.2.1
   astro:
     specifier: 3.0.0-beta.2
     version: 3.0.0-beta.2(sass@1.66.1)(typescript@5.1.6)
@@ -2114,8 +2114,8 @@ packages:
       - ts-node
     dev: false
 
-  /@swup/astro@1.2.0:
-    resolution: {integrity: sha512-ewo+MHOmibxemu8+VbaqEm+VvpV3DaaiFIo7S1J/YGfrxTKbjJjmh2Is5k15qMp0xrkfKAQhVU9rWpxiiOvWDw==}
+  /@swup/astro@1.2.1:
+    resolution: {integrity: sha512-NfjoJuhDJ+3xwYto0XBZLnOJ7C/6SKUt6D7AjZDK6dK+WS2FPQ7zh5dcn0p8EXYXp9h1oNB6JHBqcO+4LHFbuw==}
     dependencies:
       '@swup/a11y-plugin': 4.1.1(swup@4.3.1)
       '@swup/body-class-plugin': 3.1.1(swup@4.3.1)
