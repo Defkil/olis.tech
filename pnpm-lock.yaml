@@ -30,8 +30,8 @@ dependencies:
     specifier: ^1.2.1
     version: 1.2.1
   astro:
-    specifier: 3.0.0-beta.4
-    version: 3.0.0-beta.4(sass@1.66.1)
+    specifier: 3.0.0-rc.5
+    version: 3.0.0-rc.5(sass@1.66.1)
   astro-compress:
     specifier: ^2.0.14
     version: 2.0.14
@@ -233,21 +233,21 @@ packages:
       '@jridgewell/trace-mapping': 0.3.19
     dev: false
 
-  /@astrojs/compiler@1.8.2:
-    resolution: {integrity: sha512-o/ObKgtMzl8SlpIdzaxFnt7SATKPxu4oIP/1NL+HDJRzxfJcAkOTAb/ZKMRyULbz4q+1t2/DAebs2Z1QairkZw==}
+  /@astrojs/compiler@2.0.0:
+    resolution: {integrity: sha512-SKVWorXpOHff+OuZCd5kdTc5HxVX7bVXVXYP0jANT4crz7y2PdthUxMnE21iuYt4+Bq3aV5MId4OdgwlJ2/d/Q==}
     dev: false
 
-  /@astrojs/internal-helpers@0.2.0-beta.1:
-    resolution: {integrity: sha512-hqeB0lAtqYy3pDI1wSNMfAAGoDIFDF8qiKZMflWiCDwvBxYBBAe26nh9llJTxtT3ycuQAUrGLK5JyI2XQMxfyg==}
+  /@astrojs/internal-helpers@0.2.0-rc.2:
+    resolution: {integrity: sha512-4I7o+g+luVrzsEUXsaB/TKIFE76mIKaBQvH8djPwCfJZN/GlgxcfpomgUbZGWUjUGwda1KxcHIeJIxfEv8BwSw==}
     dev: false
 
-  /@astrojs/markdown-remark@3.0.0-beta.0(astro@3.0.0-beta.4):
-    resolution: {integrity: sha512-9AmoETKJzPvwcCCsWhxY97jkhJ3GDlITnjCj4IifedQkYml1smwInuYZRVco8kpybvThmZV8XsuCNpBhMmWJ/Q==}
+  /@astrojs/markdown-remark@3.0.0-rc.1(astro@3.0.0-rc.5):
+    resolution: {integrity: sha512-zgfwa+2lyBGoawOu1TqqIrv2DEEpviItsnc/Lqjl8/qBa5MdBwdQyjO0z3mLGQU41MHV0Gu51GPrPq6XzVNbHg==}
     peerDependencies:
-      astro: ^3.0.0-beta.0
+      astro: ^3.0.0-rc.5
     dependencies:
-      '@astrojs/prism': 3.0.0-beta.0
-      astro: 3.0.0-beta.4(sass@1.66.1)
+      '@astrojs/prism': 3.0.0-rc.1
+      astro: 3.0.0-rc.5(sass@1.66.1)
       github-slugger: 1.5.0
       import-meta-resolve: 2.2.2
       rehype-raw: 6.1.1
@@ -264,8 +264,8 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/prism@3.0.0-beta.0:
-    resolution: {integrity: sha512-ZAPhCxhiFOyoHSf9ZXZB/cjZ+nX2crJhmGLLR8NnXwZcmMRYdkKfjnD2GrjQNPvI0lHFO42yjC4vty2heJNBlg==}
+  /@astrojs/prism@3.0.0-rc.1:
+    resolution: {integrity: sha512-LxIU3gb/WQ79mIO35jTbuBa+GEAj+qnJA+YEgGdyGd4nRPoVb59PxU259HKvtYkudWov8HCeZo175vfYdnOxdg==}
     engines: {node: '>=18.14.1'}
     dependencies:
       prismjs: 1.29.0
@@ -285,8 +285,8 @@ packages:
       zod: 3.22.2
     dev: false
 
-  /@astrojs/telemetry@3.0.0-beta.2:
-    resolution: {integrity: sha512-HFWQ/uUWPwK/s3LgT/5j3v1nU28bYMpfcUSBrIENLwaQfjNRga2q54CkSXD8tecZLk17MoiNte4dqu67PrIZZQ==}
+  /@astrojs/telemetry@3.0.0-rc.3:
+    resolution: {integrity: sha512-SQKwBAFB4M83wJYt22yLDHeri8WU9E+sLa2/UMdJ8buSTh0+EOK5m1cLBNjRrX1vs3jWG9v00s/qw8o3eYw4Uw==}
     engines: {node: '>=18.14.1'}
     dependencies:
       ci-info: 3.8.0
@@ -2682,15 +2682,15 @@ packages:
       - '@rometools/wasm-web'
     dev: false
 
-  /astro@3.0.0-beta.4(sass@1.66.1):
-    resolution: {integrity: sha512-/Nt1RTYmbWbxrBs9yhbJmqByiZ5rx8fKEVn9gz2zmIUPEXpUGcOhlIvm69MRjll3NTAs9GSiwTHapN5hEIcmoQ==}
+  /astro@3.0.0-rc.5(sass@1.66.1):
+    resolution: {integrity: sha512-HWT32Pk08xGXPWlOVKRw/jr4c5HcDYhiGowo1ZBfy5zz/hjcUfQmQKUqpEKM7wrZkh1R/myHh7Hg1qrOO13oZA==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
     dependencies:
-      '@astrojs/compiler': 1.8.2
-      '@astrojs/internal-helpers': 0.2.0-beta.1
-      '@astrojs/markdown-remark': 3.0.0-beta.0(astro@3.0.0-beta.4)
-      '@astrojs/telemetry': 3.0.0-beta.2
+      '@astrojs/compiler': 2.0.0
+      '@astrojs/internal-helpers': 0.2.0-rc.2
+      '@astrojs/markdown-remark': 3.0.0-rc.1(astro@3.0.0-rc.5)
+      '@astrojs/telemetry': 3.0.0-rc.3
       '@babel/core': 7.22.10
       '@babel/generator': 7.22.10
       '@babel/parser': 7.22.10
@@ -2702,6 +2702,7 @@ packages:
       boxen: 6.2.1
       chokidar: 3.5.3
       ci-info: 3.8.0
+      clsx: 2.0.0
       common-ancestor-path: 1.0.1
       cookie: 0.5.0
       debug: 4.3.4
@@ -3116,6 +3117,11 @@ packages:
   /clone@1.0.4:
     resolution: {integrity: sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg==}
     engines: {node: '>=0.8'}
+    dev: false
+
+  /clsx@2.0.0:
+    resolution: {integrity: sha512-rQ1+kcj+ttHG0MKVGBUXwayCCF1oh39BF5COIpRzuCEv8Mwjv0XucrI2ExNTOn9IlLifGClWQcU9BrZORvtw6Q==}
+    engines: {node: '>=6'}
     dev: false
 
   /color-convert@1.9.3:
