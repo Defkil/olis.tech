@@ -100,3 +100,26 @@ hr {
   border: none;
   border-top: $spacing-border solid #000;
 }
+
+/* masonry */
+.masonry {
+  display: flex;
+  gap: 24px;
+}
+
+.masonry__column {
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: column;
+  gap: 24px;
+
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.hidden {
+  position: absolute;
+  top: -10000px;
+  right: 0;
+  display: flex;
+}
