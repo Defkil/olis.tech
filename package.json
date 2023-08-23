@@ -14,7 +14,6 @@
     "test": "playwright test --ui"
   },
   "dependencies": {
-    "@astrojs/image": "^0.17.3",
     "@astrojs/rss": "^2.4.4",
     "@astrojs/sitemap": "^2.0.2",
     "@docsearch/css": "^3.5.2",
