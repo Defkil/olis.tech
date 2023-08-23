@@ -7,6 +7,7 @@ import compressor from "astro-compressor";
 import { visualizer } from "rollup-plugin-visualizer";
 import { SITE_LINK } from "./src/const/data";
 import swup, { Theme } from "@swup/astro";
+import image from "@astrojs/image";
 
 // https://astro.build/config
 export default defineConfig({
@@ -25,6 +26,7 @@ export default defineConfig({
     compress({
       CSS: false,
     }),
+    image(),
   ],
   vite: {
     plugins: [
