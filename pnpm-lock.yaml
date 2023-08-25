@@ -27,8 +27,8 @@ dependencies:
     specifier: ^5.0.9
     version: 5.0.9
   '@swup/astro':
-    specifier: ^1.2.1
-    version: 1.2.1
+    specifier: ^1.3.0
+    version: 1.3.0
   astro:
     specifier: 3.0.0-rc.5
     version: 3.0.0-rc.5(sass@1.66.1)
@@ -2118,8 +2118,8 @@ packages:
       - ts-node
     dev: false
 
-  /@swup/astro@1.2.1:
-    resolution: {integrity: sha512-NfjoJuhDJ+3xwYto0XBZLnOJ7C/6SKUt6D7AjZDK6dK+WS2FPQ7zh5dcn0p8EXYXp9h1oNB6JHBqcO+4LHFbuw==}
+  /@swup/astro@1.3.0:
+    resolution: {integrity: sha512-tjbz7x8tLimDjxJJRPqjg1b3NAJEUCn4Uq/gzlrKASAUw+UET0A5vqMk2Pt3VncUi0M68X5CqKABlcIcJVgyuw==}
     dependencies:
       '@swup/a11y-plugin': 4.2.0(swup@4.3.3)
       '@swup/body-class-plugin': 3.1.1(swup@4.3.3)
@@ -2136,6 +2136,7 @@ packages:
       '@swup/scroll-plugin': 3.3.0(swup@4.3.3)
       '@swup/slide-theme': 2.0.0(swup@4.3.3)
       swup: 4.3.3
+      swup-morph-plugin: 1.1.1(swup@4.3.3)
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
@@ -5401,6 +5402,10 @@ packages:
     resolution: {integrity: sha512-gKLcREMhtuZRwRAfqP3RFW+TK4JqApVBtOIftVgjuABpAtpxhPGaDcfvbhNvD0B8iD1oUr/txX35NjcaY6Ns/A==}
     dev: false
 
+  /morphdom@2.7.0:
+    resolution: {integrity: sha512-8L8DwbdjjWwM/aNqj7BSoSn4G7SQLNiDcxCnMWbf506jojR6lNQ5YOmQqXEIE8u3C492UlkN4d0hQwz97+M1oQ==}
+    dev: false
+
   /mri@1.2.0:
     resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
     engines: {node: '>=4'}
@@ -7317,6 +7322,20 @@ packages:
       css-tree: 2.3.1
       csso: 5.0.5
       picocolors: 1.0.0
+    dev: false
+
+  /swup-morph-plugin@1.1.1(swup@4.3.3):
+    resolution: {integrity: sha512-1XEHa2J58nyTaLFhi8iruNxgRMRuz3iephaW8v66D7wrbtgiAUS3RWnZ/fpQgJRFi4Hq6rJ2GiDuuG6yZLwpPA==}
+    peerDependencies:
+      swup: ^4.0.0
+    dependencies:
+      '@swup/plugin': 3.0.0
+      morphdom: 2.7.0
+      swup: 4.3.3
+    transitivePeerDependencies:
+      - '@types/babel__core'
+      - supports-color
+      - ts-node
     dev: false
 
   /swup@4.3.3:
