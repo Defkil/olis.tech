@@ -1,4 +1,4 @@
-import { defineConfig } from "astro/config";
+import { defineConfig, sharpImageService } from "astro/config";
 import compress from "astro-compress";
 import sitemap from "@astrojs/sitemap";
 import rome from "astro-rome";
@@ -49,5 +49,8 @@ export default defineConfig({
         },
       },
     },
+  },
+  image: {
+    service: sharpImageService(),
   },
 });
