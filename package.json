@@ -32,7 +32,7 @@
     "share-api-polyfill": "^1.1.1"
   },
   "devDependencies": {
-    "@namics/stylelint-bem": "^8.1.0",
+    "@namics/stylelint-bem": "^9.0.0",
     "@playwright/test": "^1.37.1",
     "@types/probe-image-size": "^7.2.0",
     "postcss-html": "^1.5.0",

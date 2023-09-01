@@ -56,8 +56,8 @@ dependencies:
 
 devDependencies:
   '@namics/stylelint-bem':
-    specifier: ^8.1.0
-    version: 8.1.0(stylelint@15.10.3)
+    specifier: ^9.0.0
+    version: 9.0.0(stylelint@15.10.3)
   '@playwright/test':
     specifier: ^1.37.1
     version: 1.37.1
@@ -1889,13 +1889,13 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: false
 
-  /@namics/stylelint-bem@8.1.0(stylelint@15.10.3):
-    resolution: {integrity: sha512-lVK6mqAD1WjKwtXW4pZ/V7T3TM3WFG+aqYtAxqYLp7et3Rm5Tu3JoXYhA63HE4t467XOJTK+K2foIzYz42j69w==}
-    engines: {node: '>=14'}
+  /@namics/stylelint-bem@9.0.0(stylelint@15.10.3):
+    resolution: {integrity: sha512-fjEykSt5jZYo4wy4dFwqvxNz0a5yyvZa/rxpLM0kxv8y8cKKB3kBCi8XM1okMz9wHeIIg+M4vLZVg7CrlKyQdQ==}
+    engines: {node: '>=16'}
     peerDependencies:
       stylelint: '>=7.0.0 <16.0.0'
     dependencies:
-      css-selector-classes: 0.1.2
+      css-selector-parser: 2.3.2
       postcss-resolve-nested-selector: 0.1.1
       stylelint: 15.10.3
     dev: true
@@ -2618,11 +2618,6 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /array-uniq@1.0.3:
-    resolution: {integrity: sha512-MNha4BWQ6JbwhFhj03YK552f7cb3AzoE8SzeljgChvL1dl3IcvggXVz1DilzySZkCja+CXuZbdW7yATchWn8/Q==}
-    engines: {node: '>=0.10.0'}
-    dev: true
-
   /arraybuffer.prototype.slice@1.0.1:
     resolution: {integrity: sha512-09x0ZWFEjj4WD8PDbykUwo3t9arLn8NIzmmYEJFpYekOAQjpkGSyrQhNoRTcwwcFRu+ycWF78QZ63oWTqSjBcw==}
     engines: {node: '>= 0.4'}
@@ -3286,17 +3281,8 @@ packages:
       nth-check: 2.1.1
     dev: false
 
-  /css-selector-classes@0.1.2:
-    resolution: {integrity: sha512-I9BqkJUoQgd//YQfRKpk+ohVJBa1TnJjcbHGNdAy8mfrzUMpTkFDEIMQNkn8hiV1soBFGqBQcxJRoh81XhAVYw==}
-    engines: {node: '>=0.10.0'}
-    dependencies:
-      array-uniq: 1.0.3
-      css-selector-parser: 1.0.4
-    dev: true
-
-  /css-selector-parser@1.0.4:
-    resolution: {integrity: sha512-hu4/RJPZaghwTY/B7PpCt2s1Vq8qzT4UYhi279u4MB8TADfbpR3V3M9m4AnUVleQsrVkPqe/dGLbzxi4GgTg2A==}
-    engines: {'0': node >= 0.4.0}
+  /css-selector-parser@2.3.2:
+    resolution: {integrity: sha512-JjnG6/pdLJh3iqipq7kteNVtbIczsU2A1cNxb+VAiniSuNmrB/NI3us4rSCfArvlwRXYly+jZhUUfEoInSH9Qg==}
     dev: true
 
   /css-tree@1.1.3:
