@@ -28,7 +28,7 @@
     "astro-critters": "^2.0.11",
     "astro-rome": "^2.0.9",
     "probe-image-size": "^7.2.3",
-    "sass": "^1.66.1",
+    "sass": "^1.67.0",
     "share-api-polyfill": "^1.1.1",
     "sharp": "^0.32.5"
   },
