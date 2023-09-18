@@ -2322,7 +2322,7 @@ packages:
       '@swup/body-class-plugin': 3.1.1(swup@4.3.4)
       '@swup/debug-plugin': 4.0.1(swup@4.3.4)
       '@swup/fade-theme': 2.0.0(swup@4.3.4)
-      '@swup/forms-plugin': 3.3.0(swup@4.3.4)
+      '@swup/forms-plugin': 3.4.0(swup@4.3.4)
       '@swup/head-plugin': 2.1.1(swup@4.3.4)
       '@swup/overlay-theme': 2.0.0(swup@4.3.4)
       '@swup/parallel-plugin': 0.1.1(swup@4.3.4)
@@ -2384,8 +2384,8 @@ packages:
       - ts-node
     dev: false
 
-  /@swup/forms-plugin@3.3.0(swup@4.3.4):
-    resolution: {integrity: sha512-dKSVOuUe5cDXdSFteu8Pm9x3hfr1+Qaa3NvAQEkxDfCmsfE3RTswiVXdvBDf2QE2ATfAsuSk4ZSh8FssUOekdw==}
+  /@swup/forms-plugin@3.4.0(swup@4.3.4):
+    resolution: {integrity: sha512-gTpIgvSiOWvjyG3jXqH7xU7tstglf2QLkRM4MdqCwhj2TPwUduOzOK/u03VbSfFRsOnQ7Ku55CQF0qRYew+pqg==}
     peerDependencies:
       swup: ^4.0.0
     dependencies:
@@ -2982,7 +2982,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.21.10
-      caniuse-lite: 1.0.30001534
+      caniuse-lite: 1.0.30001535
       fraction.js: 4.3.6
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -3141,7 +3141,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001534
+      caniuse-lite: 1.0.30001535
       electron-to-chromium: 1.4.523
       node-releases: 2.0.13
       update-browserslist-db: 1.0.11(browserslist@4.21.10)
@@ -3218,13 +3218,13 @@ packages:
     resolution: {integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==}
     dependencies:
       browserslist: 4.21.10
-      caniuse-lite: 1.0.30001534
+      caniuse-lite: 1.0.30001535
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
     dev: false
 
-  /caniuse-lite@1.0.30001534:
-    resolution: {integrity: sha512-vlPVrhsCS7XaSh2VvWluIQEzVhefrUQcEsQWSS5A5V+dM07uv1qHeQzAOTGIMy9i3e9bH15+muvI/UHojVgS/Q==}
+  /caniuse-lite@1.0.30001535:
+    resolution: {integrity: sha512-48jLyUkiWFfhm/afF7cQPqPjaUmSraEhK4j+FCTJpgnGGEZHqyLe3hmWH7lIooZdSzXL0ReMvHz0vKDoTBsrwg==}
     dev: false
 
   /ccount@2.0.1:
