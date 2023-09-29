@@ -36,8 +36,8 @@ dependencies:
     specifier: ^2.0.15
     version: 2.0.15
   astro-compressor:
-    specifier: ^0.4.0
-    version: 0.4.0
+    specifier: ^0.4.1
+    version: 0.4.1
   astro-critters:
     specifier: ^2.0.11
     version: 2.0.11
@@ -2841,8 +2841,8 @@ packages:
       terser: 5.19.3
     dev: false
 
-  /astro-compressor@0.4.0:
-    resolution: {integrity: sha512-yw6wM+cjkdyAMc6HW2lrdinOxt64PwQuL5NCAe71cXF/5xjnyJhgg9nyyFE32oQtmtd5I/57Pyp/kPe9IfYAxg==}
+  /astro-compressor@0.4.1:
+    resolution: {integrity: sha512-IAgYAlxYRMolaptsFB9quH7RxX4eUeC4UfULCPhT+ILcg7m1kbaxuyUKqGg9Hh+KZ+FNPPDAz7DqUfl+HDWhQg==}
     dev: false
 
   /astro-critters@2.0.11:
