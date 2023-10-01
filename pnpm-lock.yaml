@@ -24,8 +24,8 @@ dependencies:
     specifier: ^5.0.8
     version: 5.0.8
   '@fontsource/righteous':
-    specifier: ^5.0.12
-    version: 5.0.12
+    specifier: ^5.0.13
+    version: 5.0.13
   '@swup/astro':
     specifier: ^1.3.2
     version: 1.3.2
@@ -1612,7 +1612,7 @@ packages:
     resolution: {integrity: sha512-p1YFTCDflk8ieHgFJYfmyHBki1D61+U9idwrLh+GQQMrBSP3DLGKpy0XUJtPjAOPltcVbqsTjiPFfH7JImjUNg==}
     dependencies:
       '@docsearch/react': 3.5.2(@algolia/client-search@4.20.0)(search-insights@2.8.3)
-      preact: 10.18.0
+      preact: 10.18.1
     transitivePeerDependencies:
       - '@algolia/client-search'
       - '@types/react'
@@ -2051,8 +2051,8 @@ packages:
     resolution: {integrity: sha512-vrj5WdSqVpQGqOug8hEWvgvnXq2Hsc63LKXHGYRA9lGJhYbru0WQKH3EEei97DkAUdgBOn/NKQpfbUS0V35Kgw==}
     dev: false
 
-  /@fontsource/righteous@5.0.12:
-    resolution: {integrity: sha512-6nam83INwnzZJTrMi40bIT9Oo2BJf3JX0xJ8hP6MCHnAb15l06NHxDsJxMnl0kyOjbeWLXG4Ub0PC3QCvPuSvg==}
+  /@fontsource/righteous@5.0.13:
+    resolution: {integrity: sha512-qOpXxWrA1hzrYWXeHVXZt+a57HrOK21Z7RJNIKuGfFnNGiZfk7HerCdp7IrEXkI7Dnu1Z3eSyKN0AgEdyyxPJw==}
     dev: false
 
   /@jridgewell/gen-mapping@0.3.3:
@@ -2621,7 +2621,7 @@ packages:
   /@types/needle@3.2.1:
     resolution: {integrity: sha512-RETMl27VIoMo/HfT3UzizZHB0nYa5oOTrTHtDsTqBF1V8UpFVZyItRlxThI3QeyBLWplCZRn6BLj4OaIpCLjgg==}
     dependencies:
-      '@types/node': 20.7.2
+      '@types/node': 20.8.0
     dev: true
 
   /@types/nlcst@1.0.2:
@@ -2642,8 +2642,8 @@ packages:
     resolution: {integrity: sha512-dP7f3LdZIysZnmvP3ANJYTSwg+wLLl8p7RqniVlV7j+oXSXAbt9h0WIBFmJy5inWZoX9wZN6eXx+YXd9Rh3RBA==}
     dev: false
 
-  /@types/node@20.7.2:
-    resolution: {integrity: sha512-RcdC3hOBOauLP+r/kRt27NrByYtDjsXyAuSbR87O6xpsvi763WI+5fbSIvYJrXnt9w4RuxhV6eAXfIs7aaf/FQ==}
+  /@types/node@20.8.0:
+    resolution: {integrity: sha512-LzcWltT83s1bthcvjBmiBvGJiiUe84NWRHkw+ZV6Fr41z2FbIzvc815dk2nQ3RAKMuN2fkenM/z3Xv2QzEpYxQ==}
 
   /@types/normalize-package-data@2.4.2:
     resolution: {integrity: sha512-lqa4UEhhv/2sjjIQgjX8B+RBjj47eo0mzGasklVJ78UKGQY1r0VpB9XHDaZZO9qzEFDdy4MrXLuEaSmPrPSe/A==}
@@ -2661,13 +2661,13 @@ packages:
     resolution: {integrity: sha512-TrcjYgMlJbzUWs8XW2TrgxJ4yzJucRQcCQdE3jGUOFBGbDlvdumiQdxNgZ8saofLWiuEXRZUjY1z1ZkeWNq52A==}
     dependencies:
       '@types/needle': 3.2.1
-      '@types/node': 20.7.2
+      '@types/node': 20.8.0
     dev: true
 
   /@types/resolve@1.17.1:
     resolution: {integrity: sha512-yy7HuzQhj0dhGpD8RLXSZWEkLsV9ibvxvi6EiJ3bkqLAO1RGo0WbkWQiwpRlSFymTJRz0d3k5LM3kkx8ArDbLw==}
     dependencies:
-      '@types/node': 20.7.2
+      '@types/node': 20.8.0
     dev: false
 
   /@types/resolve@1.20.3:
@@ -4887,7 +4887,7 @@ packages:
     resolution: {integrity: sha512-KWYVV1c4i+jbMpaBC+U++4Va0cp8OisU185o73T1vo99hqi7w8tSJfUXYswwqqrjzwxa6KpRK54WhPvwf5w6PQ==}
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/node': 20.7.2
+      '@types/node': 20.8.0
       merge-stream: 2.0.0
       supports-color: 7.2.0
     dev: false
@@ -6425,8 +6425,8 @@ packages:
       picocolors: 1.0.0
       source-map-js: 1.0.2
 
-  /preact@10.18.0:
-    resolution: {integrity: sha512-O4dGFmErPd3RNVDvXmCbOW6hetnve6vYtjx5qf51mCUmBS96s66MrNQkEII5UThDGoNF7953ptA+aNupiDxVeg==}
+  /preact@10.18.1:
+    resolution: {integrity: sha512-mKUD7RRkQQM6s7Rkmi7IFkoEHjuFqRQUaXamO61E6Nn7vqF/bo7EZCmSyrUnp2UWHw0O7XjZ2eeXis+m7tf4lg==}
     dev: false
 
   /prebuild-install@7.1.1:
