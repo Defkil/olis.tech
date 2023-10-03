@@ -24,14 +24,14 @@ dependencies:
     specifier: ^5.0.12
     version: 5.0.12
   '@fontsource/righteous':
-    specifier: ^5.0.13
-    version: 5.0.13
+    specifier: ^5.0.14
+    version: 5.0.14
   '@swup/astro':
     specifier: ^1.3.2
     version: 1.3.2
   astro:
-    specifier: 3.2.1
-    version: 3.2.1(sass@1.68.0)
+    specifier: 3.2.2
+    version: 3.2.2(sass@1.68.0)
   astro-compress:
     specifier: ^2.0.15
     version: 2.0.15
@@ -244,13 +244,13 @@ packages:
     resolution: {integrity: sha512-NQ4ppp1CM0HNkKbJNM4saVSfmUYzGlRalF6wx7F6T/MYHYSWGuojY89/oFTy4t8VlOGUCUijlsVNNeziWaUo5g==}
     dev: false
 
-  /@astrojs/markdown-remark@3.2.0(astro@3.2.1):
+  /@astrojs/markdown-remark@3.2.0(astro@3.2.2):
     resolution: {integrity: sha512-jigyLfefUZPKgVmmraCkVpdUuFH1R3SrpgQO13axsgwLDBgkggaQpNR5Ag4O9PDualeBtbdt30aYSfvnBKx9Hg==}
     peerDependencies:
       astro: ^3.1.0
     dependencies:
       '@astrojs/prism': 3.0.0
-      astro: 3.2.1(sass@1.68.0)
+      astro: 3.2.2(sass@1.68.0)
       github-slugger: 2.0.0
       import-meta-resolve: 3.0.0
       mdast-util-definitions: 6.0.0
@@ -2056,8 +2056,8 @@ packages:
     resolution: {integrity: sha512-pouhUiSqFGo5D6+/UFYVqEBU7ucM0L06txaxJi44BA+MEOvMBNGHhrApbQC9uZjAWpgdznz47fy095kQhctOgA==}
     dev: false
 
-  /@fontsource/righteous@5.0.13:
-    resolution: {integrity: sha512-qOpXxWrA1hzrYWXeHVXZt+a57HrOK21Z7RJNIKuGfFnNGiZfk7HerCdp7IrEXkI7Dnu1Z3eSyKN0AgEdyyxPJw==}
+  /@fontsource/righteous@5.0.14:
+    resolution: {integrity: sha512-wlJ2r02jL8l9ncwKO5kKwJ2Q4JwNgk0/fH091CJVTX5TvY14QMBRba9xvLcRYUZ/wuEzgYo7MvY750Bog7TeOQ==}
     dev: false
 
   /@jridgewell/gen-mapping@0.3.3:
@@ -2871,14 +2871,14 @@ packages:
       - '@rometools/wasm-web'
     dev: false
 
-  /astro@3.2.1(sass@1.68.0):
-    resolution: {integrity: sha512-idPwpMSdFg8wuS9HVkefDcbRdKpCkQzZGeKw3XO6enLcCv6ZvACRdWgl9xhM/N3RO4AOzrnJPAk1cbYcP3FdNQ==}
+  /astro@3.2.2(sass@1.68.0):
+    resolution: {integrity: sha512-vLOOGyD2g1HRkCQAFHmHUrVAbMI5sgUqKignBMtXNantgEq1P17sL2cvH0Yy2ibNN9DHZ/4TknXmwHAig8PJNg==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
     dependencies:
       '@astrojs/compiler': 2.1.0
       '@astrojs/internal-helpers': 0.2.0
-      '@astrojs/markdown-remark': 3.2.0(astro@3.2.1)
+      '@astrojs/markdown-remark': 3.2.0(astro@3.2.2)
       '@astrojs/telemetry': 3.0.2
       '@babel/core': 7.23.0
       '@babel/generator': 7.23.0
