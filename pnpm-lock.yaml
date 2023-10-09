@@ -21,8 +21,8 @@ dependencies:
     specifier: ^5.0.8
     version: 5.0.8
   '@fontsource-variable/space-grotesk':
-    specifier: ^5.0.12
-    version: 5.0.12
+    specifier: ^5.0.13
+    version: 5.0.13
   '@fontsource/righteous':
     specifier: ^5.0.15
     version: 5.0.15
@@ -2046,8 +2046,8 @@ packages:
     resolution: {integrity: sha512-j4JHCbuk2+Nl7PwTVT+RJKTDMDw7TWWt/85CIucD7KvOS7Iv0IiymE5ur21/aFbTwamOHrXX91WrQZHN7QDrmw==}
     dev: false
 
-  /@fontsource-variable/space-grotesk@5.0.12:
-    resolution: {integrity: sha512-pouhUiSqFGo5D6+/UFYVqEBU7ucM0L06txaxJi44BA+MEOvMBNGHhrApbQC9uZjAWpgdznz47fy095kQhctOgA==}
+  /@fontsource-variable/space-grotesk@5.0.13:
+    resolution: {integrity: sha512-XZzmOrO30wUG7fIOM9Fl6y+FHOA8KZOSSa4PkcHUseX/mt6nmPStTD1WhE9JcDVrSFGl3rF69so10Prpg/+RBw==}
     dev: false
 
   /@fontsource/righteous@5.0.15:
