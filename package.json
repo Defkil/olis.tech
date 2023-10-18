@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@astrojs/rss": "^3.0.0",
-    "@astrojs/sitemap": "^3.0.1",
+    "@astrojs/sitemap": "^3.0.2",
     "@docsearch/css": "^3.5.2",
     "@docsearch/js": "^3.5.2",
     "@fontsource-variable/outfit": "^5.0.8",
