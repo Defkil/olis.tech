@@ -9,8 +9,8 @@ dependencies:
     specifier: ^3.0.0
     version: 3.0.0
   '@astrojs/sitemap':
-    specifier: ^3.0.1
-    version: 3.0.1
+    specifier: ^3.0.2
+    version: 3.0.2
   '@docsearch/css':
     specifier: ^3.5.2
     version: 3.5.2
@@ -282,8 +282,8 @@ packages:
       kleur: 4.1.5
     dev: false
 
-  /@astrojs/sitemap@3.0.1:
-    resolution: {integrity: sha512-ErCthOQF0Yt6KkvaS+v/7CM6TxztOPHJjla4cbM3fBAFsDQbCS3tvoWSMqPJtmTFiy7veQ1eC5gH58FhPe85zg==}
+  /@astrojs/sitemap@3.0.2:
+    resolution: {integrity: sha512-ldxCDc0+QHcq2jH4WJFcz5iBc5/SqotEqpT91dhvoLqoRUT5U21rQ6u6qA4FyRVjpd/0Nt1kFjEsRbwoB8IKiQ==}
     dependencies:
       sitemap: 7.1.1
       zod: 3.21.1
@@ -2672,7 +2672,7 @@ packages:
   /@types/sax@1.2.5:
     resolution: {integrity: sha512-9jWta97bBVC027/MShr3gLab8gPhKy4l6qpb+UJLF5pDm3501NvA7uvqVCW+REFtx00oTi6Cq9JzLwgq6evVgw==}
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 20.8.6
     dev: false
 
   /@types/unist@2.0.8:
