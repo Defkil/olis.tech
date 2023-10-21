@@ -24,8 +24,8 @@ dependencies:
     specifier: ^5.0.13
     version: 5.0.13
   '@fontsource/righteous':
-    specifier: ^5.0.15
-    version: 5.0.15
+    specifier: ^5.0.16
+    version: 5.0.16
   '@swup/astro':
     specifier: ^1.3.2
     version: 1.3.2
@@ -2050,8 +2050,8 @@ packages:
     resolution: {integrity: sha512-XZzmOrO30wUG7fIOM9Fl6y+FHOA8KZOSSa4PkcHUseX/mt6nmPStTD1WhE9JcDVrSFGl3rF69so10Prpg/+RBw==}
     dev: false
 
-  /@fontsource/righteous@5.0.15:
-    resolution: {integrity: sha512-vQSHuwHHcrhLn0RfNyBMSeg7/rDuDg9JnM4xIItetFdh8oxRUi0XNvC1JKms9PH+W9ZjVNkRyeKlaETYsjtQPQ==}
+  /@fontsource/righteous@5.0.16:
+    resolution: {integrity: sha512-e4zxlGvppYwodID3eUEVqQBi1pOCfog2UBJk5DdKu5j4lXf4BGxqkzDCm466oa4PeT/9Vv1qzNDIKq3EENCY3g==}
     dev: false
 
   /@jridgewell/gen-mapping@0.3.3:
