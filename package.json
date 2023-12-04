@@ -30,7 +30,7 @@
     "probe-image-size": "^7.2.3",
     "sass": "^1.69.5",
     "share-api-polyfill": "^1.1.1",
-    "sharp": "^0.32.6"
+    "sharp": "^0.33.0"
   },
   "devDependencies": {
     "@namics/stylelint-bem": "^9.0.0",
