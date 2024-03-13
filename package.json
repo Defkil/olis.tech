@@ -2,7 +2,14 @@
   "name": "@olis.tech/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build": "nx run web:build",
+    "check": "nx run web:check",
+    "preview": "nx run web:preview",
+    "dev": "nx run web:dev",
+    "sync": "nx run web:sync",
+    "start": "npm run preview"
+  },
   "private": true,
   "dependencies": {
     "@nxtensions/astro": "18.2.0"
