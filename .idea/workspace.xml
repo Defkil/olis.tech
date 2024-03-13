@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75192a98-7bf5-47f8-8a4e-d1023cf9360d" name="Changes" comment="chore: nx astro workspace&#10;&#10;created with https://www.npmjs.com/package/@nxtensions/astro">
+    <list default="true" id="75192a98-7bf5-47f8-8a4e-d1023cf9360d" name="Changes" comment="chore: ide">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
@@ -127,6 +126,8 @@
       <workItem from="1710363596402" duration="37000" />
       <workItem from="1710363644313" duration="80000" />
       <workItem from="1710363737445" duration="19000" />
+      <workItem from="1710363766094" duration="59000" />
+      <workItem from="1710363833180" duration="7000" />
     </task>
     <task id="LOCAL-00001" summary="chore: removed astro v2">
       <option name="closed" value="true" />
@@ -160,7 +161,23 @@
       <option name="project" value="LOCAL" />
       <updated>1710362052232</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="chore: removed copilot ide files">
+      <option name="closed" value="true" />
+      <created>1710363791820</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710363791820</updated>
+    </task>
+    <task id="LOCAL-00006" summary="chore: ide">
+      <option name="closed" value="true" />
+      <created>1710363809664</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1710363809664</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,8 +196,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="chore: removed astro v2" />
-    <MESSAGE value="chore: ide" />
     <MESSAGE value="chore: nx astro workspace&#10;&#10;created with https://www.npmjs.com/package/@nxtensions/astro" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: nx astro workspace&#10;&#10;created with https://www.npmjs.com/package/@nxtensions/astro" />
+    <MESSAGE value="chore: removed copilot ide files" />
+    <MESSAGE value="chore: ide" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: ide" />
   </component>
 </project>
