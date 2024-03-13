@@ -1,3 +1,0 @@
-<component name="DependencyValidationManager">
-  <scope name="project" pattern="(file[olis.tech]:*||file[olis.tech]:*/)&amp;&amp;!file[olis.tech]:.astro/*&amp;&amp;!file[olis.tech]:.idea/*&amp;&amp;!file[olis.tech]:dist/*&amp;&amp;!file[olis.tech]:.idea//*&amp;&amp;!file[olis.tech]:dist//*" />
-</component>

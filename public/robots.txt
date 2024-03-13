@@ -1,5 +1,0 @@
-User-agent: *
-Disallow: /impressum/
-Disallow: /datenschutzerklaerung/
-Allow: /
-Sitemap: https://olis.tech/sitemap-index.xml
