@@ -5,9 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75192a98-7bf5-47f8-8a4e-d1023cf9360d" name="Changes" comment="chore: ide">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LINKS.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/public/blog-placeholder-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/public/blog-placeholder-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/public/blog-placeholder-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/public/blog-placeholder-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/public/blog-placeholder-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/public/blog-placeholder-about.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/public/fonts/atkinson-bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/public/fonts/atkinson-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/components/BaseHead.astro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/components/Footer.astro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/components/FormattedDate.astro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/components/Header.astro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/components/HeaderLink.astro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/consts.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/content/blog/first-post.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/content/blog/markdown-style-guide.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/content/blog/second-post.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/content/blog/third-post.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/content/blog/using-mdx.mdx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/content/config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/layouts/BlogPost.astro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/pages/about.astro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/pages/blog/[...slug].astro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/pages/blog/index.astro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/pages/rss.xml.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/styles/global.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/astro.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/astro.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/public/favicon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/public/favicon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/components/Card.astro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/env.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/layouts/Layout.astro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/pages/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/pages/index.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,49 +51,73 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Defkil"
+  }
+}]]></component>
+  <component name="GitHubPullRequestState"><![CDATA[{
+  "prStates": []
+}]]></component>
+  <component name="GitLabMergeRequestsSettings"><![CDATA[{}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Defkil/olis.tech.git",
+    "accountId": "55ddce77-cef3-4093-98fe-601a54ba9c2a"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2deGVOsRkOHfdiH0rndUCbhHx7E" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Nx.web:check.executor&quot;: &quot;Run&quot;,
-    &quot;Nx.web:dev.executor&quot;: &quot;Run&quot;,
-    &quot;Nx.web:preview.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;astro-v4&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Workspace/defkil/olis.tech&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
-    &quot;npm.olis.tech &gt; preview.executor&quot;: &quot;Run&quot;,
-    &quot;npm.olis.tech &gt; start.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Nx.web:check.executor": "Run",
+    "Nx.web:dev.executor": "Run",
+    "Nx.web:preview.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "astro-v4",
+    "last_opened_file_path": "C:/Workspace/defkil/olis.tech/apps/web",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "pnpm",
+    "npm.olis.tech > preview.executor": "Run",
+    "npm.olis.tech > start.executor": "Run",
+    "settings.editor.selected.configurable": "nx-console",
+    "ts.external.directory.path": "C:\\Workspace\\defkil\\olis.tech\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;dev.nx.console.project_details_files&quot;: [
-      &quot;C:\\Workspace\\defkil\\olis.tech\\apps\\web\\project.json&quot;,
-      &quot;C:\\Workspace\\defkil\\olis.tech\\apps\\web\\package.json&quot;,
-      &quot;C:\\Workspace\\defkil\\olis.tech\\nx.json&quot;
+  "keyToStringList": {
+    "dev.nx.console.project_details_files": [
+      "C:\\Workspace\\defkil\\olis.tech\\apps\\web\\project.json",
+      "C:\\Workspace\\defkil\\olis.tech\\apps\\web\\package.json",
+      "C:\\Workspace\\defkil\\olis.tech\\nx.json"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Workspace\defkil\olis.tech\apps\web" />
+      <recent name="C:\Workspace\defkil\olis.tech\apps\web\public" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Workspace\defkil\olis.tech" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.olis.tech &gt; start">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="web:check" type="NxRunConfigurationType">
       <option name="nx-projects" value="web" />
       <option name="nx-targets" value="check" />
@@ -84,6 +142,16 @@
       <option name="arguments" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="olis.tech &gt; preview" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -106,10 +174,18 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev" />
         <item itemvalue="npm.olis.tech &gt; start" />
         <item itemvalue="npm.olis.tech &gt; preview" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-WS-241.14494.180" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
