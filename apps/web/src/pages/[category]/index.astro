@@ -1,0 +1,36 @@
+---
+import { getCollection } from 'astro:content';
+import { getCategoryData } from '../../helper/category';
+import { collections } from '../../content/config';
+import Layout from '../../layouts/BlogPost.astro';
+
+export async function getStaticPaths() {
+  const routes: {
+    params: {
+      category: string
+    }, props: {
+      category: string, posts: any[]
+    }
+  }[] = []
+  for (const collection of Object.keys(collections)) {
+    routes.push({
+      params: {category: collection}, props: {
+        category: collection, posts: await getCollection(collection as any)
+      }
+    })
+  }
+  return routes
+}
+
+const {category} = Astro.props;
+const {title, description} = getCategoryData(category)
+
+---
+<Layout
+  title="About Me"
+  description="Lorem ipsum dolor sit amet"
+  pubDate={new Date('August 08 2021')}
+  heroImage="/blog-placeholder-about.jpg"
+>
+
+</Layout>

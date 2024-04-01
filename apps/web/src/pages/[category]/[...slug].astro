@@ -1,0 +1,42 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+import BlogPost from '../../layouts/BlogPost.astro';
+import { collections } from '../../content/config';
+export async function getStaticPaths() {
+  const routes: {
+    params: {
+      slug: string,
+      category: string,
+      description: string
+      keywords: string
+    },
+    props: any
+  }[] = []
+  for (const collection of Object.keys(collections)) {
+    const entries = await getCollection(collection as any)
+    entries.forEach(entry => {
+      let keywords = ''
+      if (entry.data.keywords) {
+        keywords = entry.data.keywords.join(',')
+      }
+      routes.push({
+        params: {
+          slug: entry.slug,
+          category: collection,
+          description: entry.data.description,
+          keywords: keywords
+        }, props: { entry },
+      })
+    })
+  }
+  return routes
+}
+type Props = CollectionEntry<'blog'>;
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<BlogPost {...entry.data}>
+	<Content />
+</BlogPost>
