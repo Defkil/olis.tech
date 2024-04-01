@@ -1,0 +1,108 @@
+---
+import { SITE_TITLE } from '../../consts';
+---
+<div class="header">
+  <header class="header__container container">
+    <h1 class="title">
+      <a href="/">
+        <button class="title__button" tabindex="-1">{SITE_TITLE}</button>
+      </a>
+    </h1>
+    <input type="text" placeholder="Seite durchsuchen"
+           class="search__input border shadow shadow--hover js--search-input" />
+  </header>
+</div>
+
+<style>
+  .header {
+    padding: 32px 0 40px 0;
+    background: #90EE90;
+  }
+
+  .header__container {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+  }
+
+  .title {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+
+  .title__button {
+    cursor: pointer;
+    font-family: var(--font-family-hightlight);
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1;
+    color: #30f;
+    text-shadow: 4px 4px #000;
+    background: none;
+    border: none;
+    transition: transform .2s ease-in-out, text-shadow .2s ease-in-out;
+  }
+
+  .title__button:hover {
+    transform: translate(4px, 4px);
+    text-shadow: 0 1px #000, 1px 0 #000, -1px 0 #000, 0 -1px #000;
+  }
+
+  .search {
+    width: 100%;
+    height: 100%;
+    padding: 0 8px
+  }
+
+  .search__input {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    font-size: 30px;
+    color: #000;
+    text-align: center;
+    background: #fff;
+    border-radius: .5rem
+  }
+
+  .search__input:focus {
+    outline: none
+  }
+
+  @media screen and (width >= 900px) {
+    .header {
+      padding-bottom: 48px;
+    }
+
+    .header__container {
+      grid-template-columns: 1fr auto;
+    }
+
+    .title {
+      text-align: left;
+    }
+
+    .search__input {
+      padding-left: 40px;
+      text-align: left
+    }
+  }
+  @media screen and (width >= 330px) {
+    .title__button {
+      font-size: 4.5rem
+    }
+  }
+  @media screen and (width >= 400px) {
+    .title__button {
+      font-size: 5rem
+    }
+  }
+  @media screen and (width >= 450px) {
+    .title__button {
+      font-size: 6rem
+    }
+  }
+</style>

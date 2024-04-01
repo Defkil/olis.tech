@@ -1,0 +1,56 @@
+---
+
+---
+
+<div class="welcome container">
+  <div class="welcome__text">Ich bin Oli, ein leidenschaftlicher Entwickler aus Konstanz, der seit über 13 Jahren programmierend die digitale Welt erforscht. In diesem Blog teile ich mein Wissen und meine Erfahrungen aus der Welt der Web- und Softwareentwicklung. Begleite mich auf meiner Reise zu qualitativ hochwertigem Code, zur Schaffung herausragender Entwicklererfahrungen und in die faszinierende Welt des Bastelns mit Hardware.</div>
+  <div class="welcome__hi"><span>H<span class="welcome__i">i</span></span></div>
+</div>
+<style>
+  .welcome {
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+
+  .welcome__text {
+    max-width: 800px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 1.2rem;
+  }
+
+  .welcome__hi {
+    display: flex;
+    align-items: center;
+    padding-right: 8px;
+    padding-left: 4px;
+    font-family: Space Grotesk Variable, sans-serif;
+    font-size: 8rem;
+    line-height: 1;
+    color: #000;
+    letter-spacing: -8px;
+  }
+
+  .welcome__hi > span {
+    position: relative;
+  }
+
+  .welcome__i {
+    position: absolute;
+    top: 2px;
+    transform-origin: 0 0;
+    transform: rotate(1deg);
+    font-size: 7.6rem;
+  }
+
+  @media screen and (width >= 600px) {
+    .welcome__text {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+
+    .welcome__hi {
+      padding-left: 24px;
+    }
+  }
+</style>

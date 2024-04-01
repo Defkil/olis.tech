@@ -1,0 +1,170 @@
+---
+import HeaderCategoriesPost from "./HeaderCategoriesPost.astro";
+import { contentLinkCategory, contentLinkPost } from '../../../helper/contentLink';
+import {SITE_CATEGORIES} from "../../../consts";
+import { contentGetCategoryPosts } from '../../../helper/content';
+const categoriesData: {
+  title: string,
+  collection: string,
+  description: string,
+  link: string,
+  lastPosts: {
+    title: string, link: string
+  }[]
+}[] = []
+
+for (const category of SITE_CATEGORIES) {
+  const data = await contentGetCategoryPosts(category.collection, 3)
+  categoriesData.push({
+    title: category.title,
+    collection: category.collection,
+    description: category.description,
+    lastPosts: data.posts.map((article) => ({
+      title: article.title, link: contentLinkPost(category.collection, article["slug"])
+    })),
+    link: contentLinkCategory(category.collection),
+  })
+}
+
+const initialCategory = categoriesData[0]!;
+const initialTitle = 'Alles aus <span class="js--title">' + initialCategory.title + '</span> anzeigen'
+---
+<div class="hc">
+  <template id="header-categories-post">
+    <HeaderCategoriesPost title="" link="" />
+  </template>
+  <header-categories>
+    <div class="hc__container container">
+      <div class="hc__sidebar">
+        <h2 class="hc__sidebar-title">Kategorien</h2>
+        <div class="hc__sidebar-container">
+          {categoriesData.map((category) => (
+            <button
+              class="hc__sidebar-button border shadow shadow--hover js--category-button"
+              data-link={category.link}
+              data-description={category.description}
+              data-last-posts={JSON.stringify(category.lastPosts)}>
+              {category.title}
+            </button>
+          ))}
+        </div>
+      </div>
+      <div class="hc__posts">
+        <div class="hc__posts--container js--posts">
+          {initialCategory.lastPosts.map((post) => (
+            <HeaderCategoriesPost title={post.title} link={post.link}/>
+          ))}
+        </div>
+        <span style="margin-top: auto;">
+          <HeaderCategoriesPost title={initialTitle} link={initialCategory.link} category="true" />
+        </span>
+      </div>
+    </div>
+  </header-categories>
+</div>
+<script>
+  import {HeaderCategories} from "./HeaderCategories";
+
+  customElements.define('header-categories', HeaderCategories);
+</script>
+<style>
+  .hc {
+    padding: 72px 0 48px;
+    background-color: #69d2e7;
+  }
+
+  .hc__container {
+
+    display: grid;
+    grid-template: "sidebar"
+                 "posts";
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .hc__sidebar {
+    grid-area: sidebar;
+    width: 100%;
+    padding-bottom: 16px;
+  }
+
+  .hc__sidebar-title {
+    margin: 0 0 24px;
+    font-family: var(--font-family-hightlight);
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 3rem;
+    color: #000;
+  }
+
+  .hc__sidebar-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .hc__sidebar-button {
+    cursor: pointer;
+    padding: 8px 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: #fff;
+    border-radius: .5rem;
+  }
+
+  .hc__posts {
+    display: flex;
+    grid-area: posts;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+  }
+
+  .hc__posts>*:last-child {
+    margin-top: auto;
+  }
+
+
+
+  .hc__post-title--small-centered-text {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  @media screen and (width >= 900px) {
+    .hc {
+      padding-bottom: 100px;
+    }
+    .hc__posts {
+      height: 288px;
+    }
+    .hc__container {
+      grid-template: "sidebar posts";
+      grid-template-columns: 400px 1fr;
+    }
+  }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
