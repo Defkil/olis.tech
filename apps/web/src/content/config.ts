@@ -1,16 +1,25 @@
 import { defineCollection, z } from 'astro:content';
+import { SITE_CATEGORIES } from '../consts.ts';
 
-const blog = defineCollection({
-	type: 'content',
-	// Type-check frontmatter using a schema
-	schema: z.object({
-		title: z.string(),
-		description: z.string(),
-		// Transform string to Date object
-		pubDate: z.coerce.date(),
-		updatedDate: z.coerce.date().optional(),
-		heroImage: z.string().optional(),
-	}),
+
+/** Post schema for astro */
+export const postSchemaDefault = z.object({
+  title: z.string(),
+  description: z.string(),
+  keywords: z.string().array().optional(),
+  image: z.string().url(),
+  imageAlt: z.string(),
+  publishDate: z.date(),
+  updateDate: z.date().optional(),
 });
 
-export const collections = { blog };
+export const collections: {
+  [key: string]: any;
+} = {};
+
+for (const category of SITE_CATEGORIES) {
+  collections[category.collection] = defineCollection({
+    type: "content",
+    schema: postSchemaDefault,
+  });
+}
