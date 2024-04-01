@@ -54,6 +54,15 @@ importers:
       '@astrojs/sitemap':
         specifier: ^3.1.2
         version: 3.1.2
+      '@fontsource-variable/outfit':
+        specifier: ^5.0.12
+        version: 5.0.12
+      '@fontsource-variable/space-grotesk':
+        specifier: ^5.0.17
+        version: 5.0.17
+      normalize.css:
+        specifier: ^8.0.1
+        version: 8.0.1
 
 packages:
 
@@ -1602,6 +1611,14 @@ packages:
     os: [win32]
     requiresBuild: true
     optional: true
+
+  /@fontsource-variable/outfit@5.0.12:
+    resolution: {integrity: sha512-f14wHgrD8GZnSbF7pK0F+Al3NYSz6oGaFbewvA4lVJRZcoQ6MQFu6BG6PY/elMrnx8WuklL8AncIVqPsrRIf0A==}
+    dev: false
+
+  /@fontsource-variable/space-grotesk@5.0.17:
+    resolution: {integrity: sha512-CnVJT5H7I4pDy7zSxOWuKwrjkeMK7y8vI6T3VUSRNgAi7ZyGjJp54F7qI4RjhTzdVhvtI4JJUsm9K+TTvL+oMw==}
+    dev: false
 
   /@jest/schemas@29.6.3:
     resolution: {integrity: sha512-mo5j5X+jIZmJQveBKeS/clAueipV7KgiX1vMgCxam1RNYiqE1w62n0/tJJnHtjW8ZHcQco5gY85jA3mi0L+nSA==}
@@ -4570,6 +4587,10 @@ packages:
   /normalize-path@3.0.0:
     resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}
     engines: {node: '>=0.10.0'}
+
+  /normalize.css@8.0.1:
+    resolution: {integrity: sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==}
+    dev: false
 
   /npm-package-arg@11.0.1:
     resolution: {integrity: sha512-M7s1BD4NxdAvBKUPqqRW957Xwcl/4Zvo8Aj+ANrzvIPzGJZElrH7Z//rSaec2ORcND6FHHLnZeY8qgTpXDMFQQ==}

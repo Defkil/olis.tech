@@ -2,6 +2,9 @@
 	"dependencies": {
 		"@astrojs/mdx": "^2.2.2",
 		"@astrojs/rss": "^4.0.5",
-		"@astrojs/sitemap": "^3.1.2"
+		"@astrojs/sitemap": "^3.1.2",
+		"@fontsource-variable/outfit": "^5.0.12",
+		"@fontsource-variable/space-grotesk": "^5.0.17",
+		"normalize.css": "^8.0.1"
 	}
 }
