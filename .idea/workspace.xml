@@ -1,13 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AIAssistantCustomInstructionsStorage">
+    <option name="instructions">
+      <map>
+        <entry key="AIAssistant.VCS.GenerateCommitMessage">
+          <value>
+            <AIAssistantStoredInstruction>
+              <option name="actionId" value="AIAssistant.VCS.GenerateCommitMessage" />
+              <option name="content" value="Generate a commit message following the Conventional Commits 1.0.0 specification.&#10;&#10;The message should start with a type, followed by a colon and a brief imperative description under 50 characters. Valid types include:&#10;&#10;feat: A new feature&#10;fix: A bug fix&#10;docs: Documentation changes&#10;style: Code styling and formatting changes&#10;refactor: Code refactoring&#10;perf: Performance improvements&#10;test: Adding or modifying tests&#10;build: Build system or dependencies changes&#10;ci: Continuous integration changes&#10;chore: Other non-code changes&#10;After the header, leave a blank line followed by 1-3 sentences with additional details as the optional body.&#10;&#10;Write the body in a neutral tone, avoiding first-person pronouns like &quot;I&quot; or &quot;we&quot;. Focus on concisely summarizing the main changes made without unnecessarily embellishing the purpose or stating obvious benefits.&#10;&#10;Omit any mentions of a scope, breaking changes, or references to issues or pull requests." />
+            </AIAssistantStoredInstruction>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75192a98-7bf5-47f8-8a4e-d1023cf9360d" name="Changes" comment="chore: base blog theme">
+    <list default="true" id="75192a98-7bf5-47f8-8a4e-d1023cf9360d" name="Changes" comment="chore: add check if data exist">
       <change afterPath="$PROJECT_DIR$/LINKS.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/helper/category.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/helper/content.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/helper/contentLink.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/pages/[category]/[...slug].astro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/pages/[category]/index.astro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/components/BaseHead.astro" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/components/BaseHead.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/consts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/consts.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/content/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/content/config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/layouts/BlogPost.astro" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/layouts/BlogPost.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/pages/blog/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/pages/blog/index.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/pages/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/pages/index.astro" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,22 +40,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Defkil"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Defkil&quot;
   }
-}]]></component>
-  <component name="GitHubPullRequestState"><![CDATA[{
-  "prStates": []
-}]]></component>
-  <component name="GitLabMergeRequestsSettings"><![CDATA[{}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Defkil/olis.tech.git",
-    "accountId": "55ddce77-cef3-4093-98fe-601a54ba9c2a"
+}</component>
+  <component name="GitHubPullRequestState">{
+  &quot;prStates&quot;: []
+}</component>
+  <component name="GitLabMergeRequestsSettings">{}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Defkil/olis.tech.git&quot;,
+    &quot;accountId&quot;: &quot;55ddce77-cef3-4093-98fe-601a54ba9c2a&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 7
@@ -45,42 +68,49 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Nx.web:check.executor": "Run",
-    "Nx.web:dev.executor": "Run",
-    "Nx.web:preview.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "astro-v4",
-    "last_opened_file_path": "C:/Workspace/defkil/olis.tech/apps/web",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "pnpm",
-    "npm.dev.executor": "Run",
-    "npm.olis.tech > preview.executor": "Run",
-    "npm.olis.tech > start.executor": "Run",
-    "settings.editor.selected.configurable": "nx-console",
-    "ts.external.directory.path": "C:\\Workspace\\defkil\\olis.tech\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Nx.web:check.executor&quot;: &quot;Run&quot;,
+    &quot;Nx.web:dev.executor&quot;: &quot;Run&quot;,
+    &quot;Nx.web:preview.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;astro-v4&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Workspace/defkil/olis.tech/apps/web/src/pages/[category]&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.olis.tech &gt; preview.executor&quot;: &quot;Run&quot;,
+    &quot;npm.olis.tech &gt; start.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;nx-console&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Workspace\\defkil\\olis.tech\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "dev.nx.console.project_details_files": [
-      "C:\\Workspace\\defkil\\olis.tech\\apps\\web\\project.json",
-      "C:\\Workspace\\defkil\\olis.tech\\apps\\web\\package.json",
-      "C:\\Workspace\\defkil\\olis.tech\\nx.json"
+  &quot;keyToStringList&quot;: {
+    &quot;dev.nx.console.project_details_files&quot;: [
+      &quot;C:\\Workspace\\defkil\\olis.tech\\apps\\web\\project.json&quot;,
+      &quot;C:\\Workspace\\defkil\\olis.tech\\apps\\web\\package.json&quot;,
+      &quot;C:\\Workspace\\defkil\\olis.tech\\nx.json&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Workspace\defkil\olis.tech\apps\web" />
-      <recent name="C:\Workspace\defkil\olis.tech\apps\web\public" />
+      <recent name="C:\Workspace\defkil\olis.tech\apps\web\src\pages\[category]" />
+      <recent name="C:\Workspace\defkil\olis.tech\apps\web\src\content\web" />
+      <recent name="C:\Workspace\defkil\olis.tech\apps\web\src\content\tools" />
+      <recent name="C:\Workspace\defkil\olis.tech\apps\web\src\content\projects" />
+      <recent name="C:\Workspace\defkil\olis.tech\apps\web\src\content\programming" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Workspace\defkil\olis.tech\apps\web\src\content" />
+      <recent name="C:\Workspace\defkil\olis.tech\apps\web\src\content\blog" />
+      <recent name="C:\Workspace\defkil\olis.tech\apps\web\src\components\header" />
       <recent name="C:\Workspace\defkil\olis.tech" />
     </key>
   </component>
@@ -171,6 +201,11 @@
       <workItem from="1710363737445" duration="19000" />
       <workItem from="1710363766094" duration="59000" />
       <workItem from="1710363833180" duration="7000" />
+      <workItem from="1711914233556" duration="5852000" />
+      <workItem from="1711923697432" duration="69000" />
+      <workItem from="1711924598391" duration="249000" />
+      <workItem from="1711926426459" duration="4056000" />
+      <workItem from="1711934328242" duration="346000" />
     </task>
     <task id="LOCAL-00001" summary="chore: removed astro v2">
       <option name="closed" value="true" />
@@ -228,7 +263,95 @@
       <option name="project" value="LOCAL" />
       <updated>1711838333066</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="chore: ide">
+      <option name="closed" value="true" />
+      <created>1711838643194</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1711838643194</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat: Import and implement ViewTransitions in BaseHead component&#10;&#10;The commit includes importing the ViewTransitions from Astro's transitions module in the BaseHead.astro file. It also adds the ViewTransitions component to the file to enable transition effects.">
+      <option name="closed" value="true" />
+      <created>1711838672154</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1711838672154</updated>
+    </task>
+    <task id="LOCAL-00010" summary="chore: test data">
+      <option name="closed" value="true" />
+      <created>1711934488140</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1711934488140</updated>
+    </task>
+    <task id="LOCAL-00011" summary="chore: removed start blog">
+      <option name="closed" value="true" />
+      <created>1711934532245</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1711934532245</updated>
+    </task>
+    <task id="LOCAL-00012" summary="chore: todo">
+      <option name="closed" value="true" />
+      <created>1711934548860</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1711934548860</updated>
+    </task>
+    <task id="LOCAL-00013" summary="chore: global styles">
+      <option name="closed" value="true" />
+      <created>1711934588465</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1711934588465</updated>
+    </task>
+    <task id="LOCAL-00014" summary="chore: blog header">
+      <option name="closed" value="true" />
+      <created>1711934616808</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1711934616808</updated>
+    </task>
+    <task id="LOCAL-00015" summary="chore: blog header">
+      <option name="closed" value="true" />
+      <created>1711934628039</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1711934628039</updated>
+    </task>
+    <task id="LOCAL-00016" summary="chore: global styles">
+      <option name="closed" value="true" />
+      <created>1711934642339</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1711934642339</updated>
+    </task>
+    <task id="LOCAL-00017" summary="chore: add dom libs">
+      <option name="closed" value="true" />
+      <created>1711934654380</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1711934654381</updated>
+    </task>
+    <task id="LOCAL-00018" summary="chore: add check if data exist">
+      <option name="closed" value="true" />
+      <created>1711934672046</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1711934672046</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,11 +369,21 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="chore: removed astro v2" />
     <MESSAGE value="chore: nx astro workspace&#10;&#10;created with https://www.npmjs.com/package/@nxtensions/astro" />
     <MESSAGE value="chore: removed copilot ide files" />
-    <MESSAGE value="chore: ide" />
     <MESSAGE value="chore: base blog theme" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: base blog theme" />
+    <MESSAGE value="chore: ide" />
+    <MESSAGE value="Add ViewTransitions import to BaseHead component&#10;&#10;The BaseHead component now includes an import for the ViewTransitions module from the 'astro:transitions' package. This additional import will provide transition functionalities across different views in the web application." />
+    <MESSAGE value="feat: Import and implement ViewTransitions in BaseHead component&#10;&#10;The commit includes importing the ViewTransitions from Astro's transitions module in the BaseHead.astro file. It also adds the ViewTransitions component to the file to enable transition effects." />
+    <MESSAGE value="chore: test data" />
+    <MESSAGE value="chore: removed start blog" />
+    <MESSAGE value="chore: todo" />
+    <MESSAGE value="chore: blog header" />
+    <MESSAGE value="chore: global styles" />
+    <MESSAGE value="chore: add dom libs" />
+    <MESSAGE value="chore: add check if data exist" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: add check if data exist" />
   </component>
 </project>
