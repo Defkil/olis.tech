@@ -18,19 +18,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75192a98-7bf5-47f8-8a4e-d1023cf9360d" name="Changes" comment="chore: add check if data exist">
+    <list default="true" id="75192a98-7bf5-47f8-8a4e-d1023cf9360d" name="Changes" comment="chore: add wave separator">
       <change afterPath="$PROJECT_DIR$/LINKS.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/src/helper/category.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/src/helper/content.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/src/helper/contentLink.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/src/pages/[category]/[...slug].astro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/web/src/pages/[category]/index.astro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TODO.md" beforeDir="false" afterPath="$PROJECT_DIR$/TODO.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/components/Footer.astro" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/components/Footer.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/components/Separator.astro" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/components/Separator.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/components/header/Header.astro" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/components/header/Header.astro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/web/src/consts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/consts.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/content/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/content/config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/layouts/BlogPost.astro" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/layouts/BlogPost.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/pages/blog/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/pages/blog/index.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/pages/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/pages/index.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/styles/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/styles/global.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,44 +64,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Nx.web:check.executor&quot;: &quot;Run&quot;,
-    &quot;Nx.web:dev.executor&quot;: &quot;Run&quot;,
-    &quot;Nx.web:preview.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;astro-v4&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Workspace/defkil/olis.tech/apps/web/src/pages/[category]&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;npm.olis.tech &gt; preview.executor&quot;: &quot;Run&quot;,
-    &quot;npm.olis.tech &gt; start.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;nx-console&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Workspace\\defkil\\olis.tech\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Nx.web:check.executor": "Run",
+    "Nx.web:dev.executor": "Run",
+    "Nx.web:preview.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "astro-v4",
+    "last_opened_file_path": "C:/Workspace/defkil/olis.tech/apps/web/src/components/header/header-categories",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "pnpm",
+    "npm.dev.executor": "Run",
+    "npm.olis.tech > preview.executor": "Run",
+    "npm.olis.tech > start.executor": "Run",
+    "settings.editor.selected.configurable": "nx-console",
+    "ts.external.directory.path": "C:\\Workspace\\defkil\\olis.tech\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;dev.nx.console.project_details_files&quot;: [
-      &quot;C:\\Workspace\\defkil\\olis.tech\\apps\\web\\project.json&quot;,
-      &quot;C:\\Workspace\\defkil\\olis.tech\\apps\\web\\package.json&quot;,
-      &quot;C:\\Workspace\\defkil\\olis.tech\\nx.json&quot;
+  "keyToStringList": {
+    "dev.nx.console.project_details_files": [
+      "C:\\Workspace\\defkil\\olis.tech\\apps\\web\\project.json",
+      "C:\\Workspace\\defkil\\olis.tech\\apps\\web\\package.json",
+      "C:\\Workspace\\defkil\\olis.tech\\nx.json"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Workspace\defkil\olis.tech\apps\web\src\components\header\header-categories" />
       <recent name="C:\Workspace\defkil\olis.tech\apps\web\src\pages\[category]" />
       <recent name="C:\Workspace\defkil\olis.tech\apps\web\src\content\web" />
       <recent name="C:\Workspace\defkil\olis.tech\apps\web\src\content\tools" />
       <recent name="C:\Workspace\defkil\olis.tech\apps\web\src\content\projects" />
-      <recent name="C:\Workspace\defkil\olis.tech\apps\web\src\content\programming" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Workspace\defkil\olis.tech\apps\web\src\content" />
@@ -205,7 +201,7 @@
       <workItem from="1711923697432" duration="69000" />
       <workItem from="1711924598391" duration="249000" />
       <workItem from="1711926426459" duration="4056000" />
-      <workItem from="1711934328242" duration="346000" />
+      <workItem from="1711934328242" duration="5925000" />
     </task>
     <task id="LOCAL-00001" summary="chore: removed astro v2">
       <option name="closed" value="true" />
@@ -351,7 +347,71 @@
       <option name="project" value="LOCAL" />
       <updated>1711934672046</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="chore: helper functions">
+      <option name="closed" value="true" />
+      <created>1711934693236</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1711934693237</updated>
+    </task>
+    <task id="LOCAL-00020" summary="chore: updated values and added categories">
+      <option name="closed" value="true" />
+      <created>1711934714539</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1711934714539</updated>
+    </task>
+    <task id="LOCAL-00021" summary="chore: add blog category logic">
+      <option name="closed" value="true" />
+      <created>1711934735723</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1711934735723</updated>
+    </task>
+    <task id="LOCAL-00022" summary="chore: first implementation of pages">
+      <option name="closed" value="true" />
+      <created>1711934765665</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1711934765665</updated>
+    </task>
+    <task id="LOCAL-00023" summary="chore: ide">
+      <option name="closed" value="true" />
+      <created>1711934777872</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1711934777872</updated>
+    </task>
+    <task id="LOCAL-00024" summary="chore: moved styles to own file">
+      <option name="closed" value="true" />
+      <created>1711935988684</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1711935988684</updated>
+    </task>
+    <task id="LOCAL-00025" summary="chore: button size and positioning">
+      <option name="closed" value="true" />
+      <created>1711937291452</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1711937291452</updated>
+    </task>
+    <task id="LOCAL-00026" summary="chore: add wave separator">
+      <option name="closed" value="true" />
+      <created>1711937304376</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1711937304376</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,7 +434,6 @@
     <MESSAGE value="chore: nx astro workspace&#10;&#10;created with https://www.npmjs.com/package/@nxtensions/astro" />
     <MESSAGE value="chore: removed copilot ide files" />
     <MESSAGE value="chore: base blog theme" />
-    <MESSAGE value="chore: ide" />
     <MESSAGE value="Add ViewTransitions import to BaseHead component&#10;&#10;The BaseHead component now includes an import for the ViewTransitions module from the 'astro:transitions' package. This additional import will provide transition functionalities across different views in the web application." />
     <MESSAGE value="feat: Import and implement ViewTransitions in BaseHead component&#10;&#10;The commit includes importing the ViewTransitions from Astro's transitions module in the BaseHead.astro file. It also adds the ViewTransitions component to the file to enable transition effects." />
     <MESSAGE value="chore: test data" />
@@ -384,6 +443,14 @@
     <MESSAGE value="chore: global styles" />
     <MESSAGE value="chore: add dom libs" />
     <MESSAGE value="chore: add check if data exist" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: add check if data exist" />
+    <MESSAGE value="chore: helper functions" />
+    <MESSAGE value="chore: updated values and added categories" />
+    <MESSAGE value="chore: add blog category logic" />
+    <MESSAGE value="chore: first implementation of pages" />
+    <MESSAGE value="chore: ide" />
+    <MESSAGE value="chore: moved styles to own file" />
+    <MESSAGE value="chore: button size and positioning" />
+    <MESSAGE value="chore: add wave separator" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: add wave separator" />
   </component>
 </project>
