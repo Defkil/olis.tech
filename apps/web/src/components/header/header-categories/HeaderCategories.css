@@ -1,11 +1,9 @@
-
 .hc {
   padding: 72px 0 48px;
   background-color: #69d2e7;
 }
 
 .hc__container {
-
   display: grid;
   grid-template: "sidebar"
                  "posts";
@@ -20,7 +18,7 @@
 }
 
 .hc__sidebar-title {
-  margin: 0 0 24px;
+  margin: 4px 0 24px;
   font-family: var(--font-family-hightlight);
   font-size: 3rem;
   font-weight: 500;
@@ -29,6 +27,7 @@
 }
 
 .hc__sidebar-container {
+  padding-top: 16px;
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
@@ -37,7 +36,7 @@
 .hc__sidebar-button {
   cursor: pointer;
   padding: 8px 16px;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 600;
   background: #fff;
   border-radius: .5rem;
@@ -51,11 +50,9 @@
   width: 100%;
 }
 
-.hc__posts>*:last-child {
+.hc__posts > *:last-child {
   margin-top: auto;
 }
-
-
 
 .hc__post-title--small-centered-text {
   font-size: 1.25rem;
@@ -66,9 +63,11 @@
   .hc {
     padding-bottom: 100px;
   }
+
   .hc__posts {
     height: 288px;
   }
+
   .hc__container {
     grid-template: "sidebar posts";
     grid-template-columns: 400px 1fr;
