@@ -64,37 +64,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Nx.web:check.executor": "Run",
-    "Nx.web:dev.executor": "Run",
-    "Nx.web:preview.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "astro-v4",
-    "last_opened_file_path": "C:/Workspace/defkil/olis.tech/apps/web/src/components/header/header-categories",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "pnpm",
-    "npm.dev.executor": "Run",
-    "npm.olis.tech > preview.executor": "Run",
-    "npm.olis.tech > start.executor": "Run",
-    "settings.editor.selected.configurable": "nx-console",
-    "ts.external.directory.path": "C:\\Workspace\\defkil\\olis.tech\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Nx.web:check.executor&quot;: &quot;Run&quot;,
+    &quot;Nx.web:dev.executor&quot;: &quot;Run&quot;,
+    &quot;Nx.web:preview.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;astro-v4&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Workspace/defkil/olis.tech/apps/web/src/components/header/header-categories&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.olis.tech &gt; preview.executor&quot;: &quot;Run&quot;,
+    &quot;npm.olis.tech &gt; start.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;nx-console&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Workspace\\defkil\\olis.tech\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "dev.nx.console.project_details_files": [
-      "C:\\Workspace\\defkil\\olis.tech\\apps\\web\\project.json",
-      "C:\\Workspace\\defkil\\olis.tech\\apps\\web\\package.json",
-      "C:\\Workspace\\defkil\\olis.tech\\nx.json"
+  &quot;keyToStringList&quot;: {
+    &quot;dev.nx.console.project_details_files&quot;: [
+      &quot;C:\\Workspace\\defkil\\olis.tech\\apps\\web\\project.json&quot;,
+      &quot;C:\\Workspace\\defkil\\olis.tech\\apps\\web\\package.json&quot;,
+      &quot;C:\\Workspace\\defkil\\olis.tech\\nx.json&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Workspace\defkil\olis.tech\apps\web\src\components\header\header-categories" />
