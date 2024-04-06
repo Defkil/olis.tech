@@ -4,10 +4,8 @@ const {link, title, category} = Astro.props
 let isCategory = (category !== undefined && category !== '' && category !== 'false')
 
 ---
-<a href={link} class:list={[{ 'js--link': isCategory }]}>
-  <div class:list={['hcp border shadow shadow--hover', { 'hcp--center': isCategory }]}>
-    <div class="hcp__title js-hcp__title"><Fragment set:html={title} /></div>
-  </div>
+<a href={link} class:list={['hcp border shadow shadow--hover', { 'hcp--center js--link': isCategory }]}>
+  <div class="hcp__title js-hcp__title"><Fragment set:html={title} /></div>
 </a>
 <style>
   .hcp {
@@ -18,6 +16,7 @@ let isCategory = (category !== undefined && category !== '' && category !== 'fal
     padding: 16px 0;
     background: #FFDB58;
     border-radius: .5rem;
+    text-decoration: none;
   }
 
   .hcp--center {
