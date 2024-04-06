@@ -7,7 +7,7 @@
           <value>
             <AIAssistantStoredInstruction>
               <option name="actionId" value="AIAssistant.VCS.GenerateCommitMessage" />
-              <option name="content" value="The message should start with a type, followed by a colon and a brief imperative description under 50 characters. Valid types include:&#10;&#10;feat: A new feature&#10;&#10;fix: A bug fix&#10;&#10;docs: Documentation changes&#10;&#10;style: Code styling and formatting changes&#10;&#10;refactor: Code refactoring&#10;&#10;perf: Performance improvements&#10;&#10;test: Adding or modifying tests&#10;&#10;build: Build system or dependencies changes&#10;&#10;ci: Continuous integration changes&#10;&#10;chore: Other non-code changes&#10;&#10;After the header, leave a blank line followed by 1-2 sentences with additional details as the optional body, but only if absolutely necessary to clarify the changes made.&#10;&#10;Write the body in a neutral tone, avoiding first-person pronouns like &quot;I&quot; or &quot;we&quot;. Focus on concisely summarizing the main code changes made, without mentioning obvious benefits or purposes. Avoid unnecessary embellishments or redundant information already conveyed in the header.&#10;&#10;If the header alone sufficiently describes the changes, omit the body entirely.&#10;&#10;Omit any mentions of a scope, breaking changes, or references to issues or pull requests." />
+              <option name="content" value="The message should start with a type, followed by a colon and a brief imperative description under 50 characters. Valid types include:&#10;&#10;feat: A new feature&#10;&#10;fix: A bug fix&#10;&#10;docs: Documentation changes&#10;&#10;style: Code styling and formatting changes&#10;&#10;refactor: Code refactoring&#10;&#10;perf: Performance improvements&#10;&#10;test: Adding or modifying tests&#10;&#10;build: Build system or dependencies changes&#10;&#10;ci: Continuous integration changes&#10;&#10;chore: Other non-code changes&#10;&#10;Note that the &quot;style&quot; type should only be used for code styling and formatting changes, not for CSS changes that affect the visual appearance or layout of the application. CSS changes should be categorized as &quot;feat&quot; for new styles or &quot;fix&quot; for addressing styling bugs.&#10;&#10;After the header, leave a blank line followed by 1-2 sentences with additional details as the optional body, but only if absolutely necessary to clarify the changes made.&#10;&#10;Write the body in a neutral tone, avoiding first-person pronouns like &quot;I&quot; or &quot;we&quot;. Focus on concisely summarizing the main code changes made, without mentioning obvious benefits or purposes. Avoid unnecessary embellishments or redundant information already conveyed in the header.&#10;&#10;If the header alone sufficiently describes the changes, omit the body entirely.&#10;&#10;Omit any mentions of a scope, breaking changes, or references to issues or pull requests." />
             </AIAssistantStoredInstruction>
           </value>
         </entry>
@@ -18,9 +18,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75192a98-7bf5-47f8-8a4e-d1023cf9360d" name="Changes" comment="feat: Update Footer component layout and links&#10;&#10;Updated Footer.astro to change the layout and add links. Footer now includes links to more sites, an RSS feed, Github, and a contact email, along with legal links to Imprint and Privacy pages. Styling has been updated to accommodate these changes.">
+    <list default="true" id="75192a98-7bf5-47f8-8a4e-d1023cf9360d" name="Changes" comment="chore: ide">
       <change afterPath="$PROJECT_DIR$/LINKS.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/components/header/Header.astro" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/components/header/Header.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/components/header/header-categories/HeaderCategoriesDom.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/components/header/header-categories/HeaderCategoriesDom.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/components/header/header-categories/HeaderCategoriesPost.astro" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/components/header/header-categories/HeaderCategoriesPost.astro" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,38 +60,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Nx.web:check.executor": "Run",
-    "Nx.web:dev.executor": "Run",
-    "Nx.web:preview.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "astro-v4",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Workspace/defkil/olis.tech/apps/web/src/components/header/header-categories",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "pnpm",
-    "npm.dev.executor": "Run",
-    "npm.olis.tech > preview.executor": "Run",
-    "npm.olis.tech > start.executor": "Run",
-    "settings.editor.selected.configurable": "nx-console",
-    "ts.external.directory.path": "C:\\Workspace\\defkil\\olis.tech\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Nx.web:build.executor&quot;: &quot;Run&quot;,
+    &quot;Nx.web:check.executor&quot;: &quot;Run&quot;,
+    &quot;Nx.web:dev.executor&quot;: &quot;Run&quot;,
+    &quot;Nx.web:preview.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;astro-v4&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Workspace/defkil/olis.tech/apps/web/src/components/header/header-categories&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
+    &quot;npm.build.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;npm.olis.tech &gt; preview.executor&quot;: &quot;Run&quot;,
+    &quot;npm.olis.tech &gt; start.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.LLMConfigurable&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Workspace\\defkil\\olis.tech\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "dev.nx.console.project_details_files": [
-      "C:\\Workspace\\defkil\\olis.tech\\apps\\web\\project.json",
-      "C:\\Workspace\\defkil\\olis.tech\\apps\\web\\package.json",
-      "C:\\Workspace\\defkil\\olis.tech\\nx.json"
+  &quot;keyToStringList&quot;: {
+    &quot;dev.nx.console.project_details_files&quot;: [
+      &quot;C:\\Workspace\\defkil\\olis.tech\\apps\\web\\project.json&quot;,
+      &quot;C:\\Workspace\\defkil\\olis.tech\\apps\\web\\package.json&quot;,
+      &quot;C:\\Workspace\\defkil\\olis.tech\\nx.json&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Workspace\defkil\olis.tech\apps\web\src\components\header\header-categories" />
@@ -106,6 +110,14 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
+    <configuration name="web:build" type="NxRunConfigurationType">
+      <option name="nx-projects" value="web" />
+      <option name="nx-targets" value="build" />
+      <option name="nx-target-configuration" value="" />
+      <envs />
+      <option name="arguments" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="web:check" type="NxRunConfigurationType">
       <option name="nx-projects" value="web" />
       <option name="nx-targets" value="check" />
@@ -128,6 +140,16 @@
       <option name="nx-target-configuration" value="" />
       <envs />
       <option name="arguments" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
       <method v="2" />
     </configuration>
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -165,13 +187,14 @@
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.olis.tech &gt; start" />
         <item itemvalue="npm.olis.tech &gt; preview" />
+        <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-WS-241.14494.180" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-WS-241.14494.235" />
       </set>
     </attachedChunks>
   </component>
@@ -197,7 +220,11 @@
       <workItem from="1711924598391" duration="249000" />
       <workItem from="1711926426459" duration="4056000" />
       <workItem from="1711934328242" duration="5925000" />
-      <workItem from="1711971151419" duration="366000" />
+      <workItem from="1711971151419" duration="619000" />
+      <workItem from="1711971792218" duration="2891000" />
+      <workItem from="1712006060211" duration="648000" />
+      <workItem from="1712265768961" duration="591000" />
+      <workItem from="1712421001736" duration="510000" />
     </task>
     <task id="LOCAL-00001" summary="chore: removed astro v2">
       <option name="closed" value="true" />
@@ -455,7 +482,31 @@
       <option name="project" value="LOCAL" />
       <updated>1711971506659</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="feat: Added background color to Header separator component">
+      <option name="closed" value="true" />
+      <created>1711971704780</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1711971704780</updated>
+    </task>
+    <task id="LOCAL-00034" summary="chore: ide">
+      <option name="closed" value="true" />
+      <created>1711971712267</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1711971712267</updated>
+    </task>
+    <task id="LOCAL-00035" summary="chore: ide">
+      <option name="closed" value="true" />
+      <created>1711975444259</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1711975444259</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -474,9 +525,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: base blog theme" />
-    <MESSAGE value="Add ViewTransitions import to BaseHead component&#10;&#10;The BaseHead component now includes an import for the ViewTransitions module from the 'astro:transitions' package. This additional import will provide transition functionalities across different views in the web application." />
-    <MESSAGE value="feat: Import and implement ViewTransitions in BaseHead component&#10;&#10;The commit includes importing the ViewTransitions from Astro's transitions module in the BaseHead.astro file. It also adds the ViewTransitions component to the file to enable transition effects." />
     <MESSAGE value="chore: test data" />
     <MESSAGE value="chore: removed start blog" />
     <MESSAGE value="chore: todo" />
@@ -493,12 +541,15 @@
     <MESSAGE value="chore: add wave separator" />
     <MESSAGE value="chore: better css mask" />
     <MESSAGE value="chore: new todo" />
-    <MESSAGE value="chore: ide" />
     <MESSAGE value="chore: default style for link and lists" />
     <MESSAGE value="chore: add " />
     <MESSAGE value="feat: Add author email to web constants&#10;&#10;This commit includes the addition of an author email constant in the web constants file. This allows for easier communication of the author's contact for site users." />
     <MESSAGE value="feat: Added site author email constant&#10;&#10;In the `consts.ts` file an additional constant for site's author's email (`SITE_AUTHOR_MAIL`) is added." />
     <MESSAGE value="feat: Update Footer component layout and links&#10;&#10;Updated Footer.astro to change the layout and add links. Footer now includes links to more sites, an RSS feed, Github, and a contact email, along with legal links to Imprint and Privacy pages. Styling has been updated to accommodate these changes." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Update Footer component layout and links&#10;&#10;Updated Footer.astro to change the layout and add links. Footer now includes links to more sites, an RSS feed, Github, and a contact email, along with legal links to Imprint and Privacy pages. Styling has been updated to accommodate these changes." />
+    <MESSAGE value="style: Update Separator component styling in Header&#10;&#10;The Separator component within the Header file has had its background color updated alongside its existing color property." />
+    <MESSAGE value="feat: Added background color to Header separator component" />
+    <MESSAGE value="chore: load fonts in astro with correct preload" />
+    <MESSAGE value="chore: load fonts in astro with correct preload" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: load fonts in astro with correct preload" />
   </component>
 </project>
