@@ -50,7 +50,7 @@ export class HeaderCategoriesDomPosts extends HeaderCategoriesDomHandler {
     const elements: DocumentFragment[] = [];
 
     if (content.length === 0) {
-      content.push({ title: "Keine Beiträge, schau später wieder vorbei!", link: "#" });
+      content.push({ title: "No posts, check back later!", link: "#" });
     }
 
     for (const post of content) {
