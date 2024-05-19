@@ -1,5 +1,4 @@
 import type { PostSchema } from './category.ts';
-// @ts-ignore
 import { getCollection } from 'astro:content';
 
 export async function contentGetCategoryPosts(
@@ -16,15 +15,17 @@ export async function contentGetCategoryPosts(
     };
   }
 
-  const data = (await getCollection(categoryCollection as any)).sort((a, b) => {
-    if (a.data.publishDate > b.data.publishDate) {
-      return -1;
-    }
-    if (a.data.publishDate < b.data.publishDate) {
-      return 1;
-    }
-    return 0;
-  });
+  const data = (await getCollection(categoryCollection as any)).sort(
+    (a: any, b: any) => {
+      if (a.data.publishDate > b.data.publishDate) {
+        return -1;
+      }
+      if (a.data.publishDate < b.data.publishDate) {
+        return 1;
+      }
+      return 0;
+    },
+  );
 
   let result = data;
   if (length > 0) {
@@ -32,7 +33,7 @@ export async function contentGetCategoryPosts(
   }
 
   return {
-    posts: result.map((post) => {
+    posts: result.map((post: any) => {
       return {
         title: post.data.title,
         description: post.data.description,
