@@ -18,9 +18,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75192a98-7bf5-47f8-8a4e-d1023cf9360d" name="Changes" comment="chore: ide">
+    <list default="true" id="75192a98-7bf5-47f8-8a4e-d1023cf9360d" name="Changes" comment="chore: nx migrate">
       <change afterPath="$PROJECT_DIR$/LINKS.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/helper/content.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/helper/content.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/pages/rss.xml.js" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/pages/rss.xml.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +82,8 @@
     "npm.dev.executor": "Run",
     "npm.olis.tech > preview.executor": "Run",
     "npm.olis.tech > start.executor": "Run",
+    "npm.update-install.executor": "Run",
+    "npm.update.executor": "Run",
     "settings.editor.selected.configurable": "project.propVCSSupport.Mappings",
     "ts.external.directory.path": "C:\\Workspace\\defkil\\olis.tech\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
@@ -139,16 +143,6 @@
       <option name="arguments" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="build" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -179,12 +173,33 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="update-install" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="update-install" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="update" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="update" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.update-install" />
+        <item itemvalue="npm.update" />
         <item itemvalue="npm.olis.tech &gt; start" />
         <item itemvalue="npm.olis.tech &gt; preview" />
-        <item itemvalue="npm.dev" />
-        <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
   </component>
@@ -227,6 +242,7 @@
       <workItem from="1716117486530" duration="327000" />
       <workItem from="1716117853411" duration="8000" />
       <workItem from="1716117885610" duration="27000" />
+      <workItem from="1716117940081" duration="1766000" />
     </task>
     <task id="LOCAL-00001" summary="chore: removed astro v2">
       <option name="closed" value="true" />
@@ -508,7 +524,31 @@
       <option name="project" value="LOCAL" />
       <updated>1711975444259</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="chore: ide">
+      <option name="closed" value="true" />
+      <created>1716118051000</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1716118051000</updated>
+    </task>
+    <task id="LOCAL-00037" summary="build: Added new update and migration scripts to package.json">
+      <option name="closed" value="true" />
+      <created>1716118080383</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1716118080383</updated>
+    </task>
+    <task id="LOCAL-00038" summary="chore: nx migrate">
+      <option name="closed" value="true" />
+      <created>1716118935214</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1716118935214</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -527,9 +567,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: test data" />
-    <MESSAGE value="chore: removed start blog" />
-    <MESSAGE value="chore: todo" />
     <MESSAGE value="chore: blog header" />
     <MESSAGE value="chore: global styles" />
     <MESSAGE value="chore: add dom libs" />
@@ -552,6 +589,9 @@
     <MESSAGE value="feat: Added background color to Header separator component" />
     <MESSAGE value="chore: load fonts in astro with correct preload" />
     <MESSAGE value="chore: load fonts in astro with correct preload" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: load fonts in astro with correct preload" />
+    <MESSAGE value="chore: ide" />
+    <MESSAGE value="build: Added new update and migration scripts to package.json" />
+    <MESSAGE value="chore: nx migrate" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: nx migrate" />
   </component>
 </project>
