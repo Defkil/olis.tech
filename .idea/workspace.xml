@@ -18,16 +18,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75192a98-7bf5-47f8-8a4e-d1023cf9360d" name="Changes" comment="chore: nx migrate">
+    <list default="true" id="75192a98-7bf5-47f8-8a4e-d1023cf9360d" name="Changes" comment="refactor: Improve type annotations in content helper&#10;&#10;Removed an unnecessary '@ts-ignore' comment and added 'any' type annotations to certain variables within sorting and mapping functions for better clarity.">
       <change afterPath="$PROJECT_DIR$/LINKS.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/web/src/pages/rss.xml.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/helper/content.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/helper/content.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/pages/rss.xml.js" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/src/pages/rss.xml.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/src/pages/rss.xml.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,6 +51,9 @@
     &quot;accountId&quot;: &quot;55ddce77-cef3-4093-98fe-601a54ba9c2a&quot;
   }
 }</component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 7
@@ -74,8 +80,12 @@
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Workspace/defkil/olis.tech/apps/web/src/components/header/header-categories",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.stylelint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.stylelint": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "pnpm",
     "npm.build.executor": "Run",
@@ -84,7 +94,9 @@
     "npm.olis.tech > start.executor": "Run",
     "npm.update-install.executor": "Run",
     "npm.update.executor": "Run",
-    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Workspace\\defkil\\olis.tech\\node_modules\\prettier",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
     "ts.external.directory.path": "C:\\Workspace\\defkil\\olis.tech\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   },
@@ -242,7 +254,7 @@
       <workItem from="1716117486530" duration="327000" />
       <workItem from="1716117853411" duration="8000" />
       <workItem from="1716117885610" duration="27000" />
-      <workItem from="1716117940081" duration="1766000" />
+      <workItem from="1716117940081" duration="2601000" />
     </task>
     <task id="LOCAL-00001" summary="chore: removed astro v2">
       <option name="closed" value="true" />
@@ -548,7 +560,23 @@
       <option name="project" value="LOCAL" />
       <updated>1716118935214</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="chore: ide">
+      <option name="closed" value="true" />
+      <created>1716119782288</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1716119782288</updated>
+    </task>
+    <task id="LOCAL-00040" summary="refactor: Improve type annotations in content helper&#10;&#10;Removed an unnecessary '@ts-ignore' comment and added 'any' type annotations to certain variables within sorting and mapping functions for better clarity.">
+      <option name="closed" value="true" />
+      <created>1716121360578</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1716121360578</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -567,7 +595,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: blog header" />
     <MESSAGE value="chore: global styles" />
     <MESSAGE value="chore: add dom libs" />
     <MESSAGE value="chore: add check if data exist" />
@@ -589,9 +616,10 @@
     <MESSAGE value="feat: Added background color to Header separator component" />
     <MESSAGE value="chore: load fonts in astro with correct preload" />
     <MESSAGE value="chore: load fonts in astro with correct preload" />
-    <MESSAGE value="chore: ide" />
     <MESSAGE value="build: Added new update and migration scripts to package.json" />
     <MESSAGE value="chore: nx migrate" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: nx migrate" />
+    <MESSAGE value="chore: ide" />
+    <MESSAGE value="refactor: Improve type annotations in content helper&#10;&#10;Removed an unnecessary '@ts-ignore' comment and added 'any' type annotations to certain variables within sorting and mapping functions for better clarity." />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: Improve type annotations in content helper&#10;&#10;Removed an unnecessary '@ts-ignore' comment and added 'any' type annotations to certain variables within sorting and mapping functions for better clarity." />
   </component>
 </project>
