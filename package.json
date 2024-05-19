@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "update": "nx migrate latest",
+    "update-install": "pnpm install --no-frozen-lockfile",
+    "migrate": "pnpm exec nx migrate --run-migrations",
     "build": "nx run web:build",
     "check": "nx run web:check",
     "preview": "nx run web:preview",
