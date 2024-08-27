@@ -19,14 +19,14 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.7.0",
-    "@nx/js": "19.0.4",
-    "@nx/workspace": "19.0.4",
-    "@swc-node/register": "~1.9.1",
-    "@swc/core": "~1.5.7",
-    "@swc/helpers": "~0.5.11",
+    "@nx/js": "19.6.3",
+    "@nx/workspace": "19.6.3",
+    "@swc-node/register": "1.9.2",
+    "@swc/core": "1.5.7",
+    "@swc/helpers": "0.5.12",
     "astro": "^4.8.6",
-    "nx": "19.0.4",
+    "nx": "19.6.3",
     "prettier": "^3.2.5",
-    "typescript": "~5.4.5"
+    "typescript": "5.5.4"
   }
 }
