@@ -32,5 +32,7 @@ export async function GET(context: any) {
     description: SITE_DESCRIPTION,
     site: context.site,
     items: posts.slice(0, 10),
+    customData: '<language>de-de</language>',
+    stylesheet: '/pretty-feed-v3.xsl',
   });
 }
