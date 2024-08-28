@@ -15,7 +15,13 @@
   },
   "private": true,
   "dependencies": {
-    "@nxtensions/astro": "19.0.1"
+    "@nxtensions/astro": "19.0.1",
+    "@astrojs/mdx": "^2.3.1",
+    "@astrojs/rss": "^4.0.7",
+    "@astrojs/sitemap": "^3.1.6",
+    "@fontsource-variable/outfit": "^5.0.14",
+    "@fontsource-variable/space-grotesk": "^5.0.19",
+    "normalize.css": "^8.0.1"
   },
   "devDependencies": {
     "@astrojs/check": "^0.7.0",
