@@ -1,39 +1,19 @@
 {
-  "name": "@olis.tech/source",
-  "version": "0.0.0",
-  "license": "MIT",
+  "name": "olis.tech",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "update": "nx migrate latest",
-    "update-install": "pnpm install --no-frozen-lockfile",
-    "migrate": "pnpm exec nx migrate --run-migrations",
-    "build": "nx run web:build",
-    "check": "nx run web:check",
-    "preview": "nx run web:preview",
-    "dev": "nx run web:dev",
-    "sync": "nx run web:sync",
-    "start": "npm run preview"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "private": true,
   "dependencies": {
-    "@nxtensions/astro": "19.0.1",
-    "@astrojs/mdx": "^2.3.1",
-    "@astrojs/rss": "^4.0.7",
-    "@astrojs/sitemap": "^3.1.6",
-    "@fontsource-variable/outfit": "^5.0.14",
-    "@fontsource-variable/space-grotesk": "^5.0.19",
-    "normalize.css": "^8.0.1"
-  },
-  "devDependencies": {
-    "@astrojs/check": "^0.7.0",
-    "@nx/devkit": "20.0.7",
-    "@nx/js": "20.0.7",
-    "@nx/workspace": "20.0.7",
-    "@swc-node/register": "1.9.2",
-    "@swc/core": "1.5.7",
-    "@swc/helpers": "0.5.12",
-    "astro": "^4.14.6",
-    "nx": "20.0.7",
-    "prettier": "^3.3.3",
-    "typescript": "5.5.4"
+    "@astrojs/starlight": "^0.28.5",
+    "astro": "^4.15.3",
+    "sharp": "^0.32.5",
+    "@astrojs/check": "^0.9.4",
+    "typescript": "^5.6.3"
   }
 }
