@@ -21,5 +21,6 @@
     }
   },
   "defaultProject": "web",
-  "nxCloudAccessToken": "MDQxYWFiNzQtODZlNC00MWIyLWFkOTgtODUyZTE5N2Q0MjhifHJlYWQtd3JpdGU="
+  "nxCloudAccessToken": "MDQxYWFiNzQtODZlNC00MWIyLWFkOTgtODUyZTE5N2Q0MjhifHJlYWQtd3JpdGU=",
+  "useLegacyCache": true
 }

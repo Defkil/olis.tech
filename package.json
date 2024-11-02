@@ -25,14 +25,14 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.7.0",
-    "@nx/devkit": "^19.6.3",
-    "@nx/js": "19.6.3",
-    "@nx/workspace": "19.6.3",
+    "@nx/devkit": "20.0.7",
+    "@nx/js": "20.0.7",
+    "@nx/workspace": "20.0.7",
     "@swc-node/register": "1.9.2",
     "@swc/core": "1.5.7",
     "@swc/helpers": "0.5.12",
     "astro": "^4.14.6",
-    "nx": "19.6.3",
+    "nx": "20.0.7",
     "prettier": "^3.3.3",
     "typescript": "5.5.4"
   }
