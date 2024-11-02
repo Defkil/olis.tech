@@ -18,90 +18,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75192a98-7bf5-47f8-8a4e-d1023cf9360d" name="Changes" comment="feat: rss pretty print">
-      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/ci.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.npmrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/extensions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TODO.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/astro.config.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/project.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/public/blog-placeholder-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/public/blog-placeholder-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/public/blog-placeholder-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/public/blog-placeholder-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/public/blog-placeholder-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/public/blog-placeholder-about.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/public/favicon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/public/pretty-feed-v3.xsl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/components/BaseHead.astro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/components/Footer.astro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/components/FormattedDate.astro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/components/Separator.astro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/components/header/Header.astro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/components/header/HeaderTitleAndSearch.astro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/components/header/HeaderWelcome.astro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/components/header/header-categories/HeaderCategories.astro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/components/header/header-categories/HeaderCategories.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/components/header/header-categories/HeaderCategories.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/components/header/header-categories/HeaderCategoriesDom.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/components/header/header-categories/HeaderCategoriesPost.astro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/consts.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/content/config.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/content/general/hello-2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/content/general/hello-3.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/content/general/hello-4.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/content/general/hello.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/content/linux/hello-2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/content/linux/hello-3.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/content/linux/hello-4.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/content/linux/hello.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/content/other/hello-2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/content/other/hello-3.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/content/other/hello-4.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/content/other/hello.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/content/programming/hello-2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/content/programming/hello-3.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/content/programming/hello-4.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/content/programming/hello.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/content/projects/hello-2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/content/projects/hello-3.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/content/projects/hello-4.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/content/projects/hello.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/content/tools/hello-2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/content/tools/hello-3.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/content/tools/hello-4.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/content/tools/hello.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/content/web/hello-2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/content/web/hello-3.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/content/web/hello-4.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/content/web/hello.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/env.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/helper/category.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/helper/content.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/helper/contentLink.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/layouts/BlogPost.astro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/pages/[category]/[...slug].astro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/pages/[category]/index.astro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/pages/about.astro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/pages/blog/[...slug].astro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/pages/blog/index.astro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/pages/index.astro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/pages/rss.xml.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/src/styles/global.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/web/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nx.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.base.json" beforeDir="false" />
+    <list default="true" id="75192a98-7bf5-47f8-8a4e-d1023cf9360d" name="Changes" comment="feat: created astro projekt with blog example">
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -714,7 +632,23 @@
       <option name="project" value="LOCAL" />
       <updated>1724869495697</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="feat: replaced nx&amp;astro with only astro with starlight starter">
+      <option name="closed" value="true" />
+      <created>1730564642270</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1730564642270</updated>
+    </task>
+    <task id="LOCAL-00049" summary="feat: created astro projekt with blog example">
+      <option name="closed" value="true" />
+      <created>1730564786947</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1730564786947</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -733,8 +667,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: add blog category logic" />
-    <MESSAGE value="chore: first implementation of pages" />
     <MESSAGE value="chore: moved styles to own file" />
     <MESSAGE value="chore: button size and positioning" />
     <MESSAGE value="chore: add wave separator" />
@@ -758,6 +690,8 @@
     <MESSAGE value="chore: add devkit to fix nx error" />
     <MESSAGE value="chore: removed pnpm workspace" />
     <MESSAGE value="feat: rss pretty print" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: rss pretty print" />
+    <MESSAGE value="feat: replaced nx&amp;astro with only astro with starlight starter" />
+    <MESSAGE value="feat: created astro projekt with blog example" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: created astro projekt with blog example" />
   </component>
 </project>
