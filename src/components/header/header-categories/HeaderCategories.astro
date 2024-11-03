@@ -1,40 +1,48 @@
 ---
-import './HeaderCategories.scss'
-import HeaderCategoriesPost from "./HeaderCategoriesPost.astro";
+import './HeaderCategories.scss';
+import HeaderCategoriesPost from './HeaderCategoriesPost.astro';
+import { getCollection } from 'astro:content';
+import { type BlogCollectionKey, blogCollections } from '../../../content/config';
 
-const categoriesData: {
-  title: string,
-  collection: string,
-  description: string,
-  link: string,
-  lastPosts: {
-    title: string, link: string
-  }[]
-}[] = [
-  {
-    title: "Web Development",
-    collection: "web-development",
-    description: "Everything about web development",
-    link: "/category/web-development",
-    lastPosts: [
-      {title: "Post 1", link: "/web-development/post-1"},
-      {title: "Post 2", link: "/web-development/post-2"},
-      {title: "Post 3", link: "/web-development/post-3"},
-    ]
-  },
-  {
-    title: "Linux",
-    collection: "linux",
-    description: "Everything about Linux",
-    link: "/category/linux",
-    lastPosts: [
-      {title: "Linux 1", link: "/linux/post-1"},
-      {title: "Linux 2", link: "/linux/post-2"},
-      {title: "Linux 3", link: "/linux/post-3"},
-    ]
-  }
-]
+const allPosts = await Promise.all(Object.keys(blogCollections).map(async (collection) => {
+  const posts = await getCollection(collection as BlogCollectionKey);
+  return posts.map(post => ({
+    ...post, collection
+  }));
+}));
 
+const flattenedPosts = allPosts.flat()
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const postsByCategory = Object.keys(blogCollections).reduce((acc, collection) => {
+  acc[collection] = flattenedPosts
+    .filter(post => post.collection === collection)
+    .slice(0, 3)
+    .map(post => ({
+      title: post.data.title, link: `/${post.collection}/${post.slug}`
+    }));
+  return acc;
+}, {} as Record<string, { title: string; link: string }[]>);
+
+const categoriesData = Object.keys(blogCollections).map(collection => ({
+  title: collection.charAt(0).toUpperCase() + collection.slice(1),
+  collection,
+  description: `Everything about ${collection}`,
+  link: `/${collection}`,
+  lastPosts: postsByCategory[collection] ?? []
+}));
+
+categoriesData.unshift({
+  title: 'Latest',
+  collection: 'latest',
+  description: 'Latest posts from all categories',
+  link: '/',
+  lastPosts: flattenedPosts
+    .slice(0, 3)
+    .map(post => ({
+      title: post.data.title, link: `/${post.collection}/${post.slug}`
+    }))
+});
 
 const initialCategory = categoriesData[0]!;
 ---
@@ -60,13 +68,12 @@ const initialCategory = categoriesData[0]!;
       <div class="posts">
         <div class="posts__container js--posts">
           {initialCategory.lastPosts.map((post) => (
-            <HeaderCategoriesPost title={post.title} link={post.link}/>
-          ))}
+            <HeaderCategoriesPost title={post.title} link={post.link} />))}
         </div>
         <a class="js--link" href={initialCategory.link} style="margin-top: auto">
           <div class="post post--small border shadow shadow--hover">
             <div class="post__title post__title--small-centered-text">
-              Show everything from <span class=js--title>{initialCategory.title}</span>
+              Show everything from <span class="js--title">{initialCategory.title}</span>
             </div>
           </div>
         </a>
@@ -75,7 +82,7 @@ const initialCategory = categoriesData[0]!;
   </header-categories>
 </div>
 <script>
-  import {HeaderCategories} from "./HeaderCategories";
+  import { HeaderCategories } from './HeaderCategories';
 
   customElements.define('header-categories', HeaderCategories);
 </script>
