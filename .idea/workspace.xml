@@ -18,9 +18,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75192a98-7bf5-47f8-8a4e-d1023cf9360d" name="Changes" comment="feat: Add HeaderCategories component&#10;&#10;Introduces the HeaderCategories component, including styles, HTML structure, and dynamic DOM manipulation to display posts based on selected categories.">
+    <list default="true" id="75192a98-7bf5-47f8-8a4e-d1023cf9360d" name="Changes" comment="refactor: Make domElements readonly in HeaderCategoriesDomHandler">
+      <change afterPath="$PROJECT_DIR$/src/content/general/hello-2.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/general/hello-3.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/general/hello-4.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/general/hello.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/nodejs/hello-2.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/nodejs/hello-3.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/nodejs/hello-4.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/nodejs/hello.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/webdev/hello-2.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/webdev/hello-3.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/webdev/hello-4.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/content/webdev/hello.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/header-categories/HeaderCategoriesDom.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header-categories/HeaderCategoriesDom.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/content/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/content/config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +85,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "astro",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Workspace/defkil/olis.tech/src/components/header/header-categories",
+    "last_opened_file_path": "C:/Workspace/defkil/olis.tech/src/content",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.stylelint": "true",
@@ -106,11 +118,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Workspace\defkil\olis.tech\src\content" />
+      <recent name="C:\Workspace\defkil\olis.tech\src\content\general" />
       <recent name="C:\Workspace\defkil\olis.tech\src\components\header\header-categories" />
       <recent name="C:\Workspace\defkil\olis.tech\src\layouts\components" />
       <recent name="C:\Workspace\defkil\olis.tech\src\components\wave-separator" />
-      <recent name="C:\Workspace\defkil\olis.tech\src\components\header\header-welcome" />
-      <recent name="C:\Workspace\defkil\olis.tech\src\components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Workspace\defkil\olis.tech\src\components\head" />
@@ -259,23 +271,7 @@
       <workItem from="1724868621674" duration="899000" />
       <workItem from="1730629302962" duration="4155000" />
       <workItem from="1730665717334" duration="34000" />
-      <workItem from="1730665758373" duration="2613000" />
-    </task>
-    <task id="LOCAL-00009" summary="feat: Import and implement ViewTransitions in BaseHead component&#10;&#10;The commit includes importing the ViewTransitions from Astro's transitions module in the BaseHead.astro file. It also adds the ViewTransitions component to the file to enable transition effects.">
-      <option name="closed" value="true" />
-      <created>1711838672154</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1711838672154</updated>
-    </task>
-    <task id="LOCAL-00010" summary="chore: test data">
-      <option name="closed" value="true" />
-      <created>1711934488140</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1711934488140</updated>
+      <workItem from="1730665758373" duration="2889000" />
     </task>
     <task id="LOCAL-00011" summary="chore: removed start blog">
       <option name="closed" value="true" />
@@ -653,7 +649,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730667306507</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="chore: ide">
+      <option name="closed" value="true" />
+      <created>1730672930412</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1730672930412</updated>
+    </task>
+    <task id="LOCAL-00059" summary="refactor: Make domElements readonly in HeaderCategoriesDomHandler">
+      <option name="closed" value="true" />
+      <created>1730672938852</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1730672938852</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -672,7 +684,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: new todo" />
     <MESSAGE value="chore: default style for link and lists" />
     <MESSAGE value="chore: add " />
     <MESSAGE value="feat: Add author email to web constants&#10;&#10;This commit includes the addition of an author email constant in the web constants file. This allows for easier communication of the author's contact for site users." />
@@ -695,8 +706,9 @@
     <MESSAGE value="chore: add fonts" />
     <MESSAGE value="chore: bun update" />
     <MESSAGE value="feat: Update welcome message in HeaderWelcome component&#10;&#10;Text updated to English, improved content clarity." />
-    <MESSAGE value="chore: ide" />
     <MESSAGE value="feat: Add HeaderCategories component&#10;&#10;Introduces the HeaderCategories component, including styles, HTML structure, and dynamic DOM manipulation to display posts based on selected categories." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Add HeaderCategories component&#10;&#10;Introduces the HeaderCategories component, including styles, HTML structure, and dynamic DOM manipulation to display posts based on selected categories." />
+    <MESSAGE value="chore: ide" />
+    <MESSAGE value="refactor: Make domElements readonly in HeaderCategoriesDomHandler" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: Make domElements readonly in HeaderCategoriesDomHandler" />
   </component>
 </project>
