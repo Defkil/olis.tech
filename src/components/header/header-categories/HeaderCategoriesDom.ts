@@ -1,7 +1,7 @@
 import type { HeaderCategoriesData } from "./HeaderCategories";
 
 export abstract class HeaderCategoriesDomHandler {
-  private domElements: NodeListOf<Element>;
+  private readonly domElements: NodeListOf<Element>;
   constructor(
     private selector: string,
     private contentAtr: keyof HeaderCategoriesData,
