@@ -18,7 +18,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75192a98-7bf5-47f8-8a4e-d1023cf9360d" name="Changes" comment="chore: ide" />
+    <list default="true" id="75192a98-7bf5-47f8-8a4e-d1023cf9360d" name="Changes" comment="chore: bun update">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header-welcome/HeaderWelcome.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header-welcome/HeaderWelcome.astro" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -256,30 +259,7 @@
       <workItem from="1724868621674" duration="899000" />
       <workItem from="1730629302962" duration="4155000" />
       <workItem from="1730665717334" duration="34000" />
-    </task>
-    <task id="LOCAL-00002" summary="chore: ide">
-      <option name="closed" value="true" />
-      <created>1710361288238</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1710361288238</updated>
-    </task>
-    <task id="LOCAL-00003" summary="chore: ide">
-      <option name="closed" value="true" />
-      <created>1710361398650</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1710361398650</updated>
-    </task>
-    <task id="LOCAL-00004" summary="chore: nx astro workspace&#10;&#10;created with https://www.npmjs.com/package/@nxtensions/astro">
-      <option name="closed" value="true" />
-      <created>1710362052232</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1710362052232</updated>
+      <workItem from="1730665758373" duration="219000" />
     </task>
     <task id="LOCAL-00005" summary="chore: removed copilot ide files">
       <option name="closed" value="true" />
@@ -649,7 +629,31 @@
       <option name="project" value="LOCAL" />
       <updated>1730629363903</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="chore: ide">
+      <option name="closed" value="true" />
+      <created>1730665869600</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1730665869600</updated>
+    </task>
+    <task id="LOCAL-00052" summary="chore: add fonts">
+      <option name="closed" value="true" />
+      <created>1730665910193</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1730665910193</updated>
+    </task>
+    <task id="LOCAL-00053" summary="chore: bun update">
+      <option name="closed" value="true" />
+      <created>1730665926219</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1730665926219</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -668,8 +672,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: moved styles to own file" />
-    <MESSAGE value="chore: button size and positioning" />
     <MESSAGE value="chore: add wave separator" />
     <MESSAGE value="chore: better css mask" />
     <MESSAGE value="chore: new todo" />
@@ -693,6 +695,8 @@
     <MESSAGE value="feat: replaced nx&amp;astro with only astro with starlight starter" />
     <MESSAGE value="feat: created astro projekt with blog example" />
     <MESSAGE value="chore: ide" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: ide" />
+    <MESSAGE value="chore: add fonts" />
+    <MESSAGE value="chore: bun update" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: bun update" />
   </component>
 </project>
