@@ -1,4 +1,4 @@
-import { defineCollection, z } from "astro:content";
+import { type CollectionEntry, defineCollection, z } from "astro:content";
 
 function createBlogCategory() {
   return defineCollection({
@@ -18,3 +18,7 @@ const webdev = createBlogCategory();
 const nodejs = createBlogCategory();
 
 export const collections = { general, webdev, nodejs };
+export const blogCollections = { general, webdev, nodejs };
+
+export type BlogCollectionKey = keyof typeof blogCollections;
+export type BlogPost = CollectionEntry<BlogCollectionKey>;
