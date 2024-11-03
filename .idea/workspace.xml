@@ -18,13 +18,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="75192a98-7bf5-47f8-8a4e-d1023cf9360d" name="Changes" comment="feat: Update welcome message in HeaderWelcome component&#10;&#10;Text updated to English, improved content clarity.">
-      <change afterPath="$PROJECT_DIR$/src/components/header/header-categories/HeaderCategories.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/header/header-categories/HeaderCategories.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/header/header-categories/HeaderCategoriesDom.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/header/header-categories/HeaderCategoriesPost.astro" afterDir="false" />
+    <list default="true" id="75192a98-7bf5-47f8-8a4e-d1023cf9360d" name="Changes" comment="feat: Add HeaderCategories component&#10;&#10;Introduces the HeaderCategories component, including styles, HTML structure, and dynamic DOM manipulation to display posts based on selected categories.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header/header-categories/HeaderCategories.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header-categories/HeaderCategories.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header-categories/HeaderCategoriesDom.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header-categories/HeaderCategoriesDom.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -263,23 +259,7 @@
       <workItem from="1724868621674" duration="899000" />
       <workItem from="1730629302962" duration="4155000" />
       <workItem from="1730665717334" duration="34000" />
-      <workItem from="1730665758373" duration="1407000" />
-    </task>
-    <task id="LOCAL-00007" summary="chore: base blog theme">
-      <option name="closed" value="true" />
-      <created>1711838333066</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1711838333066</updated>
-    </task>
-    <task id="LOCAL-00008" summary="chore: ide">
-      <option name="closed" value="true" />
-      <created>1711838643194</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1711838643194</updated>
+      <workItem from="1730665758373" duration="2613000" />
     </task>
     <task id="LOCAL-00009" summary="feat: Import and implement ViewTransitions in BaseHead component&#10;&#10;The commit includes importing the ViewTransitions from Astro's transitions module in the BaseHead.astro file. It also adds the ViewTransitions component to the file to enable transition effects.">
       <option name="closed" value="true" />
@@ -657,7 +637,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730666005560</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="chore: ide">
+      <option name="closed" value="true" />
+      <created>1730667290730</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1730667290730</updated>
+    </task>
+    <task id="LOCAL-00057" summary="feat: Add HeaderCategories component&#10;&#10;Introduces the HeaderCategories component, including styles, HTML structure, and dynamic DOM manipulation to display posts based on selected categories.">
+      <option name="closed" value="true" />
+      <created>1730667306507</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1730667306507</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -676,7 +672,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="chore: better css mask" />
     <MESSAGE value="chore: new todo" />
     <MESSAGE value="chore: default style for link and lists" />
     <MESSAGE value="chore: add " />
@@ -699,8 +694,9 @@
     <MESSAGE value="feat: created astro projekt with blog example" />
     <MESSAGE value="chore: add fonts" />
     <MESSAGE value="chore: bun update" />
-    <MESSAGE value="chore: ide" />
     <MESSAGE value="feat: Update welcome message in HeaderWelcome component&#10;&#10;Text updated to English, improved content clarity." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Update welcome message in HeaderWelcome component&#10;&#10;Text updated to English, improved content clarity." />
+    <MESSAGE value="chore: ide" />
+    <MESSAGE value="feat: Add HeaderCategories component&#10;&#10;Introduces the HeaderCategories component, including styles, HTML structure, and dynamic DOM manipulation to display posts based on selected categories." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Add HeaderCategories component&#10;&#10;Introduces the HeaderCategories component, including styles, HTML structure, and dynamic DOM manipulation to display posts based on selected categories." />
   </component>
 </project>
