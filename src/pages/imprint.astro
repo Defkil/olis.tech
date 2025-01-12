@@ -1,0 +1,29 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro';
+import { SITE_AUTHOR_MAIL } from '../consts';
+---
+
+<DefaultLayout
+  title="Olis.tech - Imprint"
+  description="Imprint"
+>
+  <div>
+    <h1>Imprint</h1>
+    <p>
+      Information according to § 5 DDG:<br>
+      Oliver Grüttner <br>
+      Wollmatingerstraße 149<br>
+      78467 Konstanz
+    </p>
+    <p>
+      Responsible for the content according to § 55 Abs. 2 RStV:<br>
+      Oliver Grüttner <br>
+      Wollmatingerstraße 149<br>
+      78467 Konstanz
+    </p>
+
+    <p>Kontakt: <br>
+      E-Mail: {SITE_AUTHOR_MAIL}
+    </p>
+  </div>
+</DefaultLayout>
