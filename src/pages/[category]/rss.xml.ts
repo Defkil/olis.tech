@@ -1,10 +1,10 @@
-import rss from "@astrojs/rss";
-import { getCollection } from "astro:content";
-import { SITE_DESCRIPTION, SITE_TITLE } from "../../consts";
-import { type BlogCollectionKey, blogCollections } from "../../content/config";
+import rss from '@astrojs/rss';
+import { getCollection } from 'astro:content';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+import { type BlogCollectionKey, collections } from '../../content.config.ts';
 
 export async function getStaticPaths() {
-  return Object.keys(blogCollections).map((category) => ({
+  return Object.keys(collections).map((category) => ({
     params: { category },
   }));
 }
@@ -15,7 +15,7 @@ export async function GET(context: {
 }) {
   const { category } = context.params;
 
-  if (!(category in blogCollections)) {
+  if (!(category in collections)) {
     throw new Error(`Invalid category: ${category}`);
   }
 
@@ -33,7 +33,7 @@ export async function GET(context: {
     site: context.site,
     items: sortedPosts.map((post) => ({
       ...post.data,
-      link: `/${category}/${post.slug}/`,
+      link: `/${category}/${post.id}/`,
       pubDate: post.data.pubDate,
       description: post.data.description,
       categories: [category],

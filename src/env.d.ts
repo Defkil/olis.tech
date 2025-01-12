@@ -4,7 +4,6 @@
 export interface CategoryData<T extends PostSchema = PostSchema> {
   title: string;
   collection: string;
-  description: string;
   /** Custom category data */
   custom?: {
     layout: string;

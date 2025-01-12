@@ -1,9 +1,6 @@
 import type { CategoryData } from '../../env';
+import { categories } from '../../content.config.ts';
 
-/**
- * Cached category data
- * for a faster build time
- */
 class CachedCategoryData {
   private cache: Record<string, CategoryData> = {};
   public get(categoryName: string): CategoryData {
@@ -14,12 +11,8 @@ class CachedCategoryData {
   }
 }
 
-/**
- * Find category data
- * @param categoryName Category name
- */
 export const findCategoryData = (categoryName: string): CategoryData => {
-  const category = null// categories.find((category) => category.collection === categoryName); //todo fix categories
+  const category = categories.find((category) => category.collection === categoryName); //todo fix categories
   if (!category) {
     throw new Error(`Category ${categoryName} not found`);
   }
@@ -28,8 +21,4 @@ export const findCategoryData = (categoryName: string): CategoryData => {
 
 const cachedCategoryData = new CachedCategoryData();
 
-/**
- * Get category data
- * @param collection Category collection (folder name)
- */
 export const getCategoryData = (collection: string): CategoryData => cachedCategoryData.get(collection);

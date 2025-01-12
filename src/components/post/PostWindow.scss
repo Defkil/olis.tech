@@ -1,4 +1,4 @@
-@import "../../styles/styles.module.scss";
+@use "../../styles/styles.module" as *;
 
 $main-size: $spacing-04;
 

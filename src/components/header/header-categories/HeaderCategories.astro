@@ -2,9 +2,9 @@
 import './HeaderCategories.scss';
 import HeaderCategoriesPost from './HeaderCategoriesPost.astro';
 import { getCollection } from 'astro:content';
-import { type BlogCollectionKey, blogCollections } from '../../../content/config';
+import { type BlogCollectionKey, collections } from '../../../content.config';
 
-const allPosts = await Promise.all(Object.keys(blogCollections).map(async (collection) => {
+const allPosts = await Promise.all(Object.keys(collections).map(async (collection) => {
   const posts = await getCollection(collection as BlogCollectionKey);
   return posts.map(post => ({
     ...post, collection
@@ -14,7 +14,7 @@ const allPosts = await Promise.all(Object.keys(blogCollections).map(async (colle
 const flattenedPosts = allPosts.flat()
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const postsByCategory = Object.keys(blogCollections).reduce((acc, collection) => {
+const postsByCategory = Object.keys(collections).reduce((acc, collection) => {
   acc[collection] = flattenedPosts
     .filter(post => post.collection === collection)
     .slice(0, 3)
@@ -24,7 +24,7 @@ const postsByCategory = Object.keys(blogCollections).reduce((acc, collection) =>
   return acc;
 }, {} as Record<string, { title: string; link: string }[]>);
 
-const categoriesData = Object.keys(blogCollections).map(collection => ({
+const categoriesData = Object.keys(collections).map(collection => ({
   title: collection.charAt(0).toUpperCase() + collection.slice(1),
   collection,
   description: `Everything about ${collection}`,

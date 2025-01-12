@@ -1,16 +1,11 @@
-import { getCollection } from 'astro:content';
-import type { PostSchema } from '../../env';
+import { type CollectionEntry, getCollection } from 'astro:content';
+import type { CollectionKeys } from '../../content.config.ts';
 
-/**
- * Get posts from a category
- * @param categoryCollection Category collection name
- * @param length Number of posts to return. If length is 0, return empty array
- */
 export async function contentGetCategoryPosts(
   categoryCollection: string,
   length = -1,
 ): Promise<{
-  posts: PostSchema[];
+  posts: CollectionEntry<CollectionKeys>[];
   total: number;
 }> {
   if (length === 0) {
@@ -28,7 +23,7 @@ export async function contentGetCategoryPosts(
       return 1;
     }
     return 0;
-  });
+  }) as CollectionEntry<CollectionKeys>[];
 
   let result = data;
   if (length > 0) {
@@ -36,15 +31,16 @@ export async function contentGetCategoryPosts(
   }
 
   return {
-    posts: result.map((post: any) => {
+    posts: result.map((post) => {
       return {
         title: post.data.title,
         description: post.data.description,
         image: post.data.image,
-        imageAlt: post.data.imageAlt,
-        publishDate: post.data.publishDate,
-        updateDate: post.data.updateDate,
-        slug: post.slug,
+        data: post.data,
+        collection: post.collection,
+        pubDate: post.data.pubDate,
+        updatedDate: post.data.updatedDate,
+        id: post.id,
       };
     }),
     total: data.length,

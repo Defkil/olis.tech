@@ -1,13 +1,13 @@
 ---
-import { type CollectionEntry, getCollection } from 'astro:content';
+import { type CollectionEntry, getCollection, render } from 'astro:content';
 import PostLayout from '../../layouts/PostLayout.astro';
-import { type BlogCollectionKey, blogCollections, type BlogPost } from '../../content/config';
+import { type BlogCollectionKey, collections, type BlogPost } from '../../content.config';
 
 export async function getStaticPaths() {
-  const allPosts = await Promise.all(Object.keys(blogCollections).map(async (category) => {
+  const allPosts = await Promise.all(Object.keys(collections).map(async (category) => {
     const posts = await getCollection(category as BlogCollectionKey);
     return posts.map((post: BlogPost) => ({
-      params: { category, slug: post.slug }, props: post
+      params: { category, slug: post.id }, props: post
     }));
   }));
 
@@ -17,7 +17,7 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<BlogCollectionKey>;
 
 const post: Props = Astro.props;
-const { Content } = await post.render();
+const { Content } = await render(post);
 ---
 
 <PostLayout {...post.data}>

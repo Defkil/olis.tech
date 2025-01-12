@@ -2,11 +2,11 @@
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../components/FormattedDate.astro';
-import { type BlogCollectionKey, blogCollections, type BlogPost } from '../content/config';
+import { type BlogCollectionKey, collections, type BlogPost } from '../content.config';
 import DefaultLayout from '../layouts/DefaultLayout.astro';
 import ContentGrid from '../components/content-grid/ContentGrid.astro';
 
-const allPosts = await Promise.all(Object.keys(blogCollections).map(async (collection) => {
+const allPosts = await Promise.all(Object.keys(collections).map(async (collection) => {
   return await getCollection(collection as BlogCollectionKey);
 }));
 

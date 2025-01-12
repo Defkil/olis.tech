@@ -1,20 +1,17 @@
-import type { PostWindowProps } from "../../env";
-import { helperShowDate } from "../helper/helperShowDate";
-import { contentLinkCategory, contentLinkPost } from "./contentLink";
-import { getCategoryData } from "./contentCategories";
-import { contentGetCategoryPosts } from "./contentGetCategoryPosts";
+import type { PostWindowProps } from '../../env';
+import { helperShowDate } from '../helper/helperShowDate';
+import { contentLinkCategory, contentLinkPost } from './contentLink';
+import { getCategoryData } from './contentCategories';
+import { contentGetCategoryPosts } from './contentGetCategoryPosts';
 
 const PAGE_SIZE = 9;
 
-/** for date sorting */
 interface DateSort {
   date: Date;
 }
 
-/** posts with date sort */
 type PostWindowPropsWithDateSort = PostWindowProps & DateSort;
 
-/** sort by date */
 function sortDate(a: DateSort, b: DateSort) {
   if (a.date > b.date) {
     return -1;
@@ -25,7 +22,6 @@ function sortDate(a: DateSort, b: DateSort) {
   return 0;
 }
 
-/** Get all posts from all categories and sort by date */
 async function getAllPostsAndSorts(): Promise<PostWindowProps[]> {
   const allPosts = import.meta.glob("../../content/**/*.md");
   const result: PostWindowPropsWithDateSort[] = [];
@@ -52,7 +48,6 @@ async function getAllPostsAndSorts(): Promise<PostWindowProps[]> {
   return result.sort(sortDate);
 }
 
-/** Get all posts from a category and sort by date */
 async function getCollectionPostsAndSorts(collection: string): Promise<PostWindowProps[]> {
   const collectionPosts = await contentGetCategoryPosts(collection);
   const categoryData = getCategoryData(collection);
@@ -76,20 +71,10 @@ async function getCollectionPostsAndSorts(collection: string): Promise<PostWindo
   return result.sort(sortDate);
 }
 
-/**
- * Get posts from a page
- * @param posts All posts
- * @param page Selected page number
- */
 async function paginatorGetPage(posts: PostWindowProps[], page: number): Promise<PostWindowProps[]> {
   return posts.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
 }
 
-/**
- * Get posts from a category
- * @param page Page number
- * @param collection Category collection, if not provided, return all posts
- */
 export async function contentPostWindowPaginator(
   page: number,
   collection?: string,

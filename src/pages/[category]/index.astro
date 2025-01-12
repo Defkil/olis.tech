@@ -1,11 +1,11 @@
 ---
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
-import { type BlogCollectionKey, blogCollections } from '../../content/config';
+import { type BlogCollectionKey, collections } from '../../content.config';
 import DefaultLayout from '../../layouts/DefaultLayout.astro';
 
 export async function getStaticPaths() {
-  return Object.keys(blogCollections).map((category) => ({
+  return Object.keys(collections).map((category) => ({
     params: { category }
   }));
 }
@@ -18,8 +18,8 @@ const posts = (await getCollection(category)).sort((a, b) => b.data.pubDate.valu
     <ul>
       {posts.map((post) => (
         <li>
-          <a href={`/${post.collection}/${post.slug}/`}>
-            <img width={720} height={360} src={post.data.heroImage} alt="" />
+          <a href={`/${post.collection}/${post.id}/`}>
+            <img width={720} height={360} src={post.data.image} alt={post.data.imageAlt} />
             <h4 class="title">{post.data.title}</h4>
             <p class="date">
               <FormattedDate date={new Date(post.data.pubDate)} />

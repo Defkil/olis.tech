@@ -1,4 +1,4 @@
-// import 'share-api-polyfill';
+// import 'share-api-polyfill'; // todo add share-api-polyfill
 import { SITE_LINK } from '../../consts.ts';
 
 export const share = async (title: string, text: string, url: string): Promise<void> => {
