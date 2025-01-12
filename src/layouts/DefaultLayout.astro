@@ -1,8 +1,10 @@
 ---
 import Header from '../components/header/Header.astro';
-import Footer from '../components/Footer.astro';
+import Footer from '../components/footer/Footer.astro';
 import PreloadWaveSeparator from '../components/head/PreloadWaveSeparator.astro';
 import Head from '../components/head/Head.astro';
+import { styles } from '../styles/styles';
+import WaveSeparator from '../components/WaveSeparator.astro';
 
 interface Props {
 	title: string;
@@ -23,6 +25,7 @@ const { title, description } = Astro.props;
 <main>
 	<slot />
 </main>
+<WaveSeparator color={styles["color-quinary"]}/>
 <Footer />
 </body>
 </html>
