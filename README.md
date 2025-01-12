@@ -13,6 +13,9 @@
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
 
+## Todos
+- [ ] Search with [pagefind](https://pagefind.app/)
+
 ## Tools
 - [Termsfeed](https://app.termsfeed.com/)
 - [Privacy Policy](https://www.wbs.legal/it-und-internet-recht/datenschutzrecht/datenschutzerklaerung/datenschutzgenerator/)
