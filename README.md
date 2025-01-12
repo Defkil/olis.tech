@@ -14,5 +14,5 @@
 
 
 ## Tools
-- [Imprint](https://app.termsfeed.com/)
+- [Termsfeed](https://app.termsfeed.com/)
 - [Privacy Policy](https://www.wbs.legal/it-und-internet-recht/datenschutzrecht/datenschutzerklaerung/datenschutzgenerator/)
