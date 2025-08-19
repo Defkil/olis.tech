@@ -18,7 +18,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="617f6e1b-0e30-497c-975a-8dd0ac82056c" name="Changes" comment="chore: removed social links" />
+    <list default="true" id="617f6e1b-0e30-497c-975a-8dd0ac82056c" name="Changes" comment="build: ide" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -137,7 +137,7 @@
       <workItem from="1748698791333" duration="588000" />
       <workItem from="1748699522683" duration="7693000" />
       <workItem from="1748801474997" duration="167000" />
-      <workItem from="1755639369888" duration="578000" />
+      <workItem from="1755639369888" duration="1004000" />
     </task>
     <task id="LOCAL-00001" summary="chore: ide codebuddy plugin">
       <option name="closed" value="true" />
@@ -379,7 +379,23 @@
       <option name="project" value="LOCAL" />
       <updated>1755639459615</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="build: removed old empty astro project">
+      <option name="closed" value="true" />
+      <created>1755640134978</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1755640134978</updated>
+    </task>
+    <task id="LOCAL-00032" summary="build: ide">
+      <option name="closed" value="true" />
+      <created>1755640350707</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1755640350707</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,7 +413,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="docs: update README with custom blog information&#10;&#10;Revised the README to reflect details about Olis.tech, replacing the default Astro Starter Kit content. Added links to imprint and privacy policy for better documentation." />
     <MESSAGE value="docs: update link name in README&#10;&#10;Replaced 'Imprint' with 'Termsfeed' in the tools section for clarity and consistency. No functional changes made." />
     <MESSAGE value="feat: imprint page" />
     <MESSAGE value="feat: privacy policy page" />
@@ -409,7 +424,6 @@
     <MESSAGE value="refactor: updated config.ts to content.config.ts" />
     <MESSAGE value="build: bunx @astrojs/upgrade" />
     <MESSAGE value="build: bunx @astrojs/upgrade" />
-    <MESSAGE value="build: ide" />
     <MESSAGE value="build: bun update" />
     <MESSAGE value="build: removed codebody" />
     <MESSAGE value="build: removed vscode configs" />
@@ -422,7 +436,9 @@
     <MESSAGE value="style: cleanup" />
     <MESSAGE value="chore: removed boilerplate" />
     <MESSAGE value="chore: removed social links" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: removed social links" />
+    <MESSAGE value="build: removed old empty astro project" />
+    <MESSAGE value="build: ide" />
+    <option name="LAST_COMMIT_MESSAGE" value="build: ide" />
   </component>
   <component name="ai.zencoder.plugin.rag.state">
     <option name="indexedFilesMap">
