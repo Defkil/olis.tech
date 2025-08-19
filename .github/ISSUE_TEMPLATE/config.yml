@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Community Support
+    url: https://github.com/yourusername/volks-typo/discussions
+    about: Please ask and answer questions here
+  - name: Documentation
+    url: https://github.com/yourusername/volks-typo/wiki
+    about: Check our documentation for common questions
+  - name: Theme Showcase
+    url: https://github.com/yourusername/volks-typo/discussions/categories/show-and-tell
+    about: Show off your site built with Volks-Typo
